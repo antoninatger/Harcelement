@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Éditeur Textes — Inès</title>
+<title>Éditeur Textes - Inès</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;font-size:14px}
@@ -63,7 +63,7 @@ select.ceff{width:68px;background:#1e293b;border:1px solid #334155;border-radius
 <body>
 
 <div class="bar">
-  <span class="bar-title">✏️ Éditeur Textes — Inès</span>
+  <span class="bar-title">✏️ Éditeur Textes - Inès</span>
   <label class="btn btn-load" for="fi">📂 Charger .js</label>
   <input type="file" id="fi" accept=".js" style="display:none">
   <span class="fname" id="fname">aucun fichier chargé</span>
@@ -103,7 +103,7 @@ document.getElementById('fi').addEventListener('change', function(e) {
       const content = ev.target.result.replace(/^﻿/, ''); // strip UTF-8 BOM
       const fn = new Function(content + '\nreturn typeof TEXTES !== "undefined" ? TEXTES : null;');
       T = fn();
-      if (!T) throw new Error('Variable TEXTES introuvable — vérifie que le fichier commence par : var TEXTES = {…}');
+      if (!T) throw new Error('Variable TEXTES introuvable - vérifie que le fichier commence par : var TEXTES = {…}');
       document.getElementById('fname').textContent = loadedFname;
       document.getElementById('bexp').disabled = false;
       document.getElementById('empty').style.display = 'none';
@@ -432,7 +432,7 @@ function renderScenario() {
     const num = el('span', 'step-num', `Étape ${i}`);
     const preview = step.intro && step.intro.length > 0
       ? step.intro[0].substring(0, 55) + (step.intro[0].length > 55 ? '…' : '')
-      : (step.c && step.c.length ? `[${step.c.map(c => c.l).join(' / ')}]` : '—');
+      : (step.c && step.c.length ? `[${step.c.map(c => c.l).join(' / ')}]` : '-');
     const prev = el('span', 'step-preview', preview);
     const arrow = el('span', 'step-arrow', '▼');
     hd.appendChild(num);
@@ -444,7 +444,7 @@ function renderScenario() {
     if (i === 0) arrow.textContent = '▲';
 
     if (Array.isArray(step.intro)) {
-      body.appendChild(el('div', 'sub', 'Intro — messages d\'Inès avant les choix'));
+      body.appendChild(el('div', 'sub', 'Intro - messages d\'Inès avant les choix'));
       body.appendChild(introList(step.intro));
     } else {
       const noIntroMsg = el('div', 'sub', '(pas d\'intro)');
@@ -513,7 +513,7 @@ function renderCrisis() {
 // ═══════════════════════════════════════════════════════════════════════════
 function renderRevelations() {
   const wrap = el('div');
-  wrap.appendChild(el('div', 'sec-title', 'Révélations — Ce que tu as appris'));
+  wrap.appendChild(el('div', 'sec-title', 'Révélations - Ce que tu as appris'));
 
   const renderCards = () => {
     while (wrap.children.length > 1) wrap.removeChild(wrap.lastChild);
@@ -552,8 +552,8 @@ function renderFins() {
   const f = T.fins;
 
   // finImmediate & blocageMessages
-  wrap.appendChild(card('Messages — Fin immédiate', msgList(T.finImmediate)));
-  wrap.appendChild(card('Messages — Blocage', msgList(T.blocageMessages)));
+  wrap.appendChild(card('Messages - Fin immédiate', msgList(T.finImmediate)));
+  wrap.appendChild(card('Messages - Blocage', msgList(T.blocageMessages)));
 
   // imm
   {

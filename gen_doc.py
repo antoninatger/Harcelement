@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-gen_doc.py — produit le document partenaires à partir du jeu lui-même.
+gen_doc.py - produit le document partenaires à partir du jeu lui-même.
 
     node dump_textes.js      (écrit _textes_dump.json depuis les fichiers de jeu)
     python gen_doc.py        (écrit doc_textes_partenaires.docx et .html)
@@ -23,7 +23,7 @@ def _charger(nom, chemin):
     return mod
 
 if not os.path.exists('_textes_dump.json'):
-    sys.exit("_textes_dump.json manquant — lancez d'abord : node dump_textes.js")
+    sys.exit("_textes_dump.json manquant - lancez d'abord : node dump_textes.js")
 
 socle = _charger('_socle_docx', '_socle_docx.py')   # styles Word + helpers
 modele = _charger('_modele', '_modele.py')          # le plan, tiré du jeu
@@ -107,7 +107,7 @@ def rendu_docx():
         elif k == 'photo':
             head = doc.add_paragraph(); s.set_spacing(head, before=60, after=10)
             s.set_indent(head, left=200); s.left_border(head, '3a4a6a', sz=14); s.shading(head, 'F0F4FA')
-            s.add_run(head, 'Photo %d — %s' % (b[1] + 1, b[2]), bold=True, size=9.5, color=s.C_BLUE, font='Arial')
+            s.add_run(head, 'Photo %d - %s' % (b[1] + 1, b[2]), bold=True, size=9.5, color=s.C_BLUE, font='Arial')
             s.add_run(head, '   %d j’aime' % b[3], size=8, color=s.C_DIM, font='Arial')
             for ligne in b[4]:
                 mp = doc.add_paragraph(); s.set_spacing(mp, before=0, after=8, line=260)
@@ -130,7 +130,7 @@ def rendu_docx():
             s.set_indent(para, left=300)
             s.add_run(para, b[1] + '   ', bold=True, size=10)
             s.add_run(para, b[2], size=10, color=s.C_GREY)
-    s.footnote_line('Retrouver Clara — document produit automatiquement à partir des fichiers du jeu.')
+    s.footnote_line('Retrouver Clara - document produit automatiquement à partir des fichiers du jeu.')
     doc.save('doc_textes_partenaires.docx')
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -208,7 +208,7 @@ def e(x): return _h.escape(str(x)) if x is not None else ''
 def rendu_html():
     o = ['<!DOCTYPE html>', '<html lang="fr"><head><meta charset="utf-8">',
          '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-         '<title>Retrouver Clara — textes complets</title>',
+         '<title>Retrouver Clara - textes complets</title>',
          '<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">',
          '<style>%s</style></head><body><div class="page">' % CSS]
     for b in B:
@@ -224,7 +224,7 @@ def rendu_html():
         elif k == 'p':   o.append('<p>%s</p>' % e(b[1]).replace('\n', '<br>'))
         elif k == 'note': o.append('<div class="note">%s</div>' % e(b[1]).replace('\n', '<br>'))
         elif k == 'bullet': o.append('<ul><li>%s</li></ul>' % e(b[1]))
-        elif k == 'sep': o.append('<div class="sep">— %s —</div>' % e(b[1]))
+        elif k == 'sep': o.append('<div class="sep">- %s -</div>' % e(b[1]))
         elif k == 'prompt': o.append('<div class="prompt">%s</div>' % e(b[1]))
         elif k == 'pensee': o.append('<div class="pensee">%s</div>' % e(b[1]))
         elif k == 'table':
@@ -260,7 +260,7 @@ def rendu_html():
                      % (amie, e(b[1]), e(b[2]), ty, msgs))
         elif k == 'photo':
             msgs = ''.join('<div class="m">%s</div>' % e(m) for m in b[4])
-            o.append('<div class="dm"><div class="hd">Photo %d — %s<span class="t">%d j’aime</span></div>%s</div>'
+            o.append('<div class="dm"><div class="hd">Photo %d - %s<span class="t">%d j’aime</span></div>%s</div>'
                      % (b[1] + 1, e(b[2]), b[3], msgs))
         elif k == 'carte':
             o.append('<div class="carte"><b>%s</b><span>%s</span></div>' % (e(b[1]), e(b[2])))
@@ -274,7 +274,7 @@ def rendu_html():
                         col, e(b[2]), body))
         elif k == 'ressource':
             o.append('<div class="res"><b>%s</b><span>%s</span></div>' % (e(b[1]), e(b[2])))
-    o.append('<footer>Retrouver Clara — document produit automatiquement à partir des fichiers du jeu '
+    o.append('<footer>Retrouver Clara - document produit automatiquement à partir des fichiers du jeu '
              '(<code>node dump_textes.js</code> puis <code>python gen_doc.py</code>).</footer>')
     o.append('</div></body></html>')
     open('doc_textes_partenaires.html', 'w', encoding='utf-8', newline='\n').write('\n'.join(o))

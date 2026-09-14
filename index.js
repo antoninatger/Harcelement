@@ -16,7 +16,7 @@
     }
   }
 
-  // Prénom du héros — Léo ou Léa. Le choix se propage aux quatre parties
+  // Prénom du héros - Léo ou Léa. Le choix se propage aux quatre parties
   // (voir prenom.js), accords compris.
   try {
     var actuel = window.RC_PRENOM || 'Léo';
@@ -29,7 +29,7 @@
     });
   } catch (e) {}
 
-  // Code de reprise — un seul code pour les quatre parties (sauvegarde.js).
+  // Code de reprise - un seul code pour les quatre parties (sauvegarde.js).
   // Il se suffit à lui-même : il marche d'un navigateur et d'un appareil à
   // l'autre, rien n'est gardé ailleurs que dans le code lui-même.
   var isEN = location.pathname.indexOf('_en') !== -1;
@@ -50,14 +50,14 @@
         inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') go.click(); });
         go.addEventListener('click', function () {
           if (Sauvegarde.reprendre(inp.value)) location.replace(location.pathname);
-          else msg.textContent = isEN ? 'Unknown code — check the 7 characters.'
-                                      : 'Code inconnu — vérifie les 7 caractères.';
+          else msg.textContent = isEN ? 'Unknown code - check the 7 characters.'
+                                      : 'Code inconnu - vérifie les 7 caractères.';
         });
       }
     }
   } catch (e) {}
 
-  // Bouton « Nouvelle enquête » — visible seulement s'il y a une partie en cours.
+  // Bouton « Nouvelle enquête » - visible seulement s'il y a une partie en cours.
   // Sur une tablette partagée, le groupe suivant héritait de l'état du précédent.
   try {
     var keys = [];
@@ -76,7 +76,7 @@
     }
   } catch (e) {}
 
-  // CTA carte 1 — "Reprendre" si déjà visitée
+  // CTA carte 1 - "Reprendre" si déjà visitée
   try {
     if(localStorage.getItem('rc_p1_visited')){
       var label = document.querySelector('.cta-label');

@@ -1,12 +1,12 @@
 /* =========================================================================
-   sauvegarde.js — un seul code pour tout le jeu
+   sauvegarde.js - un seul code pour tout le jeu
    -------------------------------------------------------------------------
    Les quatre parties sont des pages séparées et rangeaient leur avancement
    dans le localStorage du navigateur : impossible de reprendre ailleurs. La
    Partie 4 avait bien un code, mais elle seule, et sur quatre caractères.
 
    Ici, tout l'état tient dans 31 bits, écrits en base 36 : six caractères
-   plus une somme de contrôle. Le code se suffit à lui-même — il marche d'un
+   plus une somme de contrôle. Le code se suffit à lui-même - il marche d'un
    navigateur à l'autre, d'un appareil à l'autre, rien n'est stocké ailleurs.
 
      bit  0      Partie 1 vue

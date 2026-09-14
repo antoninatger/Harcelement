@@ -338,7 +338,7 @@ const CONVOS = [
     ]
   },
   {
-    id:99, avatar:"📔", name:"Moi — Journal", sub:"Note personnelle",
+    id:99, avatar:"📔", name:"Moi - Journal", sub:"Note personnelle",
     unread:true, time:"il y a 5 jours", section:null,
     secret:true,
     preview:"c'est horrible, j'ai découvert qu'ils ont un groupe sur moi...",
@@ -362,7 +362,7 @@ const PHOTO_QUIZZES = {
     question:'À ton avis, comment appelle-t-on le genre de commentaire que tu viens de lire sous la photo ?',
     options:[
       'Des conseils diététiques maladroits',
-      'Du body shaming — harcèlement ciblant l\'apparence physique',
+      'Du body shaming - harcèlement ciblant l\'apparence physique',
       'Une simple blague entre amis',
       'Du spam'
     ],
@@ -416,7 +416,7 @@ const QUIZZES = {
   7: {
     icon: '📊',
     type: 'Sondage d\'humiliation publique',
-    question: '"Clara est-elle la personne la plus nulle du collège ?" — Quel type de cyberharcèlement est-ce ?',
+    question: '"Clara est-elle la personne la plus nulle du collège ?" - Quel type de cyberharcèlement est-ce ?',
     options: [
       'Un sondage d\'humiliation publique',
       'Du phishing (vol de données)',
@@ -429,7 +429,7 @@ const QUIZZES = {
   11: {
     icon: '🕸️',
     type: 'Rumeurs et manipulation psychologique',
-    question: '"On parle de toi en mal mais je ne te dirai pas ce qu\'on dit." — C\'est quoi ?',
+    question: '"On parle de toi en mal mais je ne te dirai pas ce qu\'on dit." - C\'est quoi ?',
     options: [
       'Un conseil d\'ami maladroit',
       'Une manipulation pour isoler et angoisser la victime',
@@ -442,7 +442,7 @@ const QUIZZES = {
   22: {
     icon: '🚪',
     type: 'Exclusion forcée',
-    question: '"Supprime ton compte, personne ne le remarquerait." — Quel mécanisme est à l\'œuvre ?',
+    question: '"Supprime ton compte, personne ne le remarquerait." - Quel mécanisme est à l\'œuvre ?',
     options: [
       'Un conseil amical maladroit',
       'Une pression pour forcer la victime à s\'exclure elle-même',
@@ -594,8 +594,8 @@ const UI = {
   identifyBtn:     "🔍 Identifier un harcèlement",
   firstToLike:     "Sois la premiere a aimer",
   likes:           " J'aime",
-  synthBtn:        "📋 Voir la synthèse — Ce qui est arrivé à Clara",
-  synthNote:       "Ces formes de harcèlement sont réelles. Chacune laisse des traces sur la victime — même sans contact physique.",
+  synthBtn:        "📋 Voir la synthèse - Ce qui est arrivé à Clara",
+  synthNote:       "Ces formes de harcèlement sont réelles. Chacune laisse des traces sur la victime - même sans contact physique.",
   backToWA:        "← Retour au groupe",
   backToWAUrl:     "3_Groupe_Secret.html",
   correct:         "Bonne réponse !",
@@ -603,11 +603,11 @@ const UI = {
   demasqueSub:     "Démasqué dans le groupe : ",
   reportBtn:       "⚠ Signaler ce compte",
   reportDone:      "✓ Compte signalé",
-  reportAfter:     "Compte signalé. Clara aurait pu le faire dès le premier message — personne ne le lui avait dit.",
+  reportAfter:     "Compte signalé. Clara aurait pu le faire dès le premier message - personne ne le lui avait dit.",
   synthFound:      "trouvé",
   synthMissed:     "pas vu",
   noteCode:        "🔐 Le code pour la suite",
   codeClose:       "← Relire le journal",
   observeBtn:      "🗣 Dire ce que j'observe",
-  notTagged:       "C'est violent aussi — mais ce message ne suffit pas à nommer un type de harcèlement. Cherche-en un plus révélateur."
+  notTagged:       "C'est violent aussi - mais ce message ne suffit pas à nommer un type de harcèlement. Cherche-en un plus révélateur."
 };

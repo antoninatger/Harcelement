@@ -3,10 +3,10 @@ var TEXTES = {
   // ─── Écran titre ──────────────────────────────────────────────────────────
 
   titre: {
-    eyebrow: "Un jeu sur l'empathie — Harcèlement scolaire",
+    eyebrow: "Un jeu sur l'empathie - Harcèlement scolaire",
     main:    "Convaincre Clara",
-    sub:     "Clara ne vient plus au collège depuis cinq jours. Elle s'est réfugiée chez sa tante, à la campagne.\nTu es Léo, son ami{e}. Pour parler à Clara, tu dois d'abord convaincre sa tante que tu es digne de confiance — et que tu es vraiment là pour l'aider.",
-    legende: ["La tante", "Clara", "Toi — Léo"],
+    sub:     "Clara ne vient plus au collège depuis cinq jours. Elle s'est réfugiée chez sa tante, à la campagne.\nTu es Léo, son ami{e}. Pour parler à Clara, tu dois d'abord convaincre sa tante que tu es digne de confiance - et que tu es vraiment là pour l'aider.",
+    legende: ["La tante", "Clara", "Toi - Léo"],
     bouton:  "☎  Appeler",
     // Pensées de Léo après chaque numéro faux : le joueur doit deviner qu'Inès
     // (Partie 1) peut lui donner le numéro.
@@ -33,7 +33,7 @@ var TEXTES = {
 
   locuteurs: { aunt: "La tante", lea: "Clara", thomas: "Léo" },
 
-  // Les numéros d'aide sont dans ressources.js — un seul endroit à changer.
+  // Les numéros d'aide sont dans ressources.js - un seul endroit à changer.
 
 
   // ─── Ce que Léo fait le lendemain, et ce qui arrive au groupe ────────────
@@ -46,14 +46,14 @@ var TEXTES = {
     items: [
       "Va voir le CPE. Pas pour dénoncer : pour dire qu'une élève de son collège ne vient plus, et pourquoi.",
       "Montre les captures d'écran qu'il a gardées, et signale les comptes anonymes un par un.",
-      "N'a rien réglé tout seul — il a fait ce qu'un ami de quatorze ans peut faire : prévenir quelqu'un qui peut agir."
+      "N'a rien réglé tout seul - il a fait ce qu'un ami de quatorze ans peut faire : prévenir quelqu'un qui peut agir."
     ]
   },
 
   epilogue: {
     icon:  "⚖️",
     titre: "Et les cinq du groupe ?",
-    corps: "Le collège a ouvert une enquête et les a reçus, avec leurs parents. Deux ont répondu qu'ils « ne pensaient pas à mal ». Kevin a montré ses captures.\n\nEn France, le harcèlement scolaire est un délit depuis 2022 — y compris en ligne, y compris entre élèves d'un même établissement.\n\nClara est revenue trois semaines plus tard. Ça n'a pas été simple. Mais elle ne portait plus ça toute seule."
+    corps: "Le collège a ouvert une enquête et les a reçus, avec leurs parents. Deux ont répondu qu'ils « ne pensaient pas à mal ». Kevin a montré ses captures.\n\nEn France, le harcèlement scolaire est un délit depuis 2022 - y compris en ligne, y compris entre élèves d'un même établissement.\n\nClara est revenue trois semaines plus tard. Ça n'a pas été simple. Mais elle ne portait plus ça toute seule."
   },
 
   recapBtn: "🖨 Récapitulatif à imprimer",
@@ -64,20 +64,20 @@ var TEXTES = {
     { minScore: 10,
       icon: "🌿", cls: "good",
       titre:    "Clara va demander de l'aide.",
-      corps:    "Tu as su trouver les mots justes à chaque instant.\nNi trop forts, ni trop légers — juste présents.\n\nLa tante t'a fait confiance. Clara a raccroché avec une décision concrète : parler à un adulte de confiance, et ne plus porter ça seule.\n\nTon rôle n'était pas de la sauver. C'était de lui montrer que demander de l'aide, c'est possible.",
-      citation: "« Je vais en parler à ma tante. Vraiment parler. »\n— Clara"
+      corps:    "Tu as su trouver les mots justes à chaque instant.\nNi trop forts, ni trop légers - juste présents.\n\nLa tante t'a fait confiance. Clara a raccroché avec une décision concrète : parler à un adulte de confiance, et ne plus porter ça seule.\n\nTon rôle n'était pas de la sauver. C'était de lui montrer que demander de l'aide, c'est possible.",
+      citation: "« Je vais en parler à ma tante. Vraiment parler. »\n- Clara"
     },
     { minScore: 5,
       icon: "🕯️", cls: "ok",
       titre:    "Un premier pas.",
-      corps:    "Tu as montré de la bonne volonté, même si certaines réponses manquaient de profondeur.\n\nClara hésite encore — mais elle envisage d'en parler à un adulte. Le chemin est long.\n\nTon rôle était de lui montrer que ce n'est pas à elle seule de tout porter.",
-      citation: "« Peut-être que je vais essayer… »\n— Clara"
+      corps:    "Tu as montré de la bonne volonté, même si certaines réponses manquaient de profondeur.\n\nClara hésite encore - mais elle envisage d'en parler à un adulte. Le chemin est long.\n\nTon rôle était de lui montrer que ce n'est pas à elle seule de tout porter.",
+      citation: "« Peut-être que je vais essayer… »\n- Clara"
     },
     { minScore: 0,
       icon: "🌧️", cls: "bad",
       titre:    "La distance reste.",
-      corps:    "Tu voulais bien faire, mais tes mots ont parfois sonné comme des reproches ou de l'impatience.\n\nClara reste fermée. Elle a besoin de temps — et de quelqu'un qui écoute vraiment avant d'agir.",
-      citation: "« J'avais juste besoin que tu m'écoutes. »\n— Clara"
+      corps:    "Tu voulais bien faire, mais tes mots ont parfois sonné comme des reproches ou de l'impatience.\n\nClara reste fermée. Elle a besoin de temps - et de quelqu'un qui écoute vraiment avant d'agir.",
+      citation: "« J'avais juste besoin que tu m'écoutes. »\n- Clara"
     }
   ],
 
@@ -99,7 +99,7 @@ var TEXTES = {
 
     // ── PHASE 1 : La tante ────────────────────────────────────────────────
 
-    { id:'A1', phase:'1', phaseName:'Phase 1 — La tante', stepLabel:'Question 1 / 3',
+    { id:'A1', phase:'1', phaseName:'Phase 1 - La tante', stepLabel:'Question 1 / 3',
       pdotCount:3, pdotActive:0,
       dialogueBefore:[
         {spk:'narrator', txt:'[ Le téléphone sonne… déclic. ]'},
@@ -112,7 +112,7 @@ var TEXTES = {
         { emp:2, txt:"« Je comprends. Je veux pas la brusquer… mais elle me manque, et j'ai peur pour elle. »",
           fb:{type:'good', msg:'Tu montres que sa protection passe avant ton besoin.'},
           reply:{spk:'aunt', txt:"(un silence) C'est gentil de le dire comme ça."}},
-        { emp:1, txt:"« Je comprends. Mais c'est important — ça ne prendra pas longtemps. »",
+        { emp:1, txt:"« Je comprends. Mais c'est important - ça ne prendra pas longtemps. »",
           fb:{type:'ok', msg:'Honnête, mais centré sur toi plutôt que sur Clara.'},
           reply:{spk:'aunt', txt:"Hmm… d'accord. Je t'écoute."}},
         { emp:0, txt:"« J'ai besoin de lui parler maintenant, c'est urgent. »",
@@ -130,7 +130,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'A2', phase:'1', phaseName:'Phase 1 — La tante', stepLabel:'Question 2 / 3',
+    { id:'A2', phase:'1', phaseName:'Phase 1 - La tante', stepLabel:'Question 2 / 3',
       pdotCount:3, pdotActive:1,
       dialogueBefore:[
         {spk:'aunt', txt:"Tu sais, depuis qu'elle est arrivée ici… Clara n'est plus la même.\nElle pleure beaucoup. Elle fait des cauchemars. Elle se réveille paniquée la nuit.\nEt surtout… elle culpabilise. Elle pense que tout est de sa faute."},
@@ -158,7 +158,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'A3', phase:'1', phaseName:'Phase 1 — La tante', stepLabel:'Question 3 / 3',
+    { id:'A3', phase:'1', phaseName:'Phase 1 - La tante', stepLabel:'Question 3 / 3',
       pdotCount:3, pdotActive:2,
       dialogueBefore:[
         {spk:'aunt', txt:"Le harcèlement, ça détruit lentement. Ça te fait douter de ta valeur…\nElle s'est renfermée. Elle évite même de regarder son téléphone.\nSi tu veux vraiment l'aider… il faudra être patient. Très patient."},
@@ -172,7 +172,7 @@ var TEXTES = {
           fb:{type:'ok', msg:"Sincère. La tante apprécie l'honnêteté."},
           reply:{spk:'aunt', txt:"D'accord… je vais lui demander."}},
         { emp:0, txt:"« Je vais lui dire que tout va s'arranger, que j'ai un plan. »",
-          fb:{type:'bad', msg:"Tu parles de toi et de ton plan — pas d'elle."},
+          fb:{type:'bad', msg:"Tu parles de toi et de ton plan - pas d'elle."},
           reply:{spk:'aunt', txt:"(froide) Un plan. Clara n'a pas besoin d'un plan. Elle a besoin d'être entendue."},
           recovery:{
             auntLine: "Est-ce que tu comprends la différence, Léo ?",
@@ -198,7 +198,7 @@ var TEXTES = {
 
     // ── PHASE 2 : Clara ───────────────────────────────────────────────────
 
-    { id:'L1', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 1 / 4',
+    { id:'L1', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 1 / 4',
       pdotCount:4, pdotActive:0,
       dialogueBefore:[
         {spk:'narrator', txt:'[ Un froissement de téléphone… ]'},
@@ -226,7 +226,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'L2', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 2 / 4',
+    { id:'L2', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 2 / 4',
       pdotCount:4, pdotActive:1,
       dialogueBefore:[
         {spk:'lea', txt:"Au début, c'était juste des remarques… des petites piques.\nJe me disais que ça allait passer.\nMais après… ça a empiré. Des moqueries en groupe. Des commentaires sur tout.\nEt ensuite, ça a continué en ligne. Des messages. Des captures. Des rumeurs.\nJe ne pouvais plus y échapper… même chez moi."},
@@ -245,7 +245,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'L3', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 3 / 4',
+    { id:'L3', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 3 / 4',
       pdotCount:4, pdotActive:2,
       dialogueBefore:[
         {spk:'lea', txt:"Le pire, tu sais quoi ?\nC'est quand j'ai commencé à y croire.\nQuand je me regardais dans le miroir et que je voyais ce qu'ils disaient."},
@@ -255,7 +255,7 @@ var TEXTES = {
         { emp:2, txt:"« C'est normal que t'aies fini par y croire, ils te l'ont dit cent fois. Mais c'est faux. C'est eux le problème, pas toi. »",
           fb:{type:'good', msg:'Tu expliques le mécanisme. Tu lui rends la réalité.'},
           reply:{spk:'lea', txt:"(longue pause) Personne ne l'avait dit comme ça avant."}},
-        { emp:1, txt:"« Non. Ce que tu voyais, c'est leurs mensonges — pas toi. »",
+        { emp:1, txt:"« Non. Ce que tu voyais, c'est leurs mensonges - pas toi. »",
           fb:{type:'ok', msg:'Clair et direct. Utile.'},
           reply:{spk:'lea', txt:"J'essaie de me le dire… c'est dur."}},
         { emp:0, txt:"« Tu sais bien que c'est faux ce qu'ils disent. »",
@@ -264,7 +264,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'L4', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 4 / 4',
+    { id:'L4', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 4 / 4',
       pdotCount:4, pdotActive:3,
       dialogueBefore:[
         {spk:'lea',    txt:"Ça fait cinq jours que je suis ici…\nLes deux premiers, je sortais même pas de la chambre.\nMaintenant… ça va un peu moins mal. Mais j'ai encore peur.\nPeur de retourner au collège. Peur que ça recommence. Peur que rien ne change."},
@@ -274,13 +274,13 @@ var TEXTES = {
       prompt:'Que lui dire ?',
       choices:[
         { emp:2, txt:"« C'est déjà réel, Clara. Et c'est pour ça qu'il faut des adultes qui peuvent agir : ta tante, tes parents, le CPE. Pas pour tout régler d'un coup. Juste pour que tu portes plus ça toute seule. »",
-          fb:{type:'good', msg:"Tu lui montres que chercher de l'aide adulte, c'est un acte de courage — pas une faiblesse."},
+          fb:{type:'good', msg:"Tu lui montres que chercher de l'aide adulte, c'est un acte de courage - pas une faiblesse."},
           reply:{spk:'lea', txt:"(silence) …Peut-être. Ma tante m'a proposé d'appeler le collège.\nJ'avais dit non. Mais là… peut-être que oui."}},
-        { emp:1, txt:"« Tu n'as pas à régler ça toute seule. Si tu veux, je peux être là quand tu en parles à quelqu'un — n'importe quel adulte de confiance. »",
-          fb:{type:'ok', msg:"Solidaire. Mais c'est à elle de faire le premier pas — tu le lui rappelles bien."},
+        { emp:1, txt:"« Tu n'as pas à régler ça toute seule. Si tu veux, je peux être là quand tu en parles à quelqu'un - n'importe quel adulte de confiance. »",
+          fb:{type:'ok', msg:"Solidaire. Mais c'est à elle de faire le premier pas - tu le lui rappelles bien."},
           reply:{spk:'lea', txt:"(hésitante) …D'accord. Je vais y réfléchir."}},
         { emp:0, txt:"« T'inquiète, je vais régler ça moi-même. Ces gens vont avoir des problèmes. »",
-          fb:{type:'bad', msg:"Tu prends tout sur toi. Ce n'est pas ton rôle — et elle sait que ça risque d'empirer."},
+          fb:{type:'bad', msg:"Tu prends tout sur toi. Ce n'est pas ton rôle - et elle sait que ça risque d'empirer."},
           reply:{spk:'lea', txt:"(froid) Non… s'il te plaît, fais rien. Ça va juste empirer."}},
       ]
     }
@@ -291,5 +291,5 @@ var TEXTES = {
 
 const UI = {
   recapUrl: "recapitulatif.html",
-  invalidCode: "Code invalide — vérifie les 4 caractères."
+  invalidCode: "Code invalide - vérifie les 4 caractères."
 };

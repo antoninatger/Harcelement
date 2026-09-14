@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-//  SAUVEGARDE — un seul code pour les quatre parties (voir sauvegarde.js)
+//  SAUVEGARDE - un seul code pour les quatre parties (voir sauvegarde.js)
 // ═══════════════════════════════════════════════════════════════
 function showSaveModal(){
   saveP4();
@@ -307,7 +307,7 @@ function nextStep(){
 function buildResourcesHTML(){
   const R = (window.RESSOURCES || { titre: '', liste: [] });
   const items=R.liste.map(r=>
-    `<div><span style="color:rgba(255,255,255,.7);">${r.label}</span> — ${r.txt}</div>`
+    `<div><span style="color:rgba(255,255,255,.7);">${r.label}</span> - ${r.txt}</div>`
   ).join('');
   return `<div style="margin-top:18px;border-top:1px solid rgba(255,255,255,.06);padding-top:14px;font-family:'Jost',sans-serif;font-size:11px;color:rgba(255,255,255,.55);line-height:1.8;text-align:left;">
   <div style="color:rgba(255,255,255,.6);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-bottom:6px;">${R.titre}</div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Journal des modifications — Retrouver Clara</title>
+<title>Journal des modifications - Retrouver Clara</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -86,8 +86,8 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 <body>
 
 <div class="page-header">
-  <div class="subtitle">Document de travail — confidentiel</div>
-  <h1>Retrouver Clara — Journal des modifications</h1>
+  <div class="subtitle">Document de travail - confidentiel</div>
+  <h1>Retrouver Clara - Journal des modifications</h1>
   <div class="meta">
     <span>Version du 9 septembre 2026</span>
     <span>Projet : Harcèlement Croatie</span>
@@ -130,10 +130,10 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 <table>
   <thead><tr><th>Partie</th><th>Mécanique principale</th><th>Durée estimée</th><th>Statut</th></tr></thead>
   <tbody>
-    <tr><td><strong>1 — Téléphone d'Inès</strong></td><td>Dialogue à choix multiples, jauge de confiance</td><td>5–8 min</td><td>✅ Fonctionnel</td></tr>
-    <tr><td><strong>2 — Instaclasse de Clara</strong></td><td>Exploration d'un profil fictif, identification de types de harcèlement</td><td>10–15 min</td><td>✅ Refonte complète</td></tr>
-    <tr><td><strong>3 — Groupe Whatsupp</strong></td><td>Lecture d'un chat de groupe, quiz d'analyse</td><td>6–10 min</td><td>✅ Enrichi</td></tr>
-    <tr><td><strong>4 — Convaincre Clara</strong></td><td>Conversation téléphonique, jeu d'empathie</td><td>6–10 min</td><td>✅ Ajustements</td></tr>
+    <tr><td><strong>1 - Téléphone d'Inès</strong></td><td>Dialogue à choix multiples, jauge de confiance</td><td>5–8 min</td><td>✅ Fonctionnel</td></tr>
+    <tr><td><strong>2 - Instaclasse de Clara</strong></td><td>Exploration d'un profil fictif, identification de types de harcèlement</td><td>10–15 min</td><td>✅ Refonte complète</td></tr>
+    <tr><td><strong>3 - Groupe Whatsupp</strong></td><td>Lecture d'un chat de groupe, quiz d'analyse</td><td>6–10 min</td><td>✅ Enrichi</td></tr>
+    <tr><td><strong>4 - Convaincre Clara</strong></td><td>Conversation téléphonique, jeu d'empathie</td><td>6–10 min</td><td>✅ Ajustements</td></tr>
   </tbody>
 </table>
 
@@ -144,12 +144,12 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 <table>
   <thead><tr><th>Fichier</th><th>Rôle</th></tr></thead>
   <tbody>
-    <tr><td><span class="file-ref">index.html</span> / <span class="file-ref">index.js</span></td><td>Menu principal — présentation des 4 parties</td></tr>
+    <tr><td><span class="file-ref">index.html</span> / <span class="file-ref">index.js</span></td><td>Menu principal - présentation des 4 parties</td></tr>
     <tr><td><span class="file-ref">1_Telephone_Ines.html</span></td><td>Interface téléphone iOS simulé (Partie 1)</td></tr>
-    <tr><td><span class="file-ref">1_Telephone_Ines_textes.js</span></td><td>Tous les textes et données de dialogue (Partie 1) — modifiable sans toucher la logique</td></tr>
+    <tr><td><span class="file-ref">1_Telephone_Ines_textes.js</span></td><td>Tous les textes et données de dialogue (Partie 1) - modifiable sans toucher la logique</td></tr>
     <tr><td><span class="file-ref">1_Telephone_Ines_Structure.js</span></td><td>Moteur de jeu : jauge de confiance, branches, fins (Partie 1)</td></tr>
-    <tr><td><span class="file-ref">2_Compte_de_Clara.html</span></td><td>Interface Instaclasse fictive — profil, DMs, lightbox photos (Partie 2)</td></tr>
-    <tr><td><span class="file-ref">2_Compte_de_Clara_Structure.js</span></td><td>Moteur de jeu complet Partie 2 — données + logique</td></tr>
+    <tr><td><span class="file-ref">2_Compte_de_Clara.html</span></td><td>Interface Instaclasse fictive - profil, DMs, lightbox photos (Partie 2)</td></tr>
+    <tr><td><span class="file-ref">2_Compte_de_Clara_Structure.js</span></td><td>Moteur de jeu complet Partie 2 - données + logique</td></tr>
     <tr><td><span class="file-ref">3_Groupe_Secret.html</span></td><td>Interface Whatsupp groupe fictif (Partie 3)</td></tr>
     <tr><td><span class="file-ref">3_Groupe_Secret_textes.js</span></td><td>Messages, quiz et textes (Partie 3)</td></tr>
     <tr><td><span class="file-ref">3_Groupe_Secret_Structure.js</span></td><td>Moteur de lecture et quiz (Partie 3)</td></tr>
@@ -185,13 +185,13 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
   <h4>Adaptation ordinateur / tablette / smartphone <span class="badge badge-new">ajouté</span></h4>
   <ul>
     <li>Ajout de <code>&lt;meta name="viewport"&gt;</code> manquant sur la Partie 1 (cause principale du bug mobile)</li>
-    <li>Largeur du téléphone simulé : <code>min(296px, calc(100vw - 2rem))</code> — s'adapte aux petits écrans</li>
+    <li>Largeur du téléphone simulé : <code>min(296px, calc(100vw - 2rem))</code> - s'adapte aux petits écrans</li>
     <li>Breakpoints ajustés : passage en grille 2 colonnes à partir de 380 px</li>
     <li>Suppression de <code>maximum-scale=1.0</code> sur les Parties 2 et 3 (bloquait le zoom utilisateur)</li>
   </ul>
 </div>
 
-<h3>Navigation — Retour au menu</h3>
+<h3>Navigation - Retour au menu</h3>
 
 <div class="mod-block good">
   <h4>Suppression de l'intro sur retour au menu <span class="badge badge-new">ajouté</span></h4>
@@ -201,22 +201,22 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 <h3>Outil d'édition des textes</h3>
 
 <div class="mod-block good">
-  <h4>Script Python / tkinter <span class="badge badge-new">créé</span> — <span class="file-ref">edit_textes.py</span></h4>
+  <h4>Script Python / tkinter <span class="badge badge-new">créé</span> - <span class="file-ref">edit_textes.py</span></h4>
   <p>L'outil HTML d'édition ne fonctionnait pas sur Edge (restrictions de sécurité). Remplacement par une application de bureau Python avec thème sombre, navigation par sections et sauvegarde directe dans le fichier JS. Nécessite Python 3.x installé ; les dépendances sont auto-installées au premier lancement.</p>
 </div>
 
-<h3>Partie 2 — Ajouts de contenu</h3>
+<h3>Partie 2 - Ajouts de contenu</h3>
 
 <div class="mod-block good">
   <h4>3 nouvelles conversations DM <span class="badge badge-new">ajouté</span></h4>
   <ul>
-    <li><strong>Sextorsion</strong> (id 27) — compte <em>anon_blackmail_x</em> : menace de diffuser des photos de soirée</li>
-    <li><strong>Harcèlement sexiste</strong> (id 28) — compte <em>vrai_garcon_2024</em> : attaques fondées sur le genre</li>
-    <li><strong>Harcèlement scolaire prolongé</strong> (id 29) — compte <em>colleg_info_2024</em> : moqueries liées à la vie scolaire</li>
+    <li><strong>Sextorsion</strong> (id 27) - compte <em>anon_blackmail_x</em> : menace de diffuser des photos de soirée</li>
+    <li><strong>Harcèlement sexiste</strong> (id 28) - compte <em>vrai_garcon_2024</em> : attaques fondées sur le genre</li>
+    <li><strong>Harcèlement scolaire prolongé</strong> (id 29) - compte <em>colleg_info_2024</em> : moqueries liées à la vie scolaire</li>
   </ul>
 </div>
 
-<h3>Partie 3 — Accès provisoire</h3>
+<h3>Partie 3 - Accès provisoire</h3>
 
 <div class="mod-block warn">
   <h4>Mot de passe désactivé temporairement <span class="badge badge-changed">modifié</span></h4>
@@ -230,11 +230,11 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 
 
 <!-- PARTIE 1 -->
-<h2 id="partie1" style="margin-top:32px;">Partie 1 — Téléphone d'Inès</h2>
+<h2 id="partie1" style="margin-top:32px;">Partie 1 - Téléphone d'Inès</h2>
 
 <div class="mod-block good">
   <h4>Deuxième conversation (après Partie 3) <span class="badge badge-new">ajouté</span></h4>
-  <p>Une fois la Partie 3 terminée, une <strong>pastille verte pulsante</strong> discrète apparaît dans l'en-tête du téléphone d'Inès, indiquant un nouveau message. Elle n'est visible que si le joueur a terminé la Partie 3 — aucun indice explicite n'est donné ; c'est au joueur de penser à revenir consulter Inès.</p>
+  <p>Une fois la Partie 3 terminée, une <strong>pastille verte pulsante</strong> discrète apparaît dans l'en-tête du téléphone d'Inès, indiquant un nouveau message. Elle n'est visible que si le joueur a terminé la Partie 3 - aucun indice explicite n'est donné ; c'est au joueur de penser à revenir consulter Inès.</p>
   <p>La conversation se déroule ainsi :</p>
   <ul>
     <li>Léo : <em>"Inès, j'ai peut-être trouvé quelque chose"</em></li>
@@ -248,13 +248,13 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 
 <h4>Fichiers modifiés</h4>
 <ul>
-  <li><span class="file-ref">1_Telephone_Ines.html</span> — notification badge HTML + CSS</li>
-  <li><span class="file-ref">1_Telephone_Ines_Structure.js</span> — logique de la deuxième conversation</li>
+  <li><span class="file-ref">1_Telephone_Ines.html</span> - notification badge HTML + CSS</li>
+  <li><span class="file-ref">1_Telephone_Ines_Structure.js</span> - logique de la deuxième conversation</li>
 </ul>
 
 
 <!-- PARTIE 2 -->
-<h2 id="partie2" style="margin-top:32px;">Partie 2 — Instaclasse de Clara</h2>
+<h2 id="partie2" style="margin-top:32px;">Partie 2 - Instaclasse de Clara</h2>
 
 <div class="mod-block good">
   <h4>Refonte du système d'identification des types de harcèlement <span class="badge badge-new">nouveau</span></h4>
@@ -304,13 +304,13 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 
 <h4>Fichiers modifiés</h4>
 <ul>
-  <li><span class="file-ref">2_Compte_de_Clara.html</span> — CSS mode sélection, bouton flottant, overlay identification</li>
-  <li><span class="file-ref">2_Compte_de_Clara_Structure.js</span> — HARCEL_TYPES, HARCEL_MAP, getHarcelType(), toggleSelectMode(), showIdentifyQCM(), answerIdentify(), closeIdentify() + refonte showLb() + modification openThread()</li>
+  <li><span class="file-ref">2_Compte_de_Clara.html</span> - CSS mode sélection, bouton flottant, overlay identification</li>
+  <li><span class="file-ref">2_Compte_de_Clara_Structure.js</span> - HARCEL_TYPES, HARCEL_MAP, getHarcelType(), toggleSelectMode(), showIdentifyQCM(), answerIdentify(), closeIdentify() + refonte showLb() + modification openThread()</li>
 </ul>
 
 
 <!-- PARTIE 3 -->
-<h2 id="partie3" style="margin-top:32px;">Partie 3 — Groupe Whatsupp</h2>
+<h2 id="partie3" style="margin-top:32px;">Partie 3 - Groupe Whatsupp</h2>
 
 <div class="mod-block good">
   <h4>Phase 6 : la disparition de Clara <span class="badge badge-new">ajouté</span></h4>
@@ -318,7 +318,7 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
   <ul>
     <li><strong>Enzo, Jade, Théo, Marine</strong> : se réjouissent, se moquent du "havre secret" sans savoir ce que c'est</li>
     <li><strong>Kevin</strong> : exprime deux fois son inquiétude (<em>"on est peut-être allés trop loin"</em>) avant d'être réduit au silence par le groupe</li>
-    <li>Référence explicite au "havre secret" — terme moqué mais non élucidé — ce qui incite le joueur à aller chercher l'information ailleurs (→ Inès)</li>
+    <li>Référence explicite au "havre secret" - terme moqué mais non élucidé - ce qui incite le joueur à aller chercher l'information ailleurs (→ Inès)</li>
   </ul>
 </div>
 
@@ -334,18 +334,18 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 
 <h4>Fichiers modifiés</h4>
 <ul>
-  <li><span class="file-ref">3_Groupe_Secret_textes.js</span> — Phase 6 (messages 40–58), endMessage enrichi</li>
-  <li><span class="file-ref">3_Groupe_Secret_Structure.js</span> — setItem localStorage dans showEndState()</li>
+  <li><span class="file-ref">3_Groupe_Secret_textes.js</span> - Phase 6 (messages 40–58), endMessage enrichi</li>
+  <li><span class="file-ref">3_Groupe_Secret_Structure.js</span> - setItem localStorage dans showEndState()</li>
 </ul>
 
 
 <!-- PARTIE 4 -->
-<h2 id="partie4" style="margin-top:32px;">Partie 4 — Convaincre Clara</h2>
+<h2 id="partie4" style="margin-top:32px;">Partie 4 - Convaincre Clara</h2>
 
 <div class="mod-block changed">
   <h4>Texte d'introduction <span class="badge badge-changed">modifié</span></h4>
   <p>L'écran titre explique désormais clairement l'enjeu : Clara est réfugiée chez sa tante, et le joueur doit <strong>d'abord convaincre la tante</strong> qu'il est digne de confiance avant de pouvoir lui parler.</p>
-  <blockquote>« Clara a quitté le collège depuis trois semaines et s'est réfugiée chez sa tante. Tu es Léo, son ami. Pour parler à Clara, tu dois d'abord convaincre sa tante que tu es digne de confiance — et que tu es vraiment là pour l'aider. »</blockquote>
+  <blockquote>« Clara a quitté le collège depuis trois semaines et s'est réfugiée chez sa tante. Tu es Léo, son ami. Pour parler à Clara, tu dois d'abord convaincre sa tante que tu es digne de confiance - et que tu es vraiment là pour l'aider. »</blockquote>
 </div>
 
 <div class="mod-block removed">
@@ -361,15 +361,15 @@ blockquote{border-left:3px solid var(--accent);padding:10px 18px;margin:14px 0;c
 
 <h4>Fichiers modifiés</h4>
 <ul>
-  <li><span class="file-ref">4_Convaincre_Clara_textes.js</span> — texte d'introduction (champ <code>titre.sub</code>)</li>
-  <li><span class="file-ref">4_Convaincre_Clara_Structure.js</span> — suppression des toasts fb dans <code>onMainChoice()</code></li>
-  <li><span class="file-ref">4_Convaincre_Clara.html</span> — CSS du bouton <code>.btn-continue</code></li>
+  <li><span class="file-ref">4_Convaincre_Clara_textes.js</span> - texte d'introduction (champ <code>titre.sub</code>)</li>
+  <li><span class="file-ref">4_Convaincre_Clara_Structure.js</span> - suppression des toasts fb dans <code>onMainChoice()</code></li>
+  <li><span class="file-ref">4_Convaincre_Clara.html</span> - CSS du bouton <code>.btn-continue</code></li>
 </ul>
 
 
 <!-- ═══ 5. SESSION DU 9 SEPTEMBRE 2026 ═══ -->
 <div class="section-break"></div>
-<h2 id="session-sept">5. Modifications du 9 septembre 2026 — relecture critique</h2>
+<h2 id="session-sept">5. Modifications du 9 septembre 2026 - relecture critique</h2>
 
 <p>Vingt-sept constats ont été relevés lors d'une relecture complète du jeu (fond pédagogique,
 crédibilité, ergonomie, écriture), puis tranchés un par un. Cette section liste ce qui a été fait.
@@ -382,8 +382,8 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
   qu'une fois, dans une ligne de ressources, et « bloquer » jamais. Chaque conversation de harceleur porte
   maintenant un bouton qui ouvre les trois gestes dans l'ordre qui compte : capture d'écran d'abord (sinon
   on perd la preuve), blocage, puis signalement au réseau et à un adulte.</p>
-  <p><strong>L'écran de fin ne s'arrête plus à Clara.</strong> Il dit ce que Léo fait le lendemain — il va
-  voir le CPE, montre ses captures, signale les comptes — puis ce qui arrive aux cinq du groupe : enquête
+  <p><strong>L'écran de fin ne s'arrête plus à Clara.</strong> Il dit ce que Léo fait le lendemain - il va
+  voir le CPE, montre ses captures, signale les comptes - puis ce qui arrive aux cinq du groupe : enquête
   du collège, et rappel que le harcèlement scolaire est un délit depuis 2022.</p>
   <p><strong>La Partie 3 se termine sur le témoin.</strong> Deux blocs : « Et Kevin ? », qui liste les
   quatre gestes qu'il aurait pu faire, et « Pourquoi Clara ? », qui rappelle qu'ils ne le disent jamais et
@@ -399,7 +399,7 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
   l'affichait</strong> : la partie la plus dure du jeu n'en avait aucun. Il s'ouvre maintenant juste après
   la connexion, et rien ne démarre derrière tant qu'il est là.</p>
   <p>Un écran « Avant de continuer » revient, en sortie de Partie 2, sur ce que le joueur vient de faire du
-  compte de Clara — et sur le fait qu'entrer dans le compte de quelqu'un reste interdit, même quand on
+  compte de Clara - et sur le fait qu'entrer dans le compte de quelqu'un reste interdit, même quand on
   s'inquiète.</p>
 </div>
 
@@ -407,11 +407,11 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
   <h4>Crédibilité <span class="badge">corrigé</span></h4>
   <ul>
     <li>Le code du groupe est <strong>assumé comme un dispositif d'exercice</strong> : un groupe Whatsupp
-    n'a pas de code d'accès. Le journal de Clara ne prétend plus l'avoir obtenu — elle écrit qu'elle ne
+    n'a pas de code d'accès. Le journal de Clara ne prétend plus l'avoir obtenu - elle écrit qu'elle ne
     peut ni y entrer ni rien prouver.</li>
     <li><strong>Chronologie unifiée</strong> : harcèlement depuis huit mois, exclusion du groupe depuis
     trois semaines, fuite il y a cinq jours. Les quatre parties racontaient des durées différentes.</li>
-    <li><strong>Prénoms</strong> : Lucas devient Enzo, Léa Girard devient Sarah — Léo était le troisième
+    <li><strong>Prénoms</strong> : Lucas devient Enzo, Léa Girard devient Sarah - Léo était le troisième
     prénom en L et un testeur les a confondus.</li>
     <li><code>@anonymous_x0</code> était revendiqué par Théo puis par Enzo à deux messages d'intervalle :
     c'est maintenant un compte partagé, ce qui est réaliste.</li>
@@ -422,7 +422,7 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
 </div>
 
 <div class="mod-block changed">
-  <h4>Partie 2 — densité et progression <span class="badge">modifié</span></h4>
+  <h4>Partie 2 - densité et progression <span class="badge">modifié</span></h4>
   <ul>
     <li><strong>Huit QCM dormaient dans le fichier de textes</strong> sans jamais être appelés. Ils sont
     rebranchés, et rattachés aux neuf types (leur ancien champ « type » était une phrase, pas une clé).</li>
@@ -436,11 +436,11 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
 </div>
 
 <div class="mod-block changed">
-  <h4>Partie 3 — une mission, enfin <span class="badge badge-new">ajouté</span></h4>
+  <h4>Partie 3 - une mission, enfin <span class="badge badge-new">ajouté</span></h4>
   <p>La partie n'avait aucun objectif. Le joueur doit maintenant <strong>démasquer les cinq comptes
   anonymes</strong> que le groupe nomme à voix haute : un compteur suit sa progression, chaque @mention
   ouvre une carte, et les comptes portent ensuite le prénom de leur propriétaire quand on retourne sur
-  l'Instaclasse de la Partie 2. C'est l'asymétrie que le jeu raconte — le joueur sait, Clara jamais.</p>
+  l'Instaclasse de la Partie 2. C'est l'asymétrie que le jeu raconte - le joueur sait, Clara jamais.</p>
   <p>Les messages ne défilent plus tout seuls (55 messages en 95 secondes) : chacun attend un appui.</p>
 </div>
 
@@ -465,7 +465,7 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
     <li><strong>Bouton « Nouvelle enquête »</strong> sur le menu : sur tablette partagée, le groupe suivant
     héritait de la progression du précédent.</li>
     <li><strong>Un code de reprise de sept caractères</strong> (<span class="file-ref">sauvegarde.js</span>)
-    couvre les quatre parties et fonctionne d'un appareil à l'autre — rien n'est stocké ailleurs que dans
+    couvre les quatre parties et fonctionne d'un appareil à l'autre - rien n'est stocké ailleurs que dans
     le code lui-même.</li>
     <li><strong>Choix Léo ou Léa</strong> sur l'accueil (<span class="file-ref">prenom.js</span>), accords
     grammaticaux compris.</li>
@@ -497,9 +497,9 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
   <p>Les textes complets et le guide pédagogique sont maintenant produits par script à partir des fichiers
   du jeu :</p>
   <ul>
-    <li><span class="file-ref">node dump_textes.js</span> — extrait tous les textes vers un JSON</li>
-    <li><span class="file-ref">python gen_doc.py</span> — écrit doc_textes_partenaires.docx et .html</li>
-    <li><span class="file-ref">python gen_guide.py</span> — écrit le guide pédagogique</li>
+    <li><span class="file-ref">node dump_textes.js</span> - extrait tous les textes vers un JSON</li>
+    <li><span class="file-ref">python gen_doc.py</span> - écrit doc_textes_partenaires.docx et .html</li>
+    <li><span class="file-ref">python gen_guide.py</span> - écrit le guide pédagogique</li>
   </ul>
   <p>À relancer après chaque modification des textes. L'ancien
   <span class="file-ref">gen_docx.py</span>, où les 9 500 mots étaient recopiés à la main, a été
@@ -508,7 +508,7 @@ des fichiers du jeu</strong> : ils ne peuvent plus dériver.</p>
 
 <!-- ═══ 6. NOMS D'APPLICATIONS ═══ -->
 <div class="section-break"></div>
-<h2 id="marques">6. Noms d'applications fictifs — 10 septembre 2026</h2>
+<h2 id="marques">6. Noms d'applications fictifs - 10 septembre 2026</h2>
 
 <p>Le jeu reprenait les noms et l'apparence de deux services réels. Ils sont remplacés par des
 noms inventés : le jeu ne se réclame plus d'aucune marque existante, ce qui est plus sûr
@@ -565,7 +565,7 @@ juridiquement et évite de faire de la publicité en classe.</p>
 <h2 id="flux-narratif">7. Flux narratif complet</h2>
 
 <div class="flow" style="flex-wrap:wrap;gap:4px;">
-  <div class="flow-step"><strong>Menu</strong>index.html — présentation des 4 parties</div>
+  <div class="flow-step"><strong>Menu</strong>index.html - présentation des 4 parties</div>
   <div class="flow-step"><strong>Partie 1</strong>Appel à Inès → obtenir codes Instaclasse + révélations sur le harcèlement</div>
   <div class="flow-step"><strong>Partie 2</strong>Explorer l'Instaclasse de Clara → identifier 4 types de harcèlement → débloquer le journal de Clara → code Whatsupp 4827</div>
   <div class="flow-step"><strong>Partie 3</strong>Lire le groupe Whatsupp → comprendre l'organisation → voir Clara disparaître</div>
@@ -573,7 +573,7 @@ juridiquement et évite de faire de la publicité en classe.</p>
   <div class="flow-step"><strong>Partie 4</strong>Appeler le restaurant → convaincre la tante → parler à Clara</div>
 </div>
 
-<p style="margin-top:14px;font-size:13px;color:var(--dim);">Note : le retour vers Inès entre la Partie 3 et la Partie 4 est volontairement non guidé — le joueur doit faire le lien par lui-même entre la mention du "havre secret" dans le groupe Whatsupp et l'idée de rappeler Inès.</p>
+<p style="margin-top:14px;font-size:13px;color:var(--dim);">Note : le retour vers Inès entre la Partie 3 et la Partie 4 est volontairement non guidé - le joueur doit faire le lien par lui-même entre la mention du "havre secret" dans le groupe Whatsupp et l'idée de rappeler Inès.</p>
 
 
 <!-- ═══ 6. PENDING ═══ -->
@@ -585,10 +585,10 @@ juridiquement et évite de faire de la publicité en classe.</p>
   <p>Deux portes d'accès peuvent être franchies sans le code, ce qui est pratique pour tester mais
   vide l'exercice de son sens en séance :</p>
   <ul>
-    <li><strong>Partie 3</strong> — un lien « Accéder directement → » sous le champ du code
+    <li><strong>Partie 3</strong> - un lien « Accéder directement → » sous le champ du code
     (<span class="file-ref">3_Groupe_Secret.html</span> et <span class="file-ref">_en.html</span>,
     fonction <code>bypassGate()</code>). Le code <strong>4827</strong> lui-même fonctionne normalement.</li>
-    <li><strong>Partie 4</strong> — un lien « Passer » qui n'apparaît qu'après trois tentatives ratées
+    <li><strong>Partie 4</strong> - un lien « Passer » qui n'apparaît qu'après trois tentatives ratées
     du numéro de téléphone (<span class="file-ref">4_Convaincre_Clara.html</span>, élément
     <code>#pg-skip</code>). Celui-ci est volontaire : il évite qu'un élève reste bloqué. À conserver
     ou retirer selon le déroulé souhaité.</li>
@@ -606,12 +606,12 @@ juridiquement et évite de faire de la publicité en classe.</p>
 <div class="mod-block warn">
   <h4>À vérifier en conditions réelles <span class="badge badge-pending">à tester</span></h4>
   <ul>
-    <li>Partie 2 — mode sélection dans la lightbox sur smartphone (taille de la zone tactile des commentaires).</li>
-    <li>Partie 3 — la nouvelle mission « relier les comptes Instaclasse et Whatsupp » : vérifier que la
+    <li>Partie 2 - mode sélection dans la lightbox sur smartphone (taille de la zone tactile des commentaires).</li>
+    <li>Partie 3 - la nouvelle mission « relier les comptes Instaclasse et Whatsupp » : vérifier que la
     consigne est comprise sans aide de l'enseignant.</li>
-    <li>Écran « Avant de continuer » (avertissement de contenu) — le ton peut être réécrit selon
+    <li>Écran « Avant de continuer » (avertissement de contenu) - le ton peut être réécrit selon
     l'établissement.</li>
-    <li>Code de reprise à 7 caractères — tester un aller-retour entre deux navigateurs.</li>
+    <li>Code de reprise à 7 caractères - tester un aller-retour entre deux navigateurs.</li>
   </ul>
 </div>
 
@@ -628,20 +628,20 @@ juridiquement et évite de faire de la publicité en classe.</p>
   <p>Les repères de progression utilisent <code>localStorage</code> (persistant entre sessions) et
   <code>sessionStorage</code> (limité à l'onglet courant) :</p>
   <ul>
-    <li><code>rc_prenom</code> — localStorage — prénom choisi (Léo / Léa), accorde tous les textes</li>
-    <li><code>rc_p1_visited</code> — localStorage — Partie 1 visitée (bouton « Reprendre » sur l'accueil)</li>
-    <li><code>rc_types</code> — localStorage — types de harcèlement identifiés en Partie 2</li>
-    <li><code>rc_p3_done</code> — localStorage — Partie 3 terminée (0/1/2 : active la 2<sup>e</sup> conversation d'Inès)</li>
-    <li><code>rc_comptes</code> — localStorage — comptes Instaclasse reliés à leur auteur Whatsupp</li>
-    <li><code>rc_p4</code> — localStorage — score et choix de la Partie 4</li>
-    <li><code>rc_fin</code> — localStorage — fin obtenue</li>
-    <li><code>rc_remarques</code> — localStorage — remarques en attente d'envoi</li>
-    <li><code>harcelement_wa_state</code> — sessionStorage — position dans la Partie 3 (retour depuis Instaclasse)</li>
-    <li><code>harcelement_wa_from</code> — sessionStorage — provenance (bouton « Retour au groupe » en Partie 2)</li>
+    <li><code>rc_prenom</code> - localStorage - prénom choisi (Léo / Léa), accorde tous les textes</li>
+    <li><code>rc_p1_visited</code> - localStorage - Partie 1 visitée (bouton « Reprendre » sur l'accueil)</li>
+    <li><code>rc_types</code> - localStorage - types de harcèlement identifiés en Partie 2</li>
+    <li><code>rc_p3_done</code> - localStorage - Partie 3 terminée (0/1/2 : active la 2<sup>e</sup> conversation d'Inès)</li>
+    <li><code>rc_comptes</code> - localStorage - comptes Instaclasse reliés à leur auteur Whatsupp</li>
+    <li><code>rc_p4</code> - localStorage - score et choix de la Partie 4</li>
+    <li><code>rc_fin</code> - localStorage - fin obtenue</li>
+    <li><code>rc_remarques</code> - localStorage - remarques en attente d'envoi</li>
+    <li><code>harcelement_wa_state</code> - sessionStorage - position dans la Partie 3 (retour depuis Instaclasse)</li>
+    <li><code>harcelement_wa_from</code> - sessionStorage - provenance (bouton « Retour au groupe » en Partie 2)</li>
   </ul>
   <p>Ces repères ne quittent jamais le navigateur. Pour changer de poste, le joueur utilise le
   <strong>code de reprise à 7 caractères</strong> affiché sur l'accueil, qui encode la progression
-  sans aucun envoi réseau. Un bouton « ↺ Nouvelle enquête » remet tout à zéro — indispensable sur
+  sans aucun envoi réseau. Un bouton « ↺ Nouvelle enquête » remet tout à zéro - indispensable sur
   tablette partagée.</p>
 </div>
 
@@ -666,7 +666,7 @@ juridiquement et évite de faire de la publicité en classe.</p>
 </div><!-- /page-body -->
 
 <div style="background:var(--text);color:#5a5040;font-family:-apple-system,'Segoe UI',sans-serif;font-size:11px;text-align:center;padding:18px;letter-spacing:.06em;">
-  Retrouver Clara — Document interne — mis à jour le 10 septembre 2026
+  Retrouver Clara - Document interne - mis à jour le 10 septembre 2026
 </div>
 
 </body>

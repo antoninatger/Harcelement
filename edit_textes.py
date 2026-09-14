@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-edit_textes.py  —  Éditeur graphique pour 1_Telephone_Ines_textes.js
+edit_textes.py  -  Éditeur graphique pour 1_Telephone_Ines_textes.js
 Double-clique pour lancer.
 """
 
@@ -43,7 +43,7 @@ class App:
         self.T     = None
         self.json5 = get_json5()
 
-        root.title("Éditeur Textes — Inès")
+        root.title("Éditeur Textes - Inès")
         root.configure(bg=BG)
         root.geometry("940x680")
         root.minsize(700, 500)
@@ -64,7 +64,7 @@ class App:
         # Barre du haut
         bar = tk.Frame(self.root, bg=SURFACE, pady=8)
         bar.pack(fill='x')
-        tk.Label(bar, text="✏  Éditeur — Inès", bg=SURFACE, fg=TEXT,
+        tk.Label(bar, text="✏  Éditeur - Inès", bg=SURFACE, fg=TEXT,
                  font=('Segoe UI', 12, 'bold')).pack(side='left', padx=16)
         tk.Button(bar, text="💾  Sauvegarder", bg=ACCENT, fg='white',
                   font=('Segoe UI', 10, 'bold'), relief='flat', padx=14, pady=4,
@@ -332,7 +332,7 @@ class App:
             if isinstance(v, str):
                 self._field(parent, prefix + k, obj, k, multi=len(v) > 70)
             elif isinstance(v, dict):
-                tk.Label(parent, text=f'— {k} —', bg=SURFACE, fg=DIM,
+                tk.Label(parent, text=f'- {k} -', bg=SURFACE, fg=DIM,
                          font=('Segoe UI', 8)).pack(anchor='w', pady=(6,0))
                 self._fin_fields(parent, v, prefix=k+'.')
 

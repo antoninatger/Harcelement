@@ -1,20 +1,20 @@
 /* =========================================================================
-   retour.js — bouton « Message » et envoi des remarques par e-mail
+   retour.js - bouton « Message » et envoi des remarques par e-mail
    -------------------------------------------------------------------------
    Un petit bouton 💬 en haut à droite, à côté du plein écran, sur l'accueil
    et sur les quatre parties. Il ouvre une fenêtre unique qui fait deux
    choses, comme demandé :
 
-   1. NOTER — le joueur écrit une remarque à n'importe quel moment. Elle est
+   1. NOTER - le joueur écrit une remarque à n'importe quel moment. Elle est
       rangée dans le localStorage avec l'endroit exact où il se trouvait
       (partie, écran, avancement, dernière réplique affichée), et elle
       survit au passage d'une partie à l'autre (les quatre parties sont des
       pages séparées : sans ce stockage, chaque remarque serait perdue au
-      changement de page). Quand le navigateur refuse le stockage — le jeu
-      tourne en cadre tiers, voir le bloc STOCKAGE —, la fenêtre le dit au
+      changement de page). Quand le navigateur refuse le stockage - le jeu
+      tourne en cadre tiers, voir le bloc STOCKAGE -, la fenêtre le dit au
       lieu de perdre la remarque en silence.
 
-   2. ENVOYER — à la fin de l'exercice, un seul bouton envoie l'ensemble des
+   2. ENVOYER - à la fin de l'exercice, un seul bouton envoie l'ensemble des
       remarques accumulées dans un seul e-mail. La technique d'envoi est
       celle du Fakemètre et de Radar'naque : Web3Forms, une requête POST en
       JSON, pas de back-end, pas de dépendance.
@@ -51,15 +51,15 @@
   else if (fichier.indexOf('4_') === 0) partie = 4;
 
   var ETAPES_FR = ['Accueil',
-    'Partie 1 — Le téléphone d’Inès',
-    'Partie 2 — L’Instaclasse de Clara',
-    'Partie 3 — Le groupe Whatsupp',
-    'Partie 4 — Convaincre Clara'];
+    'Partie 1 - Le téléphone d’Inès',
+    'Partie 2 - L’Instaclasse de Clara',
+    'Partie 3 - Le groupe Whatsupp',
+    'Partie 4 - Convaincre Clara'];
   var ETAPES_EN = ['Home',
-    'Part 1 — Inès’s phone',
-    'Part 2 — Clara’s Instaclasse',
-    'Part 3 — The Whatsupp group',
-    'Part 4 — Convincing Clara'];
+    'Part 1 - Inès’s phone',
+    'Part 2 - Clara’s Instaclasse',
+    'Part 3 - The Whatsupp group',
+    'Part 4 - Convincing Clara'];
   var etape = (EN ? ETAPES_EN : ETAPES_FR)[partie];
 
   /* Ce qui, dans le DOM, signale que la partie est terminée. Un sélecteur
@@ -74,8 +74,8 @@
     ajouter: 'Add this note',
     ajoute: 'Note added.',
     jointe: 'Where you are in the exercise is attached automatically, so I can find the spot.',
-    sansMemoire: 'This browser will not let the page remember anything between the four parts. Send this note now — it would be lost when you move on.',
-    sousSansMemoire: 'A remark, an idea, something that feels off? Write it here — I read everything.',
+    sansMemoire: 'This browser will not let the page remember anything between the four parts. Send this note now - it would be lost when you move on.',
+    sousSansMemoire: 'A remark, an idea, something that feels off? Write it here - I read everything.',
     liste: 'Your notes so far',
     vide: 'No note yet.',
     supprimer: 'Delete this note',
@@ -86,7 +86,7 @@
     envoiEnCours: 'Sending…',
     fermer: 'Close',
     videErreur: 'Write a note before sending.',
-    merci: 'Thank you — it has been sent!',
+    merci: 'Thank you - it has been sent!',
     erreur: 'Sending failed. Try again, or write to contact@antoninatger.com',
     finTexte: 'End of this part. Anything to tell me about the exercise?',
     finCta: 'Send my notes'
@@ -117,18 +117,18 @@
   };
 
   /* =====================================================================
-     STOCKAGE — le fil entre les quatre parties, quand il existe
+     STOCKAGE - le fil entre les quatre parties, quand il existe
      ---------------------------------------------------------------------
      Les quatre parties sont quatre pages : sans stockage partagé, une
      remarque notée en partie 1 disparaît en passant à la partie 2.
 
      Or le jeu tourne en cadre (iframe) sur antoninatger.com, servi depuis
      github.io : c'est du stockage tiers. Safari le bloque toujours, Chrome
-     dès que les cookies tiers sont refusés — et sur les postes d'un
+     dès que les cookies tiers sont refusés - et sur les postes d'un
      établissement, c'est fréquent. localStorage lève alors une exception.
 
      Dans ce cas on ne fait pas semblant : la mémoire tombe en RAM, ce qui
-     tient le temps d'une page, et la fenêtre le dit — « envoyez maintenant,
+     tient le temps d'une page, et la fenêtre le dit - « envoyez maintenant,
      je ne pourrai pas garder cette remarque ». Perdre les remarques d'un
      élève sans rien lui dire serait pire que de ne pas les proposer.
      ===================================================================== */
@@ -161,7 +161,7 @@
   }
 
   /* =====================================================================
-     OÙ ÉTAIT LE JOUEUR — relevé au moment où il écrit, pas à l'envoi
+     OÙ ÉTAIT LE JOUEUR - relevé au moment où il écrit, pas à l'envoi
      ---------------------------------------------------------------------
      « Je n'ai pas compris cette question » n'est réparable que si on sait
      laquelle. Chaque partie tient déjà sa position dans des variables au
@@ -174,7 +174,7 @@
      ===================================================================== */
 
   /* Les `var` du jeu sont des propriétés de window ; ses `let` et `const` au
-     premier niveau, non — ils vivent dans la portée lexicale globale. Un
+     premier niveau, non - ils vivent dans la portée lexicale globale. Un
      corps de Function, lui, est évalué dans cette portée : il les voit. */
   function glob(nom) {
     try {
@@ -280,7 +280,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     Habillage — injecté ici pour que les pages n'aient rien à déclarer.
+     Habillage - injecté ici pour que les pages n'aient rien à déclarer.
      Les z-index passent au-dessus du reste du jeu (10000 au maximum).
      --------------------------------------------------------------------- */
   var CSS = [
@@ -487,7 +487,7 @@
       try { ua = (navigator.userAgent || '').slice(0, 140); } catch (e) {}
 
       var lignes = [];
-      lignes.push(l.length + (EN ? ' note(s)' : ' remarque(s)') + ' — ' + (EN ? 'EN' : 'FR') +
+      lignes.push(l.length + (EN ? ' note(s)' : ' remarque(s)') + ' - ' + (EN ? 'EN' : 'FR') +
                   ' · ' + horodatage(new Date()) +
                   ' · ' + (EN ? 'window ' : 'fenêtre ') + window.innerWidth + '×' + window.innerHeight);
       if (ua) lignes.push(ua);
@@ -495,7 +495,7 @@
       for (var i = 0; i < l.length; i++) {
         var r = l[i];
         var quand = '';
-        try { if (r.date) quand = ' — ' + horodatage(new Date(r.date)); } catch (e) {}
+        try { if (r.date) quand = ' - ' + horodatage(new Date(r.date)); } catch (e) {}
         lignes.push('');
         lignes.push((i + 1) + '. ' + (r.etape || '?') + quand);
         if (r.ou) lignes.push('   ' + (EN ? 'where: ' : 'où : ') + r.ou);
@@ -509,13 +509,13 @@
 
       /* Web3Forms pose « email » en Reply-To du message qu'il expédie. Y
          mettre « non renseigné » quand le champ est vide fabrique un en-tête
-         invalide, et les filtres anti-spam — Outlook et Hotmail en tête —
+         invalide, et les filtres anti-spam - Outlook et Hotmail en tête -
          classent volontiers un message dont le Reply-To n'est pas une
          adresse. Le champ n'est pas obligatoire : quand il est vide ou
          manifestement mal saisi, on ne l'envoie pas du tout. */
       var envoi = {
         access_key: ACCESS_KEY,
-        subject: 'Retrouver Clara — ' + (EN ? 'notes' : 'remarques') + (nom ? ' — ' + nom : ''),
+        subject: 'Retrouver Clara - ' + (EN ? 'notes' : 'remarques') + (nom ? ' - ' + nom : ''),
         name: nom || (EN ? 'Anonymous' : 'Anonyme'),
         message: lignes.join('\n')
       };
@@ -567,7 +567,7 @@
     dessinerListe();
 
     /* ------------------------------------------------------------------
-       Fin de partie — le bandeau, une seule fois par page. La détection
+       Fin de partie - le bandeau, une seule fois par page. La détection
        lit le DOM et ne touche à rien : voir FINS en haut du fichier.
        ------------------------------------------------------------------ */
     var selFin = FINS[partie];

@@ -307,7 +307,7 @@ function appendSystem(text) {
 function appendTimeSep(text) {
   var el = document.createElement('div');
   el.className = 'time-sep';
-  el.textContent = '— ' + text + ' —';
+  el.textContent = '- ' + text + ' -';
   document.getElementById('messages-container').appendChild(el);
 }
 
@@ -490,7 +490,7 @@ function showEndState() {
     var n = Object.keys(comptesTrouves).length;
     var lignes = C.liste.map(function (e) {
       var vu = !!comptesTrouves[e.handle];
-      return '<li>@' + esc(e.handle) + ' — <strong>' + (vu ? esc(e.qui) : '?') + '</strong></li>';
+      return '<li>@' + esc(e.handle) + ' - <strong>' + (vu ? esc(e.qui) : '?') + '</strong></li>';
     }).join('');
     extra.innerHTML += '<div class="end-kevin"><h4>🕵️ ' + n + '/' + C.liste.length + ' ' + esc(C.label)
       + '</h4><ul>' + lignes + '</ul><p class="k-note">' + esc(C.cardNote) + '</p></div>';

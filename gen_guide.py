@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-gen_guide.py — le guide pédagogique, régénéré à partir du jeu.
+gen_guide.py - le guide pédagogique, régénéré à partir du jeu.
 
     node dump_textes.js
     python gen_guide.py     → Retrouver_Clara_Guide_Pedagogique.docx
@@ -20,7 +20,7 @@ ICI = os.path.dirname(os.path.abspath(__file__)) or '.'
 os.chdir(ICI)
 OUT = 'Retrouver_Clara_Guide_Pedagogique.docx'
 if not os.path.exists('_textes_dump.json'):
-    sys.exit("_textes_dump.json manquant — lancez d'abord : node dump_textes.js")
+    sys.exit("_textes_dump.json manquant - lancez d'abord : node dump_textes.js")
 D = json.load(open('_textes_dump.json', encoding='utf-8'))
 
 NOIR = RGBColor(0x1a, 0x1a, 0x1e); GRIS = RGBColor(0x66, 0x66, 0x70)
@@ -87,11 +87,11 @@ def H3(txt):
     run(para, txt, bold=True, size=10, color=BLEU, font='Arial')
 def puce(txt, indent=300):
     para = doc.add_paragraph(); esp(para, after=40); retrait(para, left=indent, hanging=180)
-    run(para, '—  ', color=DIM); run(para, txt, size=10.5)
+    run(para, '-  ', color=DIM); run(para, txt, size=10.5)
 def etape(n, titre, txt):
     para = doc.add_paragraph(); esp(para, before=80, after=50); retrait(para, left=160)
     bord_g(para, '2a4a7a', sz=12)
-    run(para, 'Étape %s — %s' % (n, titre), bold=True, size=10, color=BLEU, font='Arial')
+    run(para, 'Étape %s - %s' % (n, titre), bold=True, size=10, color=BLEU, font='Arial')
     para.add_run('\n'); run(para, txt, size=10.5)
 def encart(titre, lignes, coul='2a7a50', fill='F4FAF7'):
     para = doc.add_paragraph(); esp(para, before=100, after=90); retrait(para, left=160)
@@ -125,7 +125,7 @@ p = P(align=WD_ALIGN_PARAGRAPH.CENTER); run(p, 'Jeu de sensibilisation au harcè
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; esp(p, before=60, after=60); bord_b(p, '1a1a1a', sz=12)
 run(p, 'Retrouver Clara', italic=True, size=28)
 p = P(align=WD_ALIGN_PARAGRAPH.CENTER, before=80, after=30)
-run(p, 'Guide pédagogique — déroulement du jeu, partie par partie', size=11, color=GRIS)
+run(p, 'Guide pédagogique - déroulement du jeu, partie par partie', size=11, color=GRIS)
 p = P(align=WD_ALIGN_PARAGRAPH.CENTER, after=40)
 run(p, "Document destiné aux animateurs et aux associations partenaires", size=10, color=GRIS)
 p = P(align=WD_ALIGN_PARAGRAPH.CENTER, after=200)
@@ -133,7 +133,7 @@ run(p, 'Version du %s' % DATE, size=8.5, color=DIM, font='Arial')
 
 H2('Présentation générale')
 P("Retrouver Clara est un jeu de sensibilisation en ligne composé de quatre parties, jouables "
-  "l'une après l'autre. Le joueur incarne Léo — ou Léa, au choix, sur l'écran d'accueil — un ami "
+  "l'une après l'autre. Le joueur incarne Léo - ou Léa, au choix, sur l'écran d'accueil - un ami "
   "de Clara, quatorze ans, qui ne vient plus au collège depuis cinq jours. En reconstituant ce "
   "qu'elle a vécu, il apprend à reconnaître les formes du harcèlement, à faire les gestes qui "
   "protègent, et à trouver les mots pour parler à quelqu'un qui va mal.")
@@ -160,7 +160,7 @@ H1('Partie 1', "Le téléphone d'Inès")
 P('📱  Durée estimée : 5 à 8 minutes', size=9.5, color=GRIS, after=110)
 H2('Contexte narratif')
 P("Inès est la meilleure amie de Clara. Le joueur lui écrit sans la connaître, et doit gagner "
-  "assez de sa confiance pour qu'elle accepte de parler. Inès se méfie — et elle a raison de se "
+  "assez de sa confiance pour qu'elle accepte de parler. Inès se méfie - et elle a raison de se "
   "méfier : c'est le premier point à faire remarquer aux élèves.")
 H2('Ce que le joueur fait')
 puce("Il répond à Inès par des choix multiples, six échanges plus une ouverture.")
@@ -177,10 +177,10 @@ encart("Point d'attention pour l'animateur", [
 ])
 H2('Ce que le joueur apprend')
 for r in D['p1']['TEXTES']['REVELATIONS']:
-    puce('%s — %s' % (r['title'], r['txt']))
+    puce('%s - %s' % (r['title'], r['txt']))
 H2('Transition vers la Partie 2')
-P("Si la confiance est suffisante, Inès fait promettre deux choses au joueur — faire attention à "
-  "ce qu'il lit, et respecter la vie privée de Clara — puis lui donne les identifiants du compte "
+P("Si la confiance est suffisante, Inès fait promettre deux choses au joueur - faire attention à "
+  "ce qu'il lit, et respecter la vie privée de Clara - puis lui donne les identifiants du compte "
   "Instaclasse de Clara. Elle explique pourquoi elle les a : elles se connectaient sur le même "
   "téléphone l'an dernier.")
 encart("À discuter en débrief", [
@@ -198,7 +198,7 @@ P("Le joueur se connecte au compte de Clara et découvre %d publications et %d c
   % (NB_PHOTOS, NB_CONV))
 H2('Déroulement étape par étape')
 etape('1', 'Connexion', "Le joueur saisit les identifiants qu'Inès lui a donnés. Un bouton en forme "
-      "d'œil permet de vérifier ce qu'il tape — utile sur téléphone. Un lien « Accéder directement » "
+      "d'œil permet de vérifier ce qu'il tape - utile sur téléphone. Un lien « Accéder directement » "
       "existe pour l'animateur pressé.")
 etape('2', 'Avertissement de contenu', "Un écran prévient que ce qui suit simule ce que vit une "
       "victime, que les messages sont fictifs mais représentent une réalité, et que l'objectif est "
@@ -206,7 +206,7 @@ etape('2', 'Avertissement de contenu', "Un écran prévient que ce qui suit simu
 etape('3', 'Exploration libre', "Le joueur parcourt les photos et les messages à son rythme. Aucun "
       "minuteur ne le presse.")
 etape('4', "« Qu'est-ce que tu observes ? »", "La question arrive quand le joueur a réellement "
-      "regardé — au moins deux photos et deux conversations — et jamais pendant qu'il lit. Un "
+      "regardé - au moins deux photos et deux conversations - et jamais pendant qu'il lit. Un "
       "bouton « Dire ce que j'observe » permet de répondre plus tôt. Le jeu accepte harcèlement, "
       "cyberharcèlement, intimidation, bullying et leurs variantes.")
 etape('5', 'Mission', "Identifier %d des %d types de harcèlement. Le bouton « Identifier un "
@@ -220,7 +220,7 @@ etape('7', 'Signalement', "Sur chaque conversation de harceleur, un bouton propo
       "puis signalement au réseau et à un adulte.")
 H2('Les %d types de harcèlement' % NB_TYPES)
 for k, t in T2['HARCEL_TYPES'].items():
-    puce('%s — %s' % (t['label'], t['desc']))
+    puce('%s - %s' % (t['label'], t['desc']))
 H2("Fin de la partie")
 P("À six types identifiés, le journal intime de Clara apparaît dans la liste des messages. Elle y "
   "écrit qu'elle a découvert l'existence d'un groupe secret, qu'elle ne sait même pas comment elle "
@@ -243,7 +243,7 @@ P("Le joueur lit %d messages échangés par les cinq élèves qui ont organisé 
   % (NB_MSG3, T3['group']['subtitle']))
 H2('Déroulement étape par étape')
 etape('1', "Code de l'exercice", "Le joueur saisit 4827. L'écran dit clairement qu'un vrai groupe "
-      "Whatsupp n'a pas de code d'accès et que ce verrou est celui de l'exercice — ce qui suit, en "
+      "Whatsupp n'a pas de code d'accès et que ce verrou est celui de l'exercice - ce qui suit, en "
       "revanche, est bien ce que le groupe a écrit.")
 etape('2', 'Avertissement', "Un rappel que les échanges sont fictifs mais montrent comment le "
       "harcèlement se coordonne en coulisse.")
@@ -256,15 +256,15 @@ etape('5', "Points d'analyse", "Deux questions arrivent pendant la lecture : l'u
       "doute mais se tait ; l'autre sur l'intérêt des comptes anonymes pour les harceleurs.")
 H2('Les comptes à démasquer')
 for e_ in T3['comptes']['liste']:
-    puce('@%s — %s' % (e_['handle'], e_['qui']))
+    puce('@%s - %s' % (e_['handle'], e_['qui']))
 P("Une fois démasqués, ces comptes portent le prénom de leur propriétaire quand le joueur retourne "
   "sur l'Instaclasse de Clara. C'est l'asymétrie que le jeu raconte : le joueur sait, Clara non.",
   before=40)
 H2('Fin de la partie')
 P("La synthèse reprend les mécanismes du harcèlement de groupe, puis deux blocs de discussion.")
-puce("« Et Kevin ? » — ce que le témoin aurait pu faire, et qu'il n'a pas fait. C'est le rôle que "
+puce("« Et Kevin ? » - ce que le témoin aurait pu faire, et qu'il n'a pas fait. C'est le rôle que "
      "la plupart des élèves occupent réellement.")
-puce("« Pourquoi Clara ? » — le groupe ne le dit jamais. La seule justification est « elle l'a bien "
+puce("« Pourquoi Clara ? » - le groupe ne le dit jamais. La seule justification est « elle l'a bien "
      "cherché ». Il n'y a pas de raison, et en chercher une revient déjà à donner tort à la victime.")
 
 # ── PARTIE 4 ────────────────────────────────────────────────────────────────
@@ -292,8 +292,8 @@ for f in T4['fins']:
            [f['corps'].replace('\n\n', ' ').replace('\n', ' '), f['citation'].replace('\n', ' ')],
            coul=coul[0], fill=coul[1])
 H2('Après la fin')
-P("L'écran de fin ne s'arrête plus à Clara. Il dit ce que Léo fait le lendemain — il va voir le "
-  "CPE, montre ses captures, signale les comptes — puis ce qui arrive aux cinq du groupe : le "
+P("L'écran de fin ne s'arrête plus à Clara. Il dit ce que Léo fait le lendemain - il va voir le "
+  "CPE, montre ses captures, signale les comptes - puis ce qui arrive aux cinq du groupe : le "
   "collège ouvre une enquête, et le harcèlement scolaire est un délit en France depuis 2022.")
 P("Un bouton ouvre enfin le récapitulatif imprimable : les neuf types avec ceux que le groupe a "
   "identifiés, les comptes démasqués, la fin obtenue, les numéros d'aide, et deux lignes à "
@@ -301,7 +301,7 @@ P("Un bouton ouvre enfin le récapitulatif imprimable : les neuf types avec ceux
 
 H2("Où trouver de l'aide")
 for r in RES['liste']:
-    puce('%s — %s' % (r['label'], r['txt']))
+    puce('%s - %s' % (r['label'], r['txt']))
 P("Ces numéros sont dans le fichier ressources.js : c'est le seul endroit à modifier pour adapter "
   "le jeu à un autre pays. La version anglaise donne les numéros européens.", size=9.5, color=GRIS)
 
@@ -311,7 +311,7 @@ H2('Avant la séance')
 puce("Tester le parcours complet sur le matériel qui sera utilisé.")
 puce("Ouvrir le jeu depuis index.html, jamais une partie directement : la progression et le prénom "
      "choisi passent par l'accueil.")
-puce("Sur tablette partagée, penser au bouton « Nouvelle enquête » entre deux groupes — sans lui, "
+puce("Sur tablette partagée, penser au bouton « Nouvelle enquête » entre deux groupes - sans lui, "
      "le groupe suivant hérite de la progression du précédent.")
 puce("Vérifier que les numéros affichés sont ceux du pays où se déroule la séance.")
 H2('Pendant la séance')
@@ -329,7 +329,7 @@ puce("Rappeler les numéros, et que la loi protège les victimes (article 222-33
 
 p = doc.add_paragraph(); esp(p, before=260, after=0); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 bord_b(p, 'eeeeee', sz=4)
-run(p, "Retrouver Clara — guide pédagogique produit à partir des fichiers du jeu, le %s." % DATE,
+run(p, "Retrouver Clara - guide pédagogique produit à partir des fichiers du jeu, le %s." % DATE,
     size=8, color=DIM, font='Arial')
 
 doc.save(OUT)

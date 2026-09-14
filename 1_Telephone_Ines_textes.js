@@ -75,7 +75,7 @@ var TEXTES = {
     {
       "icon": "📵",
       "title": "Elle fuyait son téléphone",
-      "txt": "Depuis plusieurs semaines, Clara laissait son téléphone retourné, ignorait ses notifications — même celles d'Inès."
+      "txt": "Depuis plusieurs semaines, Clara laissait son téléphone retourné, ignorait ses notifications - même celles d'Inès."
     },
     {
       "icon": "🔒",
@@ -85,12 +85,12 @@ var TEXTES = {
     {
       "icon": "❓",
       "title": "Inès ne sait pas tout",
-      "txt": "Même sa meilleure amie n'a pas eu les détails. Clara voulait protéger Inès — ou avait trop honte pour en parler."
+      "txt": "Même sa meilleure amie n'a pas eu les détails. Clara voulait protéger Inès - ou avait trop honte pour en parler."
     }
   ],
   "G": [
     {
-      "edu": "Je dois être le plus honnête possible, et le plus sincère — c'est ma seule chance qu'elle m'aide.",
+      "edu": "Je dois être le plus honnête possible, et le plus sincère - c'est ma seule chance qu'elle m'aide.",
       "c": [
         {
           "l": "A",
@@ -323,7 +323,7 @@ const UI = {
     playerMsg: "Inès, j'ai peut-être trouvé quelque chose",
     q: "quoi donc ?",
     correctYes: "Oui ! c'est chez sa tante, à la campagne.",
-    correctCont: "C'est là qu'elle est, bravo ! Sa tante travaille dans un restaurant — voici le numéro :",
+    correctCont: "C'est là qu'elle est, bravo ! Sa tante travaille dans un restaurant - voici le numéro :",
     wrongAnswer: "Je vois pas à quoi tu fais référence... c'est quoi exactement ce que t'as trouvé ?",
     nextUrl: "4_Convaincre_Clara.html",
     nextBtn: "→ Partie 4 : Convaincre Clara"

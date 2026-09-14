@@ -3,10 +3,10 @@ var TEXTES = {
   // ─── Title screen ──────────────────────────────────────────────────────────
 
   titre: {
-    eyebrow: "A game about empathy — School bullying",
+    eyebrow: "A game about empathy - School bullying",
     main:    "Convincing Clara",
-    sub:     "Clara has not been to school for five days. She has taken refuge at her aunt's, out in the countryside.\nYou are Léo, her friend. To speak to Clara, you must first convince her aunt that you are trustworthy — and that you are truly there to help her.",
-    legende: ["The aunt", "Clara", "You — Léo"],
+    sub:     "Clara has not been to school for five days. She has taken refuge at her aunt's, out in the countryside.\nYou are Léo, her friend. To speak to Clara, you must first convince her aunt that you are trustworthy - and that you are truly there to help her.",
+    legende: ["The aunt", "Clara", "You - Léo"],
     bouton:  "☎  Call",
     // Léo's thoughts after each wrong number: the player has to work out that
     // Inès (Part 1) can give it to them.
@@ -33,7 +33,7 @@ var TEXTES = {
 
   locuteurs: { aunt: "The aunt", lea: "Clara", thomas: "Léo" },
 
-  // Les numéros d'aide sont dans ressources.js — un seul endroit à changer.
+  // Les numéros d'aide sont dans ressources.js - un seul endroit à changer.
 
 
   // ─── What Léo does next, and what happens to the group ───────────────────
@@ -44,14 +44,14 @@ var TEXTES = {
     items: [
       "Goes to see the school counsellor. Not to denounce anyone: to say that a student has stopped coming, and why.",
       "Shows the screenshots he kept, and reports the anonymous accounts one by one.",
-      "Did not fix anything on his own — he did what a fourteen-year-old friend can do: tell someone who can act."
+      "Did not fix anything on his own - he did what a fourteen-year-old friend can do: tell someone who can act."
     ]
   },
 
   epilogue: {
     icon:  "⚖️",
     titre: "And the five in the group?",
-    corps: "The school opened an investigation and met them, with their parents. Two answered that they \"didn't mean any harm\". Kevin showed his screenshots.\n\nIn France, school bullying has been a criminal offence since 2022 — online included, between pupils of the same school included.\n\nClara came back three weeks later. It was not easy. But she was no longer carrying it alone.",
+    corps: "The school opened an investigation and met them, with their parents. Two answered that they \"didn't mean any harm\". Kevin showed his screenshots.\n\nIn France, school bullying has been a criminal offence since 2022 - online included, between pupils of the same school included.\n\nClara came back three weeks later. It was not easy. But she was no longer carrying it alone.",
   },
 
   recapBtn: "🖨 Printable summary",
@@ -62,20 +62,20 @@ var TEXTES = {
     { minScore: 10,
       icon: "🌿", cls: "good",
       titre:    "Clara is going to ask for help.",
-      corps:    "You found the right words at every moment.\nNot too forceful, not too light — simply present.\n\nThe aunt trusted you. Clara hung up with a concrete decision: to talk to a trusted adult, and to stop carrying this alone.\n\nYour role was not to save her. It was to show her that asking for help is possible.",
-      citation: "“I'm going to talk to my aunt. Really talk.”\n— Clara"
+      corps:    "You found the right words at every moment.\nNot too forceful, not too light - simply present.\n\nThe aunt trusted you. Clara hung up with a concrete decision: to talk to a trusted adult, and to stop carrying this alone.\n\nYour role was not to save her. It was to show her that asking for help is possible.",
+      citation: "“I'm going to talk to my aunt. Really talk.”\n- Clara"
     },
     { minScore: 5,
       icon: "🕯️", cls: "ok",
       titre:    "A first step.",
-      corps:    "You showed goodwill, even if some answers lacked depth.\n\nClara is still hesitant — but she is considering talking to an adult. The road is long.\n\nYour role was to show her that she does not have to carry everything alone.",
-      citation: "“Maybe I'll try…”\n— Clara"
+      corps:    "You showed goodwill, even if some answers lacked depth.\n\nClara is still hesitant - but she is considering talking to an adult. The road is long.\n\nYour role was to show her that she does not have to carry everything alone.",
+      citation: "“Maybe I'll try…”\n- Clara"
     },
     { minScore: 0,
       icon: "🌧️", cls: "bad",
       titre:    "The distance remains.",
-      corps:    "You meant well, but your words sometimes sounded like blame or impatience.\n\nClara remains closed off. She needs time — and someone who truly listens before acting.",
-      citation: "“I just needed you to listen to me.”\n— Clara"
+      corps:    "You meant well, but your words sometimes sounded like blame or impatience.\n\nClara remains closed off. She needs time - and someone who truly listens before acting.",
+      citation: "“I just needed you to listen to me.”\n- Clara"
     }
   ],
 
@@ -97,7 +97,7 @@ var TEXTES = {
 
     // ── PHASE 1: The aunt ────────────────────────────────────────────────
 
-    { id:'A1', phase:'1', phaseName:'Phase 1 — The aunt', stepLabel:'Question 1 / 3',
+    { id:'A1', phase:'1', phaseName:'Phase 1 - The aunt', stepLabel:'Question 1 / 3',
       pdotCount:3, pdotActive:0,
       dialogueBefore:[
         {spk:'narrator', txt:'[ The phone rings… click. ]'},
@@ -110,7 +110,7 @@ var TEXTES = {
         { emp:2, txt:"“I get it. I don't want to push her… but I miss her, and I'm scared for her.”",
           fb:{type:'good', msg:'You show that protecting her comes before your own need.'},
           reply:{spk:'aunt', txt:"(a silence) That's kind of you to say it like that."}},
-        { emp:1, txt:"“I understand. But it's important — it won't take long.”",
+        { emp:1, txt:"“I understand. But it's important - it won't take long.”",
           fb:{type:'ok', msg:'Honest, but focused more on you than on Clara.'},
           reply:{spk:'aunt', txt:"Hmm… alright. I'm listening."}},
         { emp:0, txt:"“I need to talk to her now, it's urgent.”",
@@ -128,7 +128,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'A2', phase:'1', phaseName:'Phase 1 — The aunt', stepLabel:'Question 2 / 3',
+    { id:'A2', phase:'1', phaseName:'Phase 1 - The aunt', stepLabel:'Question 2 / 3',
       pdotCount:3, pdotActive:1,
       dialogueBefore:[
         {spk:'aunt', txt:"You know, since she arrived here… Clara has not been the same.\nShe cries a lot. She has nightmares. She wakes up panicked at night.\nAnd above all… she feels guilty. She thinks everything is her fault."},
@@ -156,7 +156,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'A3', phase:'1', phaseName:'Phase 1 — The aunt', stepLabel:'Question 3 / 3',
+    { id:'A3', phase:'1', phaseName:'Phase 1 - The aunt', stepLabel:'Question 3 / 3',
       pdotCount:3, pdotActive:2,
       dialogueBefore:[
         {spk:'aunt', txt:"Bullying destroys you slowly. It makes you doubt your own worth…\nShe withdrew into herself. She even avoids looking at her phone.\nIf you really want to help her… you will have to be patient. Very patient."},
@@ -170,7 +170,7 @@ var TEXTES = {
           fb:{type:'ok', msg:"Sincere. The aunt appreciates the honesty."},
           reply:{spk:'aunt', txt:"Alright… I'll ask her."}},
         { emp:0, txt:"“I'll tell her everything will be okay, that I have a plan.”",
-          fb:{type:'bad', msg:"You are talking about yourself and your plan — not about her."},
+          fb:{type:'bad', msg:"You are talking about yourself and your plan - not about her."},
           reply:{spk:'aunt', txt:"(coldly) A plan. Clara does not need a plan. She needs to be heard."},
           recovery:{
             auntLine: "Do you understand the difference, Léo?",
@@ -196,7 +196,7 @@ var TEXTES = {
 
     // ── PHASE 2: Clara ───────────────────────────────────────────────────
 
-    { id:'L1', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 1 / 4',
+    { id:'L1', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 1 / 4',
       pdotCount:4, pdotActive:0,
       dialogueBefore:[
         {spk:'narrator', txt:'[ A rustle of the phone… ]'},
@@ -224,7 +224,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'L2', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 2 / 4',
+    { id:'L2', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 2 / 4',
       pdotCount:4, pdotActive:1,
       dialogueBefore:[
         {spk:'lea', txt:"At first, it was just remarks… little digs.\nI told myself it would pass.\nBut then… it got worse. Group mockery. Comments about everything.\nAnd then it continued online. Messages. Screenshots. Rumors.\nI couldn't escape it anymore… even at home."},
@@ -243,7 +243,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'L3', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 3 / 4',
+    { id:'L3', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 3 / 4',
       pdotCount:4, pdotActive:2,
       dialogueBefore:[
         {spk:'lea', txt:"You know what the worst part is?\nIt's when I started to believe it.\nWhen I looked at myself in the mirror and saw what they were saying."},
@@ -253,7 +253,7 @@ var TEXTES = {
         { emp:2, txt:"“It makes sense you ended up believing it, they told you a hundred times. But it's not true. They're the problem, not you.”",
           fb:{type:'good', msg:'You explain the mechanism. You give reality back to her.'},
           reply:{spk:'lea', txt:"(long pause) No one had ever said it like that before."}},
-        { emp:1, txt:"“No. What you saw was their lies — not you.”",
+        { emp:1, txt:"“No. What you saw was their lies - not you.”",
           fb:{type:'ok', msg:'Clear and direct. Useful.'},
           reply:{spk:'lea', txt:"I try to tell myself that… it's hard."}},
         { emp:0, txt:"“You know very well that what they say is false.”",
@@ -262,7 +262,7 @@ var TEXTES = {
       ]
     },
 
-    { id:'L4', phase:'2', phaseName:'Phase 2 — Clara', stepLabel:'Question 4 / 4',
+    { id:'L4', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 4 / 4',
       pdotCount:4, pdotActive:3,
       dialogueBefore:[
         {spk:'lea',    txt:"I've been here five days…\nThe first two, I couldn't even leave the bedroom.\nNow… it hurts a little less. But I'm still scared.\nScared to go back to school. Scared it will start again. Scared that nothing will change."},
@@ -272,13 +272,13 @@ var TEXTES = {
       prompt:'What do you say to her?',
       choices:[
         { emp:2, txt:"“It's already real, Clara. And that's exactly why you need adults who can act: your aunt, your parents, the school counsellor. Not to fix everything at once. Just so you're not carrying it alone anymore.”",
-          fb:{type:'good', msg:"You show her that seeking help from adults is an act of courage — not a weakness."},
+          fb:{type:'good', msg:"You show her that seeking help from adults is an act of courage - not a weakness."},
           reply:{spk:'lea', txt:"(silence) …Maybe. My aunt offered to call the school.\nI said no. But now… maybe yes."}},
-        { emp:1, txt:"“You don't have to deal with this alone. If you want, I can be there when you talk to someone — any trusted adult.”",
-          fb:{type:'ok', msg:"Supportive. But she has to take the first step — and you remind her of that well."},
+        { emp:1, txt:"“You don't have to deal with this alone. If you want, I can be there when you talk to someone - any trusted adult.”",
+          fb:{type:'ok', msg:"Supportive. But she has to take the first step - and you remind her of that well."},
           reply:{spk:'lea', txt:"(hesitant) …Okay. I'll think about it."}},
         { emp:0, txt:"“Don't worry, I'll handle it myself. Those people are going to be in trouble.”",
-          fb:{type:'bad', msg:"You take everything onto yourself. That is not your role — and she knows it may make things worse."},
+          fb:{type:'bad', msg:"You take everything onto yourself. That is not your role - and she knows it may make things worse."},
           reply:{spk:'lea', txt:"(coldly) No… please, don't do anything. It will only make things worse."}},
       ]
     }
@@ -289,5 +289,5 @@ var TEXTES = {
 
 const UI = {
   recapUrl: "recapitulatif_en.html",
-  invalidCode: "Invalid code — check the 4 characters."
+  invalidCode: "Invalid code - check the 4 characters."
 };

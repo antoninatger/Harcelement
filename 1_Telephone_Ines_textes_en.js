@@ -75,7 +75,7 @@ var TEXTES = {
     {
       "icon": "📵",
       "title": "She was avoiding her phone",
-      "txt": "For several weeks, Clara had been leaving her phone face down and ignoring her notifications — even Inès's."
+      "txt": "For several weeks, Clara had been leaving her phone face down and ignoring her notifications - even Inès's."
     },
     {
       "icon": "🔒",
@@ -85,12 +85,12 @@ var TEXTES = {
     {
       "icon": "❓",
       "title": "Inès doesn't know everything",
-      "txt": "Even her best friend didn't get the details. Clara wanted to protect Inès — or was too ashamed to talk about it."
+      "txt": "Even her best friend didn't get the details. Clara wanted to protect Inès - or was too ashamed to talk about it."
     }
   ],
   "G": [
     {
-      "edu": "I have to be as honest and sincere as possible — it's my only chance of getting her to help me.",
+      "edu": "I have to be as honest and sincere as possible - it's my only chance of getting her to help me.",
       "c": [
         {
           "l": "A",
@@ -323,7 +323,7 @@ const UI = {
     playerMsg: "Inès, I think I've found something",
     q: "what is it?",
     correctYes: "Yes! She's at her aunt's, in the countryside.",
-    correctCont: "That's where she is, well done! Her aunt works at a restaurant — here's the number:",
+    correctCont: "That's where she is, well done! Her aunt works at a restaurant - here's the number:",
     wrongAnswer: "I'm not sure what you mean... what exactly did you find?",
     nextUrl: "4_Convaincre_Clara_en.html",
     nextBtn: "→ Part 4: Convincing Clara"

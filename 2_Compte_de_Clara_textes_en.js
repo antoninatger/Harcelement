@@ -338,7 +338,7 @@ const CONVOS = [
     ]
   },
   {
-    id:99, avatar:"📔", name:"Me — Journal", sub:"Personal note",
+    id:99, avatar:"📔", name:"Me - Journal", sub:"Personal note",
     unread:true, time:"5 days ago", section:null,
     secret:true,
     preview:"it's horrible, I discovered they have a group about me...",
@@ -362,7 +362,7 @@ const PHOTO_QUIZZES = {
     question:'In your opinion, what do we call the kind of comment you just read under the photo?',
     options:[
       'Clumsy diet advice',
-      'Body shaming — harassment targeting physical appearance',
+      'Body shaming - harassment targeting physical appearance',
       'A simple joke between friends',
       'Spam'
     ],
@@ -416,7 +416,7 @@ const QUIZZES = {
   7: {
     icon: '📊',
     type: 'Public humiliation poll',
-    question: '"Is Clara the most useless person in school?" — What type of cyberbullying is this?',
+    question: '"Is Clara the most useless person in school?" - What type of cyberbullying is this?',
     options: [
       'A public humiliation poll',
       'Phishing, data theft',
@@ -429,7 +429,7 @@ const QUIZZES = {
   11: {
     icon: '🕸️',
     type: 'Rumors and psychological manipulation',
-    question: '"People are talking badly about you, but I won\'t tell you what they\'re saying." — What is this?',
+    question: '"People are talking badly about you, but I won\'t tell you what they\'re saying." - What is this?',
     options: [
       'Clumsy advice from a friend',
       'Manipulation meant to isolate and distress the victim',
@@ -442,7 +442,7 @@ const QUIZZES = {
   22: {
     icon: '🚪',
     type: 'Forced exclusion',
-    question: '"Delete your account, nobody would notice." — What mechanism is at work?',
+    question: '"Delete your account, nobody would notice." - What mechanism is at work?',
     options: [
       'Clumsy friendly advice',
       'Pressure to force the victim to exclude themselves',
@@ -594,8 +594,8 @@ const UI = {
   identifyBtn:     "🔍 Identify harassment",
   firstToLike:     "Be the first to like",
   likes:           " likes",
-  synthBtn:        "📋 View summary — What happened to Clara",
-  synthNote:       "These forms of bullying are real. Each one leaves marks on the victim — even without physical contact.",
+  synthBtn:        "📋 View summary - What happened to Clara",
+  synthNote:       "These forms of bullying are real. Each one leaves marks on the victim - even without physical contact.",
   backToWA:        "← Back to the group",
   backToWAUrl:     "3_Groupe_Secret_en.html",
   correct:         "Correct!",
@@ -603,11 +603,11 @@ const UI = {
   demasqueSub:     "Unmasked in the group: ",
   reportBtn:       "⚠ Report this account",
   reportDone:      "✓ Account reported",
-  reportAfter:     "Account reported. Clara could have done it from the very first message — nobody had told her.",
+  reportAfter:     "Account reported. Clara could have done it from the very first message - nobody had told her.",
   synthFound:      "found",
   synthMissed:     "missed",
   noteCode:        "🔐 The code for what comes next",
   codeClose:       "← Back to the journal",
   observeBtn:      "🗣 Say what I observe",
-  notTagged:       "That one hurts too — but it isn't enough to name a type of harassment. Look for a more revealing message."
+  notTagged:       "That one hurts too - but it isn't enough to name a type of harassment. Look for a more revealing message."
 };

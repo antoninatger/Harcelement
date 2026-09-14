@@ -19,7 +19,8 @@
       "Bash(pip show *)",
       "Bash(Get-Content \"C:\\\\Users\\\\ASUS\\\\Documents\\\\Web apps\\\\Wordpress\\\\Harcèlement Croatie\\\\2_Insta_de_Clara_textes.js\")",
       "Bash(Measure-Object -Line)",
-      "PowerShell(Get-Content *)"
+      "PowerShell(Get-Content *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

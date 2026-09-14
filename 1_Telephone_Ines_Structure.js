@@ -209,7 +209,7 @@ async function finalSuccessPhase(isSuccess){
   var fin=isSuccess?F.succes:F.fragile;
   ca.innerHTML='';
 
-  // Phase 1 — Inès demande de promettre d'être prudent
+  // Phase 1 - Inès demande de promettre d'être prudent
   await sl(600);showTy();await sl(1000);hideTy();
   addBub(fin.p1ines,'r');
   await sl(400);
@@ -226,7 +226,7 @@ async function finalSuccessPhase(isSuccess){
     await sl(400);
   }
 
-  // Phase 2 — Inès demande de respecter la vie privée de Clara
+  // Phase 2 - Inès demande de respecter la vie privée de Clara
   showTy();await sl(900);hideTy();
   addBub(fin.p2ines,'r');
   await sl(400);
@@ -237,12 +237,12 @@ async function finalSuccessPhase(isSuccess){
   });
   ca.innerHTML='';
 
-  // Phase 3 — Inès donne les codes
+  // Phase 3 - Inès donne les codes
   await sl(700);showTy();await sl(1200);hideTy();
   addBub(fin.codesMsg,'r');
   await sl(600);
 
-  // Phase 4 — Résumé : codes + bilan + navigation
+  // Phase 4 - Résumé : codes + bilan + navigation
   var titleColor=isSuccess?'#30d158':'#ff9f0a';
   var html='<div style="color:'+titleColor+';font-size:10.5px;font-weight:600;margin-bottom:6px;">'+fin.titre+'</div>';
   html+=buildIgCard(fin.ig);

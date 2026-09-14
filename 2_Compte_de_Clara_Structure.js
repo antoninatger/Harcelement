@@ -11,7 +11,7 @@ const REQUIRED_TYPES = 6;
 // Les QCM ont été écrits avant le système à neuf types : leur champ « type »
 // est une phrase, pas une clé de HARCEL_TYPES. On les rattache ici. Le QCM 23
 // (« un compte créé rien que pour harceler ») n'a pas d'équivalent : ce n'est
-// pas un type de harcèlement mais une technique — il reste un point d'analyse.
+// pas un type de harcèlement mais une technique - il reste un point d'analyse.
 const QUIZ_TYPE = { 4:'menaces', 7:'rumeurs', 11:'manipulation', 22:'exclusion', 23:null };
 const PHOTO_QUIZ_TYPE = { 3:'body_shaming', 5:'exclusion', 7:'exclusion' };
 let quizAnswered = {};
@@ -145,7 +145,7 @@ function openThread(id) {
   });
 
   // Le journal de Clara (fil 99) : le code n'est plus imposé en overlay
-  // deux secondes après l'ouverture — c'est le seul endroit où Clara parle
+  // deux secondes après l'ouverture - c'est le seul endroit où Clara parle
   // à la première personne, il faut pouvoir le lire. Un bouton en bas du
   // fil ouvre l'écran du code quand le joueur est prêt.
   if (id === 99) {
@@ -637,7 +637,7 @@ document.querySelector('#screen-dm .back').addEventListener('click', () => goTo(
 // Bouton retour screen-thread
 document.querySelector('#screen-thread .back').addEventListener('click', () => goTo('screen-dm'));
 
-// Post cells — event delegation sur .posts-grid
+// Post cells - event delegation sur .posts-grid
 document.querySelector('.posts-grid').addEventListener('click', e => {
   const cell = e.target.closest('[data-lightbox-idx]');
   if (cell) openLightbox(parseInt(cell.dataset.lightboxIdx));
@@ -645,15 +645,15 @@ document.querySelector('.posts-grid').addEventListener('click', e => {
 
 // warning overlay supprimé
 
-// Initial question — bouton valider
+// Initial question - bouton valider
 document.querySelector('.iq-btn').addEventListener('click', checkInitialAnswer);
 
-// Initial question — Enter sur l'input
+// Initial question - Enter sur l'input
 document.getElementById('iq-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') checkInitialAnswer();
 });
 
-// Mission overlay — bouton commencer
+// Mission overlay - bouton commencer
 document.querySelector('.mission-btn').addEventListener('click', startMission);
 
 // Notification secret
@@ -682,7 +682,7 @@ document.getElementById('report-cancel').addEventListener('click', closeReport);
   });
 })();
 
-// Écran du code — retour au journal
+// Écran du code - retour au journal
 const codeClose = document.getElementById('code-close');
 if (codeClose && UI.codeClose) codeClose.textContent = UI.codeClose;
 if (codeClose) codeClose.addEventListener('click', () => {
@@ -694,22 +694,22 @@ document.getElementById('synthesis-close').addEventListener('click', () => {
   document.getElementById('synthesis-overlay').style.display = 'none';
 });
 
-// Lightbox — clic sur fond pour fermer
+// Lightbox - clic sur fond pour fermer
 document.getElementById('lightbox').addEventListener('click', closeLightbox);
 
-// Lightbox — bouton fermer
+// Lightbox - bouton fermer
 document.getElementById('lb-close-btn').addEventListener('click', e => {
   e.stopPropagation();
   closeLightbox();
 });
 
-// Lightbox — navigation précédent
+// Lightbox - navigation précédent
 document.getElementById('lb-prev').addEventListener('click', e => {
   e.stopPropagation();
   lbNav(-1);
 });
 
-// Lightbox — navigation suivant
+// Lightbox - navigation suivant
 document.getElementById('lb-next').addEventListener('click', e => {
   e.stopPropagation();
   lbNav(1);
@@ -733,11 +733,11 @@ document.addEventListener('keydown', e => {
 // Bouton identifier flottant
 document.getElementById('identify-btn').addEventListener('click', toggleSelectMode);
 
-// Identify overlay — annuler et continuer
+// Identify overlay - annuler et continuer
 document.getElementById('id-cancel').addEventListener('click', closeIdentify);
 document.getElementById('id-continue').addEventListener('click', closeIdentify);
 
-// Event delegation — messages DM en mode sélection
+// Event delegation - messages DM en mode sélection
 document.getElementById('msgThread').addEventListener('click', e => {
   if (!selectMode) return;
   const bubble = e.target.closest('[data-harcel-type]');
@@ -745,7 +745,7 @@ document.getElementById('msgThread').addEventListener('click', e => {
   else if (e.target.closest('.msg-bubble.incoming')) flashHint(UI.notTagged);
 });
 
-// Event delegation — commentaires lightbox en mode sélection
+// Event delegation - commentaires lightbox en mode sélection
 document.getElementById('lb-comments').addEventListener('click', e => {
   if (!selectMode) return;
   const comment = e.target.closest('[data-harcel-type]');

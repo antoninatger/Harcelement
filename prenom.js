@@ -1,5 +1,5 @@
 /* =========================================================================
-   prenom.js — le joueur choisit Léo ou Léa
+   prenom.js - le joueur choisit Léo ou Léa
    -------------------------------------------------------------------------
    Le héros s'appelait Léo, point. Ici, le prénom se choisit sur le menu et
    se propage aux quatre parties. Le prénom seul ne suffit pas en français :

@@ -20,13 +20,13 @@ const WA_DATA = {
 
   banner: {
     strong: "Educational exercise on cyberbullying",
-    tail:   " — All characters and messages are fictional. Created for educational purposes."
+    tail:   " - All characters and messages are fictional. Created for educational purposes."
   },
 
   warning: {
     icon:  "⚠️",
     title: "Educational simulation",
-    body:  "I am going to observe a secret group that Clara is not part of.\n\nThese exchanges show how bullying is coordinated behind the scenes — how anonymous accounts are created to attack someone and how aggression is organized collectively.",
+    body:  "I am going to observe a secret group that Clara is not part of.\n\nThese exchanges show how bullying is coordinated behind the scenes - how anonymous accounts are created to attack someone and how aggression is organized collectively.",
     btn:   "Continue →"
   },
 
@@ -35,7 +35,7 @@ const WA_DATA = {
     label:      "accounts identified",
     cardTitle:  "Account unmasked",
     cardIntro:  "Behind this account:",
-    cardNote:   "Clara cannot know this. You can — because you are reading a group you are not in.",
+    cardNote:   "Clara cannot know this. You can - because you are reading a group you are not in.",
     cardSee:    "See their messages on Clara's Instaclasse →",
     cardClose:  "Close",
     already:    "Already spotted.",
@@ -64,7 +64,7 @@ const WA_DATA = {
   mobile: {
     icon:  "❓",
     title: "Why Clara?",
-    body:  "Read the group again: they never say. The only justification that comes back is \"she asked for it\". There is no reason — and looking for one would already be blaming Clara.",
+    body:  "Read the group again: they never say. The only justification that comes back is \"she asked for it\". There is no reason - and looking for one would already be blaming Clara.",
   },
 
   mission: {
@@ -144,7 +144,7 @@ const WA_DATA = {
 
     { type: "quiz", quizId: "anonymat", delay: 400 },
 
-    { type: "time-sep", text: "Next day — 09:14" },
+    { type: "time-sep", text: "Next day - 09:14" },
     { id: 40, sender: "Jade",   text: "did you see? Clara hasn't posted since last night",                               time: "09:14", delay: 1200 },
     { id: 41, sender: "Enzo",  text: "hahaha we really broke her 💀",                                                   time: "09:15", delay:  700 },
     { id: 42, sender: "Théo",   text: "she hasn't even been seen online since this morning",                             time: "09:15", delay:  800 },
@@ -179,12 +179,12 @@ const WA_DATA = {
       question: "Kevin hesitates but stays silent and goes along with it. What does this scene reveal?",
       options: [
         "Kevin is too cowardly to stand up to them",
-        "Group pressure can silence even the person who has doubts — this is a key mechanism in collective bullying",
+        "Group pressure can silence even the person who has doubts - this is a key mechanism in collective bullying",
         "Kevin is not really involved in the bullying",
         "It is an individual and free decision for each person"
       ],
       correct: 1,
-      explanation: "Group bullying works because social pressure silences dissenting voices. Kevin has doubts, but he conforms so he will not be excluded in turn. Meanwhile, Clara is facing an entire group — which makes her isolation total and her sense of injustice even stronger."
+      explanation: "Group bullying works because social pressure silences dissenting voices. Kevin has doubts, but he conforms so he will not be excluded in turn. Meanwhile, Clara is facing an entire group - which makes her isolation total and her sense of injustice even stronger."
     },
 
     anonymat: {
@@ -198,7 +198,7 @@ const WA_DATA = {
         "To play a fictional role with no real consequences"
       ],
       correct: 1,
-      explanation: "Anonymous accounts are used to hide the bullies' identities while making it seem as if the attacks are coming from everywhere. Clara cannot identify her attackers, block them effectively, or prove who is doing what. The anxiety becomes constant because the threat seems to come out of nowhere — even at home, even at night."
+      explanation: "Anonymous accounts are used to hide the bullies' identities while making it seem as if the attacks are coming from everywhere. Clara cannot identify her attackers, block them effectively, or prove who is doing what. The anxiety becomes constant because the threat seems to come out of nowhere - even at home, even at night."
     }
 
   },
@@ -211,7 +211,7 @@ const WA_DATA = {
       {
         icon: "👥",
         type: "Collective pressure",
-        exp:  "Kevin hesitates but conforms so he will not be excluded. When no one dares to object, the whole group becomes complicit — even those who have doubts. The victim faces a crowd, not just one individual."
+        exp:  "Kevin hesitates but conforms so he will not be excluded. When no one dares to object, the whole group becomes complicit - even those who have doubts. The victim faces a crowd, not just one individual."
       },
       {
         icon: "👤",
@@ -226,7 +226,7 @@ const WA_DATA = {
       {
         icon: "🌙",
         type: "The invasion of private space",
-        exp:  "By sending messages after midnight, the group makes sure Clara can no longer find refuge at home. The bullying follows the victim everywhere — even in her bed, even at night."
+        exp:  "By sending messages after midnight, the group makes sure Clara can no longer find refuge at home. The bullying follows the victim everywhere - even in her bed, even at night."
       }
     ]
   },
@@ -236,10 +236,10 @@ const WA_DATA = {
   endMessage: {
     title: "This group existed while Clara…",
     points: [
-      "was receiving anonymous messages at night — they are in this group.",
-      "saw her comments being flooded — they organized it here.",
-      "thought that \"everyone\" hated her — they created that together.",
-      "no longer dared to post — that was their goal.",
+      "was receiving anonymous messages at night - they are in this group.",
+      "saw her comments being flooded - they organized it here.",
+      "thought that \"everyone\" hated her - they created that together.",
+      "no longer dared to post - that was their goal.",
       "ran away to her \"secret haven\"... but where is it?"
     ],
     note: "Group bullying turns every space into a danger. Clara has gone somewhere to take refuge. Someone must know where."

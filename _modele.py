@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-_modele.py — construit le plan du document partenaires à partir du jeu lui-même.
+_modele.py - construit le plan du document partenaires à partir du jeu lui-même.
 
 Le document était tapé à la main : il a dérivé dès la première modification des
 textes. Ici, tout vient de _textes_dump.json, produit par dump_textes.js à
@@ -28,13 +28,13 @@ DATE = "%d %s %d" % (d.day, MOIS[d.month-1], d.year)
 
 # ── Couverture ──────────────────────────────────────────────────────────────
 bloc('cover', 'Retrouver Clara',
-     'Textes complets — Parties 1, 2, 3 et 4\nDocument à destination des partenaires',
+     'Textes complets - Parties 1, 2, 3 et 4\nDocument à destination des partenaires',
      'Version du %s  ·  Usage interne' % DATE)
 
 bloc('h2', 'Présentation générale')
 bloc('p', "Retrouver Clara est un jeu pédagogique destiné aux collégiens sur le thème du "
-          "harcèlement scolaire et de son prolongement en ligne. Le joueur incarne Léo — ou Léa, "
-          "au choix — un ami de Clara, quatorze ans, qui ne vient plus au collège depuis cinq jours. "
+          "harcèlement scolaire et de son prolongement en ligne. Le joueur incarne Léo - ou Léa, "
+          "au choix - un ami de Clara, quatorze ans, qui ne vient plus au collège depuis cinq jours. "
           "En traversant quatre scènes, il reconstitue ce qu'elle a vécu et apprend à lui parler.")
 bloc('p', "Ce document présente l'intégralité des textes jouables des quatre parties, tels qu'ils "
           "apparaissent à l'écran.")
@@ -172,7 +172,7 @@ bloc('note', "Un bouton en bas du fil ouvre l'écran du code de l'exercice (4827
 
 bloc('h2', 'Publications et commentaires')
 for i, ph in enumerate(P2['photoData']):
-    lignes = ['%s — %s' % (c['user'], net(c['text'])) for c in ph.get('comments', [])]
+    lignes = ['%s - %s' % (c['user'], net(c['text'])) for c in ph.get('comments', [])]
     bloc('photo', i, net(ph['caption']), ph['likes'], lignes)
 
 bloc('h2', "Points d'analyse (QCM)")
@@ -192,7 +192,7 @@ for cle, q in P2['PHOTO_QUIZZES'].items():
 bloc('h2', 'Signalement')
 bloc('p', "Sur chaque conversation de harceleur, un bouton « %s » ouvre les trois gestes, dans "
           "l'ordre qui compte." % U2['reportBtn'])
-bloc('bullet', "Faire une capture d'écran d'abord — une fois le compte signalé ou bloqué, on perd "
+bloc('bullet', "Faire une capture d'écran d'abord - une fois le compte signalé ou bloqué, on perd "
                "l'accès aux messages, et ce sont eux la preuve.")
 bloc('bullet', "Bloquer le compte.")
 bloc('bullet', "Signaler au réseau, puis en parler à un adulte. Un signalement seul suffit rarement.")
@@ -200,7 +200,7 @@ bloc('p', net(U2['reportAfter']))
 
 # ── PARTIE 3 ────────────────────────────────────────────────────────────────
 W = D['p3']['WA_DATA']
-bloc('h1', 'Partie 3', 'Le groupe Whatsupp secret — « %s »' % W['group']['name'])
+bloc('h1', 'Partie 3', 'Le groupe Whatsupp secret - « %s »' % W['group']['name'])
 bloc('p', "Le joueur lit les échanges à son rythme : chaque message attend un appui. Membres : %s."
           % W['group']['subtitle'])
 bloc('h2', 'Avertissement puis mission')
@@ -266,7 +266,7 @@ bloc('note', "« Accéder directement » n'apparaît qu'après la troisième pen
 
 LOC = {k: v for k, v in T4['locuteurs'].items()}
 for sc in T4['SCENES']:
-    titre = net(sc['phaseName']) + (' — ' + net(sc['stepLabel']) if sc.get('stepLabel') else '')
+    titre = net(sc['phaseName']) + (' - ' + net(sc['stepLabel']) if sc.get('stepLabel') else '')
     bloc('h2', titre)
     for l in sc['dialogueBefore']:
         who = l['spk']
@@ -310,5 +310,5 @@ R = D['ressources']
 bloc('h2', R['titre'])
 for r in R['liste']:
     bloc('ressource', r['label'], r['txt'])
-bloc('note', "Ces numéros sont dans ressources.js — c'est le seul fichier à modifier pour adapter le "
+bloc('note', "Ces numéros sont dans ressources.js - c'est le seul fichier à modifier pour adapter le "
              "jeu à un autre pays. La version anglaise (ressources_en.js) donne les numéros européens.")
