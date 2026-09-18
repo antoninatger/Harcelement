@@ -31,7 +31,7 @@ var TEXTES = {
       "type": "r"
     },
     {
-      "t": "C'est Léo. On est dans la même école que Clara.",
+      "t": "C'est Léo. On est dans le même collège que Clara.",
       "type": "s"
     },
     {
@@ -272,12 +272,13 @@ var TEXTES = {
     },
     "succes": {
       "titre": "🟢 Inès te fait confiance",
+      "p0ines": "J'ai le mot de passe depuis un moment mais j'arrive pas à m'en servir moi-même. J'ai trop peur de tomber sur un truc horrible. Toi, ça te fera moins mal de regarder à ma place.",
       "p1ines": "Tu promets de faire attention à ce que tu lis ?",
       "p1leo": "Je promets.",
       "p1suite": "Et tu me dis si tu trouves quelque chose.",
       "p2ines": "Tu promets de respecter la vie privée de Clara ?",
       "p2leo": "Je le promets.",
-      "codesMsg": "Elle me l'avait donné au cas où. Tu l'utilises, t'en parles à personne.",
+      "codesMsg": "Elle me l'avait donné au cas où. Tu l'utilises, mais t'en parles à personne.",
       "nextPartBtn": "▶ Voir l'Instaclasse de Clara",
       "copied": "✓ Copié !",
       "ig": {
@@ -291,11 +292,12 @@ var TEXTES = {
     },
     "fragile": {
       "titre": "🟡 Succès fragile",
+      "p0ines": "J'ai le mot de passe depuis un moment mais j'arrive pas à m'en servir moi-même. J'ai trop peur de tomber sur un truc horrible. Toi, ça te fera moins mal de regarder à ma place.",
       "p1ines": "Je sais vraiment pas si je fais bien.\nTu me promets de faire attention ?",
       "p1leo": "Oui.",
       "p2ines": "Tu promets de respecter la vie privée de Clara ?",
       "p2leo": "Oui.",
-      "codesMsg": "Elle me l'avait donné au cas où. Tu l'utilises, t'en parles à personne.",
+      "codesMsg": "Elle me l'avait donné au cas où. Tu l'utilises, mais t'en parles à personne.",
       "nextPartBtn": "▶ Voir l'Instaclasse de Clara",
       "copied": "✓ Copié !",
       "ig": {
@@ -322,7 +324,7 @@ const UI = {
     statusTyping: "écrit…",
     playerMsg: "Inès, j'ai peut-être trouvé quelque chose",
     q: "quoi donc ?",
-    correctYes: "Oui ! c'est chez sa tante, à la campagne.",
+    correctYes: "Attends... oui, ça doit être chez sa tante, à la campagne !",
     correctCont: "C'est là qu'elle est, bravo ! Sa tante travaille dans un restaurant - voici le numéro :",
     wrongAnswer: "Je vois pas à quoi tu fais référence... c'est quoi exactement ce que t'as trouvé ?",
     nextUrl: "4_Convaincre_Clara.html",

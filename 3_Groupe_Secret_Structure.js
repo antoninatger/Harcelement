@@ -165,6 +165,7 @@ function goToCompte() {
 // ── Moteur de lecture automatique ─────────────────────────────────────────
 
 var msgIndex = 0;
+var autoTimer = null, autoPaused = false, fastMode = false;
 
 function startPlay() {
   document.getElementById('start-screen').style.display = 'none';
@@ -232,12 +233,25 @@ function awaitTap() {
   if (f) f.placeholder = UI.tapHint || '▼';
   document.getElementById('wa-input').classList.add('tap-wait');
   document.getElementById('chat-area').classList.add('tap-wait');
+  scheduleAutoAdvance();
 }
 
-function onTap(e) {
-  if (!waitingTap) return;
-  // Les @mentions, la carte Instaclasse et les boutons gardent leur propre rôle.
-  if (e.target.closest('.mention, .ig-card-btn, button, a')) return;
+// Défilement automatique, mais lent et interruptible - on ne revient pas au
+// "ça défile tout seul" d'origine (55 messages en 95 s, personne ne
+// suivait) : le joueur peut toujours taper pour avancer tout de suite,
+// survoler la conversation pour mettre le défilement en pause, ou activer
+// le bouton ⏩ pour un rythme plus rapide.
+function scheduleAutoAdvance() {
+  clearTimeout(autoTimer);
+  if (autoPaused) return;
+  var delay = fastMode ? 1200 : 3200;
+  autoTimer = setTimeout(function () {
+    if (waitingTap) advance();
+  }, delay);
+}
+
+function advance() {
+  clearTimeout(autoTimer);
   waitingTap = false;
   var f = document.querySelector('.wa-input-field');
   if (f) f.placeholder = UI.inputPlaceholder || 'Message…';
@@ -246,8 +260,35 @@ function onTap(e) {
   processNext();
 }
 
+function onTap(e) {
+  if (!waitingTap) return;
+  // Les @mentions, la carte Instaclasse et les boutons gardent leur propre rôle.
+  if (e.target.closest('.mention, .ig-card-btn, button, a')) return;
+  advance();
+}
+
 document.getElementById('chat-area').addEventListener('click', onTap);
 document.getElementById('wa-input').addEventListener('click', onTap);
+
+document.getElementById('chat-area').addEventListener('mouseenter', function () {
+  autoPaused = true;
+  clearTimeout(autoTimer);
+});
+document.getElementById('chat-area').addEventListener('mouseleave', function () {
+  autoPaused = false;
+  if (waitingTap) scheduleAutoAdvance();
+});
+
+var ffBtn = document.getElementById('wa-ff-btn');
+if (ffBtn) {
+  ffBtn.style.opacity = '.55';
+  ffBtn.addEventListener('click', function () {
+    fastMode = !fastMode;
+    ffBtn.style.opacity = fastMode ? '1' : '.55';
+    ffBtn.style.color = fastMode ? '#00a884' : '';
+    if (waitingTap) scheduleAutoAdvance();
+  });
+}
 
 function scrollChat() {
   var ca = document.getElementById('chat-area');

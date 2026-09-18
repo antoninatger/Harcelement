@@ -247,9 +247,9 @@ const WA_DATA = {
   kevin: {
     icon:  "🫥",
     title: "Et Kevin ?",
-    body:  "Kevin a douté quatre fois. « On va un peu trop loin là. » « C'est peut-être grave. » « Ça fait 2 jours qu'on la voit plus. » Puis « … ». À chaque fois on lui a coupé la parole, et à chaque fois il s'est tu.",
+    body:  "Kevin a douté quatre fois. « On va un peu trop loin là. » « C'est peut-être grave. » « Ça fait 2 jours qu'on la voit plus. » Puis « … ». À chaque fois on lui a coupé la parole, et à chaque fois il s'est tu. Il a fini par écrire à Clara, mais trop tard : elle était déjà partie.",
     items: [
-      "Écrire à Clara en privé, une seule phrase. Il n'avait pas besoin d'affronter le groupe : il suffisait qu'elle ne se croie plus seule.",
+      "Écrire à Clara en privé dès le premier doute, une seule phrase. Il n'avait pas besoin d'affronter le groupe : il suffisait qu'elle ne se croie plus seule.",
       "Quitter le groupe. Partir se voit, et ça retire une voix au nombre.",
       "Garder une capture d'écran. C'est la seule preuve que ce groupe a existé.",
       "En parler à un adulte. C'est le seul geste qui pouvait arrêter les autres."

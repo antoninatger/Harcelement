@@ -123,9 +123,9 @@ const CONVOS = [
   {
     id:12, avatar:"👤", name:"0000_mask_0000", sub:"Compte inconnu",
     unread:false, time:"dimanche 23h41", section:null,
-    preview:"ta photo a ete partagee dans plusieurs groupes lol",
+    preview:"ta photo a ete partagee dans plusieurs groupes 💀",
     messages:[
-      { from:"them", text:"ta photo a ete partagee dans plusieurs groupes lol", time:"23:41" },
+      { from:"them", text:"ta photo a ete partagee dans plusieurs groupes 💀", time:"23:41" },
       { from:"them", text:"t'as un effet comique sans le vouloir c'est assez fort", time:"23:41" },
       { from:"them", text:"tout le monde se marre grace a toi", time:"23:42" },
     ]
@@ -148,7 +148,7 @@ const CONVOS = [
     messages:[
       { from:"them", text:"t'as vu ton nombre de likes sur ta derniere photo ?", time:"14:22" },
       { from:"them", text:"4 likes en 2 heures avec 600 abonnes c'est nul", time:"14:22" },
-      { from:"them", text:"meme tes propres abonnes t'ignorent lol", time:"14:23" },
+      { from:"them", text:"meme tes propres abonnes t'ignorent mdrrr", time:"14:23" },
       { from:"them", text:"prends ca comme un message", time:"14:23" },
     ]
   },
@@ -175,7 +175,7 @@ const CONVOS = [
   },
   {
     id:30, avatar:"💛", name:"sarah.girard", sub:"Amie · Lyon",
-    unread:false, time:"il y a 3 sem.", section:null,
+    unread:true, time:"il y a 3 sem.", section:null,
     preview:"clara reponds s'il te plait je m'inquiete",
     messages:[
       { from:"them", text:"Clara t'as pas repondu hier soir ca va ?", time:"09:12" },
@@ -338,17 +338,14 @@ const CONVOS = [
     ]
   },
   {
-    id:99, avatar:"📔", name:"Moi - Journal", sub:"Note personnelle",
-    unread:true, time:"il y a 5 jours", section:null,
+    id:99, avatar:"👤", name:"kevin.4b", sub:"Kevin",
+    unread:true, time:"il y a 3 jours", section:null,
     secret:true,
-    preview:"c'est horrible, j'ai découvert qu'ils ont un groupe sur moi...",
+    preview:"Je suis désolé, je ne pensais pas que ça irait aussi loin...",
     messages:[
-      { from:"me", text:"c'est horrible...", time:"21:03" },
-      { from:"me", text:"j'ai découvert qu'ils ont fait un groupe sur moi", time:"21:03" },
-      { from:"me", text:"un groupe secret où ils coordonnent tout ce qui m'arrive", time:"21:04" },
-      { from:"me", text:"je sais même pas comment je l'ai appris", time:"21:04" },
-      { from:"me", text:"et je peux pas y entrer. je peux rien prouver.", time:"21:05" },
-      { from:"me", text:"je sais pas quoi faire de ça", time:"21:06" },
+      { from:"them", text:"Je suis désolé, je ne pensais pas que ça irait aussi loin", time:"23:41" },
+      { from:"them", text:"mais si tu veux voir ce qu'ils racontent sur toi, c'est ici", time:"23:42" },
+      { from:"them", text:"le groupe Whatsupp « les vrais 4B 🔥 », code 4827", time:"23:42" },
     ]
   },
 ];
@@ -521,60 +518,60 @@ const HARCEL_MAP = [
 // ─── PHOTOS DU PROFIL ────────────────────────────────────────────────────────
 
 var photoData = [
-  { likes: 3,  caption: "lever de soleil ce matin 🌅",
+  { likes: 3,  caption: "lever de soleil ce matin 🌅", time: "il y a 2 heures",
     comments: [
       { user: "utilisateur_4729", text: "quelle qualite de photo lol" },
       { user: "anonymous_x0",     text: "ta photo elle est floue t'as meme pas de talent" },
       { user: "_noreply_ghost_",  text: "elle est trop moche ta photo serieusement" },
     ]
   },
-  { likes: 34, caption: "trop aimer jouer 🎸🎵",
+  { likes: 34, caption: "trop aimé jouer 🎸🎵", time: "il y a 1 jour",
     comments: [
       { user: "sarah.girard",     text: "MAIS depuis quand tu joues aussi bien" },
       { user: "ines_l",           text: "la meme chanson depuis 3 semaines mdr mais j'adore" },
       { user: "sarah.girard",     text: "tu joues au spectacle de fin d'annee stp" },
     ]
   },
-  { likes: 1,  caption: "mon chaton 🐱❤️",
+  { likes: 1,  caption: "mon chaton 🐱❤️", time: "il y a 3 jours",
     comments: [
       { user: "anon_colleg_real", text: "meme ton chat a l'air aussi nul que toi" },
       { user: "jevoustrouve",     text: "elle est trop moche ta photo" },
     ]
   },
-  { likes: 4,  caption: "glace du dimanche 🍦",
+  { likes: 4,  caption: "glace du dimanche 🍦", time: "il y a 1 semaine",
     comments: [
       { user: "sansnom_2024",     text: "et tu te demandes pourquoi t'as un probleme de poids" },
       { user: "xx_nobody_xx",     text: "franchement t'as aucune honte de poster ca" },
       { user: "anonymous_x0",     text: "mange encore t'inquiete" },
     ]
   },
-  { likes: 21, caption: "lecture du soir 📚",
+  { likes: 21, caption: "lecture du soir 📚", time: "il y a 2 semaines",
     comments: [
       { user: "ines_l",           text: "t'es a quel tome la ??" },
       { user: "sarah.girard",     text: "tu me le pretes quand t'as fini" },
     ]
   },
-  { likes: 7,  caption: "concert ce soir 🎤🔥",
+  { likes: 7,  caption: "concert ce soir 🎤🔥", time: "il y a 3 semaines",
     comments: [
       { user: "vrai_info_colleg", text: "quoi ? tu aimes cette artiste ? t'es nulle ma pauvre fille" },
       { user: "user_fake8847",    text: "t'aurais pas du y aller ca se voit que t'es pas a ta place" },
       { user: "0000_mask_0000",   text: "les gens autour de toi dans la foule ils devaient etre contents lol" },
     ]
   },
-  { likes: 2,  caption: "fleurs du marche 🌸",
+  { likes: 2,  caption: "fleurs du marche 🌸", time: "il y a 1 mois",
     comments: [
       { user: "dark_mode_user",   text: "meme les fleurs ont l'air de vouloir partir" },
-      { user: "fantome_reseau",   text: "des fleurs ? personne t'en offrira jamais lol" },
+      { user: "fantome_reseau",   text: "des fleurs ? personne t'en offrira jamais 💀" },
     ]
   },
-  { likes: 4,  caption: "gateau d'anniversaire 🎂",
+  { likes: 4,  caption: "gateau d'anniversaire 🎂", time: "il y a 2 mois",
     comments: [
       { user: "anon_colleg_real", text: "personne etait la pour ton anniversaire c'est ca ?" },
       { user: "sansnom_2024",     text: "tu l'as mange toute seule le gateau ?" },
       { user: "xx_nobody_xx",     text: "triste comme fete" },
     ]
   },
-  { likes: 0,  caption: "nuit etoilee 🌙",
+  { likes: 0,  caption: "nuit etoilee 🌙", time: "il y a 4 mois",
     comments: [
       { user: "truth_teller_99",  text: "0 likes en 3 heures c'est un message clara" },
       { user: "utilisateur_4729", text: "meme le ciel il veut pas de toi" },
@@ -607,7 +604,7 @@ const UI = {
   synthFound:      "trouvé",
   synthMissed:     "pas vu",
   noteCode:        "🔐 Le code pour la suite",
-  codeClose:       "← Relire le journal",
+  codeClose:       "← Relire le message de Kevin",
   observeBtn:      "🗣 Dire ce que j'observe",
   notTagged:       "C'est violent aussi - mais ce message ne suffit pas à nommer un type de harcèlement. Cherche-en un plus révélateur."
 };

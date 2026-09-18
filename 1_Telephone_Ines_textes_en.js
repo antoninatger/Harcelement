@@ -272,6 +272,7 @@ var TEXTES = {
     },
     "succes": {
       "titre": "🟢 Inès trusts you",
+      "p0ines": "I've had the password for a while but I've never managed to use it myself. I'm too scared of finding something horrible. It'll hurt you less than it would me.",
       "p1ines": "Do you promise to be careful with what you read?",
       "p1leo": "I promise.",
       "p1suite": "And you'll tell me if you find something.",
@@ -291,6 +292,7 @@ var TEXTES = {
     },
     "fragile": {
       "titre": "🟡 Fragile success",
+      "p0ines": "I've had the password for a while but I've never managed to use it myself. I'm too scared of finding something horrible. It'll hurt you less than it would me.",
       "p1ines": "I really don't know if I'm doing the right thing.\nDo you promise to be careful?",
       "p1leo": "Yes.",
       "p2ines": "Do you promise to respect Clara's privacy?",

@@ -209,6 +209,13 @@ async function finalSuccessPhase(isSuccess){
   var fin=isSuccess?F.succes:F.fragile;
   ca.innerHTML='';
 
+  // Phase 0 - Inès explique pourquoi elle ne regarde pas elle-même
+  if(fin.p0ines){
+    await sl(500);showTy();await sl(900);hideTy();
+    addBub(fin.p0ines,'r');
+    await sl(500);
+  }
+
   // Phase 1 - Inès demande de promettre d'être prudent
   await sl(600);showTy();await sl(1000);hideTy();
   addBub(fin.p1ines,'r');

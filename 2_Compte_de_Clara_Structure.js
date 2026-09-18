@@ -144,10 +144,8 @@ function openThread(id) {
     }
   });
 
-  // Le journal de Clara (fil 99) : le code n'est plus imposé en overlay
-  // deux secondes après l'ouverture - c'est le seul endroit où Clara parle
-  // à la première personne, il faut pouvoir le lire. Un bouton en bas du
-  // fil ouvre l'écran du code quand le joueur est prêt.
+  // Message de Kevin (fil 99) : un bouton en bas du fil ouvre l'écran du
+  // code quand le joueur est prêt, plutôt qu'un overlay imposé.
   if (id === 99) {
     const wrap = document.createElement('div');
     wrap.style.cssText = 'text-align:center;margin:18px 0 8px;';
@@ -163,7 +161,7 @@ function openThread(id) {
   }
 
   // Signalement : proposé sur les comptes qui harcèlent, pas sur l'amie ni
-  // sur le journal de Clara.
+  // sur le message de Kevin.
   setupReport(convo);
 
   // Mark as read
@@ -584,6 +582,8 @@ function showLb() {
   var likeTxt = data.likes === 0 ? UI.firstToLike : data.likes + UI.likes;
   document.getElementById('lb-likes').textContent = likeTxt;
   document.getElementById('lb-caption').textContent = data.caption;
+  var lbTimeEl = document.getElementById('lb-time');
+  if (lbTimeEl) lbTimeEl.textContent = data.time || 'il y a 2 heures';
   var commDiv = document.getElementById('lb-comments');
   commDiv.innerHTML = '';
   data.comments.forEach(function(c) {
@@ -682,7 +682,7 @@ document.getElementById('report-cancel').addEventListener('click', closeReport);
   });
 })();
 
-// Écran du code - retour au journal
+// Écran du code - retour au message de Kevin
 const codeClose = document.getElementById('code-close');
 if (codeClose && UI.codeClose) codeClose.textContent = UI.codeClose;
 if (codeClose) codeClose.addEventListener('click', () => {

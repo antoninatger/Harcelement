@@ -163,12 +163,11 @@ for c in P2['CONVOS']:
          c['id'] == 30)
 
 j = [c for c in P2['CONVOS'] if c['id'] == 99][0]
-bloc('h2', 'Journal de Clara (se débloque à six types identifiés)')
+bloc('h2', 'Message de Kevin (se débloque à six types identifiés)')
 for m in j['messages']:
-    bloc('dial', 'clara', 'Clara', net(m['text']))
-bloc('note', "Un bouton en bas du fil ouvre l'écran du code de l'exercice (4827), qui ouvre la "
-             "Partie 3. Ce code est présenté comme un dispositif d'exercice : un groupe Whatsupp "
-             "n'a pas de code d'accès, et Clara n'a jamais pu entrer dans celui-là.")
+    bloc('dial', 'kevin', 'Kevin', net(m['text']))
+bloc('note', "Un bouton en bas du fil ouvre l'écran du code d'accès du groupe Whatsupp (4827), "
+             "envoyé par Kevin, qui ouvre la Partie 3.")
 
 bloc('h2', 'Publications et commentaires')
 for i, ph in enumerate(P2['photoData']):

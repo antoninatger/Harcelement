@@ -338,17 +338,14 @@ const CONVOS = [
     ]
   },
   {
-    id:99, avatar:"📔", name:"Me - Journal", sub:"Personal note",
-    unread:true, time:"5 days ago", section:null,
+    id:99, avatar:"👤", name:"kevin.4b", sub:"Kevin",
+    unread:true, time:"3 days ago", section:null,
     secret:true,
-    preview:"it's horrible, I discovered they have a group about me...",
+    preview:"I'm sorry, I didn't think it would go this far...",
     messages:[
-      { from:"me", text:"it's horrible...", time:"21:03" },
-      { from:"me", text:"I discovered they made a group about me", time:"21:03" },
-      { from:"me", text:"a secret group where they coordinate everything that happens to me", time:"21:04" },
-      { from:"me", text:"I don't even know how I found out", time:"21:04" },
-      { from:"me", text:"and I can't get in. I can't prove anything.", time:"21:05" },
-      { from:"me", text:"I don't know what to do with this", time:"21:06" },
+      { from:"them", text:"I'm sorry, I didn't think it would go this far", time:"23:41" },
+      { from:"them", text:"but if you want to see what they're saying about you, it's here", time:"23:42" },
+      { from:"them", text:"the Whatsupp group \"the real 4B 🔥\", code 4827", time:"23:42" },
     ]
   },
 ];
@@ -607,7 +604,7 @@ const UI = {
   synthFound:      "found",
   synthMissed:     "missed",
   noteCode:        "🔐 The code for what comes next",
-  codeClose:       "← Back to the journal",
+  codeClose:       "← Back to Kevin's message",
   observeBtn:      "🗣 Say what I observe",
   notTagged:       "That one hurts too - but it isn't enough to name a type of harassment. Look for a more revealing message."
 };

@@ -222,10 +222,10 @@ H2('Les %d types de harcèlement' % NB_TYPES)
 for k, t in T2['HARCEL_TYPES'].items():
     puce('%s - %s' % (t['label'], t['desc']))
 H2("Fin de la partie")
-P("À six types identifiés, le journal intime de Clara apparaît dans la liste des messages. Elle y "
-  "écrit qu'elle a découvert l'existence d'un groupe secret, qu'elle ne sait même pas comment elle "
-  "l'a appris, et qu'elle ne peut ni y entrer ni rien prouver. Un bouton donne ensuite le code de "
-  "l'exercice, 4827, qui ouvre la Partie 3.")
+P("À six types identifiés, une notification annonce un nouveau message. C'est Kevin, l'un des "
+  "membres du groupe : il s'excuse, dit qu'il ne pensait pas que ça irait aussi loin, et donne à "
+  "Clara le code d'accès du groupe Whatsupp où ils parlent d'elle. Un bouton affiche ensuite ce "
+  "code, 4827, qui ouvre la Partie 3.")
 P("Une synthèse récapitule les neuf types en distinguant ceux que le joueur a trouvés de ceux "
   "qu'il a manqués : personne ne termine sans avoir lu les neuf.")
 encart("Avant de passer à la Partie 3", [
@@ -242,9 +242,8 @@ P("Le joueur lit %d messages échangés par les cinq élèves qui ont organisé 
   "Clara n'en fait pas partie et n'y a jamais eu accès."
   % (NB_MSG3, T3['group']['subtitle']))
 H2('Déroulement étape par étape')
-etape('1', "Code de l'exercice", "Le joueur saisit 4827. L'écran dit clairement qu'un vrai groupe "
-      "Whatsupp n'a pas de code d'accès et que ce verrou est celui de l'exercice - ce qui suit, en "
-      "revanche, est bien ce que le groupe a écrit.")
+etape('1', "Code du groupe", "Le joueur saisit 4827, le code d'accès du groupe Whatsupp que Kevin "
+      "a envoyé à Clara.")
 etape('2', 'Avertissement', "Un rappel que les échanges sont fictifs mais montrent comment le "
       "harcèlement se coordonne en coulisse.")
 etape('3', 'Mission', "Repérer les %d comptes anonymes. Le groupe les nomme à voix haute ; chaque "
@@ -262,8 +261,9 @@ P("Une fois démasqués, ces comptes portent le prénom de leur propriétaire qu
   before=40)
 H2('Fin de la partie')
 P("La synthèse reprend les mécanismes du harcèlement de groupe, puis deux blocs de discussion.")
-puce("« Et Kevin ? » - ce que le témoin aurait pu faire, et qu'il n'a pas fait. C'est le rôle que "
-     "la plupart des élèves occupent réellement.")
+puce("« Et Kevin ? » - le témoin qui doute, se tait, et n'écrit à Clara qu'une fois qu'elle est "
+     "partie : ce qu'il aurait pu faire plus tôt. C'est le rôle que la plupart des élèves occupent "
+     "réellement.")
 puce("« Pourquoi Clara ? » - le groupe ne le dit jamais. La seule justification est « elle l'a bien "
      "cherché ». Il n'y a pas de raison, et en chercher une revient déjà à donner tort à la victime.")
 
