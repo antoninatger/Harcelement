@@ -11,11 +11,6 @@ function checkCode() {
   }
 }
 
-function bypassGate() {
-  document.getElementById('code-gate').style.display = 'none';
-  document.getElementById('warning-overlay').style.display = 'flex';
-}
-
 document.getElementById('gate-input').addEventListener('keydown', function(e){
   if (e.key === 'Enter') checkCode();
 });

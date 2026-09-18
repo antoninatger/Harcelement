@@ -754,8 +754,6 @@ body {
 .ig-gate-btn{width:100%;background:#0095f6;color:#fff;border:none;border-radius:6px;padding:10px;font-size:.88rem;font-weight:600;cursor:pointer;margin-top:4px;transition:opacity .2s;}
 .ig-gate-btn:hover{opacity:.88;}
 .ig-gate-error{font-size:.75rem;color:#ed4956;margin-top:8px;min-height:16px;}
-.ig-gate-bypass{display:block;margin-top:18px;font-size:.72rem;color:#555;background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:2px;transition:color .2s;}
-.ig-gate-bypass:hover{color:#888;}
 </style>
 <div id="ig-gate">
   <div class="ig-gate-box">
@@ -768,7 +766,6 @@ body {
     </div>
     <button id="ig-login-btn" class="ig-gate-btn">Log in</button>
     <div class="ig-gate-error" id="ig-error"></div>
-    <button id="ig-bypass" class="ig-gate-bypass">Access directly →</button>
   </div>
 </div>
 <script>
@@ -824,7 +821,6 @@ body {
   });
   document.getElementById('ig-pass').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('ig-login-btn').click();});
   document.getElementById('ig-user').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('ig-pass').focus();});
-  document.getElementById('ig-bypass').addEventListener('click',dismiss);
 })();
 </script>
 
@@ -912,7 +908,7 @@ body {
       <div id="lb-avatar" style="width:32px;height:32px;border-radius:50%;overflow:hidden;flex-shrink:0;"></div>
       <div>
         <div style="font-size:.85rem;font-weight:700;color:#f5f5f5;">clara.fontaine</div>
-        <div id="lb-time" style="font-size:.7rem;color:#a8a8a8;">2 hours ago</div>
+        <div id="lb-time" style="font-size:.7rem;color:#a8a8a8;">1 week ago</div>
       </div>
       <button id="lb-close-btn" style="margin-left:auto;background:none;border:none;color:#f5f5f5;font-size:1.4rem;cursor:pointer;padding:4px;">✕</button>
     </div>

@@ -49,6 +49,10 @@
     var n = document.createTreeWalker(racine || document.body, NodeFilter.SHOW_TEXT, null);
     var noeud, aFaire = [];
     while ((noeud = n.nextNode())) {
+      // Le sélecteur de prénom se nomme lui-même : sans cette exception, le
+      // bouton « Léo » s'intitulait « Léa » dès que Léa était choisie, et on
+      // ne pouvait plus revenir en arrière.
+      if (noeud.parentElement && noeud.parentElement.closest('[data-prenom-brut]')) continue;
       if (/Léo|\{e\}|\{[^{}|]*\|[^{}]*\}/.test(noeud.nodeValue)) aFaire.push(noeud);
     }
     aFaire.forEach(function (t) { t.nodeValue = texte(t.nodeValue); });

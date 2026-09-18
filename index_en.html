@@ -164,6 +164,14 @@ body::before{
 .card-4::before{background:radial-gradient(ellipse at 30% 0%,rgba(196,134,90,.09) 0%,transparent 65%);}
 .card-4:hover{border-color:rgba(196,134,90,.3);}
 
+/* Parties pas encore atteintes : la carte reste lisible mais inerte. */
+.card.locked{opacity:.42;filter:grayscale(.55);cursor:default;pointer-events:none;}
+.card.locked:hover{transform:none;border-color:rgba(255,255,255,.07);}
+.card.locked .card-preview{opacity:.45;}
+.card.locked .card-arrow{color:#7d8698;font-weight:400;text-transform:none;letter-spacing:0;}
+.lock-why{display:block;font-size:.76rem;line-height:1.45;color:#7d8698;}
+
+
 .card-num{
   font-family:'Jost',sans-serif;
   font-size:.68rem;
@@ -298,7 +306,7 @@ body::before{
 
 #prenom-choix{
   display:flex;gap:9px;justify-content:center;align-items:center;flex-wrap:wrap;
-  margin:1.5rem auto 0;z-index:1;position:relative;font-family:'Jost',sans-serif;
+  margin:0 auto 2.2rem;z-index:1;position:relative;font-family:'Jost',sans-serif;
 }
 #prenom-choix .pc-lab{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);}
 #prenom-choix button{
@@ -426,6 +434,12 @@ body::before{
   <div class="divider"></div>
 </header>
 
+<div id="prenom-choix" data-prenom-brut>
+  <span class="pc-lab">You play</span>
+  <button type="button" data-prenom="Léo">Léo</button>
+  <button type="button" data-prenom="Léa">Léa</button>
+</div>
+
 <main class="grid">
 
   <a class="card card-1" href="1_Telephone_Ines_en.html">
@@ -508,11 +522,6 @@ body::before{
 
 </main>
 
-<div id="prenom-choix">
-  <span class="pc-lab">You play</span>
-  <button type="button" data-prenom="Léo">Léo</button>
-  <button type="button" data-prenom="Léa">Léa</button>
-</div>
 <div id="save-area">
   <span class="sa-sep">Your resume code</span>
   <span class="sa-code" id="sa-code">0000000</span>

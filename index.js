@@ -76,6 +76,52 @@
     }
   } catch (e) {}
 
+  // Verrouillage des parties pas encore atteintes.
+  // Règle : on n'ouvre une partie que si le joueur détient ce qu'elle exige -
+  // les identifiants de Clara viennent d'Inès, le code du groupe vient de
+  // Kevin à la fin de la partie 2, le numéro de la tante vient d'Inès après
+  // la lecture du groupe.
+  // Le jeu tourne en cadre : si le stockage est refusé, aucune progression
+  // n'est mémorisable. On ne verrouille alors rien, plutôt que de laisser une
+  // classe entière coincée sur la partie 1.
+  try {
+    var stockageOK = false;
+    try {
+      localStorage.setItem('rc_probe', '1');
+      localStorage.removeItem('rc_probe');
+      stockageOK = true;
+    } catch (e) { stockageOK = false; }
+
+    if (stockageOK && window.Sauvegarde) {
+      var et = Sauvegarde.etat();
+      var TYPES_POUR_LE_CODE = 6; // même seuil que le message de Kevin en partie 2
+      var ouverte = {
+        2: et.p1 === 1,
+        3: et.types.length >= TYPES_POUR_LE_CODE,
+        4: et.p3 === 2
+      };
+      var pourquoi = isEN ? {
+        2: 'Talk to Inès first - she is the one who has Clara\'s login details.',
+        3: 'Kevin gives you the group code at the end of Part 2.',
+        4: 'Inès gives you the aunt\'s number once you have read the group.'
+      } : {
+        2: 'Parle d\'abord à Inès - c\'est elle qui a les identifiants de Clara.',
+        3: 'Kevin te donne le code du groupe à la fin de la Partie 2.',
+        4: 'Inès te donne le numéro de la tante une fois le groupe lu.'
+      };
+      [2, 3, 4].forEach(function (n) {
+        if (ouverte[n]) return;
+        var carte = document.querySelector('.card-' + n);
+        if (!carte) return;
+        carte.classList.add('locked');
+        carte.removeAttribute('href');
+        carte.setAttribute('aria-disabled', 'true');
+        var fleche = carte.querySelector('.card-arrow');
+        if (fleche) fleche.innerHTML = '<span class="lock-why">\uD83D\uDD12 ' + pourquoi[n] + '</span>';
+      });
+    }
+  } catch (e) {}
+
   // CTA carte 1 - "Reprendre" si déjà visitée
   try {
     if(localStorage.getItem('rc_p1_visited')){

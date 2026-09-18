@@ -375,9 +375,18 @@ let observeBtn = null;
 const FALLBACK_S = 120;
 
 function gateOpen() { return window.igGateOpen === true; }
-function fromGroupe() {
-  try { return !!sessionStorage.getItem('harcelement_wa_from'); } catch (e) { return false; }
-}
+// Lu une seule fois, puis efface : le drapeau ne doit pas survivre a la page.
+// Sinon un joueur arrive depuis le groupe sans jamais cliquer le bouton vert
+// gardait un drapeau actif pour toute la session, et canAsk() refusait de
+// lancer la mission - plus de compteur, plus de quiz, plus de code 4827.
+var venuDuGroupe = (function () {
+  try {
+    var v = !!sessionStorage.getItem('harcelement_wa_from');
+    sessionStorage.removeItem('harcelement_wa_from');
+    return v;
+  } catch (e) { return false; }
+})();
+function fromGroupe() { return venuDuGroupe; }
 function overlayOpen() {
   return document.getElementById('lightbox').style.display === 'flex'
       || document.getElementById('screen-thread').classList.contains('active');
@@ -607,7 +616,7 @@ function showLb() {
   // Stockage tiers (le jeu tourne en cadre) : un acces non protege levait
   // une exception qui interrompait le script, et AUCUN des listeners plus
   // bas n'etait pose - la page s'affichait sans repondre au moindre clic.
-  if (!fromGroupe()) return;
+  if (!venuDuGroupe) return;
 
   var btn = document.createElement('a');
   btn.href = UI.backToWAUrl;
@@ -620,9 +629,6 @@ function showLb() {
     'text-decoration:none', 'white-space:nowrap',
     'font-family:-apple-system,Segoe UI,sans-serif'
   ].join(';');
-  btn.onclick = function () {
-    try { sessionStorage.removeItem('harcelement_wa_from'); } catch (e) {}
-  };
   document.body.appendChild(btn);
 })();
 

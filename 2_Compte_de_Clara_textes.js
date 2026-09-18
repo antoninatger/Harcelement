@@ -518,60 +518,60 @@ const HARCEL_MAP = [
 // ─── PHOTOS DU PROFIL ────────────────────────────────────────────────────────
 
 var photoData = [
-  { likes: 3,  caption: "lever de soleil ce matin 🌅", time: "il y a 2 heures",
+  { likes: 3,  caption: "lever de soleil ce matin 🌅", time: "il y a 1 semaine",
     comments: [
       { user: "utilisateur_4729", text: "quelle qualite de photo lol" },
       { user: "anonymous_x0",     text: "ta photo elle est floue t'as meme pas de talent" },
       { user: "_noreply_ghost_",  text: "elle est trop moche ta photo serieusement" },
     ]
   },
-  { likes: 34, caption: "trop aimé jouer 🎸🎵", time: "il y a 1 jour",
+  { likes: 34, caption: "trop aimé jouer 🎸🎵", time: "il y a 2 semaines",
     comments: [
       { user: "sarah.girard",     text: "MAIS depuis quand tu joues aussi bien" },
       { user: "ines_l",           text: "la meme chanson depuis 3 semaines mdr mais j'adore" },
       { user: "sarah.girard",     text: "tu joues au spectacle de fin d'annee stp" },
     ]
   },
-  { likes: 1,  caption: "mon chaton 🐱❤️", time: "il y a 3 jours",
+  { likes: 1,  caption: "mon chaton 🐱❤️", time: "il y a 3 semaines",
     comments: [
       { user: "anon_colleg_real", text: "meme ton chat a l'air aussi nul que toi" },
       { user: "jevoustrouve",     text: "elle est trop moche ta photo" },
     ]
   },
-  { likes: 4,  caption: "glace du dimanche 🍦", time: "il y a 1 semaine",
+  { likes: 4,  caption: "glace du dimanche 🍦", time: "il y a 1 mois",
     comments: [
       { user: "sansnom_2024",     text: "et tu te demandes pourquoi t'as un probleme de poids" },
       { user: "xx_nobody_xx",     text: "franchement t'as aucune honte de poster ca" },
       { user: "anonymous_x0",     text: "mange encore t'inquiete" },
     ]
   },
-  { likes: 21, caption: "lecture du soir 📚", time: "il y a 2 semaines",
+  { likes: 21, caption: "lecture du soir 📚", time: "il y a 2 mois",
     comments: [
       { user: "ines_l",           text: "t'es a quel tome la ??" },
       { user: "sarah.girard",     text: "tu me le pretes quand t'as fini" },
     ]
   },
-  { likes: 7,  caption: "concert ce soir 🎤🔥", time: "il y a 3 semaines",
+  { likes: 7,  caption: "concert ce soir 🎤🔥", time: "il y a 3 mois",
     comments: [
       { user: "vrai_info_colleg", text: "quoi ? tu aimes cette artiste ? t'es nulle ma pauvre fille" },
       { user: "user_fake8847",    text: "t'aurais pas du y aller ca se voit que t'es pas a ta place" },
       { user: "0000_mask_0000",   text: "les gens autour de toi dans la foule ils devaient etre contents lol" },
     ]
   },
-  { likes: 2,  caption: "fleurs du marche 🌸", time: "il y a 1 mois",
+  { likes: 2,  caption: "fleurs du marche 🌸", time: "il y a 4 mois",
     comments: [
       { user: "dark_mode_user",   text: "meme les fleurs ont l'air de vouloir partir" },
       { user: "fantome_reseau",   text: "des fleurs ? personne t'en offrira jamais 💀" },
     ]
   },
-  { likes: 4,  caption: "gateau d'anniversaire 🎂", time: "il y a 2 mois",
+  { likes: 4,  caption: "gateau d'anniversaire 🎂", time: "il y a 6 mois",
     comments: [
       { user: "anon_colleg_real", text: "personne etait la pour ton anniversaire c'est ca ?" },
       { user: "sansnom_2024",     text: "tu l'as mange toute seule le gateau ?" },
       { user: "xx_nobody_xx",     text: "triste comme fete" },
     ]
   },
-  { likes: 0,  caption: "nuit etoilee 🌙", time: "il y a 4 mois",
+  { likes: 0,  caption: "nuit etoilee 🌙", time: "il y a 8 mois",
     comments: [
       { user: "truth_teller_99",  text: "0 likes en 3 heures c'est un message clara" },
       { user: "utilisateur_4729", text: "meme le ciel il veut pas de toi" },
