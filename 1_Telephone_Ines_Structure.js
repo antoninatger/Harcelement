@@ -2,7 +2,7 @@ var G=TEXTES.G, CRISIS=TEXTES.CRISIS, REVELATIONS=TEXTES.REVELATIONS;
 
 var trust=0,good=0,step=0,crisisUsed=false,phase='story',busy=false,tyEl=null;
 var ma=document.getElementById('ma'),ca=document.getElementById('ca');
-var tf=document.getElementById('tf'),tlb=document.getElementById('tlb'),tdl=document.getElementById('tdl');
+var tf=document.getElementById('tf'),tlb=document.getElementById('tlb');
 
 // Initialise les éléments statiques de l'en-tête depuis TEXTES
 document.getElementById('av').textContent=TEXTES.contact.avatar;
@@ -30,20 +30,15 @@ function hideTy(){
   if(tyEl){tyEl.remove();tyEl=null;}
   document.getElementById('st').textContent=TEXTES.contact.statusOnline;
 }
-function updateBar(prev){
+function updateBar(){
   var pct=Math.max(5,Math.min(95,(trust+4)/8*100));
   tf.style.width=pct+'%';
   tf.style.background=trust>=2?'#30d158':trust>=0?'#ff9f0a':'#ff453a';
   tlb.textContent=TEXTES.trustLabels[Math.max(0,Math.min(8,trust+4))];
   tlb.style.color=trust>=2?'#30d158':trust>=0?'#ff9f0a':'#ff453a';
-  var d=trust-prev;
-  if(d!==0){
-    tdl.textContent=(d>0?'+':'')+d;
-    tdl.style.color=d>0?'#30d158':'#ff453a';
-    tdl.style.opacity='1';
-    clearTimeout(tdl._t);
-    tdl._t=setTimeout(function(){tdl.style.opacity='0';},1600);
-  }
+  // Pas d'indicateur chiffre (+1/-1) : la conversation avec Ines n'est pas un
+  // score a optimiser. La barre et le libelle suffisent a faire sentir qu'elle
+  // se ferme ou s'ouvre, sans transformer l'echange en jeu de points.
 }
 function showChoices(arr,isCr){
   ca.innerHTML='<div class="chint'+(isCr?' cr':'')+'">'+
@@ -96,10 +91,9 @@ async function pick(choice){
     endGame('imm');return;
   }
 
-  var prev=trust;
   if(phase==='story'&&choice.e>0)good++;
   trust+=choice.e;
-  updateBar(prev);
+  updateBar();
   ca.innerHTML='';
 
   if(trust<=-3){
@@ -264,7 +258,6 @@ async function startGame(){
   ma.innerHTML='';ca.innerHTML='<div class="chint">…</div>';
   tf.style.width='50%';tf.style.background='#ff9f0a';
   tlb.textContent=TEXTES.trustInitial;tlb.style.color='#ff9f0a';
-  tdl.style.opacity='0';
   document.getElementById('st').textContent=TEXTES.contact.statusOnline;
 
   var O=TEXTES.ouverture;
