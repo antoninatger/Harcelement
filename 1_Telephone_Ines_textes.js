@@ -13,17 +13,17 @@ var TEXTES = {
     "elle t'écoute",
     "elle commence à te faire confiance",
     "elle te fait confiance",
-    "elle te fait confiance",
+    "elle se confie à toi",
     "elle te fait vraiment confiance"
   ],
   "trustInitial": "elle hésite à répondre",
-  "choiceHint": "Que répond Léo ?",
-  "choiceHintCrise": "Comment réagit Léo ?",
+  "choiceHint": "Que répond Léo ?",
+  "choiceHintCrise": "Comment réagit Léo ?",
   "restartBtn": "↺ Recommencer",
   "revelationsHeader": "📋 CE QUE TU AS APPRIS SUR CLARA",
   "ouverture": [
     {
-      "t": "Inès ?",
+      "t": "Inès ?",
       "type": "s"
     },
     {
@@ -31,7 +31,7 @@ var TEXTES = {
       "type": "r"
     },
     {
-      "t": "C'est Léo. On est dans le même collège que Clara.",
+      "t": "C'est Léo. Je suis {un ami|une amie} de Clara, depuis la primaire.",
       "type": "s"
     },
     {
@@ -39,7 +39,7 @@ var TEXTES = {
       "type": "r"
     },
     {
-      "t": "Je sais. J'arrive plus à la joindre depuis plusieurs jours. Je ne la vois plus dans la cour. T'as eu de ses nouvelles ?",
+      "t": "Je sais. J'arrive plus à la joindre depuis plusieurs jours. Je ne la vois plus dans la cour. T'as eu de ses nouvelles ?",
       "type": "s"
     },
     {
@@ -111,13 +111,13 @@ var TEXTES = {
     },
     {
       "intro": [
-        "Tu la connais comment toi, Clara ?"
+        "Tu la connais comment toi, Clara ?"
       ],
-      "edu": "Je la connais depuis quelques années. On se croisait souvent à l'école. Il faut que je le lui montre.",
+      "edu": "On est amis depuis la primaire. On se parlait tous les jours, avant qu'elle se referme. Il faut qu'Inès comprenne que je ne suis pas là par curiosité.",
       "c": [
         {
           "l": "A",
-          "t": "On se croise souvent. Je l'aimais bien.",
+          "t": "On est amis depuis la primaire. Elle compte beaucoup pour moi.",
           "e": 1
         },
         {
@@ -127,7 +127,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "On est dans des classes différentes mais on se parle des fois.",
+          "t": "On se parle souvent. Enfin… on se parlait, avant.",
           "e": 0
         }
       ]
@@ -140,7 +140,7 @@ var TEXTES = {
       "c": [
         {
           "l": "A",
-          "t": "Ça lui arrivait déjà avant ?",
+          "t": "Ça lui arrivait déjà avant ?",
           "e": 1,
           "r": "Non. Jamais."
         },
@@ -152,7 +152,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "Vous vous parliez souvent ?",
+          "t": "Vous vous parliez souvent ?",
           "e": 0,
           "r": "Tous les jours. Enfin… avant."
         }
@@ -168,19 +168,19 @@ var TEXTES = {
       "c": [
         {
           "l": "A",
-          "t": "Tu sais ce qui s'est passé ?",
+          "t": "Tu sais ce qui s'est passé ?",
           "e": 1,
           "r": "Pas vraiment. J'ai essayé de lui demander."
         },
         {
           "l": "B",
-          "t": "Et t'as pas essayé d'en parler avec elle ?",
+          "t": "Et t'as pas essayé d'en parler avec elle ?",
           "e": -1,
           "r": "Si. J'ai essayé."
         },
         {
           "l": "C",
-          "t": "Elle avait l'air d'avoir peur de quelque chose ?",
+          "t": "Elle avait l'air d'avoir peur de quelque chose ?",
           "e": 0,
           "r": "Peut-être… Je lui ai demandé, plusieurs fois."
         }
@@ -239,8 +239,8 @@ var TEXTES = {
   "CRISIS": {
     "intro": [
       "Attends.",
-      "T'es dans quelle classe ?",
-      "Tu connais qui dans la sienne ?"
+      "T'es dans quelle classe ?",
+      "Tu connais qui dans la sienne ?"
     ],
     "c": [
       {
@@ -273,19 +273,19 @@ var TEXTES = {
     "succes": {
       "titre": "🟢 Inès te fait confiance",
       "p0ines": "J'ai le mot de passe depuis un moment mais j'arrive pas à m'en servir moi-même. J'ai trop peur de tomber sur un truc horrible. Toi, ça te fera moins mal de regarder à ma place.",
-      "p1ines": "Tu promets de faire attention à ce que tu lis ?",
+      "p1ines": "Tu promets de faire attention à ce que tu lis ?",
       "p1leo": "Je promets.",
       "p1suite": "Et tu me dis si tu trouves quelque chose.",
-      "p2ines": "Tu promets de respecter la vie privée de Clara ?",
+      "p2ines": "Tu promets de respecter la vie privée de Clara ?",
       "p2leo": "Je le promets.",
       "codesMsg": "Elle me l'avait donné au cas où. Tu l'utilises, mais t'en parles à personne.",
       "nextPartBtn": "▶ Voir l'Instaclasse de Clara",
-      "copied": "✓ Copié !",
+      "copied": "✓ Copié !",
       "ig": {
         "label": "📱 Instaclasse de Clara",
-        "compteLabel": "compte :",
+        "compteLabel": "compte :",
         "compte": "@clara.fontaine",
-        "mdpLabel": "mdp :",
+        "mdpLabel": "mdp :",
         "mdp": "nuit_rouge17",
         "warn": "⚠ C'est sa vie privée. Respecte-la."
       }
@@ -293,18 +293,18 @@ var TEXTES = {
     "fragile": {
       "titre": "🟡 Succès fragile",
       "p0ines": "J'ai le mot de passe depuis un moment mais j'arrive pas à m'en servir moi-même. J'ai trop peur de tomber sur un truc horrible. Toi, ça te fera moins mal de regarder à ma place.",
-      "p1ines": "Je sais vraiment pas si je fais bien.\nTu me promets de faire attention ?",
+      "p1ines": "Je sais vraiment pas si je fais bien.\nTu me promets de faire attention ?",
       "p1leo": "Oui.",
-      "p2ines": "Tu promets de respecter la vie privée de Clara ?",
+      "p2ines": "Tu promets de respecter la vie privée de Clara ?",
       "p2leo": "Oui.",
       "codesMsg": "Elle me l'avait donné au cas où. Tu l'utilises, mais t'en parles à personne.",
       "nextPartBtn": "▶ Voir l'Instaclasse de Clara",
-      "copied": "✓ Copié !",
+      "copied": "✓ Copié !",
       "ig": {
         "label": "📱 Instaclasse de Clara",
-        "compteLabel": "compte :",
+        "compteLabel": "compte :",
         "compte": "@clara.fontaine",
-        "mdpLabel": "mdp :",
+        "mdpLabel": "mdp :",
         "mdp": "nuit_rouge17",
         "warn": "⚠ Sois prudent."
       }
@@ -323,11 +323,11 @@ const UI = {
     statusOnline: "en ligne",
     statusTyping: "écrit…",
     playerMsg: "Inès, j'ai peut-être trouvé quelque chose",
-    q: "quoi donc ?",
-    correctYes: "Attends... oui, ça doit être chez sa tante, à la campagne !",
-    correctCont: "C'est là qu'elle est, bravo ! Sa tante travaille dans un restaurant - voici le numéro :",
-    wrongAnswer: "Je vois pas à quoi tu fais référence... c'est quoi exactement ce que t'as trouvé ?",
+    q: "quoi donc ?",
+    correctYes: "Attends... oui, ça doit être chez sa tante, à la campagne !",
+    correctCont: "C'est là qu'elle est, bravo ! Sa tante travaille dans un restaurant - voici le numéro :",
+    wrongAnswer: "Je vois pas à quoi tu fais référence... c'est quoi exactement ce que t'as trouvé ?",
     nextUrl: "4_Convaincre_Clara.html",
-    nextBtn: "→ Partie 4 : Convaincre Clara"
+    nextBtn: "→ Partie 4 : Convaincre Clara"
   }
 };

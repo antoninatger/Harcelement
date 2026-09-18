@@ -44,15 +44,15 @@ var TEXTES = {
     icon:  "🧑‍🏫",
     titre: "Le lendemain, Léo",
     items: [
-      "Va voir le CPE. Pas pour dénoncer : pour dire qu'une élève de son collège ne vient plus, et pourquoi.",
+      "Va voir le CPE. Pas pour dénoncer : pour dire qu'une élève de son collège ne vient plus, et pourquoi.",
       "Montre les captures d'écran qu'il a gardées, et signale les comptes anonymes un par un.",
-      "N'a rien réglé tout seul{e} - {il|elle} a fait ce qu'{un ami|une amie} de quatorze ans peut faire : prévenir quelqu'un qui peut agir."
+      "N'a rien réglé tout seul{e} - {il|elle} a fait ce qu'{un ami|une amie} de quatorze ans peut faire : prévenir quelqu'un qui peut agir."
     ]
   },
 
   epilogue: {
     icon:  "⚖️",
-    titre: "Et les cinq du groupe ?",
+    titre: "Et les cinq du groupe ?",
     corps: "Le collège a ouvert une enquête et les a reçus, avec leurs parents. Deux ont répondu qu'ils « ne pensaient pas à mal ». Kevin a montré ses captures.\n\nEn France, le harcèlement scolaire est un délit depuis 2022 - y compris en ligne, y compris entre élèves d'un même établissement.\n\nClara est revenue trois semaines plus tard. Ça n'a pas été simple. Mais elle ne portait plus ça toute seule."
   },
 
@@ -64,7 +64,7 @@ var TEXTES = {
     { minScore: 10,
       icon: "🌿", cls: "good",
       titre:    "Clara va demander de l'aide.",
-      corps:    "Tu as su trouver les mots justes à chaque instant.\nNi trop forts, ni trop légers - juste présents.\n\nLa tante t'a fait confiance. Clara a raccroché avec une décision concrète : parler à un adulte de confiance, et ne plus porter ça seule.\n\nTon rôle n'était pas de la sauver. C'était de lui montrer que demander de l'aide, c'est possible.",
+      corps:    "Tu as su trouver les mots justes à chaque instant.\nNi trop forts, ni trop légers - juste présents.\n\nLa tante t'a fait confiance. Clara a raccroché avec une décision concrète : parler à un adulte de confiance, et ne plus porter ça seule.\n\nTon rôle n'était pas de la sauver. C'était de lui montrer que demander de l'aide, c'est possible.",
       citation: "« Je vais en parler à ma tante. Vraiment parler. »\n- Clara"
     },
     { minScore: 5,
@@ -90,7 +90,7 @@ var TEXTES = {
     echecGate2:  "[ Elle raccroche doucement. ]",
     echecRecup1: "(ton ferme) Je pense qu'il vaut mieux en rester là, Léo.\nClara n'est pas en état pour ça. Pas ce soir.",
     echecRecup2: "[ Elle raccroche. ]",
-    scoreLabel:  "Score d'empathie : "
+    scoreLabel:  "Score d'empathie : "
   },
 
   // ─── Scènes ───────────────────────────────────────────────────────────────
@@ -103,11 +103,11 @@ var TEXTES = {
       pdotCount:3, pdotActive:0,
       dialogueBefore:[
         {spk:'narrator', txt:'[ Le téléphone sonne… déclic. ]'},
-        {spk:'aunt',     txt:'Allô ?'},
-        {spk:'thomas',   txt:"Bonjour madame… excusez-moi de vous déranger. Je m'appelle Léo, je suis {un ami|une amie} de Clara. Est-ce que je pourrais lui parler, s'il vous plaît ?"},
-        {spk:'aunt',     txt:"Léo… Oui, elle m'a parlé de toi.\nMais… je préfère être honnête : ce n'est pas un bon moment."},
+        {spk:'aunt',     txt:'Allô ?'},
+        {spk:'thomas',   txt:"Bonjour madame… excusez-moi de vous déranger. Je m'appelle Léo, je suis {un ami|une amie} de Clara. Est-ce que je pourrais lui parler, s'il vous plaît ?"},
+        {spk:'aunt',     txt:"Léo… Oui, elle m'a parlé de toi.\nMais… je préfère être honnête : ce n'est pas un bon moment."},
       ],
-      prompt:'Comment répondre ?',
+      prompt:'Comment répondre ?',
       choices:[
         { emp:2, txt:"« Je comprends. Je veux pas la brusquer… mais elle me manque, et j'ai peur pour elle. »",
           fb:{type:'good', msg:'Tu montres que sa protection passe avant ton besoin.'},
@@ -120,7 +120,7 @@ var TEXTES = {
           reply:{spk:'aunt', txt:"(froide) Urgent… pour toi, peut-être."},
           recovery:{
             auntLine: "Ce n'est pas une urgence pour moi, Léo. Et pour l'instant, c'est ce qui compte.",
-            prompt:   'La tante attend. Que dis-tu ?',
+            prompt:   'La tante attend. Que dis-tu ?',
             good:{ txt:"« Vous avez raison. Je suis désolé{e}. C'est elle qui compte, pas moi. »",
                    reply:{spk:'aunt', txt:"(légèrement adoucie) …D'accord. Continue."} },
             bad: { txt:"« Mais vous ne comprenez pas, c'est vraiment important. »",
@@ -135,9 +135,9 @@ var TEXTES = {
       dialogueBefore:[
         {spk:'aunt', txt:"Tu sais, depuis qu'elle est arrivée ici… Clara n'est plus la même.\nElle pleure beaucoup. Elle fait des cauchemars. Elle se réveille paniquée la nuit.\nEt surtout… elle culpabilise. Elle pense que tout est de sa faute."},
       ],
-      prompt:'Que réponds-tu ?',
+      prompt:'Que réponds-tu ?',
       choices:[
-        { emp:2, txt:"« Elle culpabilise ? Mais elle a rien fait… C'est ça qui me fait le plus mal. »",
+        { emp:2, txt:"« Elle culpabilise ? Mais elle a rien fait… C'est ça qui me fait le plus mal. »",
           fb:{type:'good', msg:'Tu défends Clara directement. La tante le ressent.'},
           reply:{spk:'aunt', txt:"(souffle) C'est exactement ce qu'elle a besoin d'entendre."}},
         { emp:1, txt:"« Je savais pas que c'était à ce point… c'est vraiment grave. »",
@@ -148,7 +148,7 @@ var TEXTES = {
           reply:{spk:'aunt', txt:"(sèchement) Elle n'osait pas. C'est précisément le problème."},
           recovery:{
             auntLine: "Si tu lui faisais des reproches maintenant… tu la blesserais encore plus, Léo.",
-            prompt:   'Comment réagis-tu à ça ?',
+            prompt:   'Comment réagis-tu à ça ?',
             good:{ txt:"« Vous avez raison. Ce n'est pas ce que je voulais dire. Elle ne méritait rien de tout ça. »",
                    reply:{spk:'aunt', txt:"(pause) …C'est mieux. J'entends de la sincérité."} },
             bad: { txt:"« Je fais juste remarquer que si elle m'avait parlé, on aurait pu éviter ça. »",
@@ -175,7 +175,7 @@ var TEXTES = {
           fb:{type:'bad', msg:"Tu parles de toi et de ton plan - pas d'elle."},
           reply:{spk:'aunt', txt:"(froide) Un plan. Clara n'a pas besoin d'un plan. Elle a besoin d'être entendue."},
           recovery:{
-            auntLine: "Est-ce que tu comprends la différence, Léo ?",
+            auntLine: "Est-ce que tu comprends la différence, Léo ?",
             prompt:   '',
             good:{ txt:"« Oui… vous avez raison. Je voulais juste l'aider mais je suis allé{e} trop vite. »",
                    reply:{spk:'aunt', txt:"(longue pause) …Je vais lui demander. Mais ne la brusque pas."} },
@@ -202,17 +202,17 @@ var TEXTES = {
       pdotCount:4, pdotActive:0,
       dialogueBefore:[
         {spk:'narrator', txt:'[ Un froissement de téléphone… ]'},
-        {spk:'lea',      txt:'Allô… ?'},
+        {spk:'lea',      txt:'Allô… ?'},
         {spk:'thomas',   txt:'Clara… c\'est moi. Léo.'},
         {spk:'lea',      txt:'… Salut.'},
         {spk:'thomas',   txt:"Je suis désolé{e} d'appeler comme ça. Je ne savais pas comment faire autrement."},
         {spk:'lea',      txt:"C'est… c'est pas grave."},
         {spk:'thomas',   txt:"Tu m'as manqué."},
         {spk:'lea',      txt:"(souffle) Toi aussi…"},
-        {spk:'thomas',   txt:"Pourquoi tu n'as rien dit ? Tu sais que tu pouvais me parler…"},
+        {spk:'thomas',   txt:"Pourquoi tu n'as rien dit ? Tu sais que tu pouvais me parler…"},
         {spk:'lea',      txt:"J'y ai pensé… plein de fois.\nJ'ai même commencé à écrire des messages… et puis je les supprimais."},
       ],
-      prompt:'Que lui réponds-tu ?',
+      prompt:'Que lui réponds-tu ?',
       choices:[
         { emp:2, txt:"« T'avais pas besoin de trouver les bons mots. Je t'aurais écoutée, même sans explication. »",
           fb:{type:'good', msg:"Tu lèves la pression des mots. Elle peut souffler."},
@@ -220,7 +220,7 @@ var TEXTES = {
         { emp:1, txt:"« Je comprends… c'est dur de savoir comment dire ces choses. »",
           fb:{type:'ok', msg:'Vrai, mais un peu général.'},
           reply:{spk:'lea', txt:"Ouais… c'est ça."}},
-        { emp:0, txt:"« Pourquoi tu as supprimé ces messages ? J'aurais répondu, tu sais. »",
+        { emp:0, txt:"« Pourquoi tu as supprimé ces messages ? J'aurais répondu, tu sais. »",
           fb:{type:'bad', msg:"Tu mets l'accent sur toi, pas sur ce qu'elle vivait."},
           reply:{spk:'lea', txt:"(froide) J'en sais rien…"}},
       ]
@@ -231,7 +231,7 @@ var TEXTES = {
       dialogueBefore:[
         {spk:'lea', txt:"Au début, c'était juste des remarques… des petites piques.\nJe me disais que ça allait passer.\nMais après… ça a empiré. Des moqueries en groupe. Des commentaires sur tout.\nEt ensuite, ça a continué en ligne. Des messages. Des captures. Des rumeurs.\nJe ne pouvais plus y échapper… même chez moi."},
       ],
-      prompt:"Que ressens-tu à l'entendre ?",
+      prompt:"Que ressens-tu à l'entendre ?",
       choices:[
         { emp:2, txt:"« Même chez toi t'étais pas tranquille… T'avais plus aucun endroit où souffler. Je suis désolé{e}. »",
           fb:{type:'good', msg:'Tu nommes sa réalité avec précision. Elle se sent comprise.'},
@@ -248,9 +248,9 @@ var TEXTES = {
     { id:'L3', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 3 / 4',
       pdotCount:4, pdotActive:2,
       dialogueBefore:[
-        {spk:'lea', txt:"Le pire, tu sais quoi ?\nC'est quand j'ai commencé à y croire.\nQuand je me regardais dans le miroir et que je voyais ce qu'ils disaient."},
+        {spk:'lea', txt:"Le pire, tu sais quoi ?\nC'est quand j'ai commencé à y croire.\nQuand je me regardais dans le miroir et que je voyais ce qu'ils disaient."},
       ],
-      prompt:'Comment lui répondre ?',
+      prompt:'Comment lui répondre ?',
       choices:[
         { emp:2, txt:"« C'est normal que t'aies fini par y croire, ils te l'ont dit cent fois. Mais c'est faux. C'est eux le problème, pas toi. »",
           fb:{type:'good', msg:'Tu expliques le mécanisme. Tu lui rends la réalité.'},
@@ -268,12 +268,12 @@ var TEXTES = {
       pdotCount:4, pdotActive:3,
       dialogueBefore:[
         {spk:'lea',    txt:"Ça fait cinq jours que je suis ici…\nLes deux premiers, je sortais même pas de la chambre.\nMaintenant… ça va un peu moins mal. Mais j'ai encore peur.\nPeur de retourner au collège. Peur que ça recommence. Peur que rien ne change."},
-        {spk:'thomas', txt:"Tu en as parlé à ta tante ? À tes parents ?"},
+        {spk:'thomas', txt:"Tu en as parlé à ta tante ? À tes parents ?"},
         {spk:'lea',    txt:"Ma tante sait un peu… Elle est gentille. Mais je veux pas les inquiéter.\nJ'ai l'impression que si j'en parle vraiment… ça devient réel."},
       ],
-      prompt:'Que lui dire ?',
+      prompt:'Que lui dire ?',
       choices:[
-        { emp:2, txt:"« C'est déjà réel, Clara. Et c'est pour ça qu'il faut des adultes qui peuvent agir : ta tante, tes parents, le CPE. Pas pour tout régler d'un coup. Juste pour que tu portes plus ça toute seule. »",
+        { emp:2, txt:"« C'est déjà réel, Clara. Et c'est pour ça qu'il faut des adultes qui peuvent agir : ta tante, tes parents, le CPE. Pas pour tout régler d'un coup. Juste pour que tu portes plus ça toute seule. »",
           fb:{type:'good', msg:"Tu lui montres que chercher de l'aide adulte, c'est un acte de courage - pas une faiblesse."},
           reply:{spk:'lea', txt:"(silence) …Peut-être. Ma tante m'a proposé d'appeler le collège.\nJ'avais dit non. Mais là… peut-être que oui."}},
         { emp:1, txt:"« Tu n'as pas à régler ça toute seule. Si tu veux, je peux être là quand tu en parles à quelqu'un - n'importe quel adulte de confiance. »",

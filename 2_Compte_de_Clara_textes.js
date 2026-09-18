@@ -18,7 +18,7 @@ const CONVOS = [
     preview:"tout le monde sait ce que t'as fait avec Nathan",
     messages:[
       { from:"them", text:"tout le monde sait ce que t'as fait avec Nathan aux toilettes", time:"10:31" },
-      { from:"them", text:"t'as pas honte ?", time:"10:31" },
+      { from:"them", text:"t'as pas honte ?", time:"10:31" },
       { from:"them", text:"ca se fait pas de se comporter comme ca", time:"10:32" },
       { from:"them", text:"tu vas le regretter", time:"10:33" },
     ]
@@ -40,7 +40,7 @@ const CONVOS = [
     messages:[
       { from:"them", text:"c'est toi qui as balance le groupe et tout le monde le sait", time:"09:58" },
       { from:"them", text:"t'aurais pas du faire ca", time:"09:59" },
-      { from:"them", text:"tu crois que ca va rester sans consequence ?", time:"09:59" },
+      { from:"them", text:"tu crois que ca va rester sans consequence ?", time:"09:59" },
       { from:"them", text:"on est plusieurs a t'avoir a l'oeil maintenant", time:"10:00" },
     ]
   },
@@ -60,9 +60,9 @@ const CONVOS = [
     unread:false, time:"hier 22h14", section:"Hier",
     preview:"t'as un vrai probleme avec ton poids tu sais ca",
     messages:[
-      { from:"them", text:"t'as un vrai probleme avec ton poids tu sais ca ?", time:"22:14" },
+      { from:"them", text:"t'as un vrai probleme avec ton poids tu sais ca ?", time:"22:14" },
       { from:"them", text:"chaque fois qu'on te voit en cours c'est de pire en pire", time:"22:15" },
-      { from:"them", text:"t'as pas de miroir chez toi ?", time:"22:15" },
+      { from:"them", text:"t'as pas de miroir chez toi ?", time:"22:15" },
     ]
   },
   {
@@ -71,9 +71,9 @@ const CONVOS = [
     preview:"on a fait un sondage sur toi dans la classe",
     messages:[
       { from:"them", text:"on a fait un sondage sur toi dans la classe", time:"20:37" },
-      { from:"them", text:"la question c'etait : Clara est-elle la personne la plus nulle du college", time:"20:38" },
+      { from:"them", text:"la question c'etait : Clara est-elle la personne la plus nulle du college", time:"20:38" },
       { from:"them", text:"94% ont vote oui", time:"20:38" },
-      { from:"them", text:"tu vas arreter de te la peter maintenant ?", time:"20:39" },
+      { from:"them", text:"tu vas arreter de te la peter maintenant ?", time:"20:39" },
     ]
   },
   {
@@ -114,7 +114,7 @@ const CONVOS = [
     unread:false, time:"lundi 19h55", section:null,
     preview:"on parle de toi sur le groupe depuis hier soir",
     messages:[
-      { from:"them", text:"tu sais qu'on parle de toi sur le groupe depuis hier soir ?", time:"19:55" },
+      { from:"them", text:"tu sais qu'on parle de toi sur le groupe depuis hier soir ?", time:"19:55" },
       { from:"them", text:"ce que les mecs de ta classe disent sur toi c'est pas joli", time:"19:56" },
       { from:"them", text:"je te dirai pas ce que c'est, ca te ferait trop de mal", time:"19:56" },
       { from:"them", text:"ou peut-etre que tu merites de savoir en fait", time:"19:57" },
@@ -135,7 +135,7 @@ const CONVOS = [
     unread:false, time:"dimanche 20h18", section:null,
     preview:"tes amis te parlent encore par pitie tu le sais non",
     messages:[
-      { from:"them", text:"tes amis te parlent encore par pitie tu le sais non ?", time:"20:18" },
+      { from:"them", text:"tes amis te parlent encore par pitie tu le sais non ?", time:"20:18" },
       { from:"them", text:"j'ai demande a quelqu'un de ton groupe il m'a dit qu'il te supportait plus", time:"20:19" },
       { from:"them", text:"t'as pas beaucoup d'avenir dans cette classe", time:"20:19" },
     ]
@@ -144,10 +144,10 @@ const CONVOS = [
   {
     id:14, avatar:"👻", name:"fantome_reseau", sub:"Compte inconnu",
     unread:false, time:"il y a 3 sem.", section:"Le mois dernier",
-    preview:"4 likes sur ta photo avec 600 abonnes c'est nul",
+    preview:"4 likes sur ta photo avec 612 abonnes c'est nul",
     messages:[
-      { from:"them", text:"t'as vu ton nombre de likes sur ta derniere photo ?", time:"14:22" },
-      { from:"them", text:"4 likes en 2 heures avec 600 abonnes c'est nul", time:"14:22" },
+      { from:"them", text:"t'as vu ton nombre de likes sur ta derniere photo ?", time:"14:22" },
+      { from:"them", text:"4 likes en 2 heures avec 612 abonnes c'est nul", time:"14:22" },
       { from:"them", text:"meme tes propres abonnes t'ignorent mdrrr", time:"14:23" },
       { from:"them", text:"prends ca comme un message", time:"14:23" },
     ]
@@ -168,7 +168,7 @@ const CONVOS = [
     unread:false, time:"il y a 3 sem.", section:null,
     preview:"on t'a filmee a la cantine hier t'etais au courant",
     messages:[
-      { from:"them", text:"on t'a filmee a la cantine hier t'etais au courant ?", time:"18:05" },
+      { from:"them", text:"on t'a filmee a la cantine hier t'etais au courant ?", time:"18:05" },
       { from:"them", text:"t'avais l'air completement perdue comme d'hab", time:"18:05" },
       { from:"them", text:"ca va tourner partout ne t'inquiete pas", time:"18:06" },
     ]
@@ -178,7 +178,7 @@ const CONVOS = [
     unread:true, time:"il y a 3 sem.", section:null,
     preview:"clara reponds s'il te plait je m'inquiete",
     messages:[
-      { from:"them", text:"Clara t'as pas repondu hier soir ca va ?", time:"09:12" },
+      { from:"them", text:"Clara t'as pas repondu hier soir ca va ?", time:"09:12" },
       { from:"them", text:"j'ai vu que t'avais poste une story a minuit j'etais inquiete", time:"09:13" },
       { from:"me",   text:"sarah je peux plus", time:"09:41" },
       { from:"me",   text:"je sais pas comment t'expliquer c'est tous les jours maintenant", time:"09:42" },
@@ -228,7 +228,7 @@ const CONVOS = [
     unread:false, time:"il y a 4 sem.", section:null,
     preview:"t'as vu le commentaire que E. a laisse sur ta photo",
     messages:[
-      { from:"them", text:"t'as vu le commentaire que E. a laisse sur ta photo ?", time:"20:12" },
+      { from:"them", text:"t'as vu le commentaire que E. a laisse sur ta photo ?", time:"20:12" },
       { from:"them", text:"tout le monde a like son comm mais pas ta photo c'est marrant non", time:"20:12" },
       { from:"them", text:"ca veut tout dire", time:"20:13" },
     ]
@@ -239,7 +239,7 @@ const CONVOS = [
     unread:false, time:"il y a 2 mois", section:"Il y a 2 mois",
     preview:"personne ne t'a defendue quand M. t'a insultee tu l'as remarque",
     messages:[
-      { from:"them", text:"personne ne t'a defendue quand M. t'a insultee tu l'as remarque ?", time:"17:34" },
+      { from:"them", text:"personne ne t'a defendue quand M. t'a insultee tu l'as remarque ?", time:"17:34" },
       { from:"them", text:"c'est parce que tout le monde pense pareil", time:"17:34" },
       { from:"them", text:"ils ont juste pas le courage de te le dire en face", time:"17:35" },
     ]
@@ -249,7 +249,7 @@ const CONVOS = [
     unread:false, time:"il y a 2 mois", section:null,
     preview:"t'as vu les stories que les 3emes ont postees sur toi",
     messages:[
-      { from:"them", text:"t'as vu les stories que les 3emes ont postees sur toi ?", time:"22:01" },
+      { from:"them", text:"t'as vu les stories que les 3emes ont postees sur toi ?", time:"22:01" },
       { from:"them", text:"ils t'ont surnommee et ca a bien marche comme blague", time:"22:01" },
       { from:"them", text:"tout le college est au courant maintenant", time:"22:02" },
       { from:"them", text:"bravo", time:"22:02" },
@@ -260,7 +260,7 @@ const CONVOS = [
     unread:false, time:"il y a 2 mois", section:null,
     preview:"ton ex a tout raconte a ses potes tu savais",
     messages:[
-      { from:"them", text:"ton ex a tout raconte a ses potes tu savais ?", time:"16:18" },
+      { from:"them", text:"ton ex a tout raconte a ses potes tu savais ?", time:"16:18" },
       { from:"them", text:"genre vraiment tout", time:"16:18" },
       { from:"them", text:"tu feras mieux la prochaine fois si y'en a une", time:"16:19" },
     ]
@@ -273,7 +273,7 @@ const CONVOS = [
       { from:"them", text:"j'ai des photos de toi que tu voudrais pas que tout le monde voie", time:"23:12" },
       { from:"them", text:"des photos de la soiree chez Lena le mois dernier", time:"23:13" },
       { from:"them", text:"si tu parles a quelqu'un de ce qui se passe au college je les envoie a toute ta liste de contacts", time:"23:13" },
-      { from:"them", text:"t'as compris le message ?", time:"23:14" },
+      { from:"them", text:"t'as compris le message ?", time:"23:14" },
     ]
   },
   // ── IL Y A 3 MOIS ──
@@ -282,7 +282,7 @@ const CONVOS = [
     unread:false, time:"il y a 3 mois", section:"Il y a 3 mois",
     preview:"t'arrives encore a dormir la nuit sachant que tout le monde te deteste",
     messages:[
-      { from:"them", text:"t'arrives encore a dormir la nuit sachant que tout le monde te deteste ?", time:"23:47" },
+      { from:"them", text:"t'arrives encore a dormir la nuit sachant que tout le monde te deteste ?", time:"23:47" },
       { from:"them", text:"parce que moi a ta place je pourrais pas", time:"23:47" },
       { from:"them", text:"tu dois etre blindee ou completement aveugle", time:"23:48" },
     ]
@@ -332,7 +332,7 @@ const CONVOS = [
     unread:false, time:"il y a 8 mois", section:null,
     preview:"on t'a inventé un surnom dans la classe tu veux savoir lequel",
     messages:[
-      { from:"them", text:"on t'a invente un surnom dans la classe tu veux savoir lequel ?", time:"13:30" },
+      { from:"them", text:"on t'a invente un surnom dans la classe tu veux savoir lequel ?", time:"13:30" },
       { from:"them", text:"tout le monde l'utilise deja sauf toi", time:"13:30" },
       { from:"them", text:"demande autour de toi si t'as le courage", time:"13:31" },
     ]
@@ -356,7 +356,7 @@ const PHOTO_QUIZZES = {
   3: {
     icon:'⚖️',
     type:'Body shaming (harcèlement sur l\'apparence physique)',
-    question:'À ton avis, comment appelle-t-on le genre de commentaire que tu viens de lire sous la photo ?',
+    question:'À ton avis, comment appelle-t-on le genre de commentaire que tu viens de lire sous la photo ?',
     options:[
       'Des conseils diététiques maladroits',
       'Du body shaming - harcèlement ciblant l\'apparence physique',
@@ -369,7 +369,7 @@ const PHOTO_QUIZZES = {
   7: {
     icon:'🎂',
     type:'Isolement et exclusion sociale en ligne',
-    question:'Les commentaires sur la photo d\'anniversaire de Clara la raillent sur sa solitude ("personne était là ?", "tu l\'as mangé toute seule ?"). C\'est quel type de harcèlement ?',
+    question:'Les commentaires sur la photo d\'anniversaire de Clara la raillent sur sa solitude ("personne était là ?", "tu l\'as mangé toute seule ?"). C\'est quel type de harcèlement ?',
     options:[
       'Des taquineries légères et sans conséquences',
       'De l\'exclusion sociale délibérée pour isoler et humilier la victime',
@@ -382,7 +382,7 @@ const PHOTO_QUIZZES = {
   5: {
     icon:'📸',
     type:'Diffusion non consentie d\'images et cybersurveillance',
-    question:'Des inconnus commentent la photo de Clara au concert en disant qu\'elle "n\'était pas à sa place" et que "les gens autour d\'elle devaient être contents". C\'est quoi ?',
+    question:'Des inconnus commentent la photo de Clara au concert en disant qu\'elle "n\'était pas à sa place" et que "les gens autour d\'elle devaient être contents". C\'est quoi ?',
     options:[
       'Un commentaire esthétique sur la photo',
       'Du harcèlement ciblant l\'identité et la place de la victime, avec intimidation collective',
@@ -400,7 +400,7 @@ const QUIZZES = {
   4: {
     icon: '⚠️',
     type: 'Intimidation et menace en ligne',
-    question: 'Ces messages ("on est plusieurs à t\'avoir à l\'œil") représentent quelle forme de cyberharcèlement ?',
+    question: 'Ces messages ("on est plusieurs à t\'avoir à l\'œil") représentent quelle forme de cyberharcèlement ?',
     options: [
       'Des moqueries légères entre élèves',
       'De la publicité indésirable (spam)',
@@ -413,7 +413,7 @@ const QUIZZES = {
   7: {
     icon: '📊',
     type: 'Sondage d\'humiliation publique',
-    question: '"Clara est-elle la personne la plus nulle du collège ?" - Quel type de cyberharcèlement est-ce ?',
+    question: '"Clara est-elle la personne la plus nulle du collège ?" - Quel type de cyberharcèlement est-ce ?',
     options: [
       'Un sondage d\'humiliation publique',
       'Du phishing (vol de données)',
@@ -426,7 +426,7 @@ const QUIZZES = {
   11: {
     icon: '🕸️',
     type: 'Rumeurs et manipulation psychologique',
-    question: '"On parle de toi en mal mais je ne te dirai pas ce qu\'on dit." - C\'est quoi ?',
+    question: '"On parle de toi en mal mais je ne te dirai pas ce qu\'on dit." - C\'est quoi ?',
     options: [
       'Un conseil d\'ami maladroit',
       'Une manipulation pour isoler et angoisser la victime',
@@ -439,7 +439,7 @@ const QUIZZES = {
   22: {
     icon: '🚪',
     type: 'Exclusion forcée',
-    question: '"Supprime ton compte, personne ne le remarquerait." - Quel mécanisme est à l\'œuvre ?',
+    question: '"Supprime ton compte, personne ne le remarquerait." - Quel mécanisme est à l\'œuvre ?',
     options: [
       'Un conseil amical maladroit',
       'Une pression pour forcer la victime à s\'exclure elle-même',
@@ -447,12 +447,12 @@ const QUIZZES = {
       'Une usurpation d\'identité'
     ],
     correct: 1,
-    explanation: 'Pousser la victime à s\'auto-exclure, c\'est de l\'exclusion forcée. L\'objectif : faire disparaître la personne sans que le harceleur soit directement tenu responsable.'
+    explanation: 'Pousser la victime à s\'auto-exclure, c\'est de l\'exclusion forcée. L\'objectif : faire disparaître la personne sans que le harceleur soit directement tenu responsable.'
   },
   23: {
     icon: '👤',
     type: 'Faux compte créé pour harceler',
-    question: '"J\'ai créé ce compte rien que pour te dire que t\'es nulle." Quel est le danger spécifique ?',
+    question: '"J\'ai créé ce compte rien que pour te dire que t\'es nulle." Quel est le danger spécifique ?',
     options: [
       'Il collecte des données personnelles',
       'Il usurpe l\'identité d\'un ami de Clara',
@@ -547,13 +547,13 @@ var photoData = [
   },
   { likes: 21, caption: "lecture du soir 📚", time: "il y a 2 mois",
     comments: [
-      { user: "ines_l",           text: "t'es a quel tome la ??" },
+      { user: "ines_l",           text: "t'es a quel tome la ??" },
       { user: "sarah.girard",     text: "tu me le pretes quand t'as fini" },
     ]
   },
   { likes: 7,  caption: "concert ce soir 🎤🔥", time: "il y a 3 mois",
     comments: [
-      { user: "vrai_info_colleg", text: "quoi ? tu aimes cette artiste ? t'es nulle ma pauvre fille" },
+      { user: "vrai_info_colleg", text: "quoi ? tu aimes cette artiste ? t'es nulle ma pauvre fille" },
       { user: "user_fake8847",    text: "t'aurais pas du y aller ca se voit que t'es pas a ta place" },
       { user: "0000_mask_0000",   text: "les gens autour de toi dans la foule ils devaient etre contents lol" },
     ]
@@ -561,13 +561,13 @@ var photoData = [
   { likes: 2,  caption: "fleurs du marche 🌸", time: "il y a 4 mois",
     comments: [
       { user: "dark_mode_user",   text: "meme les fleurs ont l'air de vouloir partir" },
-      { user: "fantome_reseau",   text: "des fleurs ? personne t'en offrira jamais 💀" },
+      { user: "fantome_reseau",   text: "des fleurs ? personne t'en offrira jamais 💀" },
     ]
   },
   { likes: 4,  caption: "gateau d'anniversaire 🎂", time: "il y a 6 mois",
     comments: [
-      { user: "anon_colleg_real", text: "personne etait la pour ton anniversaire c'est ca ?" },
-      { user: "sansnom_2024",     text: "tu l'as mange toute seule le gateau ?" },
+      { user: "anon_colleg_real", text: "personne etait la pour ton anniversaire c'est ca ?" },
+      { user: "sansnom_2024",     text: "tu l'as mange toute seule le gateau ?" },
       { user: "xx_nobody_xx",     text: "triste comme fete" },
     ]
   },
@@ -595,9 +595,9 @@ const UI = {
   synthNote:       "Ces formes de harcèlement sont réelles. Chacune laisse des traces sur la victime - même sans contact physique.",
   backToWA:        "← Retour au groupe",
   backToWAUrl:     "3_Groupe_Secret.html",
-  correct:         "Bonne réponse !",
+  correct:         "Bonne réponse !",
   wrong:           "Pas tout à fait.",
-  demasqueSub:     "Démasqué dans le groupe : ",
+  demasqueSub:     "Démasqué dans le groupe : ",
   reportBtn:       "⚠ Signaler ce compte",
   reportDone:      "✓ Compte signalé",
   reportAfter:     "Compte signalé. Clara aurait pu le faire dès le premier message - personne ne le lui avait dit.",

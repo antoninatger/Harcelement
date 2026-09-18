@@ -270,14 +270,27 @@ function onTap(e) {
 document.getElementById('chat-area').addEventListener('click', onTap);
 document.getElementById('wa-input').addEventListener('click', onTap);
 
-document.getElementById('chat-area').addEventListener('mouseenter', function () {
-  autoPaused = true;
-  clearTimeout(autoTimer);
-});
-document.getElementById('chat-area').addEventListener('mouseleave', function () {
+// La pause au survol n'a de sens qu'avec une vraie souris. Sur tablette, un
+// tap declenche mouseenter sans jamais envoyer mouseleave : le defilement
+// automatique restait en pause pour le reste de la partie.
+var souris = true;
+try { souris = window.matchMedia('(hover: hover)').matches; } catch (e) {}
+if (souris) {
+  document.getElementById('chat-area').addEventListener('mouseenter', function () {
+    autoPaused = true;
+    clearTimeout(autoTimer);
+  });
+  document.getElementById('chat-area').addEventListener('mouseleave', function () {
+    autoPaused = false;
+    if (waitingTap) scheduleAutoAdvance();
+  });
+}
+// Filet : tout contact tactile releve la pause, quoi qu'il arrive.
+document.addEventListener('touchstart', function () {
+  if (!autoPaused) return;
   autoPaused = false;
   if (waitingTap) scheduleAutoAdvance();
-});
+}, { passive: true });
 
 var ffBtn = document.getElementById('wa-ff-btn');
 if (ffBtn) {

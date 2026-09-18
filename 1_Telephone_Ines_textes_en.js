@@ -13,7 +13,7 @@ var TEXTES = {
     "she is listening to you",
     "she is starting to trust you",
     "she trusts you",
-    "she trusts you",
+    "she is opening up to you",
     "she really trusts you"
   ],
   "trustInitial": "she is hesitant to reply",
@@ -31,7 +31,7 @@ var TEXTES = {
       "type": "r"
     },
     {
-      "t": "It's Léo. We're in the same school as Clara.",
+      "t": "It's Léo. I'm a friend of Clara's - since primary school.",
       "type": "s"
     },
     {
@@ -113,11 +113,11 @@ var TEXTES = {
       "intro": [
         "How do you know Clara?"
       ],
-      "edu": "I've known her for a few years. We often ran into each other at school. I need to show her that.",
+      "edu": "We've been friends since primary school. We used to talk every day, before she shut herself away. Inès needs to understand I'm not here out of curiosity.",
       "c": [
         {
           "l": "A",
-          "t": "We often run into each other. I liked her.",
+          "t": "We've been friends since primary school. She means a lot to me.",
           "e": 1
         },
         {
@@ -127,7 +127,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "We're in different classes, but we talk sometimes.",
+          "t": "We talk a lot. Well… we used to.",
           "e": 0
         }
       ]

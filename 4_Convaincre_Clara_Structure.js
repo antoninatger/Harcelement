@@ -139,6 +139,17 @@ function loadScene(idx){
   });
 
   if(scene.isContinue){
+    // La tante revient : son ton depend de la confiance gagnee en phase 1.
+    // checkGate() testait bien PIVOT, mais n'est appele qu'apres un choix -
+    // or PIVOT n'en a aucun. pivotHaut / pivotBas ne s'affichaient donc
+    // jamais, et auntScore n'avait aucune consequence visible.
+    if(scene.id==='PIVOT'){
+      later(()=>{
+        appendLine('aunt', auntScore>=5 ? TEXTES.jeu.pivotHaut : TEXTES.jeu.pivotBas);
+        scrollFeed();
+      }, delay);
+      delay += 1100;
+    }
     later(()=>{
       document.getElementById('btn-continue').className='btn-continue show';
     }, delay+300);
@@ -284,13 +295,6 @@ function checkGate(scene){
     } else {
       later(()=>nextStep(), 500);
     }
-    return;
-  }
-  if(scene.id==='PIVOT'){
-    const auntLine = auntScore>=5 ? TEXTES.jeu.pivotHaut : TEXTES.jeu.pivotBas;
-    appendLine('aunt', auntLine);
-    scrollFeed();
-    later(()=>nextStep(), 900);
     return;
   }
   document.getElementById('btn-continue').className='btn-continue show';

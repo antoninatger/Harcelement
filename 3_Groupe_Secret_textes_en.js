@@ -51,7 +51,7 @@ const WA_DATA = {
   kevin: {
     icon:  "🫥",
     title: "And Kevin?",
-    body:  "Kevin hesitated four times. \"We're going a bit far here.\" \"This might be serious.\" \"Nobody has seen her for 2 days.\" Then \"…\". Every time he was cut off, and every time he went quiet. He eventually wrote to Clara, but too late: she had already gone.",
+    body:  "Kevin hesitated five times. \"We're going a bit far here.\" \"This might be serious.\" \"Nobody has seen her for 2 days.\" \"Maybe we went too far.\" Then \"…\". Every time he was cut off, and every time he went quiet. He eventually wrote to Clara, but too late: she had already gone.",
     items: [
       "Write to Clara privately, at the very first doubt - one sentence. He didn't have to take on the group: she only needed to stop feeling alone.",
       "Leave the group. Leaving is visible, and it takes one voice away from the crowd.",
@@ -123,7 +123,7 @@ const WA_DATA = {
 
     { type: "time-sep", text: "25 minutes later", delay: 1000 },
 
-    { id: 24, sender: "Jade",   text: "look at her number of likes 💀 3 likes in 2h with 600 followers that's dead",      time: "17:51", delay: 1800 },
+    { id: 24, sender: "Jade",   text: "look at her number of likes 💀 3 likes in 2h with 612 followers that's dead",      time: "17:51", delay: 1800 },
     { id: 25, sender: "Théo",   text: "even her real followers ignore her now hahaha",                                   time: "17:51", delay:  800 },
     { id: 26, sender: "Enzo",  text: "we managed to contaminate her image 😈",                                          time: "17:52", delay:  800 },
     { id: 27, sender: "Kevin",  text: "seriously don't you think we're going a bit too far now...",                       time: "17:53", delay: 1000 },

@@ -144,10 +144,10 @@ const CONVOS = [
   {
     id:14, avatar:"👻", name:"fantome_reseau", sub:"Unknown account",
     unread:false, time:"3 weeks ago", section:"Last month",
-    preview:"4 likes on your photo with 600 followers is pathetic",
+    preview:"4 likes on your photo with 612 followers is pathetic",
     messages:[
       { from:"them", text:"did you see the number of likes on your latest photo?", time:"14:22" },
-      { from:"them", text:"4 likes in 2 hours with 600 followers is pathetic", time:"14:22" },
+      { from:"them", text:"4 likes in 2 hours with 612 followers is pathetic", time:"14:22" },
       { from:"them", text:"even your own followers ignore you lol", time:"14:23" },
       { from:"them", text:"take that as a message", time:"14:23" },
     ]
