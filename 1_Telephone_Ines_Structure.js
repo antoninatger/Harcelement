@@ -307,6 +307,12 @@ var openSecondDirect = false;
   // Une fois le numéro donné (rc_p3_done = 2), on retrouve la première
   // conversation, avec le bandeau « nouveau message » pour rejouer la seconde.
   if (p3done === '1') openSecondDirect = true;
+
+  // … sauf si le joueur arrive depuis la porte du numéro en Partie 4 : il
+  // vient relire le numéro, autant le lui remettre sous les yeux tout de
+  // suite. Un paramètre d'URL plutôt qu'un drapeau stocké : rien à nettoyer,
+  // rien qui puisse rester coincé d'une page à l'autre.
+  if (location.search.indexOf('revoir') !== -1) openSecondDirect = true;
 })();
 
 function openSecondConvo(){

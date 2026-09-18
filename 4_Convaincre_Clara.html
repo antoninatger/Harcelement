@@ -214,7 +214,7 @@ body::after{
     <div class="pg-error" id="pg-error"></div>
     <div class="pg-thoughts" id="pg-thoughts"></div>
     <button id="pg-call" class="pg-btn-call">Appeler →</button>
-    <button id="pg-skip" class="pg-btn-skip" style="display:none">Accéder directement →</button>
+    <button id="pg-skip" class="pg-btn-skip" style="display:none">← Retourner demander à Inès</button>
     <a class="pg-back" href="index.html">← Retour à l'enquête</a>
   </div>
 </div>
@@ -370,7 +370,9 @@ body::after{
     if(e.key==='Enter') document.getElementById('pg-call').click();
   });
 
-  document.getElementById('pg-skip').addEventListener('click',dismissGate);
+  document.getElementById('pg-skip').addEventListener('click',function(){
+    window.location.href='1_Telephone_Ines.html?revoir';
+  });
 })();
 </script>
 <style>#fs-btn{position:fixed;top:1rem;right:1rem;z-index:9000;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:rgba(255,255,255,.45);cursor:pointer;padding:7px;line-height:0;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:color .2s,border-color .2s;}#fs-btn:hover{color:#fff;border-color:rgba(255,255,255,.5);}</style>
