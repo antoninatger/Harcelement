@@ -90,7 +90,7 @@ var TEXTES = {
   ],
   "G": [
     {
-      "edu": "Je dois être le plus honnête possible, et le plus sincère - c'est ma seule chance qu'elle m'aide.",
+      "edu": "Je dois être {le plus honnête|la plus honnête} possible, et {le plus sincère|la plus sincère} - c'est ma seule chance qu'elle m'aide.",
       "c": [
         {
           "l": "A",

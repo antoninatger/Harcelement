@@ -46,7 +46,7 @@ var TEXTES = {
     items: [
       "Va voir le CPE. Pas pour dénoncer : pour dire qu'une élève de son collège ne vient plus, et pourquoi.",
       "Montre les captures d'écran qu'il a gardées, et signale les comptes anonymes un par un.",
-      "N'a rien réglé tout seul - il a fait ce qu'un ami de quatorze ans peut faire : prévenir quelqu'un qui peut agir."
+      "N'a rien réglé tout seul{e} - {il|elle} a fait ce qu'{un ami|une amie} de quatorze ans peut faire : prévenir quelqu'un qui peut agir."
     ]
   },
 
@@ -117,7 +117,7 @@ var TEXTES = {
           reply:{spk:'aunt', txt:"Hmm… d'accord. Je t'écoute."}},
         { emp:0, txt:"« J'ai besoin de lui parler maintenant, c'est urgent. »",
           fb:{type:'bad', msg:'L\'insistance brusque met la tante sur la défensive.'},
-          reply:{spk:'aunt', txt:"(froid) Urgent… pour toi, peut-être."},
+          reply:{spk:'aunt', txt:"(froide) Urgent… pour toi, peut-être."},
           recovery:{
             auntLine: "Ce n'est pas une urgence pour moi, Léo. Et pour l'instant, c'est ce qui compte.",
             prompt:   'La tante attend. Que dis-tu ?',
@@ -152,7 +152,7 @@ var TEXTES = {
             good:{ txt:"« Vous avez raison. Ce n'est pas ce que je voulais dire. Elle ne méritait rien de tout ça. »",
                    reply:{spk:'aunt', txt:"(pause) …C'est mieux. J'entends de la sincérité."} },
             bad: { txt:"« Je fais juste remarquer que si elle m'avait parlé, on aurait pu éviter ça. »",
-                   reply:{spk:'aunt', txt:"(froid) Éviter ça. Tu penses vraiment que c'était si simple."} }
+                   reply:{spk:'aunt', txt:"(froide) Éviter ça. Tu penses vraiment que c'était si simple."} }
           }
         },
       ]
@@ -241,7 +241,7 @@ var TEXTES = {
           reply:{spk:'lea', txt:"Ouais…"}},
         { emp:0, txt:"« T'aurais pu bloquer ces gens, désactiver tes réseaux. »",
           fb:{type:'bad', msg:'Un conseil non demandé, qui ressemble à un reproche.'},
-          reply:{spk:'lea', txt:"(froid) Merci, j'y avais pas pensé."}},
+          reply:{spk:'lea', txt:"(froide) Merci, j'y avais pas pensé."}},
       ]
     },
 
@@ -281,7 +281,7 @@ var TEXTES = {
           reply:{spk:'lea', txt:"(hésitante) …D'accord. Je vais y réfléchir."}},
         { emp:0, txt:"« T'inquiète, je vais régler ça moi-même. Ces gens vont avoir des problèmes. »",
           fb:{type:'bad', msg:"Tu prends tout sur toi. Ce n'est pas ton rôle - et elle sait que ça risque d'empirer."},
-          reply:{spk:'lea', txt:"(froid) Non… s'il te plaît, fais rien. Ça va juste empirer."}},
+          reply:{spk:'lea', txt:"(froide) Non… s'il te plaît, fais rien. Ça va juste empirer."}},
       ]
     }
 

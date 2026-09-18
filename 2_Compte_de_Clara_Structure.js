@@ -604,7 +604,10 @@ function showLb() {
 // ─── RETOUR WHATSUPP ─────────────────────────────────────────────────────────
 
 (function () {
-  if (!sessionStorage.getItem('harcelement_wa_from')) return;
+  // Stockage tiers (le jeu tourne en cadre) : un acces non protege levait
+  // une exception qui interrompait le script, et AUCUN des listeners plus
+  // bas n'etait pose - la page s'affichait sans repondre au moindre clic.
+  if (!fromGroupe()) return;
 
   var btn = document.createElement('a');
   btn.href = UI.backToWAUrl;
@@ -618,7 +621,7 @@ function showLb() {
     'font-family:-apple-system,Segoe UI,sans-serif'
   ].join(';');
   btn.onclick = function () {
-    sessionStorage.removeItem('harcelement_wa_from');
+    try { sessionStorage.removeItem('harcelement_wa_from'); } catch (e) {}
   };
   document.body.appendChild(btn);
 })();

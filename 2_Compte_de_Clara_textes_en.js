@@ -175,7 +175,7 @@ const CONVOS = [
   },
   {
     id:30, avatar:"💛", name:"sarah.girard", sub:"Friend · Lyon",
-    unread:false, time:"3 weeks ago", section:null,
+    unread:true, time:"3 weeks ago", section:null,
     preview:"clara please answer i'm worried",
     messages:[
       { from:"them", text:"Clara you didn't answer last night are you okay?", time:"09:12" },
@@ -518,60 +518,60 @@ const HARCEL_MAP = [
 // ─── PROFILE PHOTOS ────────────────────────────────────────────────────────
 
 var photoData = [
-  { likes: 3,  caption: "sunrise this morning 🌅",
+  { likes: 3,  caption: "sunrise this morning 🌅", time: "2 hours ago",
     comments: [
       { user: "utilisateur_4729", text: "what photo quality lol" },
       { user: "anonymous_x0",     text: "your photo is blurry you have no talent at all" },
       { user: "_noreply_ghost_",  text: "your photo is seriously so ugly" },
     ]
   },
-  { likes: 34, caption: "love playing so much 🎸🎵",
+  { likes: 34, caption: "love playing so much 🎸🎵", time: "1 day ago",
     comments: [
       { user: "sarah.girard",     text: "SINCE WHEN do you play that well" },
       { user: "ines_l",           text: "same song for 3 weeks straight lol but I love it" },
       { user: "sarah.girard",     text: "please play at the end of year show" },
     ]
   },
-  { likes: 1,  caption: "my kitten 🐱❤️",
+  { likes: 1,  caption: "my kitten 🐱❤️", time: "3 days ago",
     comments: [
       { user: "anon_colleg_real", text: "even your cat looks as useless as you" },
       { user: "jevoustrouve",     text: "your photo is so ugly" },
     ]
   },
-  { likes: 4,  caption: "Sunday ice cream 🍦",
+  { likes: 4,  caption: "Sunday ice cream 🍦", time: "1 week ago",
     comments: [
       { user: "sansnom_2024",     text: "and you wonder why you have a problem with your weight" },
       { user: "xx_nobody_xx",     text: "honestly you have no shame posting that" },
       { user: "anonymous_x0",     text: "eat more don't worry" },
     ]
   },
-  { likes: 21, caption: "evening reading 📚",
+  { likes: 21, caption: "evening reading 📚", time: "2 weeks ago",
     comments: [
       { user: "ines_l",           text: "which book are you on now ??" },
       { user: "sarah.girard",     text: "lend it to me when you're done" },
     ]
   },
-  { likes: 7,  caption: "concert tonight 🎤🔥",
+  { likes: 7,  caption: "concert tonight 🎤🔥", time: "3 weeks ago",
     comments: [
       { user: "vrai_info_colleg", text: "what? you like this artist? you're useless poor girl" },
       { user: "user_fake8847",    text: "you shouldn't have gone, it's obvious you don't belong there" },
       { user: "0000_mask_0000",   text: "the people around you in the crowd must have been thrilled lol" },
     ]
   },
-  { likes: 2,  caption: "flowers from the market 🌸",
+  { likes: 2,  caption: "flowers from the market 🌸", time: "1 month ago",
     comments: [
       { user: "dark_mode_user",   text: "even the flowers look like they want to leave" },
       { user: "fantome_reseau",   text: "flowers? nobody's ever gonna give you any lol" },
     ]
   },
-  { likes: 4,  caption: "birthday cake 🎂",
+  { likes: 4,  caption: "birthday cake 🎂", time: "2 months ago",
     comments: [
       { user: "anon_colleg_real", text: "nobody was there for your birthday is that it?" },
       { user: "sansnom_2024",     text: "did you eat the whole cake by yourself?" },
       { user: "xx_nobody_xx",     text: "sad party" },
     ]
   },
-  { likes: 0,  caption: "starry night 🌙",
+  { likes: 0,  caption: "starry night 🌙", time: "4 months ago",
     comments: [
       { user: "truth_teller_99",  text: "0 likes in 3 hours that's a message clara" },
       { user: "utilisateur_4729", text: "even the sky doesn't want you" },

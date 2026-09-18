@@ -69,9 +69,10 @@ function init() {
   document.getElementById('ig-modal-likes').textContent    = UI.likes;
 
   // Retour depuis Instaclasse ? → sauter les overlays, reprendre où on en était
-  var saved = sessionStorage.getItem('harcelement_wa_state');
+  var saved = null;
+  try { saved = sessionStorage.getItem('harcelement_wa_state'); } catch (e) {}
   if (saved !== null) {
-    sessionStorage.removeItem('harcelement_wa_state');
+    try { sessionStorage.removeItem('harcelement_wa_state'); } catch (e) {}
     document.getElementById('code-gate').style.display = 'none';
     document.getElementById('warning-overlay').style.display = 'none';
     fastForwardTo(parseInt(saved, 10));
@@ -157,8 +158,12 @@ function ouvrirCompte(handle) {
 // ── Naviguer vers Instaclasse (sauvegarde l'état avant de partir) ───────────
 
 function goToCompte() {
-  sessionStorage.setItem('harcelement_wa_state', String(msgIndex));
-  sessionStorage.setItem('harcelement_wa_from', '1');
+  // Sans try/catch, un stockage tiers bloque faisait echouer la navigation
+  // elle-meme : cliquer une @mention ne faisait plus rien du tout.
+  try {
+    sessionStorage.setItem('harcelement_wa_state', String(msgIndex));
+    sessionStorage.setItem('harcelement_wa_from', '1');
+  } catch (e) {}
   window.location.href = WA_DATA.navigation.prev.url;
 }
 
@@ -491,7 +496,13 @@ function closeQuizContinue() {
 function showEndState() {
   document.getElementById('chat-area').style.display = 'none';
   document.getElementById('wa-input').style.display  = 'none';
-  try { localStorage.setItem('rc_p3_done', '1'); } catch(e) {}
+  // '2' = le joueur est deja retourne voir Ines et a obtenu le numero de la
+  // tante. Rejouer la partie 3 ne doit pas effacer cette progression.
+  try {
+    if (localStorage.getItem('rc_p3_done') !== '2') {
+      localStorage.setItem('rc_p3_done', '1');
+    }
+  } catch(e) {}
 
   var end  = document.getElementById('end-state');
   var data = WA_DATA.endMessage;

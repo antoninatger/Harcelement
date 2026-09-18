@@ -51,9 +51,9 @@ const WA_DATA = {
   kevin: {
     icon:  "🫥",
     title: "And Kevin?",
-    body:  "Kevin hesitated four times. \"We're going a bit far here.\" \"This might be serious.\" \"Nobody has seen her for 2 days.\" Then \"…\". Every time he was cut off, and every time he went quiet.",
+    body:  "Kevin hesitated four times. \"We're going a bit far here.\" \"This might be serious.\" \"Nobody has seen her for 2 days.\" Then \"…\". Every time he was cut off, and every time he went quiet. He eventually wrote to Clara, but too late: she had already gone.",
     items: [
-      "Write to Clara privately, one sentence. He didn't have to take on the group: she only needed to stop feeling alone.",
+      "Write to Clara privately, at the very first doubt - one sentence. He didn't have to take on the group: she only needed to stop feeling alone.",
       "Leave the group. Leaving is visible, and it takes one voice away from the crowd.",
       "Keep a screenshot. It is the only proof this group ever existed.",
       "Tell an adult. It is the only move that could have stopped the others."

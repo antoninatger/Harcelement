@@ -237,7 +237,7 @@ const CONVOS = [
   {
     id:18, avatar:"🫥", name:"user_invisible_00", sub:"Compte inconnu",
     unread:false, time:"il y a 2 mois", section:"Il y a 2 mois",
-    preview:"personne ne t'a defenude quand M. t'a insultee tu l'as remarque",
+    preview:"personne ne t'a defendue quand M. t'a insultee tu l'as remarque",
     messages:[
       { from:"them", text:"personne ne t'a defendue quand M. t'a insultee tu l'as remarque ?", time:"17:34" },
       { from:"them", text:"c'est parce que tout le monde pense pareil", time:"17:34" },
