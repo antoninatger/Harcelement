@@ -34,7 +34,7 @@ bloc('cover', 'Retrouver Clara',
 bloc('h2', 'Présentation générale')
 bloc('p', "Retrouver Clara est un jeu pédagogique destiné aux collégiens sur le thème du "
           "harcèlement scolaire et de son prolongement en ligne. Le joueur incarne Léo - ou Léa, "
-          "au choix - un ami de Clara, quatorze ans, qui ne vient plus au collège depuis cinq jours. "
+          "au choix - un ami de Clara, quatorze ans, qui ne vient plus au collège depuis presque une semaine. "
           "En traversant quatre scènes, il reconstitue ce qu'elle a vécu et apprend à lui parler.")
 bloc('p', "Ce document présente l'intégralité des textes jouables des quatre parties, tels qu'ils "
           "apparaissent à l'écran.")
@@ -102,12 +102,16 @@ for cle, kind in [('fragile', 'ok'), ('succes', 'good')]:
 
 bloc('h2', "Deuxième conversation avec Inès (après la Partie 3)")
 S = U1['secondConvo']
-bloc('p', "Elle s'ouvre quand le joueur revient sur la Partie 1 après avoir lu le groupe Whatsupp. "
+bloc('p', "Elle s'ouvre quand le joueur revient sur la Partie 1 après avoir lu le groupe Whatsupp (et, une fois le numéro obtenu, elle se réaffiche d'emblée, déjà résolue). "
           "Le joueur écrit librement ; les mots acceptés sont « tante », « campagne », « havre » et "
           "« secret ».")
 bloc('dial', 'leo', 'Léo', net(S['playerMsg']))
 bloc('dial', 'ines', 'Inès', net(S['q']))
-bloc('dial', 'ines', 'Inès', net(S['correctYes']) + ' ' + net(S['correctCont']) + ' 04 54 78 95 32')
+bloc('p', "Si le joueur parle du « havre secret » :")
+bloc('dial', 'ines', 'Inès', ' '.join(net(t) for t in S['foundHavre']))
+bloc('p', "S'il parle de la tante ou de la campagne :")
+bloc('dial', 'ines', 'Inès', ' '.join(net(t) for t in S['foundTante']))
+bloc('dial', 'ines', 'Inès', ' '.join(net(t) for t in S['foundSuite']) + ' 04 54 78 95 32 ' + net(S['apresNumero']))
 bloc('dial', 'ines', 'Inès', 'Si la réponse ne convient pas : « %s »' % net(S['wrongAnswer']))
 
 bloc('h2', "Ce que le joueur apprend sur Clara")

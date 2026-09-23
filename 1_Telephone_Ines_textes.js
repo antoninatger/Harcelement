@@ -104,7 +104,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "Je suis {inquiet|inquiète}. J'arrive plus à dormir depuis hier soir.",
+          "t": "Je suis {inquiet|inquiète}. J'arrive plus à dormir depuis qu'elle a disparu.",
           "e": 1
         }
       ]
@@ -113,7 +113,7 @@ var TEXTES = {
       "intro": [
         "Tu la connais comment toi, Clara ?"
       ],
-      "edu": "On est amis depuis la primaire. On se parlait tous les jours, avant qu'elle se referme. Il faut qu'Inès comprenne que je ne suis pas là par curiosité.",
+      "edu": "On est amis depuis la primaire. Cette année on n'est plus dans la même classe, on se voyait moins… mais elle compte toujours autant pour moi. Il faut qu'Inès comprenne que je ne suis pas là par curiosité.",
       "c": [
         {
           "l": "A",
@@ -127,7 +127,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "On se parle souvent. Enfin… on se parlait, avant.",
+          "t": "On se voit moins depuis qu'on est plus dans la même classe.",
           "e": 0
         }
       ]
@@ -162,7 +162,7 @@ var TEXTES = {
       "intro": [
         "Ça faisait un moment qu'elle était pas bien.",
         "Depuis des mois, en fait.",
-        "Elle manquait des cours. Elle répondait plus aux messages.",
+        "Elle manquait des cours. Elle répondait de moins en moins aux messages.",
         "Elle disait que c'était rien."
       ],
       "c": [
@@ -322,11 +322,27 @@ const UI = {
   secondConvo: {
     statusOnline: "en ligne",
     statusTyping: "écrit…",
-    playerMsg: "Inès, j'ai peut-être trouvé quelque chose",
-    q: "quoi donc ?",
-    correctYes: "Attends... oui, ça doit être chez sa tante, à la campagne !",
-    correctCont: "C'est là qu'elle est, bravo ! Sa tante travaille dans un restaurant - voici le numéro :",
-    wrongAnswer: "Je vois pas à quoi tu fais référence... c'est quoi exactement ce que t'as trouvé ?",
+    playerMsg: "Inès, je crois que je sais où est Clara.",
+    q: "Quoi ?? Où ça ?",
+    // Inès ne savait pas où était Clara : elle comprend en même temps que Léo.
+    // Deux entrées selon ce que le joueur a écrit (le surnom ou la tante).
+    foundHavre: [
+      "Son « havre secret » ??",
+      "C'est comme ça qu'elle appelait la maison de sa tante, à la campagne."
+    ],
+    foundTante: [
+      "Chez sa tante ??",
+      "Mais oui… c'est là qu'elle allait quand ça allait pas. Elle appelait ça son « havre secret »."
+    ],
+    foundSuite: [
+      "J'y avais même pas pensé.",
+      "J'ai le numéro de chez sa tante, on y était allées ensemble cet été. Attends, je le cherche."
+    ],
+    apresNumero: "Appelle-la. Et dis-moi comment va Clara, stp.",
+    // Réponse du joueur réaffichée quand il revient sur la conversation déjà résolue
+    reponseResolue: "Chez sa tante. Ils en parlent dans le groupe.",
+    relireBtn: "↺ Relire la première conversation",
+    wrongAnswer: "Hein ? Je comprends pas. Elle serait où, d'après toi ?",
     nextUrl: "4_Convaincre_Clara.html",
     nextBtn: "→ Partie 4 : Convaincre Clara"
   }

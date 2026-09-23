@@ -5,11 +5,11 @@ const CONVOS = [
   {
     id:1, avatar:"👤", name:"utilisateur_4729", sub:"Unknown account",
     unread:true, time:"4 min ago", section:"Today",
-    preview:"did you see your face this morning seriously",
+    preview:"did you see your face in your last photo seriously",
     messages:[
-      { from:"them", text:"did you see your face this morning seriously", time:"10:42" },
+      { from:"them", text:"did you see your face in your last photo seriously", time:"10:42" },
       { from:"them", text:"your haircut is a disaster", time:"10:42" },
-      { from:"them", text:"honestly make an effort before coming to class", time:"10:43" },
+      { from:"them", text:"honestly good thing you stopped coming to class", time:"10:43" },
     ]
   },
   {
@@ -36,10 +36,10 @@ const CONVOS = [
   {
     id:4, avatar:"🐍", name:"vrai_info_colleg", sub:"Unknown account",
     unread:true, time:"45 min ago", section:null,
-    preview:"you're the one who snitched on the group and everyone knows it",
+    preview:"we know everything you do clara",
     messages:[
-      { from:"them", text:"you're the one who snitched on the group and everyone knows it", time:"09:58" },
-      { from:"them", text:"you shouldn't have done that", time:"09:59" },
+      { from:"them", text:"we know everything you do clara", time:"09:58" },
+      { from:"them", text:"every photo every story we see it all", time:"09:59" },
       { from:"them", text:"you think there won't be consequences?", time:"09:59" },
       { from:"them", text:"there are several of us watching you now", time:"10:00" },
     ]
@@ -47,9 +47,9 @@ const CONVOS = [
   {
     id:5, avatar:"😈", name:"user_fake8847", sub:"Unknown account",
     unread:true, time:"1h ago", section:null,
-    preview:"i screenshotted your story from yesterday you looked pathetic",
+    preview:"i screenshotted your last story you looked pathetic",
     messages:[
-      { from:"them", text:"i screenshotted your story from yesterday", time:"09:22" },
+      { from:"them", text:"i screenshotted your last story before you deleted it", time:"09:22" },
       { from:"them", text:"you looked really pathetic with your crocodile tears", time:"09:22" },
       { from:"them", text:"it's been going around the whole class since this morning", time:"09:23" },
     ]
@@ -61,7 +61,7 @@ const CONVOS = [
     preview:"you know you have a real problem with your weight",
     messages:[
       { from:"them", text:"you know you have a real problem with your weight?", time:"22:14" },
-      { from:"them", text:"every time we see you in class it's getting worse", time:"22:15" },
+      { from:"them", text:"every time we saw you in class it was getting worse", time:"22:15" },
       { from:"them", text:"don't you have a mirror at home?", time:"22:15" },
     ]
   },
@@ -77,16 +77,6 @@ const CONVOS = [
     ]
   },
   {
-    id:8, avatar:"👁️", name:"jevoustrouve", sub:"Unknown account",
-    unread:false, time:"yesterday 18:02", section:null,
-    preview:"your photos are awful stop posting",
-    messages:[
-      { from:"them", text:"your photos are really awful stop posting", time:"18:02" },
-      { from:"them", text:"you copy other people's style but it doesn't look the same on you obviously", time:"18:03" },
-      { from:"them", text:"unsubscribe from insta you're embarrassing", time:"18:03" },
-    ]
-  },
-  {
     id:9, avatar:"💬", name:"sansnom_2024", sub:"Unknown account",
     unread:false, time:"yesterday 16:44", section:null,
     preview:"you're so sensitive it's becoming exhausting for everyone",
@@ -95,6 +85,17 @@ const CONVOS = [
       { from:"them", text:"you cry over nothing it's pathological", time:"16:44" },
       { from:"them", text:"people can't stand you anymore but nobody wants to tell you to your face", time:"16:45" },
       { from:"them", text:"now you know", time:"16:45" },
+    ]
+  },
+  {
+    id:8, avatar:"👁️", name:"jevoustrouve", sub:"Unknown account",
+    unread:false, time:"yesterday 02:47", section:null,
+    preview:"you asleep?",
+    messages:[
+      { from:"them", text:"you asleep?", time:"02:47" },
+      { from:"them", text:"we're sleeping just fine", time:"02:47" },
+      { from:"them", text:"you can turn your phone off it won't change anything", time:"02:48" },
+      { from:"them", text:"tomorrow we'll still be here", time:"02:48" },
     ]
   },
   // ── THIS WEEK ──
@@ -197,6 +198,7 @@ const CONVOS = [
       { from:"me",   text:"you're the only one with Ines who understands me", time:"10:02" },
       { from:"me",   text:"but Ines already has so many problems at home that I don't want to bother her", time:"10:03" },
       { from:"me",   text:"so I make her believe everything is fine", time:"10:03" },
+      { from:"me",   text:"but a weekend won't be enough", time:"10:04" },
       { from:"me",   text:"sarah I think I'm going to go to my aunt's", time:"10:05" },
       { from:"me",   text:"that's the only place I'll feel okay", time:"10:05" },
     ]
@@ -485,6 +487,7 @@ const HARCEL_MAP = [
   { frag:'you wonder why',                                    type:'body_shaming' },
   { frag:'there are several of us watching you',              type:'menaces' },
   { frag:"going to regret it",                                type:'menaces' },
+  { frag:"still be here",                                     type:'menaces' },
   { frag:"there won't be consequences",                       type:'menaces' },
   { frag:'everyone knows what you did with Nathan',           type:'rumeurs' },
   { frag:"been going around the whole class",                 type:'rumeurs' },
@@ -496,7 +499,7 @@ const HARCEL_MAP = [
   { frag:'nobody was there for your birthday',                type:'exclusion' },
   { frag:'eat the whole cake by yourself',                    type:'exclusion' },
   { frag:'you don\'t belong here',                            type:'exclusion' },
-  { frag:'screenshotted your story',                          type:'diffusion_images' },
+  { frag:'screenshotted your last story',                     type:'diffusion_images' },
   { frag:'your photo was shared in several groups',           type:'diffusion_images' },
   { frag:'you were filmed',                                   type:'diffusion_images' },
   { frag:'stories the 9th graders posted',                    type:'diffusion_images' },
@@ -525,7 +528,7 @@ var photoData = [
       { user: "_noreply_ghost_",  text: "your photo is seriously so ugly" },
     ]
   },
-  { likes: 34, caption: "love playing so much 🎸🎵", time: "2 weeks ago",
+  { likes: 34, caption: "loved playing tonight 🎸🎵", time: "2 weeks ago",
     comments: [
       { user: "sarah.girard",     text: "SINCE WHEN do you play that well" },
       { user: "ines_l",           text: "same song for 3 weeks straight lol but I love it" },
@@ -542,7 +545,7 @@ var photoData = [
     comments: [
       { user: "sansnom_2024",     text: "and you wonder why you have a problem with your weight" },
       { user: "xx_nobody_xx",     text: "honestly you have no shame posting that" },
-      { user: "anonymous_x0",     text: "eat more don't worry" },
+      { user: "xX_shadow_Xx",     text: "eat more don't worry" },
     ]
   },
   { likes: 21, caption: "evening reading 📚", time: "2 months ago",
@@ -553,7 +556,7 @@ var photoData = [
   },
   { likes: 7,  caption: "concert tonight 🎤🔥", time: "3 months ago",
     comments: [
-      { user: "vrai_info_colleg", text: "what? you like this artist? you're useless poor girl" },
+      { user: "explosif_2024",    text: "what? you like this artist? you're useless poor girl" },
       { user: "user_fake8847",    text: "you shouldn't have gone, it's obvious you don't belong there" },
       { user: "0000_mask_0000",   text: "the people around you in the crowd must have been thrilled lol" },
     ]
@@ -574,8 +577,8 @@ var photoData = [
   { likes: 0,  caption: "starry night 🌙", time: "8 months ago",
     comments: [
       { user: "truth_teller_99",  text: "0 likes in 3 hours that's a message clara" },
-      { user: "utilisateur_4729", text: "even the sky doesn't want you" },
-      { user: "_noreply_ghost_",  text: "you should have gone to sleep instead of posting this" },
+      { user: "void_user_xx",     text: "even the sky doesn't want you" },
+      { user: "froid_comme_toi",  text: "you should have gone to sleep instead of posting this" },
     ]
   },
 ];

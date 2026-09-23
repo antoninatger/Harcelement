@@ -5,11 +5,11 @@ const CONVOS = [
   {
     id:1, avatar:"👤", name:"utilisateur_4729", sub:"Compte inconnu",
     unread:true, time:"il y a 4 min", section:"Aujourd'hui",
-    preview:"t'as vu ta tete ce matin serieusement",
+    preview:"t'as vu ta tete sur ta derniere photo serieusement",
     messages:[
-      { from:"them", text:"t'as vu ta tete ce matin serieusement", time:"10:42" },
+      { from:"them", text:"t'as vu ta tete sur ta derniere photo serieusement", time:"10:42" },
       { from:"them", text:"ta coupe de cheveux c'est une catastrophe", time:"10:42" },
-      { from:"them", text:"franchement fais un effort avant de venir en cours", time:"10:43" },
+      { from:"them", text:"franchement t'as bien fait de plus venir en cours", time:"10:43" },
     ]
   },
   {
@@ -36,10 +36,10 @@ const CONVOS = [
   {
     id:4, avatar:"🐍", name:"vrai_info_colleg", sub:"Compte inconnu",
     unread:true, time:"il y a 45 min", section:null,
-    preview:"c'est toi qui as balance le groupe et tout le monde le sait",
+    preview:"on sait tout ce que tu fais clara",
     messages:[
-      { from:"them", text:"c'est toi qui as balance le groupe et tout le monde le sait", time:"09:58" },
-      { from:"them", text:"t'aurais pas du faire ca", time:"09:59" },
+      { from:"them", text:"on sait tout ce que tu fais clara", time:"09:58" },
+      { from:"them", text:"chaque photo chaque story on voit tout", time:"09:59" },
       { from:"them", text:"tu crois que ca va rester sans consequence ?", time:"09:59" },
       { from:"them", text:"on est plusieurs a t'avoir a l'oeil maintenant", time:"10:00" },
     ]
@@ -47,9 +47,9 @@ const CONVOS = [
   {
     id:5, avatar:"😈", name:"user_fake8847", sub:"Compte inconnu",
     unread:true, time:"il y a 1h", section:null,
-    preview:"j'ai screenshotte ta story d'hier tu faisais pitie",
+    preview:"j'ai screenshotte ta derniere story tu faisais pitie",
     messages:[
-      { from:"them", text:"j'ai screenshotte ta story d'hier", time:"09:22" },
+      { from:"them", text:"j'ai screenshotte ta derniere story avant que tu la supprimes", time:"09:22" },
       { from:"them", text:"tu faisais vraiment pitie avec tes larmes de crocodile", time:"09:22" },
       { from:"them", text:"ca tourne dans toute la classe depuis ce matin", time:"09:23" },
     ]
@@ -61,7 +61,7 @@ const CONVOS = [
     preview:"t'as un vrai probleme avec ton poids tu sais ca",
     messages:[
       { from:"them", text:"t'as un vrai probleme avec ton poids tu sais ca ?", time:"22:14" },
-      { from:"them", text:"chaque fois qu'on te voit en cours c'est de pire en pire", time:"22:15" },
+      { from:"them", text:"chaque fois qu'on te voyait en cours c'etait de pire en pire", time:"22:15" },
       { from:"them", text:"t'as pas de miroir chez toi ?", time:"22:15" },
     ]
   },
@@ -77,16 +77,6 @@ const CONVOS = [
     ]
   },
   {
-    id:8, avatar:"👁️", name:"jevoustrouve", sub:"Compte inconnu",
-    unread:false, time:"hier 18h02", section:null,
-    preview:"tes photos sont nulles arrete de poster",
-    messages:[
-      { from:"them", text:"tes photos sont vraiment nulles arrete de poster", time:"18:02" },
-      { from:"them", text:"tu copies le style des autres mais ca rend pas pareil sur toi c'est logique", time:"18:03" },
-      { from:"them", text:"desabonne-toi d'insta tu fais honte", time:"18:03" },
-    ]
-  },
-  {
     id:9, avatar:"💬", name:"sansnom_2024", sub:"Compte inconnu",
     unread:false, time:"hier 16h44", section:null,
     preview:"t'es tellement sensible ca devient pesant pour tout le monde",
@@ -95,6 +85,17 @@ const CONVOS = [
       { from:"them", text:"tu pleures pour un rien c'est pathologique", time:"16:44" },
       { from:"them", text:"les autres te supportent plus mais personne veut te le dire en face", time:"16:45" },
       { from:"them", text:"maintenant tu sais", time:"16:45" },
+    ]
+  },
+  {
+    id:8, avatar:"👁️", name:"jevoustrouve", sub:"Compte inconnu",
+    unread:false, time:"hier 02h47", section:null,
+    preview:"tu dors ?",
+    messages:[
+      { from:"them", text:"tu dors ?", time:"02:47" },
+      { from:"them", text:"nous on dort tres bien", time:"02:47" },
+      { from:"them", text:"tu peux eteindre ton tel ca changera rien", time:"02:48" },
+      { from:"them", text:"demain on sera encore la", time:"02:48" },
     ]
   },
   // ── CETTE SEMAINE ──
@@ -197,6 +198,7 @@ const CONVOS = [
       { from:"me",   text:"t'es la seule avec Ines qui me comprend", time:"10:02" },
       { from:"me",   text:"mais Ines elle a deja tellement de problemes chez elle que je veux pas la deranger", time:"10:03" },
       { from:"me",   text:"du coup je lui fais croire que tout va bien", time:"10:03" },
+      { from:"me",   text:"mais un weekend ca suffira pas", time:"10:04" },
       { from:"me",   text:"sarah je crois que je vais partir chez ma tante", time:"10:05" },
       { from:"me",   text:"y'a que la que je serai bien", time:"10:05" },
     ]
@@ -485,6 +487,7 @@ const HARCEL_MAP = [
   { frag:'tu te demandes pourquoi',                         type:'body_shaming' },
   { frag:'on est plusieurs a tavoir a loeil',               type:'menaces' },
   { frag:'tu vas le regretter',                             type:'menaces' },
+  { frag:'demain on sera encore la',                        type:'menaces' },
   { frag:'ca va rester sans consequence',                   type:'menaces' },
   { frag:'tout le monde sait ce que tas fait avec nathan',  type:'rumeurs' },
   { frag:'ca tourne dans toute la classe',                  type:'rumeurs' },
@@ -496,7 +499,7 @@ const HARCEL_MAP = [
   { frag:'personne etait la pour ton anniversaire',         type:'exclusion' },
   { frag:'tu las mange toute seule',                        type:'exclusion' },
   { frag:'ca fait un moment quon voulait te dire',          type:'exclusion' },
-  { frag:'screenshotte ta story',                           type:'diffusion_images' },
+  { frag:'screenshotte ta derniere story',                   type:'diffusion_images' },
   { frag:'ta photo a ete partagee dans plusieurs groupes',  type:'diffusion_images' },
   { frag:'on ta filmee',                                    type:'diffusion_images' },
   { frag:'stories que les 3emes ont postees',               type:'diffusion_images' },
@@ -525,7 +528,7 @@ var photoData = [
       { user: "_noreply_ghost_",  text: "elle est trop moche ta photo serieusement" },
     ]
   },
-  { likes: 34, caption: "trop aimé jouer 🎸🎵", time: "il y a 2 semaines",
+  { likes: 34, caption: "j'ai adoré jouer ce soir 🎸🎵", time: "il y a 2 semaines",
     comments: [
       { user: "sarah.girard",     text: "MAIS depuis quand tu joues aussi bien" },
       { user: "ines_l",           text: "la meme chanson depuis 3 semaines mdr mais j'adore" },
@@ -542,7 +545,7 @@ var photoData = [
     comments: [
       { user: "sansnom_2024",     text: "et tu te demandes pourquoi t'as un probleme de poids" },
       { user: "xx_nobody_xx",     text: "franchement t'as aucune honte de poster ca" },
-      { user: "anonymous_x0",     text: "mange encore t'inquiete" },
+      { user: "xX_shadow_Xx",     text: "mange encore t'inquiete" },
     ]
   },
   { likes: 21, caption: "lecture du soir 📚", time: "il y a 2 mois",
@@ -553,29 +556,29 @@ var photoData = [
   },
   { likes: 7,  caption: "concert ce soir 🎤🔥", time: "il y a 3 mois",
     comments: [
-      { user: "vrai_info_colleg", text: "quoi ? tu aimes cette artiste ? t'es nulle ma pauvre fille" },
+      { user: "explosif_2024",    text: "quoi ? tu aimes cette artiste ? t'es nulle ma pauvre fille" },
       { user: "user_fake8847",    text: "t'aurais pas du y aller ca se voit que t'es pas a ta place" },
       { user: "0000_mask_0000",   text: "les gens autour de toi dans la foule ils devaient etre contents lol" },
     ]
   },
-  { likes: 2,  caption: "fleurs du marche 🌸", time: "il y a 4 mois",
+  { likes: 2,  caption: "fleurs du marché 🌸", time: "il y a 4 mois",
     comments: [
       { user: "dark_mode_user",   text: "meme les fleurs ont l'air de vouloir partir" },
       { user: "fantome_reseau",   text: "des fleurs ? personne t'en offrira jamais 💀" },
     ]
   },
-  { likes: 4,  caption: "gateau d'anniversaire 🎂", time: "il y a 6 mois",
+  { likes: 4,  caption: "gâteau d'anniversaire 🎂", time: "il y a 6 mois",
     comments: [
       { user: "anon_colleg_real", text: "personne etait la pour ton anniversaire c'est ca ?" },
       { user: "sansnom_2024",     text: "tu l'as mange toute seule le gateau ?" },
       { user: "xx_nobody_xx",     text: "triste comme fete" },
     ]
   },
-  { likes: 0,  caption: "nuit etoilee 🌙", time: "il y a 8 mois",
+  { likes: 0,  caption: "nuit étoilée 🌙", time: "il y a 8 mois",
     comments: [
       { user: "truth_teller_99",  text: "0 likes en 3 heures c'est un message clara" },
-      { user: "utilisateur_4729", text: "meme le ciel il veut pas de toi" },
-      { user: "_noreply_ghost_",  text: "t'aurais mieux fait de dormir que de poster ca" },
+      { user: "void_user_xx",     text: "meme le ciel il veut pas de toi" },
+      { user: "froid_comme_toi",  text: "t'aurais mieux fait de dormir que de poster ca" },
     ]
   },
 ];

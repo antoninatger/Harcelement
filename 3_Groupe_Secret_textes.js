@@ -107,7 +107,7 @@ const WA_DATA = {
     { id: 17, sender: "Kevin",  text: "ouais genre même si elle screenshotte on peut toujours nier",                          time: "17:23", delay:  800 },
 
     // - Phase 3 : coordination des commentaires (~17h23) -
-    { id: 18, sender: "Enzo",  text: "moi j'utilise @utilisateur_4729, ça fait un moment",                                   time: "17:23", delay:  900 },
+    { id: 18, sender: "Enzo",  text: "moi j'utilise @utilisateur_4729",                                                        time: "17:23", delay:  900 },
     { id: 19, sender: "Jade",   text: `moi c'est @_noreply_ghost_ lol j'ai mis "elle est trop moche ta photo"`,               time: "17:24", delay: 1000 },
     { id: 20, sender: "Théo",   text: `j'ai mis "ta photo elle est floue t'as même pas de talent" depuis @anonymous_x0 💀`,   time: "17:24", delay: 1100 },
     { id: 21, sender: "Marine", text: "hahaha moi j'attends un peu pour pas que ça arrive tout en même temps",               time: "17:25", delay: 1000 },
@@ -132,7 +132,7 @@ const WA_DATA = {
 
     // - Phase 5 : création des comptes anonymes (~17h57) -
     { id: 34, sender: "Enzo",  text: "@anonymous_x0 c'est moi qui l'ai créé, Théo l'utilise aussi btw",                                        time: "17:57", delay:  700 },
-    { id: 35, sender: "Jade",   text: "moi c'est @vrai_info_colleg, créé pour balancer des rumeurs sur elle",               time: "17:57", delay: 1000 },
+    { id: 35, sender: "Jade",   text: "et j'en ai fait un 2e : @vrai_info_colleg, pour balancer des rumeurs sur elle",       time: "17:57", delay: 1000 },
     { id: 36, sender: "Théo",   text: "moi j'ai @jevoustrouve pour lui faire peur la nuit",                                 time: "17:58", delay:  900 },
     { id: 37, sender: "Marine", text: "pour ce soir on s'organise : messages toutes les heures après minuit",               time: "17:59", delay: 1000 },
     { id: 38, sender: "Enzo",  text: "pour qu'elle pense à nous même chez elle, même quand elle essaie de dormir 💀",      time: "18:00", delay: 1000 },
@@ -148,7 +148,7 @@ const WA_DATA = {
     { id: 43, sender: "Marine", text: "et elle était pas en cours aujourd'hui non plus 😂",                                   time: "09:16", delay:  900 },
     { id: 44, sender: "Kevin",  text: "sérieusement... c'est peut-être grave là",                                             time: "09:17", delay: 1200 },
     { id: 45, sender: "Enzo",  text: "relax elle a juste besoin d'une pause, elle l'a bien cherché 😂",                     time: "09:17", delay:  700 },
-    { id: 46, sender: "Kevin",  text: "ça fait 2 jours qu'on la voit plus nulle part. c'est pas normal",                     time: "09:18", delay: 1000 },
+    { id: 46, sender: "Kevin",  text: "elle a disparu de partout d'un coup. c'est pas normal",                                 time: "09:18", delay: 1000 },
     { id: 47, sender: "Jade",   text: "kevin arrête de dramatiser c'est bon",                                                 time: "09:18", delay:  600 },
     { id: 48, sender: "Marine", text: "j'ai entendu dire qu'elle est partie dans son « havre secret » lmao",                 time: "09:20", delay: 1500 },
     { id: 49, sender: "Enzo",  text: "son QUOI 💀💀💀",                                                                   time: "09:20", delay:  500 },
@@ -247,7 +247,7 @@ const WA_DATA = {
   kevin: {
     icon:  "🫥",
     title: "Et Kevin ?",
-    body:  "Kevin a douté cinq fois. « On va un peu trop loin là. » « C'est peut-être grave. » « Ça fait 2 jours qu'on la voit plus. » « On est peut-être allés trop loin. » Puis « … ». À chaque fois on lui a coupé la parole, et à chaque fois il s'est tu. Il a fini par écrire à Clara, mais trop tard : elle était déjà partie.",
+    body:  "Kevin a douté cinq fois. « On va un peu trop loin là. » « C'est peut-être grave. » « Elle a disparu de partout d'un coup. » « On est peut-être allés trop loin. » Puis « … ». À chaque fois on lui a coupé la parole, et à chaque fois il s'est tu. Il a fini par écrire à Clara, mais trop tard : elle était déjà partie.",
     items: [
       "Écrire à Clara en privé dès le premier doute, une seule phrase. Il n'avait pas besoin d'affronter le groupe : il suffisait qu'elle ne se croie plus seule.",
       "Quitter le groupe. Partir se voit, et ça retire une voix au nombre.",

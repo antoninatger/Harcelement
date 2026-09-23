@@ -5,7 +5,7 @@ var TEXTES = {
   titre: {
     eyebrow: "Un jeu sur l'empathie - Harcèlement scolaire",
     main:    "Convaincre Clara",
-    sub:     "Clara ne vient plus au collège depuis cinq jours. Elle s'est réfugiée chez sa tante, à la campagne.\nTu es Léo, son ami{e}. Pour parler à Clara, tu dois d'abord convaincre sa tante que tu es digne de confiance - et que tu es vraiment là pour l'aider.",
+    sub:     "Clara ne vient plus au collège depuis presque une semaine. Elle s'est réfugiée chez sa tante, à la campagne.\nTu es Léo, son ami{e}. Pour parler à Clara, tu dois d'abord convaincre sa tante que tu es digne de confiance - et que tu es vraiment là pour l'aider.",
     legende: ["La tante", "Clara", "Toi - Léo"],
     bouton:  "☎  Appeler",
     // Pensées de Léo après chaque numéro faux : le joueur doit deviner qu'Inès
@@ -84,8 +84,8 @@ var TEXTES = {
   // ─── Textes codés dans la logique ────────────────────────────────────────
 
   jeu: {
-    pivotHaut:   "(revenue) Elle hésite…\n… Attends.",
-    pivotBas:    "(revenue) Elle n'est pas sûre… mais elle accepte de te parler.",
+    pivotHaut:   "(revenue) Elle veut bien te parler.\nJe te la passe.",
+    pivotBas:    "(revenue) Elle hésite encore…\n… Bon. Elle accepte. Mais vas-y doucement.",
     echecGate1:  "(longue pause)\nJe suis désolée, Léo. Je ne crois pas que ce soit une bonne idée ce soir.\nPeut-être une autre fois.",
     echecGate2:  "[ Elle raccroche doucement. ]",
     echecRecup1: "(ton ferme) Je pense qu'il vaut mieux en rester là, Léo.\nClara n'est pas en état pour ça. Pas ce soir.",
@@ -269,7 +269,7 @@ var TEXTES = {
       dialogueBefore:[
         {spk:'lea',    txt:"Ça fait cinq jours que je suis ici…\nLes deux premiers, je sortais même pas de la chambre.\nMaintenant… ça va un peu moins mal. Mais j'ai encore peur.\nPeur de retourner au collège. Peur que ça recommence. Peur que rien ne change."},
         {spk:'thomas', txt:"Tu en as parlé à ta tante ? À tes parents ?"},
-        {spk:'lea',    txt:"Ma tante sait un peu… Elle est gentille. Mais je veux pas les inquiéter.\nJ'ai l'impression que si j'en parle vraiment… ça devient réel."},
+        {spk:'lea',    txt:"Mes parents croient que c'est juste de la fatigue. Ils ont dit au collège que j'étais malade.\nMa tante, elle, sait un peu… Elle est gentille. Mais je veux pas les inquiéter.\nJ'ai l'impression que si j'en parle vraiment… ça devient réel."},
       ],
       prompt:'Que lui dire ?',
       choices:[

@@ -134,7 +134,7 @@ run(p, 'Version du %s' % DATE, size=8.5, color=DIM, font='Arial')
 H2('Présentation générale')
 P("Retrouver Clara est un jeu de sensibilisation en ligne composé de quatre parties, jouables "
   "l'une après l'autre. Le joueur incarne Léo - ou Léa, au choix, sur l'écran d'accueil - un ami "
-  "de Clara, quatorze ans, qui ne vient plus au collège depuis cinq jours. En reconstituant ce "
+  "de Clara, quatorze ans, qui ne vient plus au collège depuis presque une semaine. En reconstituant ce "
   "qu'elle a vécu, il apprend à reconnaître les formes du harcèlement, à faire les gestes qui "
   "protègent, et à trouver les mots pour parler à quelqu'un qui va mal.")
 P("Le jeu se joue sur téléphone, tablette ou ordinateur, en individuel, en binôme ou en groupe "

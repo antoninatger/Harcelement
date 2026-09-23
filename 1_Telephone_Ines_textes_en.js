@@ -104,7 +104,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "I'm worried. I haven't been able to sleep since last night.",
+          "t": "I'm worried. I haven't been able to sleep since she disappeared.",
           "e": 1
         }
       ]
@@ -113,7 +113,7 @@ var TEXTES = {
       "intro": [
         "How do you know Clara?"
       ],
-      "edu": "We've been friends since primary school. We used to talk every day, before she shut herself away. Inès needs to understand I'm not here out of curiosity.",
+      "edu": "We've been friends since primary school. This year we're not in the same class anymore, we saw each other less… but she still means a lot to me. Inès needs to understand I'm not here out of curiosity.",
       "c": [
         {
           "l": "A",
@@ -127,7 +127,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "We talk a lot. Well… we used to.",
+          "t": "We see each other less since we're not in the same class anymore.",
           "e": 0
         }
       ]
@@ -162,7 +162,7 @@ var TEXTES = {
       "intro": [
         "She hadn't been doing well for a while.",
         "For months, really.",
-        "She was missing classes. She wasn't replying to messages anymore.",
+        "She was missing classes. She was answering messages less and less.",
         "She said it was nothing."
       ],
       "c": [
@@ -322,11 +322,24 @@ const UI = {
   secondConvo: {
     statusOnline: "online",
     statusTyping: "typing…",
-    playerMsg: "Inès, I think I've found something",
-    q: "what is it?",
-    correctYes: "Yes! She's at her aunt's, in the countryside.",
-    correctCont: "That's where she is, well done! Her aunt works at a restaurant - here's the number:",
-    wrongAnswer: "I'm not sure what you mean... what exactly did you find?",
+    playerMsg: "Inès, I think I know where Clara is.",
+    q: "What?? Where?",
+    foundHavre: [
+      "Her \"secret haven\"??",
+      "That's what she called her aunt's house, in the countryside."
+    ],
+    foundTante: [
+      "At her aunt's??",
+      "Oh… of course. That's where she went when things were bad. She called it her \"secret haven\"."
+    ],
+    foundSuite: [
+      "I didn't even think of that.",
+      "I've got her aunt's home number, we went there together this summer. Hang on, I'll find it."
+    ],
+    apresNumero: "Call her. And tell me how Clara's doing, please.",
+    reponseResolue: "At her aunt's. They talk about it in the group.",
+    relireBtn: "↺ Read the first conversation again",
+    wrongAnswer: "Huh? I don't get it. Where do you think she is?",
     nextUrl: "4_Convaincre_Clara_en.html",
     nextBtn: "→ Part 4: Convincing Clara"
   }

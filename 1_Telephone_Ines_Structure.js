@@ -289,6 +289,7 @@ try { localStorage.setItem('rc_p1_visited','1'); } catch(e) {}
 // ── Deuxième conversation Inès (après partie 3) ───────────────────────────
 
 var openSecondDirect = false;
+var secondDejaResolue = false;
 (function(){
   var p3done = null;
   try { p3done = localStorage.getItem('rc_p3_done'); } catch(e) {}
@@ -302,20 +303,18 @@ var openSecondDirect = false;
     openSecondConvo();
   });
 
-  // Partie 3 finie, numéro pas encore obtenu : le joueur revient exprès
-  // pour prévenir Inès, on ouvre directement la seconde conversation.
-  // Une fois le numéro donné (rc_p3_done = 2), on retrouve la première
-  // conversation, avec le bandeau « nouveau message » pour rejouer la seconde.
-  if (p3done === '1') openSecondDirect = true;
-
-  // … sauf si le joueur arrive depuis la porte du numéro en Partie 4 : il
-  // vient relire le numéro, autant le lui remettre sous les yeux tout de
-  // suite. Un paramètre d'URL plutôt qu'un drapeau stocké : rien à nettoyer,
-  // rien qui puisse rester coincé d'une page à l'autre.
-  if (location.search.indexOf('revoir') !== -1) openSecondDirect = true;
+  // Dès que la Partie 3 est finie, revenir sur la Partie 1 ouvre directement
+  // la conversation « tante ». Rejouer toute la première conversation pour
+  // retrouver le numéro bloquait les joueurs qui avaient quitté la page.
+  // Si le numéro a déjà été donné (rc_p3_done = 2), l'échange s'affiche d'un
+  // coup, déjà résolu, avec le numéro et le bouton vers la Partie 4.
+  // « ?debut » permet de relire volontairement la première conversation.
+  if (location.search.indexOf('debut') === -1) openSecondDirect = true;
+  secondDejaResolue = (p3done === '2');
 })();
 
 function openSecondConvo(){
+  var S = UI.secondConvo;
   // Masque la conversation principale, affiche la seconde
   var nb = document.getElementById('p3-notif-bar');
   if (nb) nb.style.display = 'none';
@@ -324,10 +323,16 @@ function openSecondConvo(){
   document.getElementById('ca').style.display   = 'none';
   var sc = document.getElementById('second-convo');
   sc.style.display = 'flex';
-  document.getElementById('st').textContent = UI.secondConvo.statusOnline;
+  document.getElementById('st').textContent = S.statusOnline;
 
   var scMa = document.getElementById('sc-ma');
   scMa.innerHTML = '';
+  var scInputRow = document.getElementById('sc-input-row');
+  var scInput    = document.getElementById('sc-input');
+  var scSend     = document.getElementById('sc-send');
+  var endEl      = document.getElementById('sc-end');
+  scInputRow.style.display = 'none';
+  endEl.style.display = 'none';
 
   function addSc(txt, type) {
     var d = document.createElement('div');
@@ -336,92 +341,97 @@ function openSecondConvo(){
     scMa.appendChild(d);
     scMa.scrollTop = scMa.scrollHeight;
   }
+  function addNumero() {
+    var d = document.createElement('div');
+    d.className = 'bb r';
+    d.innerHTML = '<span style="font-size:14px;font-weight:700;letter-spacing:.08em;color:#30d158;">04 54 78 95 32</span>';
+    scMa.appendChild(d);
+    scMa.scrollTop = scMa.scrollHeight;
+  }
+  function montrerFin() {
+    var html = '<a href="'+S.nextUrl+'" class="nxbtn">'+S.nextBtn+'</a>';
+    if (S.relireBtn) {
+      html += '<a href="'+location.pathname+'?debut" class="rb" style="display:block;box-sizing:border-box;text-align:center;margin-top:6px;text-decoration:none;">'+S.relireBtn+'</a>';
+    }
+    endEl.innerHTML = html;
+    endEl.style.display = 'block';
+  }
+  // Inès « écrit… » pendant ms, puis envoie txt
+  function ecrit(txt, ms) {
+    return new Promise(function(r){
+      document.getElementById('st').textContent = S.statusTyping;
+      var ty = document.createElement('div');
+      ty.className = 'tyi';
+      ty.innerHTML = '<span></span><span></span><span></span>';
+      scMa.appendChild(ty); scMa.scrollTop = scMa.scrollHeight;
+      setTimeout(function(){
+        ty.remove();
+        document.getElementById('st').textContent = S.statusOnline;
+        if (txt === '#numero') addNumero(); else addSc(txt, 'r');
+        r();
+      }, ms);
+    });
+  }
+
+  // Conversation déjà résolue : on affiche tout, sans rejouer ni redemander.
+  if (secondDejaResolue) {
+    addSc(S.playerMsg, 's');
+    addSc(S.q, 'r');
+    addSc(S.reponseResolue, 's');
+    S.foundTante.concat(S.foundSuite).forEach(function(t){ addSc(t, 'r'); });
+    addNumero();
+    addSc(S.apresNumero, 'r');
+    montrerFin();
+    return;
+  }
 
   // Amorce : le joueur envoie le premier message
-  addSc(UI.secondConvo.playerMsg, 's');
+  addSc(S.playerMsg, 's');
+  sl(700).then(function(){ return ecrit(S.q, 1100); }).then(function(){
+    scInputRow.style.display = 'flex';
+    scInput.focus();
+  });
 
-  var scInputRow = document.getElementById('sc-input-row');
-  var scInput    = document.getElementById('sc-input');
-  var scSend     = document.getElementById('sc-send');
-
-  setTimeout(function(){
-    // Inès répond
-    document.getElementById('st').textContent = UI.secondConvo.statusTyping;
-    var ty = document.createElement('div');
-    ty.className = 'tyi';
-    ty.innerHTML = '<span></span><span></span><span></span>';
-    scMa.appendChild(ty); scMa.scrollTop = scMa.scrollHeight;
-
-    setTimeout(function(){
-      ty.remove();
-      document.getElementById('st').textContent = UI.secondConvo.statusOnline;
-      addSc(UI.secondConvo.q, 'r');
-      scInputRow.style.display = 'flex';
-      scInput.focus();
-    }, 1100);
-  }, 700);
-
-  function sendMsg() {
+  var envoiEnCours = false;
+  async function sendMsg() {
     var val = scInput.value.trim();
-    if (!val) return;
+    if (!val || envoiEnCours) return;
+    envoiEnCours = true;
     scInput.value = '';
     scInputRow.style.display = 'none';
     addSc(val, 's');
 
     var n = val.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
-    // « chez sa tante » est la réponse naturelle : on l'accepte, avec les
-    // mots du groupe Whatsupp (« havre secret ») et leurs équivalents anglais.
-    var accepted = ['tante','campagne','havre','secret','aunt','countryside','haven','safe'];
-    var correct = accepted.some(function(w){ return n.includes(w); });
+    // « chez sa tante » est la réponse naturelle ; on accepte aussi les mots
+    // du groupe Whatsupp (« havre secret ») et leurs équivalents anglais.
+    var parHavre = ['havre','secret','haven','safe'].some(function(w){ return n.includes(w); });
+    var parTante = ['tante','campagne','aunt','countryside'].some(function(w){ return n.includes(w); });
 
-    document.getElementById('st').textContent = UI.secondConvo.statusTyping;
-    var ty2 = document.createElement('div');
-    ty2.className = 'tyi';
-    ty2.innerHTML = '<span></span><span></span><span></span>';
-    scMa.appendChild(ty2); scMa.scrollTop = scMa.scrollHeight;
+    if (!parHavre && !parTante) {
+      await ecrit(S.wrongAnswer, 1200);
+      envoiEnCours = false;
+      scInputRow.style.display = 'flex';
+      scInput.focus();
+      return;
+    }
 
-    setTimeout(function(){
-      ty2.remove();
-      document.getElementById('st').textContent = UI.secondConvo.statusOnline;
-
-      if (correct) {
-        addSc(UI.secondConvo.correctYes, 'r');
-        setTimeout(function(){
-          var ty3 = document.createElement('div');
-          ty3.className = 'tyi';
-          ty3.innerHTML = '<span></span><span></span><span></span>';
-          scMa.appendChild(ty3); scMa.scrollTop = scMa.scrollHeight;
-          setTimeout(function(){
-            ty3.remove();
-            addSc(UI.secondConvo.correctCont, 'r');
-            setTimeout(function(){
-              var numDiv = document.createElement('div');
-              numDiv.className = 'bb r';
-              numDiv.innerHTML = '<span style="font-size:14px;font-weight:700;letter-spacing:.08em;color:#30d158;">04 54 78 95 32</span>';
-              scMa.appendChild(numDiv); scMa.scrollTop = scMa.scrollHeight;
-              try { localStorage.setItem('rc_p3_done', '2'); } catch(e) {}
-              setTimeout(function(){
-                var endEl = document.getElementById('sc-end');
-                endEl.innerHTML = '<a href="'+UI.secondConvo.nextUrl+'" class="nxbtn">'+UI.secondConvo.nextBtn+'</a>';
-                endEl.style.display = 'block';
-              }, 600);
-            }, 1200);
-          }, 1100);
-        }, 800);
-      } else {
-        addSc(UI.secondConvo.wrongAnswer, 'r');
-        setTimeout(function(){
-          scInputRow.style.display = 'flex';
-          scInput.focus();
-        }, 400);
-      }
-    }, 1200);
+    // Inès n'a pas le numéro sous la main : elle comprend en même temps que
+    // Léo, puis va le chercher.
+    var lignes = (parTante ? S.foundTante : S.foundHavre).concat(S.foundSuite);
+    for (var i = 0; i < lignes.length; i++) {
+      await ecrit(lignes[i], i === 0 ? 1200 : 1000);
+      await sl(350);
+    }
+    await ecrit('#numero', 1600);
+    try { localStorage.setItem('rc_p3_done', '2'); } catch(e) {}
+    await sl(500);
+    await ecrit(S.apresNumero, 1000);
+    await sl(500);
+    montrerFin();
   }
 
-  scSend.addEventListener('click', sendMsg);
-  scInput.addEventListener('keydown', function(e){
-    if (e.key === 'Enter') sendMsg();
-  });
+  scSend.onclick = sendMsg;
+  scInput.onkeydown = function(e){ if (e.key === 'Enter') sendMsg(); };
 }
 
 var intro1El = document.getElementById('intro1');

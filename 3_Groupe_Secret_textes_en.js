@@ -51,7 +51,7 @@ const WA_DATA = {
   kevin: {
     icon:  "🫥",
     title: "And Kevin?",
-    body:  "Kevin hesitated five times. \"We're going a bit far here.\" \"This might be serious.\" \"Nobody has seen her for 2 days.\" \"Maybe we went too far.\" Then \"…\". Every time he was cut off, and every time he went quiet. He eventually wrote to Clara, but too late: she had already gone.",
+    body:  "Kevin hesitated five times. \"We're going a bit far here.\" \"This might be serious.\" \"She's vanished from everywhere all of a sudden.\" \"Maybe we went too far.\" Then \"…\". Every time he was cut off, and every time he went quiet. He eventually wrote to Clara, but too late: she had already gone.",
     items: [
       "Write to Clara privately, at the very first doubt - one sentence. He didn't have to take on the group: she only needed to stop feeling alone.",
       "Leave the group. Leaving is visible, and it takes one voice away from the crowd.",
@@ -114,7 +114,7 @@ const WA_DATA = {
     { id: 16, sender: "Marine", text: "make sure you use your fake accounts so she doesn't know it's us",                 time: "17:22", delay: 1000 },
     { id: 17, sender: "Kevin",  text: "yeah like even if she screenshots it we can still deny it",                        time: "17:23", delay:  800 },
 
-    { id: 18, sender: "Enzo",  text: "I'm using @utilisateur_4729, I've had it for a while",                            time: "17:23", delay:  900 },
+    { id: 18, sender: "Enzo",  text: "I'm using @utilisateur_4729",                                                        time: "17:23", delay:  900 },
     { id: 19, sender: "Jade",   text: `mine is @_noreply_ghost_ lol I put "your photo is seriously so ugly"`,             time: "17:24", delay: 1000 },
     { id: 20, sender: "Théo",   text: `I put "your photo is blurry you have no talent at all" from @anonymous_x0 💀`,     time: "17:24", delay: 1100 },
     { id: 21, sender: "Marine", text: "hahaha I'm waiting a bit so it doesn't all arrive at the same time",               time: "17:25", delay: 1000 },
@@ -136,7 +136,7 @@ const WA_DATA = {
     { type: "quiz", quizId: "coordination", delay: 400 },
 
     { id: 34, sender: "Enzo",  text: "@anonymous_x0 is mine, I made it, Théo uses it too btw",                                        time: "17:57", delay:  700 },
-    { id: 35, sender: "Jade",   text: "mine is @vrai_info_colleg, created to spread rumors about her",                   time: "17:57", delay: 1000 },
+    { id: 35, sender: "Jade",   text: "and I made a 2nd one: @vrai_info_colleg, to spread rumors about her",              time: "17:57", delay: 1000 },
     { id: 36, sender: "Théo",   text: "I have @jevoustrouve to scare her at night",                                      time: "17:58", delay:  900 },
     { id: 37, sender: "Marine", text: "for tonight we organize it like this: messages every hour after midnight",        time: "17:59", delay: 1000 },
     { id: 38, sender: "Enzo",  text: "so she thinks about us even at home, even when she's trying to sleep 💀",         time: "18:00", delay: 1000 },
@@ -151,7 +151,7 @@ const WA_DATA = {
     { id: 43, sender: "Marine", text: "and she wasn't in class today either 😂",                                          time: "09:16", delay:  900 },
     { id: 44, sender: "Kevin",  text: "seriously... this might actually be bad now",                                      time: "09:17", delay: 1200 },
     { id: 45, sender: "Enzo",  text: "relax she just needs a break, she brought it on herself 😂",                       time: "09:17", delay:  700 },
-    { id: 46, sender: "Kevin",  text: "it's been 2 days since anyone saw her anywhere. that's not normal",                time: "09:18", delay: 1000 },
+    { id: 46, sender: "Kevin",  text: "she's vanished from everywhere all of a sudden. that's not normal",                time: "09:18", delay: 1000 },
     { id: 47, sender: "Jade",   text: "kevin stop being dramatic it's fine",                                             time: "09:18", delay:  600 },
     { id: 48, sender: "Marine", text: "I heard she went to her \"secret haven\" lmao",                                    time: "09:20", delay: 1500 },
     { id: 49, sender: "Enzo",  text: "her WHAT 💀💀💀",                                                                 time: "09:20", delay:  500 },

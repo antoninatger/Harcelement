@@ -5,7 +5,7 @@ var TEXTES = {
   titre: {
     eyebrow: "A game about empathy - School bullying",
     main:    "Convincing Clara",
-    sub:     "Clara has not been to school for five days. She has taken refuge at her aunt's, out in the countryside.\nYou are Léo, her friend. To speak to Clara, you must first convince her aunt that you are trustworthy - and that you are truly there to help her.",
+    sub:     "Clara has not been to school for almost a week. She has taken refuge at her aunt's, out in the countryside.\nYou are Léo, her friend. To speak to Clara, you must first convince her aunt that you are trustworthy - and that you are truly there to help her.",
     legende: ["The aunt", "Clara", "You - Léo"],
     bouton:  "☎  Call",
     // Léo's thoughts after each wrong number: the player has to work out that
@@ -82,8 +82,8 @@ var TEXTES = {
   // ─── Texts coded into the logic ────────────────────────────────────────
 
   jeu: {
-    pivotHaut:   "(returning) She hesitates…\n… Wait.",
-    pivotBas:    "(returning) She is not sure… but she agrees to talk to you.",
+    pivotHaut:   "(returning) She'd like to talk to you.\nI'll put her on.",
+    pivotBas:    "(returning) She's still unsure…\n… All right. She agrees. But go gently.",
     echecGate1:  "(long pause)\nI'm sorry, Léo. I don't think this is a good idea tonight.\nMaybe another time.",
     echecGate2:  "[ She gently hangs up. ]",
     echecRecup1: "(firm tone) I think it would be better to leave it there, Léo.\nClara is not in a state for this. Not tonight.",
@@ -267,7 +267,7 @@ var TEXTES = {
       dialogueBefore:[
         {spk:'lea',    txt:"I've been here five days…\nThe first two, I couldn't even leave the bedroom.\nNow… it hurts a little less. But I'm still scared.\nScared to go back to school. Scared it will start again. Scared that nothing will change."},
         {spk:'thomas', txt:"Have you talked to your aunt about it? To your parents?"},
-        {spk:'lea',    txt:"My aunt knows a little… She's kind. But I don't want to worry them.\nI feel like if I really talk about it… it becomes real."},
+        {spk:'lea',    txt:"My parents think I'm just tired. They told the school I was ill.\nMy aunt knows a little… She's kind. But I don't want to worry them.\nI feel like if I really talk about it… it becomes real."},
       ],
       prompt:'What do you say to her?',
       choices:[
