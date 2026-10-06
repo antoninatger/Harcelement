@@ -9,7 +9,7 @@
    France. Replace them with local ones where you have better.
    ========================================================================= */
 window.RESSOURCES = {
-  titre: "Where to find help",
+  titre: "If you ever need to talk, these numbers can help",
   liste: [
     { label: "116 111",     txt: "European child helpline - free, in most EU countries" },
     { label: "116 123",     txt: "Emotional support and suicide prevention (EU)" },

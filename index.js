@@ -103,11 +103,13 @@
       var pourquoi = isEN ? {
         2: 'Talk to Inès first - she is the one who has Clara\'s login details.',
         3: 'Kevin gives you the group code at the end of Part 2.',
-        4: 'Inès gives you the aunt\'s number once you have read the group.'
+        4: et.p3 ? 'I need the phone number of Clara\'s aunt. How can I get it?' : 'Read the Whatsupp group first.'
       } : {
         2: 'Parle d\'abord à Inès - c\'est elle qui a les identifiants de Clara.',
         3: 'Kevin te donne le code du groupe à la fin de la Partie 2.',
-        4: 'Inès te donne le numéro de la tante une fois le groupe lu.'
+        // Pas de « retourne voir Inès » : le joueur doit trouver seul qui
+        // peut lui donner ce numéro (retour testeurs du 6 octobre).
+        4: et.p3 ? 'Il me faut le numéro de la tante de Clara. Comment l\'obtenir\u00a0?' : 'Lis d\'abord le groupe Whatsupp.'
       };
       [2, 3, 4].forEach(function (n) {
         if (ouverte[n]) return;

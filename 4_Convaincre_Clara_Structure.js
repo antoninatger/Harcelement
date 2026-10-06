@@ -53,6 +53,12 @@ function initTextes(){
   const legs=document.querySelectorAll('.legend > span');
   t.legende.forEach((l,i)=>{ if(legs[i]) legs[i].appendChild(document.createTextNode(l)); });
   document.querySelector('.btn-start').textContent=t.bouton;
+  // Comment se joue l'appel
+  const how=document.getElementById('t-how');
+  if(how && t.comment){
+    how.innerHTML='<div class="how-title">'+t.commentTitre+'</div><ul>'
+      + t.comment.map(c=>'<li>'+c+'</li>').join('') + '</ul>';
+  }
 
   const go=TEXTES.gameover;
   document.querySelector('.go-icon').textContent=go.icon;
@@ -62,7 +68,7 @@ function initTextes(){
 
   const retryBtns=document.querySelectorAll('.btn-retry');
   retryBtns[0].textContent=TEXTES.btnRecommencer;
-  retryBtns[1].textContent=TEXTES.btnRejouer;
+  const rap=document.querySelector('.btn-rappeler'); if(rap) rap.textContent=TEXTES.btnRappeler;
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -71,7 +77,12 @@ function initTextes(){
 let empathy = 0;
 let sceneIndex = 0;
 let auntScore = 0;
+// Maladresses : envers la tante en phase 1, puis envers Clara en phase 2 (le
+// compteur repart à zéro quand la tante passe le téléphone). Deux, et on
+// raccroche.
 let auntStrikes = 0;
+// « empathy » ne compte plus que l'échange avec Clara (phase 2, 0 à 8) : c'est
+// lui qui décide de la fin. La tante a son propre score, auntScore.
 const MAX_EMP = 10;
 let _timers = [];
 
@@ -114,11 +125,18 @@ function addEmpathy(n){ empathy=Math.min(MAX_EMP,empathy+n); saveP4(); }
 // ═══ LOAD SCENE ═══
 function loadScene(idx){
   sceneIndex=idx;
-  saveP4();
   const scene=TEXTES.SCENES[idx];
+  if(scene && scene.id==='PIVOT'){ auntStrikes=0; empathy=0; }
+  saveP4();
   if(!scene){ showEnding(); return; }
 
   document.getElementById('phase-label').textContent=scene.phaseName;
+  const goal=document.getElementById('phase-goal');
+  if(goal){
+    const o=(TEXTES.objectifs||{})[scene.phase];
+    if(o) goal.textContent=o;
+    goal.style.display=o?'block':'none';
+  }
   document.getElementById('step-label').textContent=scene.stepLabel;
 
   const pdotsEl=document.getElementById('pdots'); pdotsEl.innerHTML='';
@@ -132,7 +150,11 @@ function loadScene(idx){
   clearIx();
 
   let delay=150;
-  scene.dialogueBefore.forEach(line=>{
+  // Rappel de Clara : Léo rappelle chez la tante et s'excuse, au lieu de
+  // rejouer le premier « Allô ? » comme si rien ne s'était passé.
+  const lignes=(rappel && scene.dialogueRappel) ? scene.dialogueRappel : scene.dialogueBefore;
+  rappel=false;
+  lignes.forEach(line=>{
     const dur = 500 + line.txt.length*9;
     later(()=>{ appendLine(line.spk,line.txt); scrollFeed(); }, delay);
     delay += dur;
@@ -199,12 +221,17 @@ function showChoices(choices, prompt, callback){
     });
     wrap.appendChild(btn);
   });
+  // Les choix réduisent la zone du dialogue : on ramène la dernière réplique
+  // en vue, sinon elle restait cachée sous les boutons.
+  scrollFeed();
 }
 
 // ═══ MAIN CHOICE HANDLER ═══
 function onMainChoice(scene, choice){
   if(scene.phase==='1') auntScore+=choice.emp;
-  addEmpathy(choice.emp);
+  else addEmpathy(choice.emp);
+  const claraBlessee = scene.phase==='2' && choice.emp===0;
+  if(claraBlessee){ auntStrikes++; saveP4(); }
 
   later(()=>{
     document.getElementById('choices').innerHTML='';
@@ -226,6 +253,14 @@ function onMainChoice(scene, choice){
 
       if(choice.emp===0 && scene.phase==='1' && choice.recovery){
         later(()=>showRecovery(scene, choice.recovery), 900);
+      } else if(claraBlessee && auntStrikes>=2){
+        // Deuxième réponse maladroite : Clara raccroche, on peut la rappeler.
+        later(()=>{
+          appendLine('lea', TEXTES.jeu.claraRaccroche1);
+          appendLine('narrator', TEXTES.jeu.claraRaccroche2);
+          scrollFeed();
+          later(()=>showGameover('clara'), 2400);
+        }, 1400);
       } else {
         later(()=>checkGate(scene), 850);
       }
@@ -241,8 +276,8 @@ function showRecovery(scene, rec){
   later(()=>{
     // Le retour de la réponse maladroite reste affiché pendant le rattrapage.
     const recoveryChoices=[
-      { emp:'good', txt: rec.good.txt, _reply: rec.good.reply },
-      { emp:'bad',  txt: rec.bad.txt,  _reply: rec.bad.reply  },
+      { emp:'good', txt: rec.good.txt, _reply: rec.good.reply, _fb: rec.good.fb },
+      { emp:'bad',  txt: rec.bad.txt,  _reply: rec.bad.reply,  _fb: rec.bad.fb  },
     ];
     showChoices(recoveryChoices, rec.prompt||'', (choice)=>onRecoveryChoice(scene, choice));
   }, 900);
@@ -260,10 +295,15 @@ function onRecoveryChoice(scene, choice){
     later(()=>{
       appendLine(choice._reply.spk, choice._reply.txt);
       scrollFeed();
+      // Pourquoi ce rattrapage marche, ou pas.
+      if(choice._fb){
+        const toast=document.getElementById('fb-toast');
+        toast.textContent=choice._fb.msg;
+        toast.className='fb show '+choice._fb.type;
+      }
 
       if(choice.emp==='good'){
         auntScore+=1;
-        addEmpathy(1);
         auntStrikes=0;
       } else {
         auntStrikes++;
@@ -272,7 +312,7 @@ function onRecoveryChoice(scene, choice){
             appendLine('aunt', TEXTES.jeu.echecRecup1);
             appendLine('narrator', TEXTES.jeu.echecRecup2);
             scrollFeed();
-            later(()=>switchScreen('gameover'), 2000);
+            later(()=>showGameover('tante'), 2000);
           }, 800);
           return;
         }
@@ -290,7 +330,7 @@ function checkGate(scene){
         appendLine('aunt', TEXTES.jeu.echecGate1);
         appendLine('narrator', TEXTES.jeu.echecGate2);
         scrollFeed();
-        later(()=>switchScreen('gameover'), 2000);
+        later(()=>showGameover('tante'), 2000);
       }, 400);
     } else {
       later(()=>nextStep(), 500);
@@ -307,29 +347,39 @@ function nextStep(){
   else loadScene(next);
 }
 
+// ═══ GAME OVER ═══
+// La tante raccroche : on recommence tout. Clara raccroche : on peut la
+// rappeler, sans refaire la conversation avec la tante.
+function showGameover(qui){
+  const G = qui==='clara' ? TEXTES.gameoverClara : TEXTES.gameover;
+  document.querySelector('.go-icon').textContent=G.icon;
+  document.querySelector('.go-title').textContent=G.titre;
+  document.querySelector('.go-body').innerHTML=G.corps.replace(/\n/g,'<br>');
+  document.querySelector('.go-lesson').innerHTML=G.lecon.replace(/\n/g,'<br>');
+  const rap=document.querySelector('.btn-rappeler');
+  if(rap) rap.style.display = qui==='clara' ? 'inline-block' : 'none';
+  const tout=document.querySelector('#screen-gameover .btn-retry');
+  if(tout) tout.textContent = qui==='clara' ? TEXTES.btnTout : TEXTES.btnRecommencer;
+  switchScreen('gameover');
+}
+
+// Léo rappelle : la tante décroche, il s'excuse, Clara reprend l'appel.
+let rappel=false;
+function rappelerClara(){
+  clearTimers();
+  empathy=0; auntStrikes=0; rappel=true;
+  const i=TEXTES.SCENES.findIndex(s=>s.phase==='2');
+  switchScreen('game');
+  loadScene(i);
+}
+
 // ═══ ENDING ═══
 function buildResourcesHTML(){
   const R = (window.RESSOURCES || { titre: '', liste: [] });
   const items=R.liste.map(r=>
-    `<div><span style="color:rgba(255,255,255,.7);">${r.label}</span> - ${r.txt}</div>`
+    `<div><span class="res-num">${r.label}</span> - ${r.txt}</div>`
   ).join('');
-  return `<div style="margin-top:18px;border-top:1px solid rgba(255,255,255,.06);padding-top:14px;font-family:'Jost',sans-serif;font-size:11px;color:rgba(255,255,255,.55);line-height:1.8;text-align:left;">
-  <div style="color:rgba(255,255,255,.6);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-bottom:6px;">${R.titre}</div>
-  ${items}
-</div>`;
-}
-
-function buildSuiteHTML(){
-  const S=TEXTES.suite, E=TEXTES.epilogue;
-  let h='';
-  if(S){
-    h+=`<div class="end-block"><h4>${S.icon} ${S.titre}</h4><ul>`
-      + S.items.map(i=>`<li>${i}</li>`).join('') + `</ul></div>`;
-  }
-  if(E){
-    h+=`<div class="end-block end-block-law"><h4>${E.icon} ${E.titre}</h4><p>${E.corps.replace(/\n/g,'<br>')}</p></div>`;
-  }
-  return h;
+  return `<div class="res-block"><div class="res-title">${R.titre}</div>${items}</div>`;
 }
 
 function buildRecapHTML(){
@@ -347,9 +397,50 @@ function showEnding(){
   document.getElementById('end-title').className='end-title '+fin.cls;
   document.getElementById('end-body').textContent=fin.corps;
   document.getElementById('end-quote').textContent=fin.citation;
-  document.getElementById('end-score').innerHTML = buildSuiteHTML() + buildResourcesHTML() + buildRecapHTML();
+
+  // Fin ratée : pas de conclusion heureuse, on propose de recommencer
+  // l'échange avec Clara. Sinon : la suite de l'histoire.
+  const act=document.getElementById('end-actions');
+  if(fin.cls==='bad'){
+    act.innerHTML=`<button class="btn-start js-rappeler">${TEXTES.btnRejouerClara}</button>`
+      + `<button class="btn-retry js-tout">${TEXTES.btnTout}</button>`
+      + buildResourcesHTML();
+  } else {
+    act.innerHTML=`<button class="btn-start js-suite">${TEXTES.btnSuite}</button>`
+      + `<button class="btn-retry js-rappeler">${TEXTES.btnRejouerClara}</button>`;
+  }
   try { localStorage.setItem('rc_fin', fin.cls); } catch(e){}
   switchScreen('end');
+  document.getElementById('screen-end').scrollTop=0;
+}
+
+// La conclusion : le texte apparaît ligne après ligne, comme les écrans
+// d'introduction. Un appui affiche tout d'un coup.
+function showConclusion(){
+  clearTimers();
+  const box=document.getElementById('epi-lines');
+  const fin=document.getElementById('epi-fin');
+  box.innerHTML=''; fin.classList.remove('on');
+  fin.innerHTML = buildResourcesHTML() + buildRecapHTML()
+    + `<button class="btn-retry js-tout" style="margin-top:18px">${TEXTES.btnRejouer}</button>`;
+  const lignes=TEXTES.conclusion||[];
+  let d=400;
+  lignes.forEach((l,i)=>{
+    const p=document.createElement('p');
+    p.className='epi-line';
+    p.textContent=l;
+    box.appendChild(p);
+    later(()=>p.classList.add('on'), d);
+    d += 1300 + l.length*22;
+  });
+  later(()=>fin.classList.add('on'), d);
+  switchScreen('epilogue');
+  document.getElementById('screen-epilogue').scrollTop=0;
+}
+function toutAfficher(){
+  clearTimers();
+  document.querySelectorAll('.epi-line').forEach(p=>p.classList.add('on'));
+  document.getElementById('epi-fin').classList.add('on');
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -362,8 +453,17 @@ document.getElementById('btn-continue').addEventListener('click', nextStep);
 document.querySelector('.btn-close-modal').addEventListener('click', hideSaveModal);
 document.getElementById('code-input').addEventListener('input', function(){ this.value = this.value.toUpperCase(); });
 
-document.querySelectorAll('.btn-retry').forEach(btn => {
-  btn.addEventListener('click', retryGame);
+document.querySelector('#screen-gameover .btn-retry').addEventListener('click', retryGame);
+const btnRap=document.querySelector('.btn-rappeler');
+if(btnRap) btnRap.addEventListener('click', rappelerClara);
+// Boutons créés à la volée sur les écrans de fin
+document.addEventListener('click', e=>{
+  if(e.target.closest('.js-rappeler')) rappelerClara();
+  else if(e.target.closest('.js-tout')) retryGame();
+  else if(e.target.closest('.js-suite')) showConclusion();
+});
+document.getElementById('screen-epilogue').addEventListener('click', e=>{
+  if(!e.target.closest('button, a')) toutAfficher();
 });
 
 // ═══════════════════════════════════════════════════════════════

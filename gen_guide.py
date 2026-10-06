@@ -115,7 +115,7 @@ d = datetime.date.today(); DATE = '%d %s %d' % (d.day, MOIS[d.month - 1], d.year
 
 T2 = D['p2']; T3 = D['p3']['WA_DATA']; T4 = D['p4']['TEXTES']; RES = D['ressources']
 NB_TYPES = len(T2['HARCEL_TYPES']); NB_CONV = len([c for c in T2['CONVOS'] if c['id'] != 99])
-NB_QCM2 = len(T2['QUIZZES']) + len(T2['PHOTO_QUIZZES']); NB_PHOTOS = len(T2['photoData'])
+NB_PHOTOS = len(T2['photoData'])
 NB_COMPTES = len(T3['comptes']['liste']); NB_SCENES = len(T4['SCENES'])
 NB_MSG3 = len([m for m in T3['messages'] if not m.get('type')])
 
@@ -150,7 +150,9 @@ tableau(['Partie', 'Titre', 'Mécanique', 'Compétence', 'Durée'], [
 encart("Ce qui a changé récemment", [
     "Le jeu affiche un avertissement de contenu avant la Partie 2, la plus dure des quatre.",
     "Le joueur peut signaler les comptes qui harcèlent : capture, blocage, signalement, adulte.",
-    "La Partie 3 se lit au rythme du joueur (un appui par message), plus en défilement automatique.",
+    "Les pensées de Léo s'affichent dans une bulle, hors du téléphone, et expliquent chaque réaction.",
+    "Partie 2 : une seule mécanique (appuyer sur un message, choisir son type), une liste des types toujours visible, une vraie recherche.",
+    "Partie 4 : Clara raccroche après deux réponses maladroites ; la fin dépend de l'échange avec elle.",
     "Un code de reprise à sept caractères permet de reprendre la partie sur un autre appareil.",
     "Un bouton « Nouvelle enquête » remet tout à zéro entre deux groupes sur la même tablette.",
 ], coul='2a4a7a', fill='F0F4FA')
@@ -165,12 +167,14 @@ P("Inès est la meilleure amie de Clara. Le joueur lui écrit sans la connaître
 H2('Ce que le joueur fait')
 puce("Il répond à Inès par des choix multiples, six échanges plus une ouverture.")
 puce("Une jauge de confiance monte ou descend à chaque réponse et s'affiche en haut de l'écran.")
-puce("Si la confiance passe sous un certain seuil, une « crise » se déclenche une seule fois : "
-     "Inès demande au joueur qui il est vraiment. C'est un rattrapage.")
-puce("Sous un seuil plus bas, Inès coupe la conversation. Le joueur recommence.")
+puce("À la première réponse maladroite, une « crise » se déclenche une seule fois : Inès demande "
+     "au joueur qui il est vraiment. C'est un rattrapage.")
+puce("À la deuxième réponse maladroite, Inès coupe la conversation. Le joueur recommence.")
 H2('Mécanique principale')
 P("Dialogue à choix multiples. Chaque option vaut +1, 0 ou −1 en confiance. La bonne réponse est "
   "presque toujours celle qui parle de Clara plutôt que du joueur : c'est le cœur de l'exercice.")
+P("Après chaque réponse, une bulle de pensée de Léo, à côté du téléphone, dit pourquoi Inès s'ouvre "
+  "ou se ferme (« Je lui ai mis la pression… »). La jauge ne bouge plus sans explication.")
 encart("Point d'attention pour l'animateur", [
     "Depuis la dernière version, chaque option reçoit sa propre réponse d'Inès. Avant, la même "
     "réplique suivait les trois choix, et un élève attentif le remarquait.",
@@ -203,19 +207,18 @@ etape('1', 'Connexion', "Le joueur saisit les identifiants qu'Inès lui a donné
 etape('2', 'Avertissement de contenu', "Un écran prévient que ce qui suit simule ce que vit une "
       "victime, que les messages sont fictifs mais représentent une réalité, et que l'objectif est "
       "de comprendre l'impact. Rien ne commence tant que le joueur n'a pas continué.")
-etape('3', 'Exploration libre', "Le joueur parcourt les photos et les messages à son rythme. Aucun "
-      "minuteur ne le presse.")
-etape('4', "« Qu'est-ce que tu observes ? »", "La question arrive quand le joueur a réellement "
-      "regardé - au moins deux photos et deux conversations - et jamais pendant qu'il lit. Un "
-      "bouton « Dire ce que j'observe » permet de répondre plus tôt. Le jeu accepte harcèlement, "
-      "cyberharcèlement, intimidation, bullying et leurs variantes.")
-etape('5', 'Mission', "Identifier %d des %d types de harcèlement. Le bouton « Identifier un "
-      "harcèlement » passe l'écran en mode sélection : les messages concernés se soulignent en "
-      "pointillés, le joueur en choisit un et dit de quel type il s'agit." % (6, NB_TYPES))
-etape('6', "Points d'analyse", "%d questions se déclenchent seules, à la première ouverture de "
-      "certaines conversations et de certaines photos. Une mauvaise réponse n'est pas bloquante : "
-      "l'explication est lue, le type est acquis." % NB_QCM2)
-etape('7', 'Signalement', "Sur chaque conversation de harceleur, un bouton propose les trois gestes "
+etape('3', 'Mission', "Léo sait déjà que Clara est harcelée ; il doit nommer les formes que prend "
+      "ce harcèlement. Objectif : %d des %d types. Le bouton « 📋 Types », toujours visible, montre la "
+      "liste de ceux qui restent à trouver." % (6, NB_TYPES))
+etape('4', 'Identifier', "Les messages à analyser sont entourés de pointillés. Le joueur appuie sur "
+      "l'un d'eux et choisit son type dans la liste, qui s'ouvre en bas de l'écran en laissant le "
+      "message visible. Un message peut relever de plusieurs types : n'importe lequel est accepté. "
+      "Une explication suit chaque réponse. Après deux erreurs, la réponse est donnée, mais le type "
+      "n'est pas compté.")
+etape('5', 'Se repérer', "Les conversations et les photos déjà ouvertes passent en gris ; un filtre "
+      "« Non lus » montre ce qui reste. La recherche trouve un pseudo ou un mot, dans les messages "
+      "comme dans les commentaires.")
+etape('6', 'Signalement', "Sur chaque conversation de harceleur, un bouton propose les trois gestes "
       "dans l'ordre qui compte : capture d'écran d'abord (sinon on perd la preuve), puis blocage, "
       "puis signalement au réseau et à un adulte.")
 H2('Les %d types de harcèlement' % NB_TYPES)
@@ -246,11 +249,14 @@ etape('1', "Code du groupe", "Le joueur saisit 4827, le code d'accès du groupe 
       "a envoyé à Clara.")
 etape('2', 'Avertissement', "Un rappel que les échanges sont fictifs mais montrent comment le "
       "harcèlement se coordonne en coulisse.")
-etape('3', 'Mission', "Repérer les %d comptes anonymes. Le groupe les nomme à voix haute ; chaque "
-      "fois qu'un compte est cité, le joueur appuie dessus et découvre qui se cache derrière. Un "
-      "compteur suit sa progression en haut de l'écran." % NB_COMPTES)
-etape('4', 'Lecture au rythme du joueur', "Chaque message attend un appui. Personne n'est largué, "
-      "et l'animateur peut s'arrêter quand il veut pour faire réagir le groupe.")
+etape('3', 'Mission', "Repérer les %d comptes anonymes. Le groupe en nomme cinq à voix haute ; "
+      "chaque fois qu'un compte est cité, le joueur appuie dessus et découvre qui se cache derrière. "
+      "Le sixième n'est jamais nommé : Marine décrit seulement son commentaire sous la photo du chat. "
+      "Le joueur part enquêter sur l'Instaclasse, retrouve le commentaire et appuie sur le pseudo de "
+      "son auteur. Un compteur suit sa progression en haut de l'écran." % NB_COMPTES)
+etape('4', 'Lecture', "Les messages défilent seuls, au rythme de lecture ; un appui fait passer au "
+      "suivant, le survol à la souris met en pause, et rien n'avance pendant qu'une fenêtre est "
+      "ouverte. Une pensée de Léo signale le doute de Kevin : il faut comprendre ce qu'il pense.")
 etape('5', "Points d'analyse", "Deux questions arrivent pendant la lecture : l'une sur Kevin, qui "
       "doute mais se tait ; l'autre sur l'intérêt des comptes anonymes pour les harceleurs.")
 H2('Les comptes à démasquer')
@@ -260,6 +266,8 @@ P("Une fois démasqués, ces comptes portent le prénom de leur propriétaire qu
   "sur l'Instaclasse de Clara. C'est l'asymétrie que le jeu raconte : le joueur sait, Clara non.",
   before=40)
 H2('Fin de la partie')
+P("Léo se demande où habite la tante de Clara, et qui pourrait le savoir. Le menu ne lui dit pas "
+  "où aller : c'est au joueur de penser à Inès.")
 P("La synthèse reprend les mécanismes du harcèlement de groupe, puis deux blocs de discussion.")
 puce("« Et Kevin ? » - le témoin qui doute, se tait, et n'écrit à Clara qu'une fois qu'elle est "
      "partie : ce qu'il aurait pu faire plus tôt. C'est le rôle que la plupart des élèves occupent "
@@ -280,21 +288,25 @@ etape('1', 'Composer le numéro', "Le numéro de la tante n'est donné que par I
 etape('2', 'Convaincre la tante', "Trois questions. Une réponse maladroite ouvre un rattrapage ; "
       "deux maladresses de suite et la tante raccroche.")
 etape('3', 'Parler à Clara', "Quatre questions. Chaque réponse reçoit un retour écrit qui explique "
-      "pourquoi elle touche juste ou passe à côté.")
+      "pourquoi elle touche juste ou passe à côté. Deux réponses maladroites, et Clara raccroche : "
+      "le joueur peut la rappeler.")
 H2('Ce qui a changé')
 P("Les cœurs et le score chiffré ont été retirés : ils poussaient à chercher la bonne réponse "
-  "plutôt qu'à répondre. Le compte d'empathie reste interne et choisit la fin ; le joueur, lui, ne "
-  "voit que le retour écrit après chaque choix.")
+  "plutôt qu'à répondre. Le compte reste interne ; le joueur, lui, ne voit que le retour écrit "
+  "après chaque choix. Un encadré « Comment ça se passe » explique, avant l'appel, comment parler "
+  "à la tante puis à Clara.")
 H2('Les trois fins')
 for f in T4['fins']:
     coul = {'good': ('2a7a50', 'F4FAF7'), 'ok': ('c09030', 'FDFAF0'), 'bad': ('c04030', 'FDF4F4')}[f['cls']]
-    encart('%s  %s  (empathie ≥ %d sur 10)' % (f['icon'], f['titre'], f['minScore']),
+    encart('%s  %s  (écoute de Clara ≥ %d sur 8)' % (f['icon'], f['titre'], f['minScore']),
            [f['corps'].replace('\n\n', ' ').replace('\n', ' '), f['citation'].replace('\n', ' ')],
            coul=coul[0], fill=coul[1])
 H2('Après la fin')
-P("L'écran de fin ne s'arrête plus à Clara. Il dit ce que Léo fait le lendemain - il va voir le "
-  "CPE, montre ses captures, signale les comptes - puis ce qui arrive aux cinq du groupe : le "
-  "collège ouvre une enquête, et le harcèlement scolaire est un délit en France depuis 2022.")
+P("Après une fin réussie, la conclusion de l'histoire s'écrit à l'écran, ligne après ligne : ce que "
+  "Léo fait le lendemain - il va voir le CPE, montre ses captures, signale les comptes - puis ce "
+  "qui arrive aux cinq du groupe : le collège ouvre une enquête, et le harcèlement scolaire est un "
+  "délit en France depuis 2022. Après « La distance reste », le jeu propose plutôt de recommencer "
+  "l'échange avec Clara.")
 P("Un bouton ouvre enfin le récapitulatif imprimable : les neuf types avec ceux que le groupe a "
   "identifiés, les comptes démasqués, la fin obtenue, les numéros d'aide, et deux lignes à "
   "compléter à la main.")

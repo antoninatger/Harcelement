@@ -18,16 +18,16 @@
      Partie 1 vue                                   2 valeurs
      Partie 3 : 0 non faite, 1 faite, 2 numéro obtenu  3
      les neuf types de harcèlement (Partie 2)        512
-     les cinq comptes démasqués (Partie 3)            32
-     empathie 0-10 (Partie 4)                         11
-     scène en cours 0-11 (Partie 4)                   12
+     les six comptes démasqués (Partie 3)             64
+     écoute de Clara 0-8, phase 2 (Partie 4)           9
+     scène en cours 0-8 (Partie 4)                     9
      confiance de la tante 0-10                       11
-     maladresses envers la tante 0-2                   3
+     maladresses (tante, puis Clara) 0-2               3
      fin de la Partie 4 : aucune, good, ok, bad        4
 
-   Le produit fait 1 712 848 896, sous les 36^6 = 2 176 782 336 disponibles.
-   Ce format n'est pas celui de la version précédente : les codes émis avant
-   ne sont plus valides.
+   Le produit fait 2 102 132 736, sous les 36^6 = 2 176 782 336 disponibles.
+   Format du 6 octobre 2026 (sixième compte, celui de Marine, retrouvé par
+   enquête) : les codes émis avant ne sont plus valides.
    ========================================================================= */
 (function (global) {
   'use strict';
@@ -35,7 +35,7 @@
   var TYPES = ['body_shaming','menaces','rumeurs','exclusion','diffusion_images',
                'manipulation','sextorsion','sexiste','scolaire'];
   var COMPTES = ['utilisateur_4729','_noreply_ghost_','anonymous_x0',
-                 'vrai_info_colleg','jevoustrouve'];
+                 'vrai_info_colleg','jevoustrouve','anon_colleg_real'];
 
   function lire(cle, defaut) {
     try { var v = localStorage.getItem(cle); return v === null ? defaut : v; }
@@ -58,8 +58,8 @@
       p3:       borne(lire('rc_p3_done', 0), 2),
       types:    json('rc_types', []),
       comptes:  Object.keys(json('rc_comptes', {})),
-      empathy:  borne(p4.e, 10),
-      scene:    borne(p4.s, 11),
+      empathy:  borne(p4.e, 8),
+      scene:    borne(p4.s, 8),
       aunt:     borne(p4.a, 10),
       strikes:  borne(p4.k, 2),
       fin:      lire('rc_fin', 'none')
@@ -74,9 +74,9 @@
     { cle: 'p1',      base: 2   },
     { cle: 'p3',      base: 3   },
     { cle: 'types',   base: 512 },
-    { cle: 'comptes', base: 32  },
-    { cle: 'empathy', base: 11  },
-    { cle: 'scene',   base: 12  },
+    { cle: 'comptes', base: 64  },
+    { cle: 'empathy', base: 9   },
+    { cle: 'scene',   base: 9   },
     { cle: 'aunt',    base: 11  },
     { cle: 'strikes', base: 3   },
     { cle: 'fin',     base: 4   }
@@ -143,13 +143,14 @@
       strikes: vals.strikes,
       fin:     FINS[vals.fin] || 'none'
     };
-    if (e.p3 > 2 || e.empathy > 10 || e.aunt > 10 || e.strikes > 2) return null;
+    if (e.p3 > 2 || e.empathy > 8 || e.scene > 8 || e.aunt > 10 || e.strikes > 2) return null;
     return e;
   }
 
   /* ---------- application ---------- */
   var QUI = { utilisateur_4729:'Enzo', _noreply_ghost_:'Jade',
-              anonymous_x0:'Enzo et Théo', vrai_info_colleg:'Jade', jevoustrouve:'Théo' };
+              anonymous_x0:'Enzo et Théo', vrai_info_colleg:'Jade', jevoustrouve:'Théo',
+              anon_colleg_real:'Marine' };
 
   function appliquer(e) {
     if (!e) return false;
@@ -168,7 +169,9 @@
     // rc_remarques n'est pas de la progression : ce sont les remarques
     // ecrites par un eleve et pas encore envoyees. Les effacer avec une
     // nouvelle enquete detruisait son retour sans le prevenir.
-    ['rc_p1_visited','rc_p3_done','rc_types','rc_comptes','rc_p4','rc_fin']
+    // rc_p2_vus / rc_p2_mission : messages déjà ouverts et consigne déjà lue
+    // en Partie 2. Pas dans le code de reprise (confort, pas progression).
+    ['rc_p1_visited','rc_p3_done','rc_types','rc_comptes','rc_p4','rc_fin','rc_p2_vus','rc_p2_mission']
       .forEach(function (k) { ecrire(k, null); });
     try { sessionStorage.clear(); } catch (e) {}
   }

@@ -6,6 +6,7 @@ const CONVOS = [
     id:1, avatar:"👤", name:"utilisateur_4729", sub:"Unknown account",
     unread:true, time:"4 min ago", section:"Today",
     preview:"did you see your face in your last photo seriously",
+    why:"He goes after her face and her hair: that's body shaming. And \"good thing you stopped coming to class\" pushes her out of school: that's exclusion, carrying school bullying online.",
     messages:[
       { from:"them", text:"did you see your face in your last photo seriously", time:"10:42" },
       { from:"them", text:"your haircut is a disaster", time:"10:42" },
@@ -16,6 +17,7 @@ const CONVOS = [
     id:2, avatar:"🙈", name:"anonymous_x0", sub:"Unknown account",
     unread:true, time:"12 min ago", section:null,
     preview:"everyone knows what you did with Nathan",
+    why:"A story about her private life, with no proof, that \"everyone\" supposedly knows: that's a rumor. It targets Clara because she's a girl - nobody would blame Nathan: so it's sexist too. The last line is a threat.",
     messages:[
       { from:"them", text:"everyone knows what you did with Nathan in the bathrooms", time:"10:31" },
       { from:"them", text:"aren't you ashamed?", time:"10:31" },
@@ -27,6 +29,7 @@ const CONVOS = [
     id:3, avatar:"💀", name:"_noreply_ghost_", sub:"Unknown account",
     unread:true, time:"28 min ago", section:null,
     preview:"your profile picture is pathetic",
+    why:"Mocking her face and her looks is body shaming. \"Even the 6th graders laugh at you\" brings the humiliation into the school corridors, and shuts her out.",
     messages:[
       { from:"them", text:"your profile picture is really pathetic", time:"10:15" },
       { from:"them", text:"do you think you're pretty or what", time:"10:15" },
@@ -36,18 +39,20 @@ const CONVOS = [
   {
     id:4, avatar:"🐍", name:"vrai_info_colleg", sub:"Unknown account",
     unread:true, time:"45 min ago", section:null,
-    preview:"we know everything you do clara",
+    preview:"apparently you stole from lena's locker",
+    why:"A made-up accusation (\"apparently…\") spread to the whole class to damage her reputation: that's a rumor. \"It's not me saying it, it's everyone\" is there to make it believable.",
     messages:[
-      { from:"them", text:"we know everything you do clara", time:"09:58" },
-      { from:"them", text:"every photo every story we see it all", time:"09:59" },
-      { from:"them", text:"you think there won't be consequences?", time:"09:59" },
-      { from:"them", text:"there are several of us watching you now", time:"10:00" },
+      { from:"them", text:"apparently you stole from lena's locker", time:"09:58" },
+      { from:"them", text:"that's why she doesn't talk to you anymore", time:"09:59" },
+      { from:"them", text:"i warned the whole class, watch your stuff 😂", time:"09:59" },
+      { from:"them", text:"it's not me saying it it's everyone", time:"10:00" },
     ]
   },
   {
     id:5, avatar:"😈", name:"user_fake8847", sub:"Unknown account",
     unread:true, time:"1h ago", section:null,
     preview:"i screenshotted your last story you looked pathetic",
+    why:"Screenshotting her story and passing it around without her consent is sharing her image without consent. Calling her tears \"crocodile tears\" denies her pain so she doubts herself: that's manipulation.",
     messages:[
       { from:"them", text:"i screenshotted your last story before you deleted it", time:"09:22" },
       { from:"them", text:"you looked really pathetic with your crocodile tears", time:"09:22" },
@@ -59,6 +64,7 @@ const CONVOS = [
     id:6, avatar:"👤", name:"xxxxxxxxx_011", sub:"Unknown account",
     unread:false, time:"yesterday 22:14", section:"Yesterday",
     preview:"you know you have a real problem with your weight",
+    why:"Her weight, her reflection in the mirror: attacking someone's body to humiliate them is body shaming. Repeated, it can damage how a person sees themselves for a long time.",
     messages:[
       { from:"them", text:"you know you have a real problem with your weight?", time:"22:14" },
       { from:"them", text:"every time we saw you in class it was getting worse", time:"22:15" },
@@ -69,6 +75,7 @@ const CONVOS = [
     id:7, avatar:"🕷️", name:"anon_colleg_real", sub:"Unknown account",
     unread:false, time:"yesterday 20:37", section:null,
     preview:"we made a poll about you in class",
+    why:"A poll on \"the most useless person in school\" turns a whole class against one person: exclusion, starting at school. The \"94%\" is probably made up: it's there to make her feel alone against everyone.",
     messages:[
       { from:"them", text:"we made a poll about you in class", time:"20:37" },
       { from:"them", text:"the question was: Is Clara the most useless person in school", time:"20:38" },
@@ -80,6 +87,7 @@ const CONVOS = [
     id:9, avatar:"💬", name:"sansnom_2024", sub:"Unknown account",
     unread:false, time:"yesterday 16:44", section:null,
     preview:"you're so sensitive it's becoming exhausting for everyone",
+    why:"Telling her she's \"too sensitive\", that her crying is \"pathological\", turns the blame back on her: she ends up believing she is the problem. That's manipulation. \"People can't stand you anymore\" adds isolation.",
     messages:[
       { from:"them", text:"you're so sensitive it's becoming exhausting for everyone", time:"16:44" },
       { from:"them", text:"you cry over nothing it's pathological", time:"16:44" },
@@ -91,6 +99,7 @@ const CONVOS = [
     id:8, avatar:"👁️", name:"jevoustrouve", sub:"Unknown account",
     unread:false, time:"yesterday 02:47", section:null,
     preview:"you asleep?",
+    why:"Writing \"tomorrow we'll still be here\" at 2:47 a.m. tells her she's safe nowhere, not even at night, not even at home: these are threats.",
     messages:[
       { from:"them", text:"you asleep?", time:"02:47" },
       { from:"them", text:"we're sleeping just fine", time:"02:47" },
@@ -103,6 +112,7 @@ const CONVOS = [
     id:10, avatar:"🔇", name:"xx_nobody_xx", sub:"Unknown account",
     unread:false, time:"Monday 21:10", section:"This week",
     preview:"the way you dress is really embarrassing",
+    why:"Her clothes, her appearance: that's body shaming. \"Even the teachers noticed\" is probably false, but makes her believe everyone is judging her. And \"stay home\" pushes her to disappear: exclusion.",
     messages:[
       { from:"them", text:"the way you dress is really embarrassing", time:"21:10" },
       { from:"them", text:"it looks like you dress out of trash cans", time:"21:10" },
@@ -114,6 +124,7 @@ const CONVOS = [
     id:11, avatar:"🤡", name:"super_secret_info", sub:"Unknown account",
     unread:false, time:"Monday 19:55", section:null,
     preview:"people have been talking about you in the group since last night",
+    why:"\"People are talking about you, but I won't say what\": creating anxiety with nothing she can check is manipulation. Bringing up what \"the guys in your class say about you\" also lets a rumor spread.",
     messages:[
       { from:"them", text:"you know people have been talking about you in the group since last night?", time:"19:55" },
       { from:"them", text:"what the guys in your class are saying about you isn't pretty", time:"19:56" },
@@ -125,6 +136,7 @@ const CONVOS = [
     id:12, avatar:"👤", name:"0000_mask_0000", sub:"Unknown account",
     unread:false, time:"Sunday 23:41", section:null,
     preview:"your photo was shared in several groups lol",
+    why:"Her photo is going around in groups she isn't in, so people can laugh at her: that's sharing her image without consent.",
     messages:[
       { from:"them", text:"your photo was shared in several groups lol", time:"23:41" },
       { from:"them", text:"you're funny without meaning to be, that's pretty strong", time:"23:41" },
@@ -135,6 +147,7 @@ const CONVOS = [
     id:13, avatar:"🌑", name:"dark_mode_user", sub:"Unknown account",
     unread:false, time:"Sunday 20:18", section:null,
     preview:"your friends still talk to you out of pity you know that right",
+    why:"Making her believe her friends only put up with her out of pity pushes her away from the very people who could help: manipulation that leads to isolation.",
     messages:[
       { from:"them", text:"your friends still talk to you out of pity you know that right?", time:"20:18" },
       { from:"them", text:"I asked someone in your group and they said they can't stand you anymore", time:"20:19" },
@@ -146,6 +159,7 @@ const CONVOS = [
     id:14, avatar:"👻", name:"fantome_reseau", sub:"Unknown account",
     unread:false, time:"3 weeks ago", section:"Last month",
     preview:"4 likes on your photo with 612 followers is pathetic",
+    why:"Counting her likes to prove that \"even your followers ignore you\" makes her feel she no longer belongs, even online: that's exclusion.",
     messages:[
       { from:"them", text:"did you see the number of likes on your latest photo?", time:"14:22" },
       { from:"them", text:"4 likes in 2 hours with 612 followers is pathetic", time:"14:22" },
@@ -157,6 +171,7 @@ const CONVOS = [
     id:15, avatar:"🎭", name:"truth_teller_99", sub:"Unknown account",
     unread:false, time:"3 weeks ago", section:null,
     preview:"i don't understand how you still have friends",
+    why:"\"It's not mean, it's just the truth\": presenting an insult as a fact, until she believes it, is manipulation. \"How do you still have friends\" also tries to isolate her.",
     messages:[
       { from:"them", text:"I really don't understand how you still have friends", time:"09:50" },
       { from:"them", text:"there's nothing interesting about you seriously", time:"09:51" },
@@ -168,6 +183,7 @@ const CONVOS = [
     id:16, avatar:"🕶️", name:"incognito_user21", sub:"Unknown account",
     unread:false, time:"3 weeks ago", section:null,
     preview:"you were filmed in the cafeteria yesterday did you know",
+    why:"Filming her without her knowing and promising the video \"will go everywhere\" is sharing her image without consent - and threatening her.",
     messages:[
       { from:"them", text:"you were filmed in the cafeteria yesterday did you know?", time:"18:05" },
       { from:"them", text:"you looked completely lost as usual", time:"18:05" },
@@ -207,6 +223,7 @@ const CONVOS = [
     id:28, avatar:"😤", name:"vrai_garcon_2024", sub:"Unknown account",
     unread:false, time:"3 weeks ago", section:null,
     preview:"girls like you don't know how to behave",
+    why:"\"You're a girl, stay in your place\": she's attacked because she's a girl, to shut her up. That's sexist harassment.",
     messages:[
       { from:"them", text:"girls like you don't know how to behave", time:"19:44" },
       { from:"them", text:"you don't belong expressing yourself like that in front of everyone", time:"19:45" },
@@ -218,6 +235,7 @@ const CONVOS = [
     id:29, avatar:"🏫", name:"colleg_info_2024", sub:"Unknown account",
     unread:false, time:"3 weeks ago", section:null,
     preview:"everyone was laughing behind your back in the cafeteria",
+    why:"The canteen, math class, the teachers: what happens at school is picked up online that same evening. The bullying no longer stops when classes end.",
     messages:[
       { from:"them", text:"did you see the face you had in the cafeteria today", time:"17:21" },
       { from:"them", text:"everyone was laughing behind your back in the cafeteria", time:"17:22" },
@@ -229,6 +247,7 @@ const CONVOS = [
     id:17, avatar:"🔴", name:"rouge_anonyme", sub:"Unknown account",
     unread:false, time:"4 weeks ago", section:null,
     preview:"did you see the comment E. left on your photo",
+    why:"Showing her that everyone liked the mocking comment and not her photo makes her feel the group rejects her: that's exclusion.",
     messages:[
       { from:"them", text:"did you see the comment E. left on your photo?", time:"20:12" },
       { from:"them", text:"everyone liked his comment but not your photo that's funny right", time:"20:12" },
@@ -240,6 +259,7 @@ const CONVOS = [
     id:18, avatar:"🫥", name:"user_invisible_00", sub:"Unknown account",
     unread:false, time:"2 months ago", section:"2 months ago",
     preview:"nobody defended you when M. insulted you did you notice",
+    why:"\"Nobody stood up for you\": making her believe everyone is against her cuts her off from others. That's manipulation, used to isolate her.",
     messages:[
       { from:"them", text:"nobody defended you when M. insulted you did you notice?", time:"17:34" },
       { from:"them", text:"it's because everyone thinks the same", time:"17:34" },
@@ -250,6 +270,7 @@ const CONVOS = [
     id:19, avatar:"🧨", name:"explosif_2024", sub:"Unknown account",
     unread:false, time:"2 months ago", section:null,
     preview:"did you see the stories the 9th graders posted about you",
+    why:"A nickname made up and posted in stories for \"the whole school\": her reputation is trashed in front of everyone. That's a rumor, carrying school bullying further.",
     messages:[
       { from:"them", text:"did you see the stories the 9th graders posted about you?", time:"22:01" },
       { from:"them", text:"they gave you a nickname and it worked really well as a joke", time:"22:01" },
@@ -261,6 +282,7 @@ const CONVOS = [
     id:20, avatar:"🪲", name:"bug_report_xx", sub:"Unknown account",
     unread:false, time:"2 months ago", section:null,
     preview:"your ex told his friends everything did you know",
+    why:"Her ex supposedly \"told everything\" about her private life: true or not, that's a rumor. And \"you'll do better next time\" judges a girl on her love life: that's sexist.",
     messages:[
       { from:"them", text:"your ex told his friends everything did you know?", time:"16:18" },
       { from:"them", text:"like really everything", time:"16:18" },
@@ -271,6 +293,7 @@ const CONVOS = [
     id:27, avatar:"🔐", name:"anon_blackmail_x", sub:"Unknown account",
     unread:false, time:"2 months ago", section:null,
     preview:"i have photos of you that you wouldn't want everyone to see",
+    why:"\"If you talk, I send the photos\": that's blackmail. Using embarrassing or intimate images to silence someone is sextortion - a crime, to be reported right away.",
     messages:[
       { from:"them", text:"I have photos of you that you wouldn't want everyone to see", time:"23:12" },
       { from:"them", text:"photos from the party at Lena's last month", time:"23:13" },
@@ -283,6 +306,7 @@ const CONVOS = [
     id:21, avatar:"⚫", name:"xX_shadow_Xx", sub:"Unknown account",
     unread:false, time:"3 months ago", section:"3 months ago",
     preview:"can you still sleep at night knowing everyone hates you",
+    why:"\"Everyone hates you\": nothing proves it, but hear it enough and you start believing it. That's manipulation, and it isolates her.",
     messages:[
       { from:"them", text:"can you still sleep at night knowing everyone hates you?", time:"23:47" },
       { from:"them", text:"because if I were you I couldn't", time:"23:47" },
@@ -293,6 +317,7 @@ const CONVOS = [
     id:22, avatar:"🗑️", name:"delete_clara", sub:"Unknown account",
     unread:false, time:"3 months ago", section:null,
     preview:"you can delete your account nobody would notice",
+    why:"Pushing her to delete her account means wanting her to disappear without looking responsible: forced exclusion.",
     messages:[
       { from:"them", text:"you can delete your account nobody would notice", time:"11:03" },
       { from:"them", text:"you have 612 followers but zero real friends on there", time:"11:03" },
@@ -312,6 +337,7 @@ const CONVOS = [
     id:24, avatar:"🎯", name:"target_clara_f", sub:"Unknown account",
     unread:false, time:"3 months ago", section:null,
     preview:"you're the easiest person to hate i've ever seen",
+    why:"\"The easiest person to hate\": making her believe everyone rejects her is exclusion - and manipulation.",
     messages:[
       { from:"them", text:"you're the easiest person to hate I've ever seen", time:"20:55" },
       { from:"them", text:"no effort needed honestly", time:"20:55" },
@@ -323,6 +349,7 @@ const CONVOS = [
     id:25, avatar:"🕳️", name:"void_user_xx", sub:"Unknown account",
     unread:false, time:"7 months ago", section:"More than 6 months ago",
     preview:"we've wanted to tell you for a while that you don't belong here",
+    why:"\"You don't belong here, in this school, in this class, on this network\": she's told she belongs nowhere. That's exclusion, starting at school.",
     messages:[
       { from:"them", text:"we've wanted to tell you for a while that you don't belong here", time:"08:14" },
       { from:"them", text:"in this school in this class and on this network", time:"08:14" },
@@ -333,6 +360,7 @@ const CONVOS = [
     id:26, avatar:"🧊", name:"froid_comme_toi", sub:"Unknown account",
     unread:false, time:"8 months ago", section:null,
     preview:"we made up a nickname for you in class do you want to know which one",
+    why:"A nickname that \"everyone uses except you\": the whole class mocks her behind her back. That's a rumor. \"Ask around if you dare\" pushes her to distrust everyone: manipulation.",
     messages:[
       { from:"them", text:"we made up a nickname for you in class do you want to know which one?", time:"13:30" },
       { from:"them", text:"everyone already uses it except you", time:"13:30" },
@@ -352,171 +380,22 @@ const CONVOS = [
   },
 ];
 
-// ─── PHOTO QUIZZES, triggered from the lightbox ──────────────────────────
-
-const PHOTO_QUIZZES = {
-  3: {
-    icon:'⚖️',
-    type:'Body shaming',
-    question:'In your opinion, what do we call the kind of comment you just read under the photo?',
-    options:[
-      'Clumsy diet advice',
-      'Body shaming - harassment targeting physical appearance',
-      'A simple joke between friends',
-      'Spam'
-    ],
-    correct:1,
-    explanation:'Body shaming consists of criticizing a person\'s body, weight, or eating habits in order to hurt and humiliate them. When repeated, these comments can cause long-lasting body image issues.'
-  },
-  7: {
-    icon:'🎂',
-    type:'Online isolation and social exclusion',
-    question:'The comments on Clara\'s birthday photo mock her loneliness ("was nobody there?", "did you eat it all by yourself?"). What type of bullying is this?',
-    options:[
-      'Light teasing with no consequences',
-      'Deliberate social exclusion meant to isolate and humiliate the victim',
-      'Phishing',
-      'A simple disagreement'
-    ],
-    correct:1,
-    explanation:'Mocking someone for being isolated is meant to make them feel excluded and unwanted. On social media, these comments are visible to everyone and intensify the pain of loneliness.'
-  },
-  5: {
-    icon:'📸',
-    type:'Non-consensual sharing of images and cyber-surveillance',
-    question:'Strangers comment on Clara\'s concert photo, saying she "didn\'t belong there" and that "the people around her must have been happy." What is this?',
-    options:[
-      'An aesthetic comment on the photo',
-      'Harassment targeting the victim\'s identity and sense of belonging, with collective intimidation',
-      'A music review',
-      'A friendly joke'
-    ],
-    correct:1,
-    explanation:'Hostile comments about Clara\'s presence in everyday spaces, such as a concert or cafeteria, are meant to make her believe she does not "belong" anywhere. This is a form of permanent exclusion that also affects physical spaces.'
-  }
-};
-
-// ─── QUIZ SYSTEM ─────────────────────────────────────────────────────────────
-
-const QUIZZES = {
-  4: {
-    icon: '⚠️',
-    type: 'Online intimidation and threats',
-    question: 'These messages, "there are several of us watching you," represent what form of cyberbullying?',
-    options: [
-      'Light teasing between students',
-      'Unwanted advertising, spam',
-      'Collective intimidation and online threats',
-      'A simple misunderstanding'
-    ],
-    correct: 2,
-    explanation: 'Threatening a victim as a group in order to scare them or silence them is collective intimidation. Even without physical violence, these messages create a constant state of anxiety.'
-  },
-  7: {
-    icon: '📊',
-    type: 'Public humiliation poll',
-    question: '"Is Clara the most useless person in school?" - What type of cyberbullying is this?',
-    options: [
-      'A public humiliation poll',
-      'Phishing, data theft',
-      'Exclusion from an online gaming group',
-      'Advertising spam'
-    ],
-    correct: 0,
-    explanation: 'A humiliation poll publicly targets one person to ridicule them in front of a group. Over time, the victim often internalizes this collective judgment as a truth about themselves.'
-  },
-  11: {
-    icon: '🕸️',
-    type: 'Rumors and psychological manipulation',
-    question: '"People are talking badly about you, but I won\'t tell you what they\'re saying." - What is this?',
-    options: [
-      'Clumsy advice from a friend',
-      'Manipulation meant to isolate and distress the victim',
-      'Doxxing, revealing personal data',
-      'A harmless troll'
-    ],
-    correct: 1,
-    explanation: 'Hinting that "everyone is talking badly about you" without ever saying exactly what is being said is psychological manipulation. The goal is to create constant anxiety and cut the victim off from people close to them.'
-  },
-  22: {
-    icon: '🚪',
-    type: 'Forced exclusion',
-    question: '"Delete your account, nobody would notice." - What mechanism is at work?',
-    options: [
-      'Clumsy friendly advice',
-      'Pressure to force the victim to exclude themselves',
-      'Spam',
-      'Identity theft'
-    ],
-    correct: 1,
-    explanation: 'Pushing the victim to exclude themselves is forced exclusion. The goal is to make the person disappear without the bully being held directly responsible.'
-  },
-  23: {
-    icon: '👤',
-    type: 'Fake account created to harass',
-    question: '"I created this account just to tell you you\'re useless." What is the specific danger?',
-    options: [
-      'It collects personal data',
-      'It impersonates one of Clara\'s friends',
-      'It was created solely to harass, protected by anonymity',
-      'It sends viruses'
-    ],
-    correct: 2,
-    explanation: 'Creating an account solely to harass illustrates the cowardice enabled by online anonymity. The victim cannot identify or truly block the aggressor.'
-  }
-};
-
 // ─── TYPES OF BULLYING ────────────────────────────────────────────────────
 
 const HARCEL_TYPES = {
   body_shaming:     { label:'Body shaming',                         desc:'Mockery targeting the body, weight, or appearance.',                    color:'#e07040', icon:'🪞' },
   menaces:          { label:'Threats and intimidation',              desc:'Threatening messages meant to scare or silence the victim.',             color:'#cc3333', icon:'⚠️' },
-  rumeurs:          { label:'Rumors and defamation',                 desc:'Spreading false information to damage someone\'s reputation.',           color:'#cc6600', icon:'🗣️' },
+  rumeurs:          { label:'Rumors and defamation',                 desc:'Spreading false or intimate stories, or a nickname, to damage someone\'s reputation.',           color:'#cc6600', icon:'🗣️' },
   exclusion:        { label:'Exclusion and forced isolation',         desc:'Pushing the victim to feel excluded from every social space.',           color:'#8844cc', icon:'🚪' },
   diffusion_images: { label:'Sharing images without consent',         desc:'Sharing or threatening to share images without permission.',             color:'#0088cc', icon:'📸' },
   manipulation:     { label:'Psychological manipulation',             desc:'Insinuations and mind games that create anxiety and confusion.',          color:'#669900', icon:'🕸️' },
   sextorsion:       { label:'Blackmail / Sextortion',                 desc:'Using intimate images or secrets to pressure someone.',                  color:'#aa0044', icon:'🔐' },
   sexiste:          { label:'Sexist harassment',                      desc:'Attacks based on gender meant to humiliate and belittle.',               color:'#cc44aa', icon:'😤' },
-  scolaire:         { label:'Long-term school bullying',              desc:'The extension of school bullying onto social media.',                    color:'#447799', icon:'🏫' },
+  scolaire:         { label:'Long-term school bullying',              desc:'What happens at school (canteen, corridors, classes) carries on online, and the other way round.',                    color:'#447799', icon:'🏫' },
 };
 
-const HARCEL_MAP = [
-  { frag:'problem with your weight',                          type:'body_shaming' },
-  { frag:'eat more',                                          type:'body_shaming' },
-  { frag:'real problem with your weight',                     type:'body_shaming' },
-  { frag:'you wonder why',                                    type:'body_shaming' },
-  { frag:'there are several of us watching you',              type:'menaces' },
-  { frag:"going to regret it",                                type:'menaces' },
-  { frag:"still be here",                                     type:'menaces' },
-  { frag:"there won't be consequences",                       type:'menaces' },
-  { frag:'everyone knows what you did with Nathan',           type:'rumeurs' },
-  { frag:"been going around the whole class",                 type:'rumeurs' },
-  { frag:'we made a poll about you',                          type:'rumeurs' },
-  { frag:'nickname',                                          type:'rumeurs' },
-  { frag:'delete your account nobody would notice',           type:'exclusion' },
-  { frag:"we've wanted to tell you for a while",              type:'exclusion' },
-  { frag:'in this school in this class',                      type:'exclusion' },
-  { frag:'nobody was there for your birthday',                type:'exclusion' },
-  { frag:'eat the whole cake by yourself',                    type:'exclusion' },
-  { frag:'you don\'t belong here',                            type:'exclusion' },
-  { frag:'screenshotted your last story',                     type:'diffusion_images' },
-  { frag:'your photo was shared in several groups',           type:'diffusion_images' },
-  { frag:'you were filmed',                                   type:'diffusion_images' },
-  { frag:'stories the 9th graders posted',                    type:'diffusion_images' },
-  { frag:"I won't tell you what it is",                       type:'manipulation' },
-  { frag:'or maybe you deserve to know',                      type:'manipulation' },
-  { frag:'your friends still talk to you out of pity',        type:'manipulation' },
-  { frag:'nobody defended you',                               type:'manipulation' },
-  { frag:"photos of you that you wouldn't want",              type:'sextorsion' },
-  { frag:"if you talk to anyone about what's happening at school", type:'sextorsion' },
-  { frag:'girls like you',                                    type:'sexiste' },
-  { frag:'stay in your place',                                type:'sexiste' },
-  { frag:'too much in your head for a girl',                  type:'sexiste' },
-  { frag:"don't belong expressing yourself",                  type:'sexiste' },
-  { frag:'everyone was laughing behind your back in the cafeteria', type:'scolaire' },
-  { frag:"even the teachers can't stand you",                 type:'scolaire' },
-  { frag:'the math teacher embarrassed you',                  type:'scolaire' },
-];
+// Which message belongs to which type(s): see 2_Compte_de_Clara_types.js,
+// shared by the French and English versions.
 
 // ─── PROFILE PHOTOS ────────────────────────────────────────────────────────
 
@@ -542,6 +421,7 @@ var photoData = [
     ]
   },
   { likes: 4,  caption: "Sunday ice cream 🍦", time: "1 month ago",
+    why: "A photo of ice cream, and they talk about her weight: that's body shaming. These comments are public: all her followers read them.",
     comments: [
       { user: "sansnom_2024",     text: "and you wonder why you have a problem with your weight" },
       { user: "xx_nobody_xx",     text: "honestly you have no shame posting that" },
@@ -555,6 +435,7 @@ var photoData = [
     ]
   },
   { likes: 7,  caption: "concert tonight 🎤🔥", time: "3 months ago",
+    why: "\"You don't belong there\", \"the people around you must have been thrilled\": she's made to feel she's in the way everywhere, even at a concert. That's exclusion.",
     comments: [
       { user: "explosif_2024",    text: "what? you like this artist? you're useless poor girl" },
       { user: "user_fake8847",    text: "you shouldn't have gone, it's obvious you don't belong there" },
@@ -562,12 +443,14 @@ var photoData = [
     ]
   },
   { likes: 2,  caption: "flowers from the market 🌸", time: "4 months ago",
+    why: "\"Even the flowers want to leave\", \"nobody will ever give you any\": she's told again and again she'll always be alone. That's exclusion.",
     comments: [
       { user: "dark_mode_user",   text: "even the flowers look like they want to leave" },
       { user: "fantome_reseau",   text: "flowers? nobody's ever gonna give you any lol" },
     ]
   },
   { likes: 4,  caption: "birthday cake 🎂", time: "6 months ago",
+    why: "Mocking a birthday with \"nobody there\" makes her feel alone: that's exclusion. \"Did you eat it all by yourself?\" also targets her body: that's body shaming.",
     comments: [
       { user: "anon_colleg_real", text: "nobody was there for your birthday is that it?" },
       { user: "sansnom_2024",     text: "did you eat the whole cake by yourself?" },
@@ -575,6 +458,7 @@ var photoData = [
     ]
   },
   { likes: 0,  caption: "starry night 🌙", time: "8 months ago",
+    why: "\"0 likes, that's a message\", \"even the sky doesn't want you\": she's told over and over that nobody wants her. That's exclusion.",
     comments: [
       { user: "truth_teller_99",  text: "0 likes in 3 hours that's a message clara" },
       { user: "void_user_xx",     text: "even the sky doesn't want you" },
@@ -585,29 +469,54 @@ var photoData = [
 
 // ─── UI STRINGS ───────────────────────────────────────────────────────────────
 
-const UI = {
+var UI = {
   unread:          "unread",
-  typesIdentified: "types identified",
+  all:             "All",
+  typesIdentified: "types found",
+  typesBtn:        "📋 Types",
   today:           "Today",
-  quizLabel:       "Identify the type of harassment",
-  cancelSelect:    "✕ Cancel selection",
-  identifyBtn:     "🔍 Identify harassment",
   firstToLike:     "Be the first to like",
   likes:           " likes",
+  searchPh:        "Search a username or a message",
+  searchNone:      "No results.",
+  searchComments:  "Comments under her photos",
+  searchUnder:     "under \"{cap}\"",
   synthBtn:        "📋 View summary - What happened to Clara",
   synthNote:       "These forms of bullying are real. Each one leaves marks on the victim - even without physical contact.",
+  listTitle:       "📋 The types of harassment to find",
+  listIntro:       "Find at least 6 out of 9. Tap a message or a comment, then choose its type.",
+  synthTitle:      "📋 What happened to Clara - Summary",
   backToWA:        "← Back to the group",
   backToWAUrl:     "3_Groupe_Secret_en.html",
-  correct:         "Correct!",
-  wrong:           "Not quite.",
+  idLabel:         "What type of harassment?",
+  idSeveral:       "A message can belong to several types: one is enough.",
+  correct:         "That's it.",
+  alsoTypes:       "This message also counts as:",
+  wrong1:          "Not quite. Read the message again and try another type.",
+  wrong2:          "Here is the answer.",
+  wrongNote:       "This type doesn't count this time: find it in another message.",
+  idClose:         "Close",
+  idContinue:      "Continue →",
+  synthFound:      "found",
+  synthMissed:     "missed",
+  synthTodo:       "to find",
   demasqueSub:     "Unmasked in the group: ",
   reportBtn:       "⚠ Report this account",
   reportDone:      "✓ Account reported",
   reportAfter:     "Account reported. Clara could have done it from the very first message - nobody had told her.",
-  synthFound:      "found",
-  synthMissed:     "missed",
   noteCode:        "🔐 The code for what comes next",
   codeClose:       "← Back to Kevin's message",
-  observeBtn:      "🗣 Say what I observe",
-  notTagged:       "That one hurts too - but it isn't enough to name a type of harassment. Look for a more revealing message."
+  // Investigations started from the group (Part 3)
+  enquetes: {
+    marine: {
+      photo: 2, handle: "anon_colleg_real", qui: "Marine",
+      bar: "🔎 <b>Investigation</b> - In the group, Marine says she wrote under the photo of Clara's cat that \"even her cat looks as useless as her\". Open that photo and tap the <b>username</b> of whoever wrote the comment.",
+      lbHint: "🔎 Investigation: tap the username of whoever wrote Marine's comment.",
+      wrongPhoto: "Wrong photo: Marine is talking about Clara's cat.",
+      wrongUser: "Not that username. Read Marine's words again: \"even her cat looks as useless as her\".",
+      okTitle: "Account unmasked",
+      okNote: "Clara can't know this. You can: you matched what is said in the group with her comments."
+    }
+  },
+  notTagged:       "Mean, yes. But this message alone isn't enough to tell what type of harassment it is: look for a more specific one."
 };

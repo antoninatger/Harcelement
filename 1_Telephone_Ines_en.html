@@ -1,8 +1,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-.pw{display:flex;justify-content:center;align-items:flex-start;padding:1.5rem 1rem;min-height:100vh;background:#000;}
+.pw{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:1.5rem 1rem;min-height:100vh;background:#000;}
 @media(min-width:600px){.pw{align-items:center;padding:2rem 1rem;}}
+/* Bulle de pensée de Léo, hors du téléphone : au-dessus sur mobile, à gauche sur grand écran */
+#pz{width:min(296px, calc(100vw - 2rem));min-height:0;display:flex;flex-direction:column;justify-content:flex-end;margin-bottom:14px;}
+#pz:empty{margin-bottom:0;}
+.pensee{position:relative;background:#f2eee6;color:#22201c;border-radius:22px;padding:10px 14px 11px;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:12.5px;line-height:1.5;box-shadow:0 4px 18px rgba(0,0,0,.45);animation:pzIn .35s ease;transition:opacity .4s;margin-bottom:16px;}
+.pensee.old{opacity:.45;font-size:11.5px;}
+.pensee.old::before,.pensee.old::after{display:none;}
+.pensee-qui{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-style:normal;font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a7f6e;margin-bottom:3px;}
+.pensee::before,.pensee::after{content:'';position:absolute;background:#f2eee6;border-radius:50%;}
+.pensee::before{width:13px;height:13px;left:34px;bottom:-9px;}
+.pensee::after{width:7px;height:7px;left:26px;bottom:-19px;}
+@keyframes pzIn{from{opacity:0;transform:translateY(6px) scale(.97)}to{opacity:1;transform:none}}
+@media(min-width:760px){
+  .pensee{margin-bottom:0;}
+  .pensee+.pensee{margin-top:12px;}
+  .pw{flex-direction:row;}
+  .pw::after{content:'';width:252px;flex-shrink:0;} /* garde le téléphone centré */
+  #pz{width:230px;margin:0 22px 0 0;align-self:center;min-height:0;}
+  .pensee{margin-bottom:0;}
+  .pensee::before{left:auto;right:-9px;bottom:22px;}
+  .pensee::after{left:auto;right:-20px;bottom:14px;}
+}
 .ph{width:min(296px, calc(100vw - 2rem));background:#0d0d0d;border-radius:38px;border:7px solid #1c1c1c;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;}
 .sb{background:#000;display:flex;justify-content:space-between;align-items:flex-end;padding:11px 18px 5px;}
 .nt{width:104px;height:24px;background:#000;border-radius:0 0 14px 14px;align-self:flex-start;border:1.5px solid #1a1a1a;border-top:none;}
@@ -92,7 +113,7 @@
   </div>
 </div>
 
-<div class="pw"><div class="ph">
+<div class="pw"><div id="pz" aria-live="polite"></div><div class="ph">
   <div class="sb">
     <span style="color:#fff;font-size:12px;font-weight:600;">9:41</span>
     <div class="nt"></div>

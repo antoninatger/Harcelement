@@ -1,4 +1,4 @@
-const WA_DATA = {
+var WA_DATA = {
 
   // ─── Group ──────────────────────────────────────────────────────────────────
 
@@ -44,7 +44,8 @@ const WA_DATA = {
       { handle: "_noreply_ghost_",  qui: "Jade" },
       { handle: "anonymous_x0",     qui: "Enzo and Théo" },
       { handle: "vrai_info_colleg", qui: "Jade" },
-      { handle: "jevoustrouve",     qui: "Théo" }
+      { handle: "jevoustrouve",     qui: "Théo" },
+      { handle: "anon_colleg_real", qui: "Marine", enquete: true }
     ]
   },
 
@@ -68,9 +69,9 @@ const WA_DATA = {
   },
 
   mission: {
-    icon:  "👁",
-    title: "What you need to understand",
-    body:  "I am going to observe how the members of this group organized the bullying against Clara.\n\nQuestions will appear during the reading to help me analyze what is happening.\n\nBy the end, I will have a complete view of what happened.",
+    icon:  "🕵️",
+    title: "What to look for",
+    body:  "Clara gets messages from anonymous accounts. In here, among themselves, they say which accounts they use.\n\nMy goal: find out who is behind each one. As soon as an account is named (@…), tap it. There are six: one of them, you'll have to track down on Clara's Instaclass.\n\nThe conversation plays by itself. Tap anywhere to skip to the next message faster.",
     btn:   "Start →"
   },
 
@@ -129,6 +130,7 @@ const WA_DATA = {
     { id: 27, sender: "Kevin",  text: "seriously don't you think we're going a bit too far now...",                       time: "17:53", delay: 1000 },
     { id: 28, sender: "Enzo",  text: "don't worry it's just for fun, she takes it way too seriously anyway",             time: "17:53", delay:  900 },
     { id: 29, sender: "Kevin",  text: "yeah okay...",                                                                    time: "17:54", delay:  500 },
+    { type: "thought", text: "Kevin doesn't seem to agree… but he keeps quiet. Why? I need to understand what he really thinks." },
     { id: 30, sender: "Marine", text: "what about her DMs too? we could send her stuff at night",                        time: "17:54", delay: 1000 },
     { id: 31, sender: "Enzo",  text: "yes with anon accounts again, so she can't sleep peacefully",                      time: "17:55", delay:  900 },
     { id: 32, sender: "Jade",   text: "like harass her until she finally leaves insta",                                  time: "17:55", delay:  800 },
@@ -138,6 +140,11 @@ const WA_DATA = {
     { id: 34, sender: "Enzo",  text: "@anonymous_x0 is mine, I made it, Théo uses it too btw",                                        time: "17:57", delay:  700 },
     { id: 35, sender: "Jade",   text: "and I made a 2nd one: @vrai_info_colleg, to spread rumors about her",              time: "17:57", delay: 1000 },
     { id: 36, sender: "Théo",   text: "I have @jevoustrouve to scare her at night",                                      time: "17:58", delay:  900 },
+    { id: 59, sender: "Marine", text: "I'm not saying which account is mine 🤫 but go look under the photo of her cat, I wrote that even her cat looks as useless as her 😂", time: "17:58", delay: 1000 },
+    { type: "enquete", key: "marine", handle: "anon_colleg_real",
+      text: "Marine won't say which account she uses. But her comment is under the photo of Clara's cat: I can find out who wrote it.",
+      btn: "🔎 Track down Marine's account on the Instaclass",
+      done: "✓ Marine's account found:" },
     { id: 37, sender: "Marine", text: "for tonight we organize it like this: messages every hour after midnight",        time: "17:59", delay: 1000 },
     { id: 38, sender: "Enzo",  text: "so she thinks about us even at home, even when she's trying to sleep 💀",         time: "18:00", delay: 1000 },
     { id: 39, sender: "Jade",   text: "and we flood her DMs from the anon accounts, especially stuff about her looks",   time: "18:01", delay: 1000 },
@@ -164,6 +171,7 @@ const WA_DATA = {
     { id: 56, sender: "Jade",   text: "exactly, it's her fault if she can't take it",                                    time: "09:25", delay:  600 },
     { id: 57, sender: "Enzo",  text: "well she can come back from her \"haven\" whenever she wants 😂 we'll be here",    time: "09:25", delay:  900 },
     { id: 58, sender: "Kevin",  text: "...",                                                                            time: "09:26", delay:  400 },
+    { type: "thought", text: "Kevin tried to stop them, several times. One against four, he can't. That's probably why he sent Clara the code." },
 
     { type: "end", delay: 300 }
 
@@ -231,6 +239,10 @@ const WA_DATA = {
     ]
   },
 
+  // ─── Léo's thought at the end of the reading ─────────────────────────────────
+  // Deliberately no hint: the player has to work out who to ask.
+  endThought: "Clara is at her aunt's, her \"secret haven\". But where does her aunt live? I have no idea… I need to find someone who knows.",
+
   // ─── Final state ────────────────────────────────────────────────────────────
 
   endMessage: {
@@ -242,24 +254,25 @@ const WA_DATA = {
       "no longer dared to post - that was their goal.",
       "ran away to her \"secret haven\"... but where is it?"
     ],
-    note: "Group bullying turns every space into a danger. Clara has gone somewhere to take refuge. Someone must know where."
+    note: "Group bullying turns every space into a danger. Clara has gone to take refuge far from all this."
   },
 
   // ─── Navigation ─────────────────────────────────────────────────────────────
 
   navigation: {
     prev: { label: "← Clara's Instaclasse", url: "2_Compte_de_Clara_en.html" },
-    next: { label: "Back to the investigation →", url: "index_en.html" }
+    next: { label: "Back to the menu →", url: "index_en.html?skip" }
   }
 
 };
 
-const UI = {
+var UI = {
   today: "Today",
   likes: "3 likes",
   mentionTooltip: "See their messages on Clara's Instaclasse",
-  correct: "✓ Correct!",
+  correct: "✓ That's it.",
   wrong: "✗ Not quite.",
-  tapHint: "▼ Tap to read on",
+  tapHint: "Tap to speed up",
+  penseeLabel: "💭 Léo thinks…",
   inputPlaceholder: "Message…"
 };

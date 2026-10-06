@@ -9,10 +9,10 @@
    les numéros européens.
    ========================================================================= */
 window.RESSOURCES = {
-  titre: "Où trouver de l'aide",
+  titre: "Si jamais tu veux parler, voici les numéros qui peuvent t'aider",
   liste: [
     { label: "3018",          txt: "Cyberharcèlement - gratuit, anonyme, 7 j/7 (e-Enfance)" },
-    { label: "3020",          txt: "Harcèlement à l'école - « Non au harcèlement »" },
+    { label: "3020",          txt: "Harcèlement à l'école - « Non au harcèlement »" },
     { label: "3114",          txt: "Souffrance psychique et prévention du suicide" },
     { label: "e-enfance.org", txt: "Conseils et signalement en ligne" }
   ]

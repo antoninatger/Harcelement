@@ -230,7 +230,8 @@
     if (partie === 1) {
       var step = nombre(glob('step')), G = glob('G');
       var total = (G && G.length) ? G.length : null;
-      if (step !== null) b.push((EN ? 'exchange ' : 'échange ') + (step + 1) + (total ? '/' + total : ''));
+      // Borné au total : en fin de conversation, step vaut G.length (« 7/6 »).
+      if (step !== null) b.push((EN ? 'exchange ' : 'échange ') + (total ? Math.min(step + 1, total) + '/' + total : step + 1));
       var trust = nombre(glob('trust'));
       if (trust !== null) b.push((EN ? 'trust ' : 'confiance ') + trust);
       var good = nombre(glob('good'));
@@ -260,8 +261,9 @@
       var TX = glob('TEXTES');
       var nbSc = (TX && TX.SCENES && TX.SCENES.length) ? TX.SCENES.length : null;
       if (si !== null) b.push((EN ? 'scene ' : 'scène ') + (si + 1) + (nbSc ? '/' + nbSc : ''));
-      var emp = nombre(glob('empathy')), maxEmp = nombre(glob('MAX_EMP'));
-      if (emp !== null) b.push((EN ? 'empathy ' : 'empathie ') + emp + (maxEmp ? '/' + maxEmp : ''));
+      // « empathy » ne compte que l'échange avec Clara (phase 2, sur 8).
+      var emp = nombre(glob('empathy'));
+      if (emp !== null) b.push((EN ? 'listening to Clara ' : 'écoute de Clara ') + emp + '/8');
       var sc = nombre(glob('auntScore'));
       if (sc !== null) b.push((EN ? 'aunt ' : 'tante ') + sc);
       var st = nombre(glob('auntStrikes'));

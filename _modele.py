@@ -46,7 +46,7 @@ bloc('h2', 'Structure du jeu')
 bloc('table', ['Partie', 'Titre', 'Mécanique', 'Durée'], [
     ['1', "Le téléphone d'Inès", "Dialogue à choix, jauge de confiance", "5–8 min"],
     ['2', "L'Instaclasse de Clara", "Exploration, identification de 6 types sur 9, signalement", "12–18 min"],
-    ['3', "Le groupe Whatsupp secret", "Lecture au rythme du joueur, 5 comptes à démasquer, 2 QCM", "8–12 min"],
+    ['3', "Le groupe Whatsupp secret", "Lecture automatique, 6 comptes à démasquer (dont un par enquête), 2 QCM", "8–12 min"],
     ['4', "Convaincre Clara", "Dialogue d'empathie, 8 scènes, 3 fins", "8–12 min"],
 ])
 bloc('p', "Le jeu se termine sur un récapitulatif imprimable (recapitulatif.html) qui reprend ce que "
@@ -56,8 +56,9 @@ bloc('p', "Le jeu se termine sur un récapitulatif imprimable (recapitulatif.htm
 T1 = D['p1']['TEXTES']; U1 = D['p1']['UI']
 bloc('h1', 'Partie 1', "Le téléphone d'Inès")
 bloc('p', "Léo écrit à Inès, la meilleure amie de Clara. Une jauge de confiance monte ou descend à "
-          "chaque réponse. Sous −3, Inès coupe la conversation ; sous −2, une crise de confiance se "
-          "déclenche une seule fois.")
+          "chaque réponse. À la première réponse maladroite, une crise de confiance se déclenche (une "
+          "seule fois) : c'est la chance de se rattraper. À la deuxième, Inès coupe la conversation et "
+          "il faut recommencer.")
 
 bloc('h2', 'Ouverture')
 for m in T1['ouverture']:
@@ -76,15 +77,19 @@ for i, g in enumerate(T1['G']):
         bloc('choix', kind, c['l'], net(c['t']),
              ('confiance %+d' % c['e']),
              net(c['r']) if c.get('r') else None, 'Inès')
+        if c.get('p'):
+            bloc('pensee', net(c['p']))
 
 CR = T1['CRISIS']
-bloc('h2', 'Crise de confiance (une seule fois, si la confiance passe sous −2)')
+bloc('h2', 'Crise de confiance (une seule fois, après la première réponse maladroite)')
 for ligne in CR['intro']:
     bloc('dial', 'ines', 'Inès', net(ligne))
 bloc('prompt', T1['choiceHintCrise'])
 for c in CR['c']:
     kind = 'good' if c['e'] > 0 else ('bad' if c['e'] < 0 else 'ok')
     bloc('choix', kind, c['l'], net(c['t']), 'confiance %+d' % c['e'], None, 'Inès')
+    if c.get('p'):
+        bloc('pensee', net(c['p']))
 
 F = T1['fins']
 bloc('h2', 'Les cinq fins de la Partie 1')
@@ -157,14 +162,15 @@ for c in P2['CONVOS']:
     if c['id'] == 99:
         continue
     types = []
-    for m in c['messages']:
-        nm = norm(m['text'])
-        for e in P2['HARCEL_MAP']:
-            if norm(e['frag']) in nm and e['type'] not in types:
-                types.append(e['type'])
+    for liste in (P2.get('TYPES_DM') or {}).get(str(c['id']), []):
+        for t in liste:
+            if t not in types:
+                types.append(t)
     lib = ', '.join(P2['HARCEL_TYPES'][t]['label'] for t in types) if types else None
     bloc('dm', c['name'], c['time'], lib, [net(m['text']) for m in c['messages']],
          c['id'] == 30)
+    if c.get('why'):
+        bloc('note', 'Explication donnée au joueur : ' + net(c['why']))
 
 j = [c for c in P2['CONVOS'] if c['id'] == 99][0]
 bloc('h2', 'Message de Kevin (se débloque à six types identifiés)')
@@ -178,19 +184,12 @@ for i, ph in enumerate(P2['photoData']):
     lignes = ['%s - %s' % (c['user'], net(c['text'])) for c in ph.get('comments', [])]
     bloc('photo', i, net(ph['caption']), ph['likes'], lignes)
 
-bloc('h2', "Points d'analyse (QCM)")
-bloc('note', "Ils se déclenchent à la première ouverture des conversations et des photos concernées. "
-             "Le type est acquis même sur une mauvaise réponse : l'explication vient d'être lue, et une "
-             "erreur ne doit pas fermer l'accès à la suite.")
-QT = {'4': 'menaces', '7': 'rumeurs', '11': 'manipulation', '22': 'exclusion', '23': None}
-for cle, q in P2['QUIZZES'].items():
-    conv = [c for c in P2['CONVOS'] if str(c['id']) == str(cle)]
-    ou = 'conversation « %s »' % conv[0]['name'] if conv else 'conversation %s' % cle
-    bloc('quiz', ou, net(q['question']), [net(o) for o in q['options']], q['correct'], net(q['explanation']))
-for cle, q in P2['PHOTO_QUIZZES'].items():
-    ph = P2['photoData'][int(cle)]
-    bloc('quiz', 'photo « %s »' % net(ph['caption']), net(q['question']),
-         [net(o) for o in q['options']], q['correct'], net(q['explanation']))
+bloc('h2', "Identifier les types de harcèlement")
+bloc('note', "Une seule mécanique : le joueur appuie sur un message ou un commentaire et choisit son "
+             "type dans la liste des neuf. Un message peut relever de plusieurs types, et n'importe "
+             "lequel est accepté. Après deux erreurs, la réponse est donnée et expliquée, mais le type "
+             "n'est pas compté. L'explication affichée est celle notée sous chaque conversation. "
+             "La classification est dans 2_Compte_de_Clara_types.js, commune au français et à l'anglais.")
 
 bloc('h2', 'Signalement')
 bloc('p', "Sur chaque conversation de harceleur, un bouton « %s » ouvre les trois gestes, dans "
@@ -210,7 +209,7 @@ bloc('h2', 'Avertissement puis mission')
 bloc('p', net(W['warning']['body']))
 bloc('p', net(W['mission']['body']))
 
-bloc('h2', 'Les cinq comptes anonymes à démasquer')
+bloc('h2', 'Les %d comptes anonymes à démasquer' % len(W['comptes']['liste']))
 bloc('note', net(W['comptes']['cardNote']))
 for e in W['comptes']['liste']:
     bloc('compte', '@' + e['handle'], e['qui'])
@@ -229,8 +228,14 @@ for m in W['messages']:
         q = W['quizzes'][m['quizId']]
         bloc('quiz', 'point d\'analyse « %s »' % m['quizId'], net(q['question']),
              [net(o) for o in q['options']], q['correct'], net(q['explanation']))
+    elif t == 'enquete':
+        bloc('note', "🔎 Enquête : " + net(m['text']) + " Le joueur va sur l'Instaclasse, ouvre la "
+             "photo du chat et appuie sur le pseudo de l'auteur du commentaire (@%s)." % m['handle'])
+    elif t == 'thought':
+        bloc('note', '💭 Léo se dit : ' + net(m['text']))
     elif t == 'end':
-        pass
+        if W.get('endThought'):
+            bloc('note', '💭 Léo se dit, à la fin : ' + net(W['endThought']))
     else:
         bloc('dial', m['sender'].lower(), m['sender'], net(m['text']))
 
@@ -291,23 +296,26 @@ for sc in T4['SCENES']:
                  net(r['bad']['txt']), net(r['bad']['reply']['txt']))
 
 bloc('h2', 'Les fins')
+bloc('note', "La fin dépend de l'échange avec Clara seul (0 à 8 points sur ses quatre questions). "
+             "Deux réponses maladroites avec elle, et elle raccroche : le joueur peut la rappeler. "
+             "Une fin « La distance reste » propose de recommencer l'échange au lieu de raconter la suite.")
 for f in T4['fins']:
     kind = f['cls'] if f['cls'] in ('good', 'ok', 'bad') else 'neutral'
-    bloc('fin', kind, '%s %s (empathie ≥ %d sur 10)' % (f['icon'], net(f['titre']), f['minScore']),
+    bloc('fin', kind, '%s %s (écoute de Clara ≥ %d sur 8)' % (f['icon'], net(f['titre']), f['minScore']),
          [net(f['corps']), net(f['citation'])])
 G = T4['gameover']
 bloc('fin', 'neutral', G['icon'] + ' ' + net(G['titre']),
      [net(G['corps']), net(G['lecon'])])
+G = T4.get('gameoverClara')
+if G:
+    bloc('fin', 'neutral', G['icon'] + ' ' + net(G['titre']),
+         [net(G['corps']), net(G['lecon'])])
 bloc('note', "Les cœurs et le score chiffré ont été retirés : le joueur ne voit que le retour écrit "
-             "après chaque réponse. Le compte d'empathie reste interne et choisit la fin.")
+             "après chaque réponse. Le compte reste interne et choisit la fin.")
 
-S4 = T4['suite']
-bloc('h2', S4['icon'] + ' ' + net(S4['titre']))
-for it in S4['items']:
-    bloc('bullet', net(it))
-E4 = T4['epilogue']
-bloc('h2', E4['icon'] + ' ' + net(E4['titre']))
-bloc('p', net(E4['corps']))
+bloc('h2', "Conclusion de l'histoire (texte à l'écran, après une fin réussie)")
+for l in T4.get('conclusion', []):
+    bloc('p', net(l))
 
 R = D['ressources']
 bloc('h2', R['titre'])

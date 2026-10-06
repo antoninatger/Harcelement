@@ -1,6 +1,8 @@
 var G=TEXTES.G, CRISIS=TEXTES.CRISIS, REVELATIONS=TEXTES.REVELATIONS;
 
-var trust=0,good=0,step=0,crisisUsed=false,phase='story',busy=false,tyEl=null;
+// faux : réponses maladroites (e < 0). À la deuxième, Inès arrête de répondre,
+// comme Clara en Partie 4 : il faut recommencer la conversation.
+var trust=0,good=0,faux=0,step=0,crisisUsed=false,phase='story',busy=false,tyEl=null;
 var ma=document.getElementById('ma'),ca=document.getElementById('ca');
 var tf=document.getElementById('tf'),tlb=document.getElementById('tlb');
 
@@ -12,12 +14,41 @@ document.getElementById('st').textContent=TEXTES.contact.statusOnline;
 function sl(ms){return new Promise(function(r){setTimeout(r,ms);});}
 
 function addBub(txt,type){
+  // Les pensées de Léo ne s'écrivent plus dans le téléphone : elles vont dans
+  // la bulle de pensée, à côté (voir pensee()).
+  if(type==='ed'){pensee(txt);return;}
   var d=document.createElement('div');
   d.className='bb '+type;
   d.innerHTML=txt.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
   ma.appendChild(d);
   ma.scrollTop=ma.scrollHeight;
 }
+// ── Bulle de pensée, hors du téléphone ──────────────────────────────────────
+// Deux pensées au plus : la précédente reste, estompée, au-dessus de la
+// nouvelle (sinon le bilan d'une réponse disparaissait dès la question suivante).
+var pz=document.getElementById('pz');
+function pensee(txt){
+  if(!pz)return;
+  var anc=pz.querySelectorAll('.pensee');
+  for(var i=0;i<anc.length;i++){
+    if(i<anc.length-1) anc[i].remove(); else anc[i].classList.add('old');
+  }
+  var d=document.createElement('div');
+  d.className='pensee';
+  var q=document.createElement('div');
+  q.className='pensee-qui';
+  q.textContent=TEXTES.penseeLabel||'';
+  var t=document.createElement('div');
+  t.textContent=txt;
+  d.appendChild(q);d.appendChild(t);
+  pz.appendChild(d);
+}
+function penseeAncienne(){
+  var d=pz&&pz.querySelector('.pensee');
+  if(d)d.classList.add('old');
+}
+function viderPensee(){if(pz)pz.innerHTML='';}
+
 function showTy(){
   tyEl=document.createElement('div');
   tyEl.className='tyi';
@@ -54,6 +85,7 @@ function showChoices(arr,isCr){
 
 async function showNextStep(){
   await sl(430);
+  penseeAncienne();
   var ns=G[step];
   if(ns.intro){
     showTy();
@@ -92,17 +124,10 @@ async function pick(choice){
   }
 
   if(phase==='story'&&choice.e>0)good++;
+  if(choice.e<0)faux++;
   trust+=choice.e;
   updateBar();
   ca.innerHTML='';
-
-  if(trust<=-3){
-    await sl(500);showTy();await sl(1200);hideTy();
-    addBub(TEXTES.blocageMessages[0].t,TEXTES.blocageMessages[0].type);
-    await sl(350);addBub(TEXTES.blocageMessages[1].t,TEXTES.blocageMessages[1].type);
-    await sl(300);addBub(TEXTES.blocageMessages[2].t,TEXTES.blocageMessages[2].type);
-    endGame('block');return;
-  }
 
   // Réplique propre au choix (champ « r » de l'option), jouée avant la suite
   // commune de l'étape : sans elle, « Si j'ai essayé » répondait aussi bien à
@@ -112,6 +137,23 @@ async function pick(choice){
     addBub(choice.r,'r');
   }
 
+  // Ce que Léo comprend de la réaction d'Inès : la raison pour laquelle la
+  // jauge vient de monter ou de descendre.
+  if(choice.p){
+    await sl(500);
+    pensee(choice.p);
+    await sl(2000);
+  }
+
+  // Deuxième maladresse : Inès coupe la conversation.
+  if(faux>=2){
+    await sl(400);showTy();await sl(1200);hideTy();
+    addBub(TEXTES.blocageMessages[0].t,TEXTES.blocageMessages[0].type);
+    await sl(350);addBub(TEXTES.blocageMessages[1].t,TEXTES.blocageMessages[1].type);
+    await sl(300);addBub(TEXTES.blocageMessages[2].t,TEXTES.blocageMessages[2].type);
+    endGame('block');return;
+  }
+
   if(phase==='crisis'){
     phase='story';
     step++;
@@ -119,7 +161,9 @@ async function pick(choice){
     await showNextStep();return;
   }
 
-  if(trust<=-2&&!crisisUsed&&step<G.length-1){
+  // Première maladresse : Inès se méfie et demande qui est Léo. C'est la
+  // seule chance de se rattraper ; une deuxième maladresse et elle s'en va.
+  if(choice.e<0&&!crisisUsed&&step<G.length-1){
     crisisUsed=true;phase='crisis';
     await sl(600);showTy();await sl(1400);hideTy();
     for(var i=0;i<CRISIS.intro.length;i++){
@@ -184,6 +228,7 @@ function endGame(type){
       +'<div style="color:#e5e5ea;font-size:12px;line-height:1.65;">'
       +'<span style="color:#555">'+TEXTES.contact.name+' :</span> '+F.blocage.ines+'<br>'
       +'<span style="color:#555">'+F.blocage.sys+'</span></div>';
+    if(F.blocage.conseil) html+='<div style="color:#bbb;font-size:11px;line-height:1.55;margin-top:9px;">'+F.blocage.conseil+'</div>';
     html+='<button class="rb js-restart">'+TEXTES.restartBtn+'</button>';
     ca.innerHTML='<div class="ea">'+html+'</div>';
   }else if(good>=2){
@@ -254,7 +299,8 @@ async function finalSuccessPhase(isSuccess){
 }
 
 async function startGame(){
-  trust=0;good=0;step=0;crisisUsed=false;phase='story';busy=false;tyEl=null;
+  trust=0;good=0;faux=0;step=0;crisisUsed=false;phase='story';busy=false;tyEl=null;
+  viderPensee();
   ma.innerHTML='';ca.innerHTML='<div class="chint">…</div>';
   tf.style.width='50%';tf.style.background='#ff9f0a';
   tlb.textContent=TEXTES.trustInitial;tlb.style.color='#ff9f0a';
@@ -344,7 +390,9 @@ function openSecondConvo(){
   function addNumero() {
     var d = document.createElement('div');
     d.className = 'bb r';
-    d.innerHTML = '<span style="font-size:14px;font-weight:700;letter-spacing:.08em;color:#30d158;">04 54 78 95 32</span>';
+    // Le numéro se copie d'un clic : il faut le retaper en Partie 4.
+    d.innerHTML = '<span style="font-size:14px;font-weight:700;letter-spacing:.08em;color:#30d158;">04 54 78 95 32</span>'
+      + ' <button class="cpbtn" title="'+(S.copyTitle||'')+'" onclick="doCopy(this,\'04 54 78 95 32\')">📋</button>';
     scMa.appendChild(d);
     scMa.scrollTop = scMa.scrollHeight;
   }

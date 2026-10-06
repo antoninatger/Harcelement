@@ -17,6 +17,7 @@ var TEXTES = {
     "she really trusts you"
   ],
   "trustInitial": "she is hesitant to reply",
+  "penseeLabel": "💭 Léo thinks…",
   "choiceHint": "What does Léo reply?",
   "choiceHintCrise": "How does Léo react?",
   "restartBtn": "↺ Restart",
@@ -39,7 +40,7 @@ var TEXTES = {
       "type": "r"
     },
     {
-      "t": "I know. I haven't been able to reach her for several days. I don't see her in the schoolyard anymore. Have you heard from her?",
+      "t": "I know, we've hardly ever talked. But Clara has told me a lot about you.\nI haven't been able to reach her for several days, and I don't see her in the schoolyard anymore. Have you heard from her?",
       "type": "s"
     },
     {
@@ -94,18 +95,21 @@ var TEXTES = {
       "c": [
         {
           "l": "A",
-          "t": "Because you're her friend. If anyone knows something, it's you.",
-          "e": -1
+          "t": "You're her best friend. If anyone knows something, it has to be you.",
+          "e": -1,
+          "p": "I put pressure on her, as if it were her job to know everything. She's shutting down."
         },
         {
           "l": "B",
           "t": "I didn't know who else to turn to.",
-          "e": 0
+          "e": 0,
+          "p": "True… but it doesn't tell her why I'm worried."
         },
         {
           "l": "C",
           "t": "I'm worried. I haven't been able to sleep since she disappeared.",
-          "e": 1
+          "e": 1,
+          "p": "I told her how I feel, without asking anything of her. She can believe me."
         }
       ]
     },
@@ -118,17 +122,20 @@ var TEXTES = {
         {
           "l": "A",
           "t": "We've been friends since primary school. She means a lot to me.",
-          "e": 1
+          "e": 1,
+          "p": "I told her who I am to Clara. That's exactly what she wanted to know."
         },
         {
           "l": "B",
           "t": "Not that well. But I've heard people talking about her lately.",
-          "e": -1
+          "e": -1,
+          "p": "Ouch. I sound like someone looking for gossip."
         },
         {
           "l": "C",
           "t": "We see each other less since we're not in the same class anymore.",
-          "e": 0
+          "e": 0,
+          "p": "True, but it doesn't say why she matters to me."
         }
       ]
     },
@@ -142,19 +149,22 @@ var TEXTES = {
           "l": "A",
           "t": "Had this happened before?",
           "e": 1,
-          "r": "No. Never."
+          "r": "No. Never.",
+          "p": "A real question, without assuming anything. She wants to answer it."
         },
         {
           "l": "B",
           "t": "Maybe she blocked you.",
           "e": -1,
-          "r": "She would never block me. Not me."
+          "r": "She would never block me. Not me.",
+          "p": "I implied Clara was rejecting her. Inès felt targeted."
         },
         {
           "l": "C",
           "t": "Did you talk often?",
           "e": 0,
-          "r": "Every day. Well… before."
+          "r": "Every day. Well… before.",
+          "p": "She answered, but my question doesn't help her say more."
         }
       ]
     },
@@ -168,21 +178,24 @@ var TEXTES = {
       "c": [
         {
           "l": "A",
-          "t": "Do you know what happened?",
+          "t": "Do you know what was going on with her?",
           "e": 1,
-          "r": "Not really. I tried asking her."
+          "r": "Not really. I tried asking her.",
+          "p": "An open question: I'm letting her tell me what she knows."
         },
         {
           "l": "B",
-          "t": "And you didn't try to talk to her about it?",
+          "t": "And you didn't do anything?",
           "e": -1,
-          "r": "I did try."
+          "r": "I did! I tried. What do you think?",
+          "p": "That sounded like blame. She feels accused of not helping Clara."
         },
         {
           "l": "C",
-          "t": "Did she seem afraid of something?",
+          "t": "She was scared of something, right?",
           "e": 0,
-          "r": "Maybe… I asked her, more than once."
+          "r": "I don't know… I asked her, more than once.",
+          "p": "I guessed for her. Better to let her tell it."
         }
       ]
     },
@@ -197,17 +210,20 @@ var TEXTES = {
         {
           "l": "A",
           "t": "It sounds like she wanted to distance herself from her phone.",
-          "e": 1
+          "e": 1,
+          "p": "I connected what she told me. She can see I'm really listening."
         },
         {
           "l": "B",
           "t": "That's strange behavior.",
-          "e": 0
+          "e": 0,
+          "p": "\"Strange\"… That doesn't help her go any further."
         },
         {
           "l": "C",
           "t": "Maybe she's just going through a bad time.",
-          "e": -1
+          "e": -1,
+          "p": "I played down what she saw. She knows it's more serious than that."
         }
       ]
     },
@@ -221,17 +237,20 @@ var TEXTES = {
         {
           "l": "A",
           "t": "You don't have to do anything. It's your choice.",
-          "e": 1
+          "e": 1,
+          "p": "I'm leaving the choice to her. That's what reassures her most."
         },
         {
           "l": "B",
           "t": "Just tell me what you know.",
-          "e": -1
+          "e": -1,
+          "p": "That was an order. She's even more suspicious now."
         },
         {
           "l": "C",
           "t": "I just want to know if she's okay. Nothing else.",
-          "e": 0
+          "e": 0,
+          "p": "Sincere… but she still doesn't know if she can trust me."
         }
       ]
     }
@@ -246,17 +265,20 @@ var TEXTES = {
       {
         "l": "A",
         "t": "You're right to be suspicious. You don't know me.",
-        "e": 2
+        "e": 2,
+        "p": "I admitted she was right to be wary. That disarms her."
       },
       {
         "l": "B",
         "t": "I'm not one of the people who hurt her.",
-        "e": 1
+        "e": 1,
+        "p": "She hears me… but she has no proof."
       },
       {
         "l": "C",
         "t": "Trust me, I'm just trying to help.",
-        "e": -1
+        "e": -1,
+        "p": "\"Trust me\": exactly what someone untrustworthy would say."
       }
     ]
   },
@@ -268,17 +290,18 @@ var TEXTES = {
     "blocage": {
       "titre": "🔴 Trust lost",
       "ines": "I knew we couldn't trust you.",
+      "conseil": "Two clumsy answers, and Inès shut down. Start again: talk to her about Clara and how you feel, without pushing or judging her.",
       "sys": "(she stops replying)"
     },
     "succes": {
       "titre": "🟢 Inès trusts you",
-      "p0ines": "I've had the password for a while but I've never managed to use it myself. I'm too scared of finding something horrible. It'll hurt you less than it would me.",
+      "p0ines": "I've got the login for her Instaclasse account. She gave it to me just in case.\nBut I don't dare use it. I'm too scared of finding something horrible. It'll hurt you less than it would me.",
       "p1ines": "Do you promise to be careful with what you read?",
       "p1leo": "I promise.",
       "p1suite": "And you'll tell me if you find something.",
       "p2ines": "Do you promise to respect Clara's privacy?",
       "p2leo": "I promise.",
-      "codesMsg": "She gave it to me just in case. You use it, you don't tell anyone.",
+      "codesMsg": "Here's her username and password. You use them, but you don't tell anyone.",
       "nextPartBtn": "▶ View Clara's Instaclasse",
       "copied": "✓ Copied!",
       "ig": {
@@ -292,12 +315,12 @@ var TEXTES = {
     },
     "fragile": {
       "titre": "🟡 Fragile success",
-      "p0ines": "I've had the password for a while but I've never managed to use it myself. I'm too scared of finding something horrible. It'll hurt you less than it would me.",
+      "p0ines": "I've got the login for her Instaclasse account. She gave it to me just in case.\nBut I don't dare use it. I'm too scared of finding something horrible. It'll hurt you less than it would me.",
       "p1ines": "I really don't know if I'm doing the right thing.\nDo you promise to be careful?",
       "p1leo": "Yes.",
       "p2ines": "Do you promise to respect Clara's privacy?",
       "p2leo": "Yes.",
-      "codesMsg": "She gave it to me just in case. You use it, you don't tell anyone.",
+      "codesMsg": "Here's her username and password. You use them, but you don't tell anyone.",
       "nextPartBtn": "▶ View Clara's Instaclasse",
       "copied": "✓ Copied!",
       "ig": {
@@ -338,6 +361,7 @@ const UI = {
     ],
     apresNumero: "Call her. And tell me how Clara's doing, please.",
     reponseResolue: "At her aunt's. They talk about it in the group.",
+    copyTitle: "Copy the number",
     relireBtn: "↺ Read the first conversation again",
     wrongAnswer: "Huh? I don't get it. Where do you think she is?",
     nextUrl: "4_Convaincre_Clara_en.html",

@@ -8,6 +8,13 @@ var TEXTES = {
     sub:     "Clara has not been to school for almost a week. She has taken refuge at her aunt's, out in the countryside.\nYou are Léo, her friend. To speak to Clara, you must first convince her aunt that you are trustworthy - and that you are truly there to help her.",
     legende: ["The aunt", "Clara", "You - Léo"],
     bouton:  "☎  Call",
+    commentTitre: "How it works",
+    comment: [
+      "Each time, you choose what Léo says from three answers.",
+      "First, the aunt. She is protecting Clara: show her you're thinking of Clara before yourself, without pushing. If she doesn't trust you, she hangs up.",
+      "Then, Clara. Listen to her before trying to help: don't judge her, don't blame her, don't hand her ready-made solutions. If she feels judged, she hangs up.",
+      "After each answer, a note explains how it came across."
+    ],
     // Léo's thoughts after each wrong number: the player has to work out that
     // Inès (Part 1) can give it to them.
     pensees: [
@@ -29,6 +36,22 @@ var TEXTES = {
   btnRecommencer: "↩ Start over",
   btnRejouer:     "↩ Play again",
 
+  objectifs: {
+    "1": "Goal: get the aunt to put Clara on the phone.",
+    "2": "Goal: listen to Clara, and help her agree to talk to an adult."
+  },
+
+  gameoverClara: {
+    icon:  "📵",
+    titre: "Clara hung up.",
+    corps: "She felt judged instead of listened to. She didn't have the strength to keep going tonight.\n\nYou can call her back and try a different way.",
+    lecon: "💡 Someone who is hurting doesn't first need advice or solutions.\nThey need to be listened to, without being judged."
+  },
+  btnRappeler:    "↩ Call Clara back",
+  btnTout:        "↩ Start everything over",
+  btnSuite:       "What happened next →",
+  btnRejouerClara:"↩ Try the conversation with Clara again",
+
   // ─── Speaker labels ─────────────────────────────────────────────────────
 
   locuteurs: { aunt: "The aunt", lea: "Clara", thomas: "Léo" },
@@ -38,34 +61,29 @@ var TEXTES = {
 
   // ─── What Léo does next, and what happens to the group ───────────────────
 
-  suite: {
-    icon:  "🧑‍🏫",
-    titre: "The next day, Léo",
-    items: [
-      "Goes to see the school counsellor. Not to denounce anyone: to say that a student has stopped coming, and why.",
-      "Shows the screenshots he kept, and reports the anonymous accounts one by one.",
-      "Did not fix anything on his own - he did what a fourteen-year-old friend can do: tell someone who can act."
-    ]
-  },
-
-  epilogue: {
-    icon:  "⚖️",
-    titre: "And the five in the group?",
-    corps: "The school opened an investigation and met them, with their parents. Two answered that they \"didn't mean any harm\". Kevin showed his screenshots.\n\nIn France, school bullying has been a criminal offence since 2022 - online included, between pupils of the same school included.\n\nClara came back three weeks later. It was not easy. But she was no longer carrying it alone.",
-  },
+  // Read as the conclusion of the story: text on screen, line after line.
+  conclusion: [
+    "The next day, Léo went to see the school counsellor.",
+    "Not to denounce anyone: to say that a student from {his|her} school had stopped coming, and why. {He|She} showed the screenshots {he|she} had kept, and reported the anonymous accounts, one by one.",
+    "{He|She} didn't fix anything alone. {He|She} did what a fourteen-year-old friend can do: tell someone who can act.",
+    "The school opened an investigation. The five in the group were called in, with their parents. Two said they \"didn't mean any harm\". Kevin showed his screenshots.",
+    "In France, school bullying has been a criminal offence since 2022 - online included, between pupils included.",
+    "Clara went back to school three weeks later. It wasn't easy. But she was no longer carrying it alone."
+  ],
 
   recapBtn: "🖨 Printable summary",
 
   // ─── Endings, descending score order ───────────────────────────────────
 
   fins: [
-    { minScore: 10,
+    // Score = how well Léo listened to Clara in phase 2 (0 to 8).
+    { minScore: 7,
       icon: "🌿", cls: "good",
       titre:    "Clara is going to ask for help.",
       corps:    "You found the right words at every moment.\nNot too forceful, not too light - simply present.\n\nThe aunt trusted you. Clara hung up with a concrete decision: to talk to a trusted adult, and to stop carrying this alone.\n\nYour role was not to save her. It was to show her that asking for help is possible.",
       citation: "“I'm going to talk to my aunt. Really talk.”\n- Clara"
     },
-    { minScore: 5,
+    { minScore: 4,
       icon: "🕯️", cls: "ok",
       titre:    "A first step.",
       corps:    "You showed goodwill, even if some answers lacked depth.\n\nClara is still hesitant - but she is considering talking to an adult. The road is long.\n\nYour role was to show her that she does not have to carry everything alone.",
@@ -74,7 +92,7 @@ var TEXTES = {
     { minScore: 0,
       icon: "🌧️", cls: "bad",
       titre:    "The distance remains.",
-      corps:    "You meant well, but your words sometimes sounded like blame or impatience.\n\nClara remains closed off. She needs time - and someone who truly listens before acting.",
+      corps:    "You meant well, but your words sometimes sounded like blame or impatience.\n\nClara remains closed off. She needs time - and someone who truly listens before acting.\n\nTry the conversation again: listen to her first, without judging.",
       citation: "“I just needed you to listen to me.”\n- Clara"
     }
   ],
@@ -88,7 +106,9 @@ var TEXTES = {
     echecGate2:  "[ She gently hangs up. ]",
     echecRecup1: "(firm tone) I think it would be better to leave it there, Léo.\nClara is not in a state for this. Not tonight.",
     echecRecup2: "[ She hangs up. ]",
-    scoreLabel:  "Empathy score: "
+    scoreLabel:  "Empathy score: ",
+    claraRaccroche1: "(long silence) … I think I'm going to hang up. I don't have the strength tonight.",
+    claraRaccroche2: "[ She hangs up. ]"
   },
 
   // ─── Scenes ───────────────────────────────────────────────────────────────
@@ -114,14 +134,16 @@ var TEXTES = {
           fb:{type:'ok', msg:'Honest, but focused more on you than on Clara.'},
           reply:{spk:'aunt', txt:"Hmm… alright. I'm listening."}},
         { emp:0, txt:"“I need to talk to her now, it's urgent.”",
-          fb:{type:'bad', msg:'The abrupt insistence puts the aunt on the defensive.'},
+          fb:{type:'bad', msg:"\"It's urgent\": you're talking about your own need. The aunt is protecting Clara, who is not doing well. By insisting, you show her that you come before Clara - exactly what she fears."},
           reply:{spk:'aunt', txt:"(coldly) Urgent… for you, maybe."},
           recovery:{
             auntLine: "It is not an emergency for me, Léo. And for now, that is what matters.",
             prompt:   'The aunt waits. What do you say?',
             good:{ txt:"“You're right. I'm sorry. She is what matters, not me.”",
+                   fb:{type:'good', msg:"You admit your mistake and put Clara back at the centre. That's what reassures the aunt."},
                    reply:{spk:'aunt', txt:"(slightly softened) …Alright. Continue."} },
             bad: { txt:"“But you don't understand, it's really important.”",
+                   fb:{type:'bad', msg:"You contradict the aunt instead of hearing her. It's not up to you to decide whether Clara is ready to talk: it's up to her, and to the aunt protecting her."},
                    reply:{spk:'aunt', txt:"(sharply) I understand very well. And it does not reassure me."} }
           }
         },
@@ -142,14 +164,16 @@ var TEXTES = {
           fb:{type:'ok', msg:'Sincere, but you remain on the surface.'},
           reply:{spk:'aunt', txt:"Yes. It is very serious."}},
         { emp:0, txt:"“She should have talked to me before it got to this point.”",
-          fb:{type:'bad', msg:'It sounds like blame. The aunt clearly notices it.'},
+          fb:{type:'bad', msg:"\"She should have told me\": that's blaming Clara for staying silent. Victims often keep quiet out of shame or fear. Holding it against her adds to the guilt the aunt has just described."},
           reply:{spk:'aunt', txt:"(sharply) She didn't dare. That is precisely the problem."},
           recovery:{
             auntLine: "If you blamed her now… you would hurt her even more, Léo.",
             prompt:   'How do you react to that?',
             good:{ txt:"“You're right. That's not what I meant. She deserved none of this.”",
+                   fb:{type:'good', msg:"You correct yourself, and put the blame where it belongs: on those who bullied her."},
                    reply:{spk:'aunt', txt:"(pause) …That's better. I hear sincerity."} },
             bad: { txt:"“I'm just pointing out that if she had talked to me, we could have avoided this.”",
+                   fb:{type:'bad', msg:"You insist it could all have been avoided if she had talked. That amounts to saying it's partly her fault. It is never the victim's fault."},
                    reply:{spk:'aunt', txt:"(coldly) Avoided this. You really think it was that simple."} }
           }
         },
@@ -166,18 +190,20 @@ var TEXTES = {
         { emp:2, txt:"“I'll be patient. Just tell her I'm here. She doesn't have to talk to me.”",
           fb:{type:'good', msg:"You remove all pressure. That's exactly what was needed."},
           reply:{spk:'aunt', txt:"(softer) I'll tell her that. Wait."}},
-        { emp:1, txt:"“I promise I'll be gentle. Thank you for giving me this chance.”",
+        { emp:1, txt:"“I'll be careful about what I say to her. Thank you for letting me try.”",
           fb:{type:'ok', msg:"Sincere. The aunt appreciates the honesty."},
           reply:{spk:'aunt', txt:"Alright… I'll ask her."}},
         { emp:0, txt:"“I'll tell her everything will be okay, that I have a plan.”",
-          fb:{type:'bad', msg:"You are talking about yourself and your plan - not about her."},
+          fb:{type:'bad', msg:"\"I have a plan, everything will be fine\": you promise what you can't deliver, and you decide for her. Clara doesn't need rescuing, she needs to be listened to, at her own pace."},
           reply:{spk:'aunt', txt:"(coldly) A plan. Clara does not need a plan. She needs to be heard."},
           recovery:{
             auntLine: "Do you understand the difference, Léo?",
             prompt:   '',
             good:{ txt:"“Yes… you're right. I just wanted to help her but I went too fast.”",
+                   fb:{type:'good', msg:"You admit you went too fast. The aunt sees you can listen."},
                    reply:{spk:'aunt', txt:"(long pause) …I'll ask her. But don't pressure her."} },
             bad: { txt:"“I think it would do her good to have a concrete goal.”",
+                   fb:{type:'bad', msg:"A \"concrete goal\" is still a solution decided for her. Before she can act, Clara needs to feel heard."},
                    reply:{spk:'aunt', txt:"(firmly) I don't think you're ready to talk to her tonight."} }
           }
         },
@@ -198,6 +224,18 @@ var TEXTES = {
 
     { id:'L1', phase:'2', phaseName:'Phase 2 - Clara', stepLabel:'Question 1 / 4',
       pdotCount:4, pdotActive:0,
+      dialogueRappel:[
+        {spk:'narrator', txt:'[ You call back. It rings for a long time… click. ]'},
+        {spk:'aunt',     txt:'Hello?'},
+        {spk:'thomas',   txt:"It's Léo again. I'm sorry… I said the wrong things to Clara earlier. Would she be willing to talk to me again? Just for a minute."},
+        {spk:'aunt',     txt:"(a long silence) … I'll ask her. But this time, listen to her."},
+        {spk:'narrator', txt:'[ Footsteps… a door… whispers. ]'},
+        {spk:'lea',      txt:'… Hello?'},
+        {spk:'thomas',   txt:"Clara… I'm sorry about earlier. I didn't mean to lecture you. I'm here to listen, that's all."},
+        {spk:'lea',      txt:"(silence) … Okay."},
+        {spk:'thomas',   txt:"I asked you why you hadn't said anything. You don't have to answer."},
+        {spk:'lea',      txt:"No… it's okay. I thought about it… lots of times.\nI even started writing messages… and then I'd delete them."},
+      ],
       dialogueBefore:[
         {spk:'narrator', txt:'[ A rustle of the phone… ]'},
         {spk:'lea',      txt:'Hello…?'},
@@ -219,7 +257,7 @@ var TEXTES = {
           fb:{type:'ok', msg:'True, but a little general.'},
           reply:{spk:'lea', txt:"Yeah… that's it."}},
         { emp:0, txt:"“Why did you delete those messages? I would have answered, you know.”",
-          fb:{type:'bad', msg:"You focus on yourself, not on what she was going through."},
+          fb:{type:'bad', msg:"\"Why did you delete them?\": you're asking her to justify herself, and bringing the conversation back to you (\"I would have answered\"). She's already ashamed of staying silent: questioning her about it puts her in the wrong."},
           reply:{spk:'lea', txt:"(coldly) I don't know…"}},
       ]
     },
@@ -238,7 +276,7 @@ var TEXTES = {
           fb:{type:'ok', msg:'Sincere, but you remain on the surface.'},
           reply:{spk:'lea', txt:"Yeah…"}},
         { emp:0, txt:"“You could have blocked those people, disabled your social media.”",
-          fb:{type:'bad', msg:'Unsolicited advice that sounds like blame.'},
+          fb:{type:'bad', msg:"Advice she didn't ask for, and it sounds like blame: \"you could have avoided this\". She is telling you what she went through, not handing you a problem to solve. And blocking isn't enough: anonymous accounts come back under another name. Before advising, listen."},
           reply:{spk:'lea', txt:"(coldly) Thanks, I hadn't thought of that."}},
       ]
     },
@@ -257,7 +295,7 @@ var TEXTES = {
           fb:{type:'ok', msg:'Clear and direct. Useful.'},
           reply:{spk:'lea', txt:"I try to tell myself that… it's hard."}},
         { emp:0, txt:"“You know very well that what they say is false.”",
-          fb:{type:'bad', msg:'"You know very well" unintentionally minimizes her pain.'},
+          fb:{type:'bad', msg:"\"You know very well it's not true\": if she knew, she wouldn't be here. Heard a hundred times, bullying ends up making the victim believe what she's told. \"You know very well\" blames her for believing it."},
           reply:{spk:'lea', txt:"(silence) If I really knew that, I wouldn't have broken down."}},
       ]
     },
@@ -278,7 +316,7 @@ var TEXTES = {
           fb:{type:'ok', msg:"Supportive. But she has to take the first step - and you remind her of that well."},
           reply:{spk:'lea', txt:"(hesitant) …Okay. I'll think about it."}},
         { emp:0, txt:"“Don't worry, I'll handle it myself. Those people are going to be in trouble.”",
-          fb:{type:'bad', msg:"You take everything onto yourself. That is not your role - and she knows it may make things worse."},
+          fb:{type:'bad', msg:"\"I'll sort it out myself\": you want to protect her, but taking on the group alone could make things worse, for her and for you. It's not your role: it's the job of adults who can act - the school counsellor, her parents, her aunt."},
           reply:{spk:'lea', txt:"(coldly) No… please, don't do anything. It will only make things worse."}},
       ]
     }

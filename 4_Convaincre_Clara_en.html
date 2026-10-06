@@ -199,6 +199,34 @@ body::after{
 .end-recap:hover{background:rgba(196,134,90,.08);border-color:rgba(196,134,90,.6);}
 .pg-back{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
 .pg-back:hover{color:rgba(255,255,255,.55);}
+
+/* ─── Écrans longs : ils défilent au lieu d'être coupés ─── */
+#screen-title,#screen-end,#screen-gameover,#screen-epilogue{overflow-y:auto;justify-content:flex-start;}
+#screen-title>:first-child,#screen-end>:first-child,#screen-gameover>:first-child,#screen-epilogue>:first-child{margin-top:auto;}
+#screen-title>:last-child,#screen-end>:last-child,#screen-gameover>:last-child,#screen-epilogue>:last-child{margin-bottom:auto;}
+/* Comment se joue l'appel */
+.t-how{font-family:'Jost',sans-serif;text-align:left;max-width:400px;border:1px solid var(--border);background:rgba(255,255,255,.025);border-radius:4px;padding:12px 16px;}
+.t-how .how-title{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:7px;}
+.t-how ul{margin:0;padding-left:17px;}
+.t-how li{font-size:12.5px;font-weight:300;color:var(--text);opacity:.9;line-height:1.6;margin-bottom:5px;}
+.t-how li:last-child{margin-bottom:0;}
+/* Objectif de la phase en cours */
+.phase-goal{flex-shrink:0;font-family:'Jost',sans-serif;font-size:12px;color:var(--accent);opacity:.85;padding:2px 0 6px;display:none;}
+.fb{line-height:1.55;letter-spacing:.04em;font-size:11.5px;}
+.btn-rappeler{display:none;}
+/* Fin */
+#end-actions{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.res-block{margin-top:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;font-family:'Jost',sans-serif;font-size:12px;color:rgba(255,255,255,.62);line-height:1.85;text-align:left;max-width:420px;}
+.res-title{color:rgba(255,255,255,.85);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:15px;line-height:1.5;margin-bottom:8px;}
+.res-num{color:rgba(255,255,255,.88);font-weight:500;}
+/* Conclusion : le texte de fin, ligne après ligne */
+#screen-epilogue{flex-direction:column;align-items:center;padding:48px 28px;cursor:pointer;}
+#epi-lines{max-width:500px;}
+.epi-line{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:300;font-size:clamp(1rem,2.6vw,1.2rem);color:#c8c0b2;line-height:1.8;margin-bottom:1.1rem;text-align:center;opacity:0;transform:translateY(9px);transition:opacity 1.1s ease,transform 1.1s ease;}
+.epi-line.on{opacity:1;transform:none;}
+#epi-fin{display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;transition:opacity 1s;pointer-events:none;max-width:460px;width:100%;}
+#epi-fin.on{opacity:1;pointer-events:auto;}
+#epi-fin .end-recap{width:100%;}
 </style>
 </head>
 <body>
@@ -239,6 +267,7 @@ body::after{
     <span><span class="leg-dot" style="background:var(--lea)"></span></span>
     <span><span class="leg-dot" style="background:var(--thomas)"></span></span>
   </div>
+  <div class="t-how" id="t-how"></div>
   <button class="btn-start"></button>
   <div class="save-area">
     <div class="save-sep">or resume a game</div>
@@ -265,6 +294,7 @@ body::after{
       <div class="phase-lbl" id="step-label"></div>
       <div class="pdots" id="pdots"></div>
     </div>
+    <div class="phase-goal" id="phase-goal"></div>
     <div class="feed" id="feed"></div>
     <div class="ix" id="ix">
       <div class="fb" id="fb-toast"></div>
@@ -281,7 +311,8 @@ body::after{
   <div class="go-title"></div>
   <div class="go-body"></div>
   <div class="go-lesson"></div>
-  <button class="btn-retry" style="margin-top:8px"></button>
+  <button class="btn-start btn-rappeler" style="margin-top:8px"></button>
+  <button class="btn-retry"></button>
 </div>
 
 <!-- ENDING -->
@@ -290,8 +321,13 @@ body::after{
   <div class="end-title" id="end-title"></div>
   <div class="end-body" id="end-body"></div>
   <div class="end-quote" id="end-quote"></div>
-  <div class="end-score" id="end-score"></div>
-  <button class="btn-retry"></button>
+  <div id="end-actions"></div>
+</div>
+
+<!-- CONCLUSION -->
+<div id="screen-epilogue" class="screen">
+  <div id="epi-lines"></div>
+  <div id="epi-fin"></div>
 </div>
 
 <!-- SAVE MODAL -->

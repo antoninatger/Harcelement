@@ -1,4 +1,4 @@
-const WA_DATA = {
+var WA_DATA = {
 
   // ─── Groupe ──────────────────────────────────────────────────────────────────
 
@@ -33,7 +33,7 @@ const WA_DATA = {
   mission: {
     icon:  "🕵️",
     title: "Ce qu'il faut repérer",
-    body:  "Ils écrivent à Clara depuis des comptes anonymes - et ici, entre eux, ils disent lesquels.\n\nÀ chaque fois qu'un compte est nommé, appuie dessus : je saurai qui se cache derrière. Clara, elle, ne le saura jamais.\n\nIl y en a cinq à repérer. Des questions viendront aussi pendant la lecture.",
+    body:  "Clara reçoit des messages de comptes anonymes. Ici, entre eux, ils disent quels comptes ils utilisent.\n\nMon objectif : découvrir qui se cache derrière chacun. Dès qu'un compte est nommé (@…), appuie dessus. Il y en a six : l'un d'eux, il faudra aller le retrouver sur l'Instaclasse de Clara.\n\nLa conversation défile toute seule. Appuie n'importe où pour passer plus vite au message suivant.",
     btn:   "Commencer →"
   },
 
@@ -53,7 +53,10 @@ const WA_DATA = {
       { handle: "_noreply_ghost_",  qui: "Jade" },
       { handle: "anonymous_x0",     qui: "Enzo et Théo" },
       { handle: "vrai_info_colleg", qui: "Jade" },
-      { handle: "jevoustrouve",     qui: "Théo" }
+      { handle: "jevoustrouve",     qui: "Théo" },
+      // Celui-là n'est jamais nommé : Marine décrit son commentaire, le joueur
+      // le retrouve sous la photo du chat (enquête, voir « enquete » plus bas).
+      { handle: "anon_colleg_real", qui: "Marine", enquete: true }
     ]
   },
 
@@ -124,6 +127,7 @@ const WA_DATA = {
     { id: 27, sender: "Kevin",  text: "sérieusement vous trouvez pas qu'on va un peu trop loin là...",                       time: "17:53", delay: 1000 },
     { id: 28, sender: "Enzo",  text: "t'inquiète c'est juste pour rire, elle le prend trop au sérieux de toute façon",      time: "17:53", delay:  900 },
     { id: 29, sender: "Kevin",  text: "ouais ok...",                                                                         time: "17:54", delay:  500 },
+    { type: "thought", text: "Kevin n'a pas l'air d'accord… mais il se tait. Pourquoi ? Je dois comprendre ce qu'il pense vraiment." },
     { id: 30, sender: "Marine", text: "et aussi ses DMs ? on pourrait lui envoyer des trucs la nuit",                       time: "17:54", delay: 1000 },
     { id: 31, sender: "Enzo",  text: "oui avec des comptes anon encore, comme ça elle dort pas tranquille",                 time: "17:55", delay:  900 },
     { id: 32, sender: "Jade",   text: "genre la harceler pour qu'elle finisse par partir d'insta",                           time: "17:55", delay:  800 },
@@ -132,8 +136,13 @@ const WA_DATA = {
 
     // - Phase 5 : création des comptes anonymes (~17h57) -
     { id: 34, sender: "Enzo",  text: "@anonymous_x0 c'est moi qui l'ai créé, Théo l'utilise aussi btw",                                        time: "17:57", delay:  700 },
-    { id: 35, sender: "Jade",   text: "et j'en ai fait un 2e : @vrai_info_colleg, pour balancer des rumeurs sur elle",       time: "17:57", delay: 1000 },
+    { id: 35, sender: "Jade",   text: "et j'en ai fait un 2e : @vrai_info_colleg, pour balancer des rumeurs sur elle",       time: "17:57", delay: 1000 },
     { id: 36, sender: "Théo",   text: "moi j'ai @jevoustrouve pour lui faire peur la nuit",                                 time: "17:58", delay:  900 },
+    { id: 59, sender: "Marine", text: "moi mon compte je dis pas lequel 🤫 mais allez voir sous la photo de son chat, j'ai mis que même son chat avait l'air aussi nul qu'elle 😂", time: "17:58", delay: 1000 },
+    { type: "enquete", key: "marine", handle: "anon_colleg_real",
+      text: "Marine ne dit pas quel compte elle utilise. Mais son commentaire est sous la photo du chat de Clara : je peux retrouver qui l'a écrit.",
+      btn: "🔎 Retrouver le compte de Marine sur l'Instaclasse",
+      done: "✓ Compte de Marine retrouvé :" },
     { id: 37, sender: "Marine", text: "pour ce soir on s'organise : messages toutes les heures après minuit",               time: "17:59", delay: 1000 },
     { id: 38, sender: "Enzo",  text: "pour qu'elle pense à nous même chez elle, même quand elle essaie de dormir 💀",      time: "18:00", delay: 1000 },
     { id: 39, sender: "Jade",   text: "et on flood ses DMs depuis les comptes anon, surtout des trucs sur son physique",   time: "18:01", delay: 1000 },
@@ -150,17 +159,18 @@ const WA_DATA = {
     { id: 45, sender: "Enzo",  text: "relax elle a juste besoin d'une pause, elle l'a bien cherché 😂",                     time: "09:17", delay:  700 },
     { id: 46, sender: "Kevin",  text: "elle a disparu de partout d'un coup. c'est pas normal",                                 time: "09:18", delay: 1000 },
     { id: 47, sender: "Jade",   text: "kevin arrête de dramatiser c'est bon",                                                 time: "09:18", delay:  600 },
-    { id: 48, sender: "Marine", text: "j'ai entendu dire qu'elle est partie dans son « havre secret » lmao",                 time: "09:20", delay: 1500 },
+    { id: 48, sender: "Marine", text: "j'ai entendu dire qu'elle est partie dans son « havre secret » lmao",                 time: "09:20", delay: 1500 },
     { id: 49, sender: "Enzo",  text: "son QUOI 💀💀💀",                                                                   time: "09:20", delay:  500 },
     { id: 50, sender: "Jade",   text: "elle est vraiment trop bizarre cette fille avec ses mots de 40 ans",                  time: "09:21", delay:  800 },
-    { id: 51, sender: "Théo",   text: "c'est quoi ce « havre secret » omg elle se prend pour qui",                          time: "09:21", delay:  700 },
+    { id: 51, sender: "Théo",   text: "c'est quoi ce « havre secret » omg elle se prend pour qui",                          time: "09:21", delay:  700 },
     { id: 52, sender: "Marine", text: "chez sa tante je crois, quelque part, personne sait vraiment",                        time: "09:22", delay: 1000 },
     { id: 53, sender: "Enzo",  text: "lmao elle s'est enfuie dans son château secret 🏰 trop pathétique",                  time: "09:22", delay:  800 },
     { id: 54, sender: "Kevin",  text: "les gars franchement... on est peut-être allés trop loin",                            time: "09:24", delay: 1500 },
     { id: 55, sender: "Théo",   text: "non, elle l'a bien cherché. elle avait juste à pas réagir comme ça",                  time: "09:24", delay:  700 },
     { id: 56, sender: "Jade",   text: "exactement, c'est sa faute si elle peut pas encaisser",                               time: "09:25", delay:  600 },
-    { id: 57, sender: "Enzo",  text: "bon elle revient quand elle veut de son « havre » 😂 on sera là",                    time: "09:25", delay:  900 },
+    { id: 57, sender: "Enzo",  text: "bon elle revient quand elle veut de son « havre » 😂 on sera là",                    time: "09:25", delay:  900 },
     { id: 58, sender: "Kevin",  text: "...",                                                                                  time: "09:26", delay:  400 },
+    { type: "thought", text: "Kevin a essayé de les arrêter, plusieurs fois. Seul contre quatre, il n'y arrive pas. C'est sans doute pour ça qu'il a envoyé le code à Clara." },
 
     { type: "end",                        delay: 300 }
 
@@ -228,6 +238,10 @@ const WA_DATA = {
     ]
   },
 
+  // ─── Pensée de Léo à la fin de la lecture ──────────────────────────────────
+  // Volontairement sans indication : le joueur doit trouver seul à qui demander.
+  endThought: "Clara est chez sa tante, son « havre secret ». Mais où habite sa tante ? Je n'en sais rien… Il faut que je trouve quelqu'un qui le sache.",
+
   // ─── État final ──────────────────────────────────────────────────────────────
 
   endMessage: {
@@ -235,11 +249,11 @@ const WA_DATA = {
     points: [
       "recevait des messages anonymes la nuit - ils sont dans ce groupe.",
       "voyait ses commentaires envahis - ils les ont organisés ici.",
-      "pensait que « tout le monde » la détestait - ils l'ont fabriqué ensemble.",
+      "pensait que « tout le monde » la détestait - ils l'ont fabriqué ensemble.",
       "n'osait plus poster - c'était leur objectif.",
-      "s'est enfuie vers son « havre secret »... mais où est-il ?"
+      "s'est enfuie vers son « havre secret »... mais où est-il ?"
     ],
-    note: "Le harcèlement de groupe transforme chaque espace en danger. Clara est partie se réfugier quelque part. Quelqu’un doit savoir où."
+    note: "Le harcèlement de groupe transforme chaque espace en danger. Clara est partie se réfugier loin de tout ça."
   },
 
   // ─── Ce que le témoin aurait pu faire ───────────────────────────────────────
@@ -247,7 +261,7 @@ const WA_DATA = {
   kevin: {
     icon:  "🫥",
     title: "Et Kevin ?",
-    body:  "Kevin a douté cinq fois. « On va un peu trop loin là. » « C'est peut-être grave. » « Elle a disparu de partout d'un coup. » « On est peut-être allés trop loin. » Puis « … ». À chaque fois on lui a coupé la parole, et à chaque fois il s'est tu. Il a fini par écrire à Clara, mais trop tard : elle était déjà partie.",
+    body:  "Kevin a douté cinq fois. « On va un peu trop loin là. » « C'est peut-être grave. » « Elle a disparu de partout d'un coup. » « On est peut-être allés trop loin. » Puis « … ». À chaque fois on lui a coupé la parole, et à chaque fois il s'est tu. Il a fini par écrire à Clara, mais trop tard : elle était déjà partie.",
     items: [
       "Écrire à Clara en privé dès le premier doute, une seule phrase. Il n'avait pas besoin d'affronter le groupe : il suffisait qu'elle ne se croie plus seule.",
       "Quitter le groupe. Partir se voit, et ça retire une voix au nombre.",
@@ -262,24 +276,25 @@ const WA_DATA = {
   mobile: {
     icon:  "❓",
     title: "Pourquoi Clara ?",
-    body:  "Relis le groupe : à aucun moment ils ne le disent. La seule justification qui revient est « elle l'a bien cherché ». Il n'y a pas de raison - et chercher laquelle serait déjà donner tort à Clara."
+    body:  "Relis le groupe : à aucun moment ils ne le disent. La seule justification qui revient est « elle l'a bien cherché ». Il n'y a pas de raison - et chercher laquelle serait déjà donner tort à Clara."
   },
 
   // ─── Navigation ──────────────────────────────────────────────────────────────
 
   navigation: {
     prev: { label: "← Instaclasse de Clara", url: "2_Compte_de_Clara.html" },
-    next: { label: "Retour à l'enquête →", url: "index.html" }
+    next: { label: "Retour au menu →", url: "index.html?skip" }
   }
 
 };
 
-const UI = {
+var UI = {
   today: "Aujourd'hui",
   likes: "3 J'aime",
   mentionTooltip: "Voir ses messages sur l'Instaclasse de Clara",
-  correct: "✓ Bonne réponse !",
+  correct: "✓ C'est bien ça.",
   wrong: "✗ Pas tout à fait.",
-  tapHint: "▼ Appuie pour lire la suite",
+  tapHint: "Appuie pour accélérer",
+  penseeLabel: "💭 Léo se dit…",
   inputPlaceholder: "Message…"
 };

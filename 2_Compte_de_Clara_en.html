@@ -6,6 +6,7 @@
 <title>Simulation – Online Harassment</title>
 <script src="2_Compte_de_Clara_textes_en.js" defer></script>
 <script src="prenom.js" defer></script>
+<script src="2_Compte_de_Clara_types.js" defer></script>
 <script src="2_Compte_de_Clara_Structure.js" defer></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -344,7 +345,7 @@ body {
 #synthesis-btn:hover { background: #1a2a40; }
 #synthesis-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,.95);
-  z-index: 300; align-items: flex-start; justify-content: center;
+  z-index: 700; align-items: flex-start; justify-content: center;
   padding: 20px; overflow-y: auto;
 }
 #synthesis-box {
@@ -436,7 +437,7 @@ body {
   display:none;position:fixed;bottom:80px;left:50%;transform:translateX(-50%);
   background:#0f2a1a;border:1px solid #2dcc6f;color:#2dcc6f;
   border-radius:12px;padding:12px 20px;font-size:.82rem;font-weight:600;
-  text-align:center;z-index:350;max-width:340px;cursor:pointer;
+  text-align:center;z-index:560;max-width:340px;cursor:pointer;
   animation:slideUp .35s ease;box-shadow:0 4px 20px rgba(0,0,0,.6);white-space:nowrap;
 }
 @keyframes slideUp{from{opacity:0;transform:translateX(-50%) translateY(20px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
@@ -499,58 +500,78 @@ body {
 .synth-flag.ok { color: #4dcc70; background: #0d2415; }
 .synth-flag.no { color: #7a8aa5; background: #16202f; }
 
-/* ── SELECTION MODE ── */
-[data-harcel-type].selectable {
-  cursor: pointer;
-  outline: 2px dashed rgba(233,69,96,.55);
-  outline-offset: 2px;
-  border-radius: 4px;
-  transition: background .15s, outline-color .15s;
-}
-[data-harcel-type].selectable:hover {
-  outline-color: #e94560;
-  background: rgba(233,69,96,.1) !important;
-}
-/* ── IDENTIFY OVERLAY ── */
-#identify-overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,.94);
-  z-index: 500;
-  align-items: center; justify-content: center;
-  padding: 20px;
-}
-#identify-box {
-  background: #0f1a2e; border: 2px solid #e94560;
-  border-radius: 16px; padding: 24px 20px;
-  max-width: 360px; width: 100%; text-align: center;
-  max-height: 90vh; overflow-y: auto;
-}
-#id-icon { font-size: 2rem; margin-bottom: 6px; }
-#id-label {
-  font-size: .65rem; font-weight: 700; letter-spacing: .15em;
-  text-transform: uppercase; color: #e94560; margin-bottom: 12px;
-}
-#id-msg {
-  font-size: .78rem; color: #8a9ab5; font-style: italic;
-  background: #0a1525; border-radius: 8px;
-  padding: 10px 12px; margin-bottom: 14px;
-  text-align: left; border-left: 3px solid #e94560;
-  line-height: 1.5;
-}
-#id-options { display: flex; flex-direction: column; gap: 7px; }
-#id-footer { display: flex; gap: 8px; margin-top: 14px; }
-#id-cancel {
-  flex: 1; background: #1a1a2e; color: #8a9ab5;
-  border: 1px solid #2a3a5a; border-radius: 8px;
-  padding: 10px; font-size: .82rem; cursor: pointer;
-}
-#id-continue {
-  flex: 2; background: #3a6fff; color: #fff;
-  border: none; border-radius: 8px; padding: 10px;
-  font-size: .85rem; font-weight: 700; cursor: pointer;
-}
-#id-continue:hover { background: #2a5fee; }
 
+
+
+/* ── RECHERCHE ET FILTRE (liste des messages) ── */
+.dm-search{position:relative;}
+#dm-search-input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:.85rem;font-family:inherit;min-width:0;}
+#dm-search-input::placeholder{color:var(--text2);}
+.dm-filtres{display:flex;gap:8px;padding:2px 16px 6px;}
+.dm-filtre{background:var(--surface2);border:1px solid var(--border);color:var(--text2);border-radius:16px;padding:5px 12px;font-size:.75rem;font-weight:600;cursor:pointer;}
+.dm-filtre.on{background:#f5f5f5;color:#000;border-color:#f5f5f5;}
+.dm-filtre b{font-weight:700;margin-left:3px;}
+.dm-sous{display:block;font-size:.68rem;font-weight:500;color:var(--text2);margin-top:1px;}
+.dm-empty{padding:24px 16px;text-align:center;color:var(--text2);font-size:.85rem;}
+.dm-preview mark,.dm-name mark{background:rgba(0,149,246,.35);color:inherit;border-radius:2px;}
+/* Déjà ouvert par Léo : en gris */
+.dm-item.visited .dm-name,.dm-item.visited .dm-preview{color:#6a6a6a !important;font-weight:500;}
+.dm-item.visited .dm-avatar{opacity:.5;}
+.dm-item.unread .dm-name{color:var(--text);}
+.post-cell{position:relative;}
+/* ── ENQUÊTE (depuis le groupe) : retrouver l'auteur d'un commentaire ── */
+#enquete-bar{display:none;position:sticky;top:0;z-index:120;background:#2a2410;border-bottom:2px solid #d4b464;color:#f3e6b8;font-size:.8rem;line-height:1.5;padding:10px 14px;}
+#enquete-bar b{color:#ffd166;}
+body.enquete .ig-comment .c-user{cursor:pointer;text-decoration:underline dotted #ffd166;text-underline-offset:3px;}
+#lb-enquete{display:none;background:#2a2410;border:1px solid #d4b464;color:#f3e6b8;font-size:.76rem;line-height:1.45;padding:7px 10px;border-radius:8px;margin-bottom:8px;}
+body.enquete #lb-enquete{display:block;}
+#enquete-ok{display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:700;align-items:center;justify-content:center;padding:20px;}
+#enquete-ok .handle{font-family:'Courier New',monospace;color:#c4a5ff;font-size:1rem;margin:6px 0 2px;}
+#enquete-ok .qui{font-size:1.6rem;font-weight:700;color:#4dcc70;margin:4px 0 12px;}
+
+/* ── MESSAGES À ANALYSER ── */
+.cible{cursor:pointer;outline:2px dashed rgba(233,69,96,.6);outline-offset:2px;}
+.cible:hover{outline-color:#e94560;background-color:rgba(233,69,96,.12) !important;}
+.analyse{outline:1.5px solid rgba(77,204,112,.45);outline-offset:2px;}
+.focus{outline:2.5px solid #ffd166 !important;outline-offset:3px;}
+.tag-row{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
+.revele{outline-color:rgba(138,154,181,.45);}
+.revele .tag{color:#8a9ab5;background:#16202f;}
+body[data-ecran="screen-thread"] #types-btn{bottom:128px;}
+.tag{font-size:.64rem;font-weight:700;color:#4dcc70;background:#0d2415;border-radius:4px;padding:2px 6px;line-height:1.3;}
+.ig-comment{font-size:.8rem;color:#f5f5f5;line-height:1.4;border-radius:4px;padding:2px 3px;}
+.ig-comment .c-user{font-weight:700;color:#f5f5f5;}
+.ig-comment .c-text{color:#d0d0d0;}
+
+/* ── BOUTON « TYPES » (liste des types à trouver) ── */
+#types-btn{display:none;position:fixed;bottom:20px;right:16px;z-index:520;background:#3a6fff;color:#fff;border:none;border-radius:24px;padding:11px 18px;font-size:.82rem;font-weight:700;cursor:pointer;box-shadow:0 2px 14px rgba(58,111,255,.45);white-space:nowrap;}
+#types-tracker{width:100%;border:none;cursor:pointer;font-family:inherit;text-align:left;}
+#types-tracker .t-more{font-size:.85rem;}
+.synth-intro{font-size:.8rem;color:#c8d4e8;line-height:1.55;margin-bottom:12px;text-align:center;}
+
+/* ── IDENTIFICATION : feuille en bas d'écran, le message reste visible ── */
+#identify-overlay{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:600;display:none;justify-content:center;pointer-events:none;}
+#identify-box{pointer-events:auto;background:#0f1a2e;border:2px solid #e94560;border-bottom:none;border-radius:16px 16px 0 0;padding:14px 14px 16px;width:100%;max-width:480px;max-height:58vh;overflow-y:auto;box-shadow:0 -8px 30px rgba(0,0,0,.6);text-align:left;}
+#id-label{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e94560;margin-bottom:6px;}
+#id-msg{font-size:.8rem;color:#c8d4e8;font-style:italic;background:#0a1525;border-radius:8px;padding:8px 10px;margin-bottom:6px;border-left:3px solid #ffd166;line-height:1.45;}
+#id-sub{font-size:.7rem;color:#6a7f9f;margin-bottom:8px;}
+#id-options{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.id-opt{display:flex;align-items:center;gap:6px;background:#1a2a40;border:1px solid #2a3a5a;border-radius:8px;padding:8px 9px;color:#c8d4e8;font-size:.74rem;line-height:1.25;text-align:left;cursor:pointer;font-family:inherit;}
+.id-opt .i{font-size:.95rem;flex-shrink:0;}
+.id-opt:hover:not(:disabled){background:#1e3355;border-color:#3a6fff;}
+.id-opt:disabled{cursor:default;opacity:.55;}
+.id-opt.correct{background:#0f2a1a;border-color:#2dcc6f;color:#2dcc6f;opacity:1;}
+.id-opt.also{background:#0f2a1a;border-color:#2dcc6f;border-style:dashed;color:#7fdca0;opacity:1;}
+.id-opt.wrong{background:#2a0f0f;border-color:#cc3333;color:#cc5555;opacity:1;}
+.quiz-fb .why{margin-top:6px;color:#c8d4e8;}
+.quiz-fb .note{margin-top:6px;color:#8a9ab5;font-size:.74rem;}
+#id-footer{display:flex;gap:8px;margin-top:10px;}
+#id-cancel{flex:1;background:#1a1a2e;color:#8a9ab5;border:1px solid #2a3a5a;border-radius:8px;padding:10px;font-size:.82rem;cursor:pointer;}
+#id-continue{flex:2;background:#3a6fff;color:#fff;border:none;border-radius:8px;padding:10px;font-size:.85rem;font-weight:700;cursor:pointer;}
+body.sheet-open .msg-thread{padding-bottom:60vh;}
+body.sheet-open #lightbox{justify-content:flex-start !important;}
+body.sheet-open #lb-img,body.sheet-open #lb-prev,body.sheet-open #lb-next{display:none !important;}
+body.sheet-open #lb-comments{max-height:none !important;}
 .menu-btn{position:fixed;top:14px;left:14px;z-index:10000;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.8);font-family:-apple-system,system-ui,sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.06em;padding:7px 13px;border-radius:20px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:color .2s,border-color .2s,background .2s;line-height:1;}
 .menu-btn:hover{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(0,0,0,.85);}
 @keyframes i1slide{to{opacity:1;transform:translateY(0);}}
@@ -568,11 +589,12 @@ body {
 
 <div id="intro2">
   <div class="i1-inner">
-    <p class="i1-line" style="animation-delay:.7s">I need to understand what Clara went through...</p>
-    <p class="i1-line" style="animation-delay:2.6s">...by looking at her social media, the photo comments and messages.</p>
+    <p class="i1-line" style="animation-delay:.7s">What Inès told me leaves no doubt: someone is harassing Clara online.</p>
+    <p class="i1-line" style="animation-delay:2.8s">But harassment can take many forms.</p>
+    <p class="i1-line" style="animation-delay:4.6s">I'm going to go through her messages and photos to understand what she went through, and name each form of harassment.</p>
     <span class="i1-sep"></span>
-    <button id="intro2-btn" class="i1-btn" style="animation-delay:5s">See her Instaclasse →</button>
-    <span class="i1-skip" style="animation-delay:5.5s">tap to continue</span>
+    <button id="intro2-btn" class="i1-btn" style="animation-delay:6.4s">See her Instaclass →</button>
+    <span class="i1-skip" style="animation-delay:6.9s">tap to continue</span>
   </div>
 </div>
 
@@ -583,6 +605,9 @@ body {
 </div>
 
 <!-- Phone -->
+<!-- Enquête lancée depuis le groupe (Partie 3) -->
+<div id="enquete-bar"></div>
+
 <div id="phone">
 
   <!-- SCREEN 1: Profile -->
@@ -681,7 +706,11 @@ body {
 
     <div class="dm-search">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      Search
+      <input type="search" id="dm-search-input" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="dm-filtres">
+      <button type="button" class="dm-filtre on" data-filtre="tous">All</button>
+      <button type="button" class="dm-filtre" data-filtre="nonlus">Unread<b id="dm-nonlus"></b></button>
     </div>
 
     <div class="dm-list" id="dmList"></div>
@@ -784,7 +813,7 @@ body {
   // rien ne se declenche derriere.
   function showWarning(){
     var w=document.getElementById('warning-overlay');
-    if(!w){ window.igGateOpen=false; return; }
+    if(!w){ window.igGateOpen=false; if(window.rcApresAvertissement) window.rcApresAvertissement(); return; }
     w.style.display='flex';
     // Le bloc est plus bas dans la page que ce script : on branche le bouton
     // au moment de l'afficher, pas au chargement.
@@ -794,6 +823,7 @@ body {
       b.addEventListener('click',function(){
         w.style.display='none';
         window.igGateOpen=false;
+        if(window.rcApresAvertissement) window.rcApresAvertissement();
       });
     }
     if(b) b.focus();
@@ -835,28 +865,15 @@ body {
   </div>
 </div>
 
-<!-- Initial question overlay -->
-<div id="initial-q-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:400;align-items:center;justify-content:center;padding:24px;">
-  <div class="iq-box">
-    <div class="iq-icon">👁</div>
-    <div class="iq-title">What do you observe?</div>
-    <p class="iq-text">You just discovered Clara's Instaclasse profile.<br><br>
-    Based on what you have read… <strong style="color:#e94560">What is Clara experiencing?</strong></p>
-    <input class="iq-input" id="iq-input" type="text" placeholder="Write your answer…" autocomplete="off">
-    <button class="iq-btn">Submit</button>
-    <div class="iq-error" id="iq-error">That's not it. Re-read the messages and comments carefully.</div>
-    <div class="iq-success" id="iq-success">✓ That's it.</div>
-  </div>
-</div>
 
 <!-- Mission overlay -->
 <div id="mission-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:400;align-items:center;justify-content:center;padding:24px;">
   <div class="mission-box">
-    <div class="m-icon">👁</div>
-    <h2>What you need to understand</h2>
-    <p>To understand what Clara is going through, you need to <strong style="color:#3a9fff">identify the different types of harassment</strong> she is experiencing.</p>
-    <p style="margin-top:10px;">Read the <strong>comments under her photos</strong> and her <strong>private messages</strong>. When a message seems revealing, tap <strong>🔍 Identify harassment</strong>, then tap that message: you will have to say which type of harassment it is.</p>
-    <p style="margin-top:10px;font-size:.78rem;color:#5a7090;">Identify at least <strong style="color:#3a9fff">6 different types</strong> (out of 9). Finding them is how you will discover what Clara never showed anyone.</p>
+    <div class="m-icon">🎯</div>
+    <h2>What to look for</h2>
+    <p>Clara is being cyberbullied. But there are several types, and each one hurts in its own way.</p>
+    <p style="margin-top:10px;">Read her <strong>private messages</strong> and the <strong>comments under her photos</strong>. When a message seems hurtful, <strong>tap it</strong> and choose from the list what type of harassment it is. One message can combine several.</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#5a7090;">Find at least <strong style="color:#3a9fff">6 types out of 9</strong>. The <strong>📋 Types</strong> button at the bottom of the screen shows the list.</p>
     <button class="mission-btn">Start the investigation →</button>
   </div>
 </div>
@@ -879,22 +896,11 @@ body {
   </div>
 </div>
 
-<!-- Quiz overlay -->
-<div id="quiz-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:560;align-items:center;justify-content:center;padding:20px;">
-  <div id="quiz-box">
-    <div id="quiz-icon">🔍</div>
-    <div id="quiz-label">ANALYSIS POINT</div>
-    <div id="quiz-question"></div>
-    <div id="quiz-options"></div>
-    <div id="quiz-feedback" style="display:none;"></div>
-    <button id="quiz-continue" style="display:none;">Continue →</button>
-  </div>
-</div>
 
 <!-- Synthesis overlay -->
-<div id="synthesis-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:300;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;">
+<div id="synthesis-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:700;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;">
   <div id="synthesis-box">
-    <div class="synth-title">📋 What happened to Clara - Summary</div>
+    <div class="synth-title" id="synth-title"></div>
     <div id="synthesis-content"></div>
     <button id="synthesis-close">Close</button>
   </div>
@@ -925,6 +931,7 @@ body {
       <div style="font-size:.82rem;font-weight:700;color:#f5f5f5;margin-bottom:6px;" id="lb-likes"></div>
       <div style="font-size:.82rem;color:#f5f5f5;margin-bottom:10px;"><span style="font-weight:700;">clara.fontaine</span> <span id="lb-caption"></span></div>
       <!-- Comments -->
+      <div id="lb-enquete"></div>
       <div id="lb-comments" style="max-height:160px;overflow-y:auto;padding-bottom:12px;display:flex;flex-direction:column;gap:7px;"></div>
     </div>
     <!-- Nav arrows -->
@@ -933,20 +940,33 @@ body {
   </div>
 </div>
 
-<!-- Floating identify button -->
-<button id="identify-btn" style="display:none;position:fixed;bottom:20px;right:16px;z-index:450;background:#e94560;color:#fff;border:none;border-radius:24px;padding:11px 18px;font-size:.82rem;font-weight:700;cursor:pointer;box-shadow:0 2px 14px rgba(233,69,96,.45);white-space:nowrap;transition:background .2s;">🔍 Identify harassment</button>
+<!-- Enquête réussie -->
+<div id="enquete-ok">
+  <div class="mission-box">
+    <div class="m-icon">🕵️</div>
+    <h2 id="eq-title"></h2>
+    <div class="handle" id="eq-handle"></div>
+    <div class="qui" id="eq-qui"></div>
+    <p id="eq-note"></p>
+    <a class="box-btn" id="eq-back" style="display:block;text-decoration:none;text-align:center;">← Back to the group</a>
+    <button class="ghost-btn" id="eq-stay">Stay on the Instaclass</button>
+  </div>
+</div>
 
-<!-- Identify overlay -->
-<div id="identify-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:500;align-items:center;justify-content:center;padding:20px;">
+<!-- Liste des types à trouver -->
+<button id="types-btn" type="button">📋 Types</button>
+
+<!-- Identification : en bas de l'écran, le message reste visible au-dessus -->
+<div id="identify-overlay">
   <div id="identify-box">
-    <div id="id-icon">🔍</div>
-    <div id="id-label">What type of harassment?</div>
+    <div id="id-label"></div>
     <div id="id-msg"></div>
+    <div id="id-sub"></div>
     <div id="id-options"></div>
     <div id="id-feedback" style="display:none;"></div>
     <div id="id-footer">
-      <button id="id-cancel">Cancel</button>
-      <button id="id-continue" style="display:none;">Continue →</button>
+      <button id="id-cancel">Close</button>
+      <button id="id-continue" style="display:none;"></button>
     </div>
   </div>
 </div>

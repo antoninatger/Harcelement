@@ -70,6 +70,9 @@ function init() {
     try { sessionStorage.removeItem('harcelement_wa_state'); } catch (e) {}
     document.getElementById('code-gate').style.display = 'none';
     document.getElementById('warning-overlay').style.display = 'none';
+    // Ni l'introduction ni la consigne ne se rejouent au retour.
+    var intro = document.getElementById('intro3');
+    if (intro) intro.style.display = 'none';
     fastForwardTo(parseInt(saved, 10));
   }
 }
@@ -90,8 +93,9 @@ function fastForwardTo(targetIndex) {
     if      (m.type === 'system')         appendSystem(m.text);
     else if (m.type === 'post-card') appendPostCard(m.sender, true);
     else if (m.type === 'time-sep')       appendTimeSep(m.text);
+    else if (m.type === 'enquete')        appendEnquete(m, true);
     else if (!m.type)                     appendMessage(m.sender, m.text, m.time, true);
-    // quiz / end ignorés
+    // quiz / thought / end ignorés
   }
 
   msgIndex = targetIndex;
@@ -100,7 +104,8 @@ function fastForwardTo(targetIndex) {
 }
 
 // ── COMPTES ANONYMES ─────────────────────────────────────────────────────
-// Le groupe nomme cinq comptes à voix haute. Le joueur les repère en appuyant
+// Le groupe nomme cinq comptes à voix haute (le sixième se retrouve par une
+// enquête sur l'Instaclasse, voir appendEnquete). Le joueur les repère en appuyant
 // dessus ; la Partie 2 les étiquette ensuite avec le prénom du propriétaire.
 // C'est l'asymétrie que le jeu raconte : le joueur sait, Clara jamais.
 
@@ -150,6 +155,26 @@ function ouvrirCompte(handle) {
   majComptes();
 }
 
+// ── Enquête : un compte jamais nommé, à retrouver sur l'Instaclasse ────────
+// La carte reste dans la conversation : le joueur peut y revenir plus tard.
+function appendEnquete(m, instant) {
+  var container = document.getElementById('messages-container');
+  var el = document.createElement('div');
+  el.className = 'enquete-card';
+  if (instant) el.style.animation = 'none';
+  var qui = comptesTrouves[m.handle];
+  if (qui) {
+    el.innerHTML = '<span class="eq-done">' + esc(m.done) + ' @' + esc(m.handle) + ' - <strong>' + esc(qui) + '</strong></span>';
+  } else {
+    el.innerHTML = '<button type="button" class="eq-btn">' + esc(m.btn) + '</button>';
+    el.querySelector('.eq-btn').addEventListener('click', function () {
+      try { sessionStorage.setItem('rc_enquete', m.key); } catch (e) {}
+      goToCompte();
+    });
+  }
+  container.appendChild(el);
+}
+
 // ── Naviguer vers Instaclasse (sauvegarde l'état avant de partir) ───────────
 
 function goToCompte() {
@@ -188,6 +213,20 @@ function processNext() {
     showEndState();
     return;
   }
+  if (msg.type === 'enquete') {
+    appendEnquete(msg, false);
+    scrollChat();
+    montrerPensee(msg.text);
+    dernierTexte = msg.text;
+    awaitTap();
+    return;
+  }
+  if (msg.type === 'thought') {
+    montrerPensee(msg.text);
+    dernierTexte = msg.text;
+    awaitTap();
+    return;
+  }
   if (msg.type === 'system') {
     appendSystem(msg.text);
     wait(msg.delay || 800, processNext);
@@ -217,8 +256,27 @@ function processNext() {
       appendMessage(msg.sender, msg.text, msg.time, false);
     }
     scrollChat();
+    dernierTexte = msg.text || '';
     awaitTap();
   });
+}
+
+// ── Pensées de Léo : une bulle hors de la conversation ─────────────────────
+var dernierTexte = '';
+function montrerPensee(txt) {
+  var el = document.getElementById('pensee-wa');
+  if (!el) return;
+  el.querySelector('.pw-qui').textContent = UI.penseeLabel || '';
+  el.querySelector('.pw-txt').textContent = txt;
+  el.classList.add('on');
+  // Laisse de la place sous les derniers messages : la bulle ne les cache pas.
+  document.getElementById('chat-area').classList.add('avec-pensee');
+  scrollChat();
+}
+function cacherPensee() {
+  var el = document.getElementById('pensee-wa');
+  if (el) el.classList.remove('on');
+  document.getElementById('chat-area').classList.remove('avec-pensee');
 }
 
 function wait(ms, cb) { setTimeout(cb, ms); }
@@ -241,13 +299,23 @@ function awaitTap() {
 // suivait) : le joueur peut toujours taper pour avancer tout de suite,
 // survoler la conversation pour mettre le défilement en pause, ou activer
 // le bouton ⏩ pour un rythme plus rapide.
+// Le temps laissé dépend de la longueur du message : de quoi le lire, pas plus.
+// Rien n'avance tant qu'une fenêtre (compte démasqué, publication) est ouverte.
 function scheduleAutoAdvance() {
   clearTimeout(autoTimer);
   if (autoPaused) return;
-  var delay = fastMode ? 1200 : 3200;
+  var n = (dernierTexte || '').length;
+  var delay = fastMode ? 1200 : Math.min(7000, Math.max(2600, 1800 + n * 45));
   autoTimer = setTimeout(function () {
-    if (waitingTap) advance();
+    if (!waitingTap) return;
+    if (fenetreOuverte()) { scheduleAutoAdvance(); return; }
+    advance();
   }, delay);
+}
+function fenetreOuverte() {
+  var c = document.getElementById('compte-overlay');
+  var m = document.getElementById('ig-modal');
+  return (c && c.style.display === 'flex') || (m && m.classList.contains('open'));
 }
 
 function advance() {
@@ -257,6 +325,7 @@ function advance() {
   if (f) f.placeholder = UI.inputPlaceholder || 'Message…';
   document.getElementById('wa-input').classList.remove('tap-wait');
   document.getElementById('chat-area').classList.remove('tap-wait');
+  cacherPensee();
   processNext();
 }
 
@@ -268,6 +337,7 @@ function onTap(e) {
 }
 
 document.getElementById('chat-area').addEventListener('click', onTap);
+document.getElementById('pensee-wa').addEventListener('click', onTap);
 document.getElementById('wa-input').addEventListener('click', onTap);
 
 // La pause au survol n'a de sens qu'avec une vraie souris. Sur tablette, un
@@ -512,6 +582,7 @@ function showEndState() {
     }
   } catch(e) {}
 
+  cacherPensee();
   var end  = document.getElementById('end-state');
   var data = WA_DATA.endMessage;
   document.getElementById('end-title').textContent = data.title;
@@ -564,6 +635,14 @@ function showEndState() {
     extra.innerHTML += '<div class="end-mobile"><h4>' + M.icon + ' ' + esc(M.title) + '</h4><p>' + esc(M.body) + '</p></div>';
   }
   synthEl.appendChild(extra);
+
+  // Ce que Léo se dit en refermant le groupe : où est la tante ?
+  if (WA_DATA.endThought) {
+    var pz = document.getElementById('end-pensee');
+    pz.querySelector('.pw-qui').textContent = UI.penseeLabel || '';
+    pz.querySelector('.pw-txt').textContent = WA_DATA.endThought;
+    pz.style.display = 'block';
+  }
 
   document.getElementById('end-prev').textContent = WA_DATA.navigation.prev.label;
   document.getElementById('end-prev').href        = WA_DATA.navigation.prev.url;
