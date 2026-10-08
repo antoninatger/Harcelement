@@ -1,0 +1,6014 @@
+[
+{
+"num": "M-001",
+"cle": "index.html#intro-line",
+"fr": "Clara a disparu...",
+"ligne": "M-001"
+},
+{
+"num": "M-002",
+"cle": "index.html#intro-line",
+"fr": "Je suis {inquiet|inquiète}.",
+"ligne": "M-002"
+},
+{
+"num": "M-003",
+"cle": "index.html#intro-line",
+"fr": "Je veux comprendre ce qui lui est arrivé.",
+"ligne": "M-003"
+},
+{
+"num": "M-004",
+"cle": "index.html#intro-skip",
+"fr": "Appuyer pour continuer",
+"ligne": "M-004"
+},
+{
+"num": "M-005",
+"cle": "index.html#hero-label",
+"fr": "Exercice de sensibilisation",
+"ligne": "M-005"
+},
+{
+"num": "M-006",
+"cle": "index.html#hero-title",
+"fr": "Retrouver Clara",
+"ligne": "M-006"
+},
+{
+"num": "M-007",
+"cle": "index.html#hero-sub",
+"fr": "Quatre étapes pour comprendre ce qui est arrivé à Clara et comment l'aider.",
+"ligne": "M-007"
+},
+{
+"num": "M-008",
+"cle": "index.html#pc-lab",
+"fr": "Tu joues",
+"ligne": "M-008"
+},
+{
+"num": "M-009",
+"cle": "index.html#prenom-choix",
+"fr": "Léo",
+"ligne": null
+},
+{
+"num": "M-010",
+"cle": "index.html#prenom-choix",
+"fr": "Léa",
+"ligne": null
+},
+{
+"num": "M-011",
+"cle": "index.html#prev-b",
+"fr": "Elle répond plus à moi non plus.",
+"ligne": "M-011"
+},
+{
+"num": "M-012",
+"cle": "index.html#prev-b",
+"fr": "T'as une idée de ce qui s'est passé ?",
+"ligne": "M-012"
+},
+{
+"num": "M-013",
+"cle": "index.html#prev-b",
+"fr": "Inès écrit…",
+"ligne": "M-013"
+},
+{
+"num": "M-014",
+"cle": "index.html#cta-label",
+"fr": "Commencer l'enquête",
+"ligne": "M-014"
+},
+{
+"num": "M-015",
+"cle": "index.html#cta-btn",
+"fr": "Partie 1 →",
+"ligne": "M-015"
+},
+{
+"num": "M-016",
+"cle": "index.html#card-num",
+"fr": "Partie 1",
+"ligne": "M-016"
+},
+{
+"num": "M-017",
+"cle": "index.html#card-title",
+"fr": "Le téléphone d'Inès",
+"ligne": "M-017"
+},
+{
+"num": "M-018",
+"cle": "index.html#card-desc",
+"fr": "Inès est la meilleure amie de Clara. Parle-lui pour comprendre ce qu'elle sait sur la situation.",
+"ligne": "M-018"
+},
+{
+"num": "M-019",
+"cle": "index.html#card-arrow",
+"fr": "Commencer",
+"ligne": "M-019"
+},
+{
+"num": "M-020",
+"cle": "index.html#prev-ig-name",
+"fr": "@clara.fontaine",
+"ligne": null
+},
+{
+"num": "M-021",
+"cle": "index.html#card-num",
+"fr": "Partie 2",
+"ligne": "M-021"
+},
+{
+"num": "M-022",
+"cle": "index.html#card-title",
+"fr": "L'Instaclasse de Clara",
+"ligne": "M-022"
+},
+{
+"num": "M-023",
+"cle": "index.html#card-desc",
+"fr": "Observe le compte Instaclasse de Clara et découvre les traces du harcèlement qu'elle subit en ligne.",
+"ligne": "M-023"
+},
+{
+"num": "M-024",
+"cle": "index.html#card-arrow",
+"fr": "Commencer",
+"ligne": "M-019"
+},
+{
+"num": "M-025",
+"cle": "index.html#nm",
+"fr": "Enzo",
+"ligne": null
+},
+{
+"num": "M-026",
+"cle": "index.html#prev-wa-b",
+"fr": "t'as vu le post de ce matin 💀",
+"ligne": "M-026"
+},
+{
+"num": "M-027",
+"cle": "index.html#nm",
+"fr": "Jade",
+"ligne": null
+},
+{
+"num": "M-028",
+"cle": "index.html#prev-wa-b",
+"fr": "loool elle est grave",
+"ligne": "M-028"
+},
+{
+"num": "M-029",
+"cle": "index.html#nm",
+"fr": "Enzo",
+"ligne": null
+},
+{
+"num": "M-030",
+"cle": "index.html#prev-wa-b",
+"fr": "quelqu'un lui a répondu ???",
+"ligne": "M-030"
+},
+{
+"num": "M-031",
+"cle": "index.html#card-num",
+"fr": "Partie 3",
+"ligne": "M-031"
+},
+{
+"num": "M-032",
+"cle": "index.html#card-title",
+"fr": "Le groupe Whatsupp secret",
+"ligne": "M-032"
+},
+{
+"num": "M-033",
+"cle": "index.html#card-desc",
+"fr": "Observe le groupe Whatsupp secret où le harcèlement contre Clara a été organisé.",
+"ligne": "M-033"
+},
+{
+"num": "M-034",
+"cle": "index.html#card-arrow",
+"fr": "Commencer",
+"ligne": "M-019"
+},
+{
+"num": "M-035",
+"cle": "index.html#prev-dl",
+"fr": "📞 Chez la tante de Clara…",
+"ligne": "M-035"
+},
+{
+"num": "M-036",
+"cle": "index.html#prev-dl",
+"fr": "« J'y ai pensé… plein de fois. »",
+"ligne": "M-036"
+},
+{
+"num": "M-037",
+"cle": "index.html#prev-dl",
+"fr": "Il faut trouver les mots justes.",
+"ligne": "M-037"
+},
+{
+"num": "M-038",
+"cle": "index.html#card-num",
+"fr": "Partie 4",
+"ligne": "M-038"
+},
+{
+"num": "M-039",
+"cle": "index.html#card-title",
+"fr": "Convaincre Clara",
+"ligne": "M-039"
+},
+{
+"num": "M-040",
+"cle": "index.html#card-desc",
+"fr": "Clara est sur le point de baisser les bras. Trouve les mots justes pour lui montrer qu'elle n'est pas seule.",
+"ligne": "M-040"
+},
+{
+"num": "M-041",
+"cle": "index.html#card-arrow",
+"fr": "Commencer",
+"ligne": "M-019"
+},
+{
+"num": "M-042",
+"cle": "index.html#sa-sep",
+"fr": "Ton code de reprise",
+"ligne": "M-042"
+},
+{
+"num": "M-043",
+"cle": "index.html#sa-sep",
+"fr": "ou reprendre avec un code",
+"ligne": "M-043"
+},
+{
+"num": "M-044",
+"cle": "index.html#sa-input@placeholder",
+"fr": "7 caractères",
+"ligne": "M-044"
+},
+{
+"num": "M-045",
+"cle": "index.html#sa-input@aria-label",
+"fr": "Code de reprise",
+"ligne": "M-045"
+},
+{
+"num": "M-046",
+"cle": "index.html#sa-go",
+"fr": "Reprendre",
+"ligne": "M-046"
+},
+{
+"num": "M-047",
+"cle": "index.html#reset-btn",
+"fr": "↺ Nouvelle enquête",
+"ligne": "M-047"
+},
+{
+"num": "M-048",
+"cle": "index.html#footer-logo@alt",
+"fr": "Ambassade de France en Croatie",
+"ligne": "M-048"
+},
+{
+"num": "M-049",
+"cle": "index.html#footer-txt",
+"fr": "© Retrouver Clara - Exercice de sensibilisation au harcèlement",
+"ligne": "M-049"
+},
+{
+"num": "M-050",
+"cle": "index.html#fs-btn@title",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "M-051",
+"cle": "index.html#fs-btn@aria-label",
+"fr": "Activer le plein écran",
+"ligne": "M-051"
+},
+{
+"num": "M-052",
+"cle": "index.js",
+"fr": "Rien à sauvegarder pour l'instant",
+"ligne": "M-052"
+},
+{
+"num": "M-053",
+"cle": "index.js",
+"fr": "Code inconnu - vérifie les 7 caractères.",
+"ligne": "M-053"
+},
+{
+"num": "M-054",
+"cle": "index.js",
+"fr": "Parle d'abord à Inès - c'est elle qui a les identifiants de Clara.",
+"ligne": "M-054"
+},
+{
+"num": "M-055",
+"cle": "index.js",
+"fr": "Kevin te donne le code du groupe à la fin de la Partie 2.",
+"ligne": "M-055"
+},
+{
+"num": "M-056",
+"cle": "index.js",
+"fr": "Il me faut le numéro de la tante de Clara. Comment l'obtenir ?",
+"ligne": "M-056"
+},
+{
+"num": "M-057",
+"cle": "index.js",
+"fr": "Lis d'abord le groupe Whatsupp.",
+"ligne": "M-057"
+},
+{
+"num": "M-058",
+"cle": "index.js",
+"fr": "Reprendre l'enquête",
+"ligne": "M-058"
+},
+{
+"num": "M-059",
+"cle": "index.js",
+"fr": "↩ Continuer",
+"ligne": "M-059"
+},
+{
+"num": "P1-001",
+"cle": "1_Telephone_Ines.html#menu-btn",
+"fr": "← Menu",
+"ligne": "P1-001"
+},
+{
+"num": "P1-002",
+"cle": "1_Telephone_Ines.html#i1-line",
+"fr": "Inès est la meilleure amie de Clara. Moi, je lui ai presque jamais parlé.",
+"ligne": "P1-002"
+},
+{
+"num": "P1-003",
+"cle": "1_Telephone_Ines.html#i1-line",
+"fr": "Elle devrait pouvoir m'aider à comprendre ce qui est arrivé à Clara.",
+"ligne": "P1-003"
+},
+{
+"num": "P1-004",
+"cle": "1_Telephone_Ines.html#i1-line",
+"fr": "Mais je dois lui prouver que je veux vraiment l'aider.",
+"ligne": "P1-004"
+},
+{
+"num": "P1-005",
+"cle": "1_Telephone_Ines.html#intro1-btn",
+"fr": "Contacter Inès →",
+"ligne": "P1-005"
+},
+{
+"num": "P1-006",
+"cle": "1_Telephone_Ines.html#i1-skip",
+"fr": "appuyer pour continuer",
+"ligne": "P1-006"
+},
+{
+"num": "P1-007",
+"cle": "1_Telephone_Ines.html#p3-notif-bar",
+"fr": "nouveau message",
+"ligne": "P1-007"
+},
+{
+"num": "P1-008",
+"cle": "1_Telephone_Ines.html#p3-notif-bar",
+"fr": "maintenant",
+"ligne": "P1-008"
+},
+{
+"num": "P1-009",
+"cle": "1_Telephone_Ines.html#sc-input@placeholder",
+"fr": "Écrire un message…",
+"ligne": "P1-009"
+},
+{
+"num": "P1-010",
+"cle": "1_Telephone_Ines.html#fs-btn@title",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P1-011",
+"cle": "1_Telephone_Ines.html#fs-btn@aria-label",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P1-012",
+"cle": "TEXTES.contact.statusOnline",
+"fr": "en ligne",
+"ligne": "P1-012"
+},
+{
+"num": "P1-013",
+"cle": "TEXTES.contact.statusTyping",
+"fr": "écrit…",
+"ligne": "P1-013"
+},
+{
+"num": "P1-014",
+"cle": "TEXTES.trustLabels[0]",
+"fr": "elle ne veut plus te parler",
+"ligne": "P1-014"
+},
+{
+"num": "P1-015",
+"cle": "TEXTES.trustLabels[1]",
+"fr": "elle est sur le point de raccrocher",
+"ligne": "P1-015"
+},
+{
+"num": "P1-016",
+"cle": "TEXTES.trustLabels[2]",
+"fr": "elle se méfie de toi",
+"ligne": "P1-016"
+},
+{
+"num": "P1-017",
+"cle": "TEXTES.trustLabels[3]",
+"fr": "elle hésite à répondre",
+"ligne": "P1-017"
+},
+{
+"num": "P1-018",
+"cle": "TEXTES.trustLabels[4]",
+"fr": "elle t'écoute",
+"ligne": "P1-018"
+},
+{
+"num": "P1-019",
+"cle": "TEXTES.trustLabels[5]",
+"fr": "elle commence à te faire confiance",
+"ligne": "P1-019"
+},
+{
+"num": "P1-020",
+"cle": "TEXTES.trustLabels[6]",
+"fr": "elle te fait confiance",
+"ligne": "P1-020"
+},
+{
+"num": "P1-021",
+"cle": "TEXTES.trustLabels[7]",
+"fr": "elle se confie à toi",
+"ligne": "P1-021"
+},
+{
+"num": "P1-022",
+"cle": "TEXTES.trustLabels[8]",
+"fr": "elle te fait vraiment confiance",
+"ligne": "P1-022"
+},
+{
+"num": "P1-023",
+"cle": "TEXTES.trustInitial",
+"fr": "elle hésite à répondre",
+"ligne": "P1-017"
+},
+{
+"num": "P1-024",
+"cle": "TEXTES.penseeLabel",
+"fr": "💭 Léo se dit…",
+"ligne": "P1-024"
+},
+{
+"num": "P1-025",
+"cle": "TEXTES.choiceHint",
+"fr": "Que répond Léo ?",
+"ligne": "P1-025"
+},
+{
+"num": "P1-026",
+"cle": "TEXTES.choiceHintCrise",
+"fr": "Comment réagit Léo ?",
+"ligne": "P1-026"
+},
+{
+"num": "P1-027",
+"cle": "TEXTES.restartBtn",
+"fr": "↺ Recommencer",
+"ligne": "P1-027"
+},
+{
+"num": "P1-028",
+"cle": "TEXTES.revelationsHeader",
+"fr": "📋 CE QUE TU AS APPRIS SUR CLARA",
+"ligne": "P1-028"
+},
+{
+"num": "P1-029",
+"cle": "TEXTES.ouverture[0].t",
+"fr": "Inès ?",
+"ligne": "P1-029"
+},
+{
+"num": "P1-030",
+"cle": "TEXTES.ouverture[1].t",
+"fr": "Oui c'est qui",
+"ligne": "P1-030"
+},
+{
+"num": "P1-031",
+"cle": "TEXTES.ouverture[2].t",
+"fr": "C'est Léo. Je suis {un ami|une amie} de Clara, depuis la primaire.",
+"ligne": "P1-031"
+},
+{
+"num": "P1-032",
+"cle": "TEXTES.ouverture[3].t",
+"fr": "Je te connais pas.",
+"ligne": "P1-032"
+},
+{
+"num": "P1-033",
+"cle": "TEXTES.ouverture[4].t",
+"fr": "Je sais, on s'est presque jamais parlé. Mais Clara m'a souvent parlé de toi.\nJ'arrive plus à la joindre depuis plusieurs jours, et je la vois plus dans la cour. T'as eu de ses nouvelles ?",
+"ligne": "P1-033"
+},
+{
+"num": "P1-034",
+"cle": "TEXTES.ouverture[5].t",
+"fr": "Pourquoi tu me demandes ça à moi",
+"ligne": "P1-034"
+},
+{
+"num": "P1-035",
+"cle": "TEXTES.finImmediate[0].t",
+"fr": "ok",
+"ligne": "P1-035"
+},
+{
+"num": "P1-036",
+"cle": "TEXTES.finImmediate[1].t",
+"fr": "vu ✔️",
+"ligne": "P1-036"
+},
+{
+"num": "P1-037",
+"cle": "TEXTES.blocageMessages[0].t",
+"fr": "Arrête de me parler.",
+"ligne": "P1-037"
+},
+{
+"num": "P1-038",
+"cle": "TEXTES.blocageMessages[1].t",
+"fr": "Je te répondrai plus.",
+"ligne": "P1-038"
+},
+{
+"num": "P1-039",
+"cle": "TEXTES.blocageMessages[2].t",
+"fr": "(elle ne répond plus)",
+"ligne": "P1-039"
+},
+{
+"num": "P1-040",
+"cle": "TEXTES.REVELATIONS[0].title",
+"fr": "Elle fuyait son téléphone",
+"ligne": "P1-040"
+},
+{
+"num": "P1-041",
+"cle": "TEXTES.REVELATIONS[0].txt",
+"fr": "Depuis plusieurs semaines, Clara laissait son téléphone retourné, ignorait ses notifications - même celles d'Inès.",
+"ligne": "P1-041"
+},
+{
+"num": "P1-042",
+"cle": "TEXTES.REVELATIONS[1].title",
+"fr": "Elle avait disparu des réseaux",
+"ligne": "P1-042"
+},
+{
+"num": "P1-043",
+"cle": "TEXTES.REVELATIONS[1].txt",
+"fr": "Clara avait arrêté de poster, d'ouvrir ses applis. Quelque chose en ligne la faisait fuir. Inès ne sait pas exactement quoi.",
+"ligne": "P1-043"
+},
+{
+"num": "P1-044",
+"cle": "TEXTES.REVELATIONS[2].title",
+"fr": "Inès ne sait pas tout",
+"ligne": "P1-044"
+},
+{
+"num": "P1-045",
+"cle": "TEXTES.REVELATIONS[2].txt",
+"fr": "Même sa meilleure amie n'a pas eu les détails. Clara voulait protéger Inès - ou avait trop honte pour en parler.",
+"ligne": "P1-045"
+},
+{
+"num": "P1-046",
+"cle": "TEXTES.G[0].edu",
+"fr": "Je dois être {le plus honnête|la plus honnête} possible, et {le plus sincère|la plus sincère} - c'est ma seule chance qu'elle m'aide.",
+"ligne": "P1-046"
+},
+{
+"num": "P1-047",
+"cle": "TEXTES.G[0].c[0].t",
+"fr": "T'es sa meilleure amie. Si quelqu'un sait quelque chose, c'est forcément toi.",
+"ligne": "P1-047"
+},
+{
+"num": "P1-048",
+"cle": "TEXTES.G[0].c[0].p",
+"fr": "Je lui ai mis la pression, comme si c'était à elle de tout savoir. Elle se ferme.",
+"ligne": "P1-048"
+},
+{
+"num": "P1-049",
+"cle": "TEXTES.G[0].c[1].t",
+"fr": "Je savais pas à qui d'autre m'adresser.",
+"ligne": "P1-049"
+},
+{
+"num": "P1-050",
+"cle": "TEXTES.G[0].c[1].p",
+"fr": "C'est vrai… mais ça ne lui dit pas pourquoi je m'inquiète.",
+"ligne": "P1-050"
+},
+{
+"num": "P1-051",
+"cle": "TEXTES.G[0].c[2].t",
+"fr": "Je suis {inquiet|inquiète}. J'arrive plus à dormir depuis qu'elle a disparu.",
+"ligne": "P1-051"
+},
+{
+"num": "P1-052",
+"cle": "TEXTES.G[0].c[2].p",
+"fr": "Je lui ai dit ce que je ressens, sans rien lui demander. Elle peut me croire.",
+"ligne": "P1-052"
+},
+{
+"num": "P1-053",
+"cle": "TEXTES.G[1].intro[0]",
+"fr": "Tu la connais comment toi, Clara ?",
+"ligne": "P1-053"
+},
+{
+"num": "P1-054",
+"cle": "TEXTES.G[1].edu",
+"fr": "On est amis depuis la primaire. Cette année on n'est plus dans la même classe, on se voyait moins… mais elle compte toujours autant pour moi. Il faut qu'Inès comprenne que je ne suis pas là par curiosité.",
+"ligne": "P1-054"
+},
+{
+"num": "P1-055",
+"cle": "TEXTES.G[1].c[0].t",
+"fr": "On est amis depuis la primaire. Elle compte beaucoup pour moi.",
+"ligne": "P1-055"
+},
+{
+"num": "P1-056",
+"cle": "TEXTES.G[1].c[0].p",
+"fr": "Je lui ai dit qui je suis pour Clara. C'est exactement ce qu'elle voulait savoir.",
+"ligne": "P1-056"
+},
+{
+"num": "P1-057",
+"cle": "TEXTES.G[1].c[1].t",
+"fr": "Pas super bien. Mais j'ai entendu parler d'elle ces derniers temps.",
+"ligne": "P1-057"
+},
+{
+"num": "P1-058",
+"cle": "TEXTES.G[1].c[1].p",
+"fr": "Aïe. J'ai l'air de quelqu'un qui vient chercher des ragots.",
+"ligne": "P1-058"
+},
+{
+"num": "P1-059",
+"cle": "TEXTES.G[1].c[2].t",
+"fr": "On se voit moins depuis qu'on est plus dans la même classe.",
+"ligne": "P1-059"
+},
+{
+"num": "P1-060",
+"cle": "TEXTES.G[1].c[2].p",
+"fr": "C'est vrai, mais ça ne dit pas pourquoi elle compte pour moi.",
+"ligne": "P1-060"
+},
+{
+"num": "P1-061",
+"cle": "TEXTES.G[2].intro[0]",
+"fr": "Elle répond plus à moi non plus.",
+"ligne": "M-011"
+},
+{
+"num": "P1-062",
+"cle": "TEXTES.G[2].intro[1]",
+"fr": "Depuis quelques jours.",
+"ligne": "P1-062"
+},
+{
+"num": "P1-063",
+"cle": "TEXTES.G[2].c[0].t",
+"fr": "Ça lui arrivait déjà avant ?",
+"ligne": "P1-063"
+},
+{
+"num": "P1-064",
+"cle": "TEXTES.G[2].c[0].r",
+"fr": "Non. Jamais.",
+"ligne": "P1-064"
+},
+{
+"num": "P1-065",
+"cle": "TEXTES.G[2].c[0].p",
+"fr": "Une vraie question, sans rien supposer. Elle a envie d'y répondre.",
+"ligne": "P1-065"
+},
+{
+"num": "P1-066",
+"cle": "TEXTES.G[2].c[1].t",
+"fr": "Peut-être qu'elle vous a bloqués.",
+"ligne": "P1-066"
+},
+{
+"num": "P1-067",
+"cle": "TEXTES.G[2].c[1].r",
+"fr": "Elle m'aurait jamais bloquée. Pas moi.",
+"ligne": "P1-067"
+},
+{
+"num": "P1-068",
+"cle": "TEXTES.G[2].c[1].p",
+"fr": "J'ai laissé entendre que Clara la rejetait. Inès s'est sentie visée.",
+"ligne": "P1-068"
+},
+{
+"num": "P1-069",
+"cle": "TEXTES.G[2].c[2].t",
+"fr": "Vous vous parliez souvent ?",
+"ligne": "P1-069"
+},
+{
+"num": "P1-070",
+"cle": "TEXTES.G[2].c[2].r",
+"fr": "Tous les jours. Enfin… avant.",
+"ligne": "P1-070"
+},
+{
+"num": "P1-071",
+"cle": "TEXTES.G[2].c[2].p",
+"fr": "Elle a répondu, mais ma question ne l'aide pas à en dire plus.",
+"ligne": "P1-071"
+},
+{
+"num": "P1-072",
+"cle": "TEXTES.G[3].intro[0]",
+"fr": "Ça faisait un moment qu'elle était pas bien.",
+"ligne": "P1-072"
+},
+{
+"num": "P1-073",
+"cle": "TEXTES.G[3].intro[1]",
+"fr": "Depuis des mois, en fait.",
+"ligne": "P1-073"
+},
+{
+"num": "P1-074",
+"cle": "TEXTES.G[3].intro[2]",
+"fr": "Elle manquait des cours. Elle répondait de moins en moins aux messages.",
+"ligne": "P1-074"
+},
+{
+"num": "P1-075",
+"cle": "TEXTES.G[3].intro[3]",
+"fr": "Elle disait que c'était rien.",
+"ligne": "P1-075"
+},
+{
+"num": "P1-076",
+"cle": "TEXTES.G[3].c[0].t",
+"fr": "Tu sais ce qui lui arrivait ?",
+"ligne": "P1-076"
+},
+{
+"num": "P1-077",
+"cle": "TEXTES.G[3].c[0].r",
+"fr": "Pas vraiment. J'ai essayé de lui demander.",
+"ligne": "P1-077"
+},
+{
+"num": "P1-078",
+"cle": "TEXTES.G[3].c[0].p",
+"fr": "Une question ouverte : je la laisse raconter ce qu'elle sait.",
+"ligne": "P1-078"
+},
+{
+"num": "P1-079",
+"cle": "TEXTES.G[3].c[1].t",
+"fr": "Et toi, t'as rien fait ?",
+"ligne": "P1-079"
+},
+{
+"num": "P1-080",
+"cle": "TEXTES.G[3].c[1].r",
+"fr": "Si ! J'ai essayé. Tu crois quoi ?",
+"ligne": "P1-080"
+},
+{
+"num": "P1-081",
+"cle": "TEXTES.G[3].c[1].p",
+"fr": "Ça sonnait comme un reproche. Elle se sent accusée de ne pas avoir aidé Clara.",
+"ligne": "P1-081"
+},
+{
+"num": "P1-082",
+"cle": "TEXTES.G[3].c[2].t",
+"fr": "Elle avait peur de quelque chose, c'est ça ?",
+"ligne": "P1-082"
+},
+{
+"num": "P1-083",
+"cle": "TEXTES.G[3].c[2].r",
+"fr": "J'en sais rien… Je lui ai demandé, plusieurs fois.",
+"ligne": "P1-083"
+},
+{
+"num": "P1-084",
+"cle": "TEXTES.G[3].c[2].p",
+"fr": "J'ai deviné à sa place. Mieux vaut la laisser raconter.",
+"ligne": "P1-084"
+},
+{
+"num": "P1-085",
+"cle": "TEXTES.G[4].intro[0]",
+"fr": "Elle voulait pas.",
+"ligne": "P1-085"
+},
+{
+"num": "P1-086",
+"cle": "TEXTES.G[4].intro[1]",
+"fr": "Mais je voyais bien.",
+"ligne": "P1-086"
+},
+{
+"num": "P1-087",
+"cle": "TEXTES.G[4].intro[2]",
+"fr": "Elle laissait son téléphone retourné sur la table. Elle regardait plus ses applis.",
+"ligne": "P1-087"
+},
+{
+"num": "P1-088",
+"cle": "TEXTES.G[4].intro[3]",
+"fr": "Des fois je lui envoyais un message, je voyais qu'elle l'avait lu… et elle répondait pas pendant des heures.",
+"ligne": "P1-088"
+},
+{
+"num": "P1-089",
+"cle": "TEXTES.G[4].c[0].t",
+"fr": "On dirait qu'elle voulait s'éloigner de son téléphone.",
+"ligne": "P1-089"
+},
+{
+"num": "P1-090",
+"cle": "TEXTES.G[4].c[0].p",
+"fr": "J'ai relié ce qu'elle m'a dit. Elle voit que j'écoute vraiment.",
+"ligne": "P1-090"
+},
+{
+"num": "P1-091",
+"cle": "TEXTES.G[4].c[1].t",
+"fr": "C'est bizarre comme comportement.",
+"ligne": "P1-091"
+},
+{
+"num": "P1-092",
+"cle": "TEXTES.G[4].c[1].p",
+"fr": "« Bizarre »… Ça ne l'aide pas à aller plus loin.",
+"ligne": "P1-092"
+},
+{
+"num": "P1-093",
+"cle": "TEXTES.G[4].c[2].t",
+"fr": "C'est peut-être juste une mauvaise période.",
+"ligne": "P1-093"
+},
+{
+"num": "P1-094",
+"cle": "TEXTES.G[4].c[2].p",
+"fr": "J'ai minimisé ce qu'elle a vu. Elle sait que c'est plus grave que ça.",
+"ligne": "P1-094"
+},
+{
+"num": "P1-095",
+"cle": "TEXTES.G[5].intro[0]",
+"fr": "Je sais pas si je devrais te raconter tout ça.",
+"ligne": "P1-095"
+},
+{
+"num": "P1-096",
+"cle": "TEXTES.G[5].intro[1]",
+"fr": "Je te connais même pas.",
+"ligne": "P1-096"
+},
+{
+"num": "P1-097",
+"cle": "TEXTES.G[5].edu",
+"fr": "Elle a raison de se méfier. Je dois la rassurer sans la brusquer.",
+"ligne": "P1-097"
+},
+{
+"num": "P1-098",
+"cle": "TEXTES.G[5].c[0].t",
+"fr": "T'es obligée à rien. C'est toi qui décides.",
+"ligne": "P1-098"
+},
+{
+"num": "P1-099",
+"cle": "TEXTES.G[5].c[0].p",
+"fr": "Je lui laisse le choix. C'est ce qui la rassure le plus.",
+"ligne": "P1-099"
+},
+{
+"num": "P1-100",
+"cle": "TEXTES.G[5].c[1].t",
+"fr": "Dis-moi juste ce que tu sais.",
+"ligne": "P1-100"
+},
+{
+"num": "P1-101",
+"cle": "TEXTES.G[5].c[1].p",
+"fr": "C'était un ordre. Elle se méfie encore plus.",
+"ligne": "P1-101"
+},
+{
+"num": "P1-102",
+"cle": "TEXTES.G[5].c[2].t",
+"fr": "Je veux juste savoir si elle va bien. Rien d'autre.",
+"ligne": "P1-102"
+},
+{
+"num": "P1-103",
+"cle": "TEXTES.G[5].c[2].p",
+"fr": "Sincère… mais elle ne sait toujours pas si elle peut me faire confiance.",
+"ligne": "P1-103"
+},
+{
+"num": "P1-104",
+"cle": "TEXTES.CRISIS.intro[0]",
+"fr": "Attends.",
+"ligne": "P1-104"
+},
+{
+"num": "P1-105",
+"cle": "TEXTES.CRISIS.intro[1]",
+"fr": "T'es dans quelle classe ?",
+"ligne": "P1-105"
+},
+{
+"num": "P1-106",
+"cle": "TEXTES.CRISIS.intro[2]",
+"fr": "Tu connais qui dans la sienne ?",
+"ligne": "P1-106"
+},
+{
+"num": "P1-107",
+"cle": "TEXTES.CRISIS.c[0].t",
+"fr": "T'as raison d'être méfiante. Tu me connais pas.",
+"ligne": "P1-107"
+},
+{
+"num": "P1-108",
+"cle": "TEXTES.CRISIS.c[0].p",
+"fr": "J'ai reconnu qu'elle avait raison de se méfier. Ça la désarme.",
+"ligne": "P1-108"
+},
+{
+"num": "P1-109",
+"cle": "TEXTES.CRISIS.c[1].t",
+"fr": "Je fais pas partie des gens qui lui ont fait du mal.",
+"ligne": "P1-109"
+},
+{
+"num": "P1-110",
+"cle": "TEXTES.CRISIS.c[1].p",
+"fr": "Elle m'entend… mais elle n'a aucune preuve.",
+"ligne": "P1-110"
+},
+{
+"num": "P1-111",
+"cle": "TEXTES.CRISIS.c[2].t",
+"fr": "Fais-moi confiance, j'essaie juste d'aider.",
+"ligne": "P1-111"
+},
+{
+"num": "P1-112",
+"cle": "TEXTES.CRISIS.c[2].p",
+"fr": "« Fais-moi confiance » : c'est exactement ce que dirait quelqu'un de pas fiable.",
+"ligne": "P1-112"
+},
+{
+"num": "P1-113",
+"cle": "TEXTES.fins.imm.titre",
+"fr": "Fin de conversation",
+"ligne": "P1-113"
+},
+{
+"num": "P1-114",
+"cle": "TEXTES.fins.imm.corps",
+"fr": "(elle ne répond plus)",
+"ligne": "P1-039"
+},
+{
+"num": "P1-115",
+"cle": "TEXTES.fins.blocage.titre",
+"fr": "🔴 Confiance perdue",
+"ligne": "P1-115"
+},
+{
+"num": "P1-116",
+"cle": "TEXTES.fins.blocage.ines",
+"fr": "Je savais qu'on ne pouvait pas te faire confiance.",
+"ligne": "P1-116"
+},
+{
+"num": "P1-117",
+"cle": "TEXTES.fins.blocage.conseil",
+"fr": "Deux réponses maladroites, et Inès s'est fermée. Recommence : parle-lui de Clara et de ce que tu ressens, sans la presser ni la juger.",
+"ligne": "P1-117"
+},
+{
+"num": "P1-118",
+"cle": "TEXTES.fins.blocage.sys",
+"fr": "(elle ne répond plus)",
+"ligne": "P1-039"
+},
+{
+"num": "P1-119",
+"cle": "TEXTES.fins.succes.titre",
+"fr": "🟢 Inès te fait confiance",
+"ligne": "P1-119"
+},
+{
+"num": "P1-120",
+"cle": "TEXTES.fins.succes.p0ines",
+"fr": "J'ai les codes de son compte Instaclasse. Elle me les avait donnés au cas où.\nMais j'ose pas m'en servir. J'ai trop peur de tomber sur un truc horrible. Toi, ça te fera moins mal de regarder à ma place.",
+"ligne": "P1-120"
+},
+{
+"num": "P1-121",
+"cle": "TEXTES.fins.succes.p1ines",
+"fr": "Tu promets de faire attention à ce que tu lis ?",
+"ligne": "P1-121"
+},
+{
+"num": "P1-122",
+"cle": "TEXTES.fins.succes.p1leo",
+"fr": "Je promets.",
+"ligne": "P1-122"
+},
+{
+"num": "P1-123",
+"cle": "TEXTES.fins.succes.p1suite",
+"fr": "Et tu me dis si tu trouves quelque chose.",
+"ligne": "P1-123"
+},
+{
+"num": "P1-124",
+"cle": "TEXTES.fins.succes.p2ines",
+"fr": "Tu promets de respecter la vie privée de Clara ?",
+"ligne": "P1-124"
+},
+{
+"num": "P1-125",
+"cle": "TEXTES.fins.succes.p2leo",
+"fr": "Je le promets.",
+"ligne": "P1-125"
+},
+{
+"num": "P1-126",
+"cle": "TEXTES.fins.succes.codesMsg",
+"fr": "Voilà son identifiant et son mot de passe. Tu t'en sers, mais t'en parles à personne.",
+"ligne": "P1-126"
+},
+{
+"num": "P1-127",
+"cle": "TEXTES.fins.succes.nextPartBtn",
+"fr": "▶ Voir l'Instaclasse de Clara",
+"ligne": "P1-127"
+},
+{
+"num": "P1-128",
+"cle": "TEXTES.fins.succes.copied",
+"fr": "✓ Copié !",
+"ligne": "P1-128"
+},
+{
+"num": "P1-129",
+"cle": "TEXTES.fins.succes.ig.label",
+"fr": "📱 Instaclasse de Clara",
+"ligne": "P1-129"
+},
+{
+"num": "P1-130",
+"cle": "TEXTES.fins.succes.ig.compteLabel",
+"fr": "compte :",
+"ligne": "P1-130"
+},
+{
+"num": "P1-131",
+"cle": "TEXTES.fins.succes.ig.mdpLabel",
+"fr": "mdp :",
+"ligne": "P1-131"
+},
+{
+"num": "P1-132",
+"cle": "TEXTES.fins.succes.ig.warn",
+"fr": "⚠ C'est sa vie privée. Respecte-la.",
+"ligne": "P1-132"
+},
+{
+"num": "P1-133",
+"cle": "TEXTES.fins.fragile.titre",
+"fr": "🟡 Succès fragile",
+"ligne": "P1-133"
+},
+{
+"num": "P1-134",
+"cle": "TEXTES.fins.fragile.p0ines",
+"fr": "J'ai les codes de son compte Instaclasse. Elle me les avait donnés au cas où.\nMais j'ose pas m'en servir. J'ai trop peur de tomber sur un truc horrible. Toi, ça te fera moins mal de regarder à ma place.",
+"ligne": "P1-120"
+},
+{
+"num": "P1-135",
+"cle": "TEXTES.fins.fragile.p1ines",
+"fr": "Je sais vraiment pas si je fais bien.\nTu me promets de faire attention ?",
+"ligne": "P1-135"
+},
+{
+"num": "P1-136",
+"cle": "TEXTES.fins.fragile.p1leo",
+"fr": "Oui.",
+"ligne": "P1-136"
+},
+{
+"num": "P1-137",
+"cle": "TEXTES.fins.fragile.p2ines",
+"fr": "Tu promets de respecter la vie privée de Clara ?",
+"ligne": "P1-124"
+},
+{
+"num": "P1-138",
+"cle": "TEXTES.fins.fragile.p2leo",
+"fr": "Oui.",
+"ligne": "P1-136"
+},
+{
+"num": "P1-139",
+"cle": "TEXTES.fins.fragile.codesMsg",
+"fr": "Voilà son identifiant et son mot de passe. Tu t'en sers, mais t'en parles à personne.",
+"ligne": "P1-126"
+},
+{
+"num": "P1-140",
+"cle": "TEXTES.fins.fragile.nextPartBtn",
+"fr": "▶ Voir l'Instaclasse de Clara",
+"ligne": "P1-127"
+},
+{
+"num": "P1-141",
+"cle": "TEXTES.fins.fragile.copied",
+"fr": "✓ Copié !",
+"ligne": "P1-128"
+},
+{
+"num": "P1-142",
+"cle": "TEXTES.fins.fragile.ig.label",
+"fr": "📱 Instaclasse de Clara",
+"ligne": "P1-129"
+},
+{
+"num": "P1-143",
+"cle": "TEXTES.fins.fragile.ig.compteLabel",
+"fr": "compte :",
+"ligne": "P1-130"
+},
+{
+"num": "P1-144",
+"cle": "TEXTES.fins.fragile.ig.mdpLabel",
+"fr": "mdp :",
+"ligne": "P1-131"
+},
+{
+"num": "P1-145",
+"cle": "TEXTES.fins.fragile.ig.warn",
+"fr": "⚠ Sois prudent.",
+"ligne": "P1-145"
+},
+{
+"num": "P1-146",
+"cle": "TEXTES.fins.echec.titre",
+"fr": "🔴 Échec",
+"ligne": "P1-146"
+},
+{
+"num": "P1-147",
+"cle": "TEXTES.fins.echec.ines",
+"fr": "Non. \nArrête de fouiller. C'est pas tes affaires.",
+"ligne": "P1-147"
+},
+{
+"num": "P1-148",
+"cle": "TEXTES.fins.echec.sys",
+"fr": "(elle ne répond plus)",
+"ligne": "P1-039"
+},
+{
+"num": "P1-149",
+"cle": "UI.secondConvo.statusOnline",
+"fr": "en ligne",
+"ligne": "P1-012"
+},
+{
+"num": "P1-150",
+"cle": "UI.secondConvo.statusTyping",
+"fr": "écrit…",
+"ligne": "P1-013"
+},
+{
+"num": "P1-151",
+"cle": "UI.secondConvo.playerMsg",
+"fr": "Inès, je crois que je sais où est Clara.",
+"ligne": "P1-151"
+},
+{
+"num": "P1-152",
+"cle": "UI.secondConvo.q",
+"fr": "Quoi ?? Où ça ?",
+"ligne": "P1-152"
+},
+{
+"num": "P1-153",
+"cle": "UI.secondConvo.foundHavre[0]",
+"fr": "Son « havre secret » ??",
+"ligne": "P1-153"
+},
+{
+"num": "P1-154",
+"cle": "UI.secondConvo.foundHavre[1]",
+"fr": "C'est comme ça qu'elle appelait la maison de sa tante, à la campagne.",
+"ligne": "P1-154"
+},
+{
+"num": "P1-155",
+"cle": "UI.secondConvo.foundTante[0]",
+"fr": "Chez sa tante ??",
+"ligne": "P1-155"
+},
+{
+"num": "P1-156",
+"cle": "UI.secondConvo.foundTante[1]",
+"fr": "Mais oui… c'est là qu'elle allait quand ça allait pas. Elle appelait ça son « havre secret ».",
+"ligne": "P1-156"
+},
+{
+"num": "P1-157",
+"cle": "UI.secondConvo.foundSuite[0]",
+"fr": "J'y avais même pas pensé.",
+"ligne": "P1-157"
+},
+{
+"num": "P1-158",
+"cle": "UI.secondConvo.foundSuite[1]",
+"fr": "J'ai le numéro de chez sa tante, on y était allées ensemble cet été. Attends, je le cherche.",
+"ligne": "P1-158"
+},
+{
+"num": "P1-159",
+"cle": "UI.secondConvo.apresNumero",
+"fr": "Appelle-la. Et dis-moi comment va Clara, stp.",
+"ligne": "P1-159"
+},
+{
+"num": "P1-160",
+"cle": "UI.secondConvo.reponseResolue",
+"fr": "Chez sa tante. Ils en parlent dans le groupe.",
+"ligne": "P1-160"
+},
+{
+"num": "P1-161",
+"cle": "UI.secondConvo.copyTitle",
+"fr": "Copier le numéro",
+"ligne": "P1-161"
+},
+{
+"num": "P1-162",
+"cle": "UI.secondConvo.relireBtn",
+"fr": "↺ Relire la première conversation",
+"ligne": "P1-162"
+},
+{
+"num": "P1-163",
+"cle": "UI.secondConvo.wrongAnswer",
+"fr": "Hein ? Je comprends pas. Elle serait où, d'après toi ?",
+"ligne": "P1-163"
+},
+{
+"num": "P1-164",
+"cle": "UI.secondConvo.nextBtn",
+"fr": "→ Partie 4 : Convaincre Clara",
+"ligne": "P1-164"
+},
+{
+"num": "P2-001",
+"cle": "2_Compte_de_Clara.html#i1-line",
+"fr": "Ce qu'Inès m'a dit ne laisse aucun doute : quelqu'un harcèle Clara en ligne.",
+"ligne": "P2-001"
+},
+{
+"num": "P2-002",
+"cle": "2_Compte_de_Clara.html#i1-line",
+"fr": "Mais le harcèlement peut prendre bien des formes.",
+"ligne": "P2-002"
+},
+{
+"num": "P2-003",
+"cle": "2_Compte_de_Clara.html#i1-line",
+"fr": "Je vais fouiller ses messages et ses photos pour comprendre ce qu'elle a vécu, et nommer chaque forme de harcèlement.",
+"ligne": "P2-003"
+},
+{
+"num": "P2-004",
+"cle": "2_Compte_de_Clara.html#intro2-btn",
+"fr": "Voir son Instaclasse →",
+"ligne": "P2-004"
+},
+{
+"num": "P2-005",
+"cle": "2_Compte_de_Clara.html#i1-skip",
+"fr": "appuyer pour continuer",
+"ligne": "P1-006"
+},
+{
+"num": "P2-006",
+"cle": "2_Compte_de_Clara.html#tag",
+"fr": "Simulation",
+"ligne": "P2-006"
+},
+{
+"num": "P2-007",
+"cle": "2_Compte_de_Clara.html#banner",
+"fr": "Exercice pédagogique sur le cyberharcèlement, créé à des fins éducatives - tous les personnages et messages sont fictifs.",
+"ligne": "P2-007"
+},
+{
+"num": "P2-008",
+"cle": "2_Compte_de_Clara.html#nav-bar",
+"fr": "📷 Instaclasse",
+"ligne": "P2-008"
+},
+{
+"num": "P2-009",
+"cle": "2_Compte_de_Clara.html#stat",
+"fr": "publications",
+"ligne": "P2-009"
+},
+{
+"num": "P2-010",
+"cle": "2_Compte_de_Clara.html#stat",
+"fr": "abonnés",
+"ligne": "P2-010"
+},
+{
+"num": "P2-011",
+"cle": "2_Compte_de_Clara.html#stat",
+"fr": "abonnements",
+"ligne": "P2-011"
+},
+{
+"num": "P2-012",
+"cle": "2_Compte_de_Clara.html#name",
+"fr": "Clara Fontaine",
+"ligne": "P2-012"
+},
+{
+"num": "P2-013",
+"cle": "2_Compte_de_Clara.html#bio",
+"fr": "✨ 14 ans • Collège J. Prévert 🎒 🎵 musique | 🐱 chats | 🍕 pizza forever",
+"ligne": "P2-013"
+},
+{
+"num": "P2-014",
+"cle": "2_Compte_de_Clara.html#btn-outline",
+"fr": "Modifier le profil",
+"ligne": "P2-014"
+},
+{
+"num": "P2-015",
+"cle": "2_Compte_de_Clara.html#btn-outline",
+"fr": "Partager",
+"ligne": "P2-015"
+},
+{
+"num": "P2-016",
+"cle": "2_Compte_de_Clara.html#story-item",
+"fr": "Vacances",
+"ligne": "P2-016"
+},
+{
+"num": "P2-017",
+"cle": "2_Compte_de_Clara.html#story-item",
+"fr": "Musique",
+"ligne": "P2-017"
+},
+{
+"num": "P2-018",
+"cle": "2_Compte_de_Clara.html#story-item",
+"fr": "Mon chat",
+"ligne": "P2-018"
+},
+{
+"num": "P2-019",
+"cle": "2_Compte_de_Clara.html#story-item",
+"fr": "Food",
+"ligne": "P2-019"
+},
+{
+"num": "P2-020",
+"cle": "2_Compte_de_Clara.html#nav-bar",
+"fr": "clara.fontaine",
+"ligne": null
+},
+{
+"num": "P2-021",
+"cle": "2_Compte_de_Clara.html#dm-filtre",
+"fr": "Tous",
+"ligne": "P2-021"
+},
+{
+"num": "P2-022",
+"cle": "2_Compte_de_Clara.html#dm-filtre",
+"fr": "Non lus",
+"ligne": "P2-022"
+},
+{
+"num": "P2-023",
+"cle": "2_Compte_de_Clara.html#threadSub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-024",
+"cle": "2_Compte_de_Clara.html#msg-input@placeholder",
+"fr": "Message…",
+"ligne": "P2-024"
+},
+{
+"num": "P2-025",
+"cle": "2_Compte_de_Clara.html#msg-send",
+"fr": "Envoyer",
+"ligne": "P2-025"
+},
+{
+"num": "P2-026",
+"cle": "2_Compte_de_Clara.html#mission-box",
+"fr": "Signaler ce compte",
+"ligne": "P2-026"
+},
+{
+"num": "P2-027",
+"cle": "2_Compte_de_Clara.html#report-steps",
+"fr": "Fais une capture d'écran d'abord. Une fois le compte signalé ou bloqué, tu n'auras plus accès aux messages - et ce sont eux, la preuve.",
+"ligne": "P2-027"
+},
+{
+"num": "P2-028",
+"cle": "2_Compte_de_Clara.html#report-steps",
+"fr": "Bloque le compte. Il ne pourra plus écrire ni voir le profil.",
+"ligne": "P2-028"
+},
+{
+"num": "P2-029",
+"cle": "2_Compte_de_Clara.html#report-steps",
+"fr": "Signale-le au réseau, puis parle à un adulte. Un signalement tout seul suffit rarement.",
+"ligne": "P2-029"
+},
+{
+"num": "P2-030",
+"cle": "2_Compte_de_Clara.html#report-go",
+"fr": "Capture, blocage, signalement →",
+"ligne": "P2-030"
+},
+{
+"num": "P2-031",
+"cle": "2_Compte_de_Clara.html#report-cancel",
+"fr": "Annuler",
+"ligne": "P2-031"
+},
+{
+"num": "P2-032",
+"cle": "2_Compte_de_Clara.html#mission-box",
+"fr": "Avant de continuer",
+"ligne": "P2-032"
+},
+{
+"num": "P2-033",
+"cle": "2_Compte_de_Clara.html#mission-box",
+"fr": "Tu viens de lire tous les messages privés de Clara. Elle ne le sait pas, et elle n'a rien autorisé. Inès t'avait fait promettre de respecter sa vie privée. Léo a eu peur pour elle - ça n'en fait pas quelque chose de normal. Entrer dans le compte de quelqu'un reste interdit, même quand on s'inquiète. Ce qu'on peut faire, à sa place : en parler à un adulte. Léo ne l'a pas encore fait.",
+"ligne": "P2-033"
+},
+{
+"num": "P2-034",
+"cle": "2_Compte_de_Clara.html#privacy-go",
+"fr": "J'ai compris →",
+"ligne": "P2-034"
+},
+{
+"num": "P2-035",
+"cle": "2_Compte_de_Clara.html#ig-gate-logo",
+"fr": "Instaclasse",
+"ligne": "P2-035"
+},
+{
+"num": "P2-036",
+"cle": "2_Compte_de_Clara.html#ig-gate-sub",
+"fr": "Inès t'a transmis les identifiants de Clara. Connecte-toi pour accéder à son compte.",
+"ligne": "P2-036"
+},
+{
+"num": "P2-037",
+"cle": "2_Compte_de_Clara.html#ig-user@placeholder",
+"fr": "Nom d'utilisateur",
+"ligne": "P2-037"
+},
+{
+"num": "P2-038",
+"cle": "2_Compte_de_Clara.html#ig-pass@placeholder",
+"fr": "Mot de passe",
+"ligne": "P2-038"
+},
+{
+"num": "P2-039",
+"cle": "2_Compte_de_Clara.html#ig-eye@title",
+"fr": "Afficher le mot de passe",
+"ligne": "P2-039"
+},
+{
+"num": "P2-040",
+"cle": "2_Compte_de_Clara.html#ig-eye@aria-label",
+"fr": "Afficher le mot de passe",
+"ligne": "P2-039"
+},
+{
+"num": "P2-041",
+"cle": "2_Compte_de_Clara.html#ig-login-btn",
+"fr": "Se connecter",
+"ligne": "P2-041"
+},
+{
+"num": "P2-042",
+"cle": "2_Compte_de_Clara.html#warning-box",
+"fr": "Simulation pédagogique",
+"ligne": "P2-042"
+},
+{
+"num": "P2-043",
+"cle": "2_Compte_de_Clara.html#warning-box",
+"fr": "Ce que tu vas voir simule ce que vit une victime de cyberharcèlement. Les messages sont fictifs mais représentent une réalité vécue par de nombreux élèves. L'objectif est de comprendre l'impact de ces comportements.",
+"ligne": "P2-043"
+},
+{
+"num": "P2-044",
+"cle": "2_Compte_de_Clara.html#warn-btn",
+"fr": "Je comprends, continuer →",
+"ligne": "P2-044"
+},
+{
+"num": "P2-045",
+"cle": "2_Compte_de_Clara.html#mission-box",
+"fr": "Ce qu'il faut repérer",
+"ligne": "P2-045"
+},
+{
+"num": "P2-046",
+"cle": "2_Compte_de_Clara.html#mission-box",
+"fr": "Clara est victime de cyberharcèlement. Mais il y en a plusieurs types, et chacun blesse à sa façon.",
+"ligne": "P2-046"
+},
+{
+"num": "P2-047",
+"cle": "2_Compte_de_Clara.html#mission-box",
+"fr": "Lis ses messages privés et les commentaires sous ses photos. Quand un message te paraît violent, appuie dessus et choisis dans la liste de quel type de harcèlement il s'agit. Un message peut en combiner plusieurs.",
+"ligne": "P2-047"
+},
+{
+"num": "P2-048",
+"cle": "2_Compte_de_Clara.html#mission-box",
+"fr": "Trouve au moins 6 types sur 9. Le bouton 📋 Types, en bas de l'écran, montre la liste.",
+"ligne": "P2-048"
+},
+{
+"num": "P2-049",
+"cle": "2_Compte_de_Clara.html#mission-btn",
+"fr": "Commencer l'enquête →",
+"ligne": "P2-049"
+},
+{
+"num": "P2-050",
+"cle": "2_Compte_de_Clara.html#secret-notif",
+"fr": "📩 Nouveau message - appuie ici",
+"ligne": "P2-050"
+},
+{
+"num": "P2-051",
+"cle": "2_Compte_de_Clara.html#code-box",
+"fr": "Code du groupe",
+"ligne": "P2-051"
+},
+{
+"num": "P2-052",
+"cle": "2_Compte_de_Clara.html#code-box",
+"fr": "Le code d'accès du groupe Whatsupp, envoyé par Kevin. Retiens-le, il ouvre la Partie 3 :",
+"ligne": "P2-052"
+},
+{
+"num": "P2-053",
+"cle": "2_Compte_de_Clara.html#code-box",
+"fr": "Ce que tu liras ensuite est ce que le groupe a écrit.",
+"ligne": "P2-053"
+},
+{
+"num": "P2-054",
+"cle": "2_Compte_de_Clara.html#code-box",
+"fr": "Passer à la Partie 3 →",
+"ligne": "P2-054"
+},
+{
+"num": "P2-055",
+"cle": "2_Compte_de_Clara.html#code-close",
+"fr": "← Relire le message de Kevin",
+"ligne": "P2-055"
+},
+{
+"num": "P2-056",
+"cle": "2_Compte_de_Clara.html#synthesis-close",
+"fr": "Fermer",
+"ligne": "P2-056"
+},
+{
+"num": "P2-057",
+"cle": "2_Compte_de_Clara.html#lightbox",
+"fr": "clara.fontaine",
+"ligne": null
+},
+{
+"num": "P2-058",
+"cle": "2_Compte_de_Clara.html#lb-time",
+"fr": "il y a 1 semaine",
+"ligne": "P2-058"
+},
+{
+"num": "P2-059",
+"cle": "2_Compte_de_Clara.html#lightbox",
+"fr": "clara.fontaine",
+"ligne": null
+},
+{
+"num": "P2-060",
+"cle": "2_Compte_de_Clara.html#eq-back",
+"fr": "← Retour au groupe",
+"ligne": "P2-060"
+},
+{
+"num": "P2-061",
+"cle": "2_Compte_de_Clara.html#eq-stay",
+"fr": "Rester sur l'Instaclasse",
+"ligne": "P2-061"
+},
+{
+"num": "P2-062",
+"cle": "2_Compte_de_Clara.html#types-btn",
+"fr": "📋 Types",
+"ligne": "P2-062"
+},
+{
+"num": "P2-063",
+"cle": "2_Compte_de_Clara.html#id-cancel",
+"fr": "Fermer",
+"ligne": "P2-056"
+},
+{
+"num": "P2-064",
+"cle": "2_Compte_de_Clara.html#menu-btn",
+"fr": "← Menu",
+"ligne": "P1-001"
+},
+{
+"num": "P2-065",
+"cle": "2_Compte_de_Clara.html#fs-btn@title",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P2-066",
+"cle": "2_Compte_de_Clara.html#fs-btn@aria-label",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P2-067",
+"cle": "2_Compte_de_Clara.html (connexion)",
+"fr": "Identifiants incorrects. Relis les messages d'Inès.",
+"ligne": "P2-067"
+},
+{
+"num": "P2-068",
+"cle": "HARCEL_TYPES.body_shaming.label",
+"fr": "Body shaming",
+"ligne": "P2-068"
+},
+{
+"num": "P2-069",
+"cle": "HARCEL_TYPES.body_shaming.desc",
+"fr": "Moqueries ciblant le corps, le poids ou l'apparence.",
+"ligne": "P2-069"
+},
+{
+"num": "P2-070",
+"cle": "HARCEL_TYPES.menaces.label",
+"fr": "Menaces et intimidation",
+"ligne": "P2-070"
+},
+{
+"num": "P2-071",
+"cle": "HARCEL_TYPES.menaces.desc",
+"fr": "Messages menaçants pour faire peur ou réduire la victime au silence.",
+"ligne": "P2-071"
+},
+{
+"num": "P2-072",
+"cle": "HARCEL_TYPES.rumeurs.label",
+"fr": "Rumeurs et diffamation",
+"ligne": "P2-072"
+},
+{
+"num": "P2-073",
+"cle": "HARCEL_TYPES.rumeurs.desc",
+"fr": "Répandre des histoires fausses ou intimes, ou un surnom, pour salir sa réputation.",
+"ligne": "P2-073"
+},
+{
+"num": "P2-074",
+"cle": "HARCEL_TYPES.exclusion.label",
+"fr": "Exclusion et isolement forcé",
+"ligne": "P2-074"
+},
+{
+"num": "P2-075",
+"cle": "HARCEL_TYPES.exclusion.desc",
+"fr": "Pousser la victime à se sentir exclue de tout espace social.",
+"ligne": "P2-075"
+},
+{
+"num": "P2-076",
+"cle": "HARCEL_TYPES.diffusion_images.label",
+"fr": "Diffusion d'images sans consentement",
+"ligne": "P2-076"
+},
+{
+"num": "P2-077",
+"cle": "HARCEL_TYPES.diffusion_images.desc",
+"fr": "Partager ou menacer de partager des images sans accord.",
+"ligne": "P2-077"
+},
+{
+"num": "P2-078",
+"cle": "HARCEL_TYPES.manipulation.label",
+"fr": "Manipulation psychologique",
+"ligne": "P2-078"
+},
+{
+"num": "P2-079",
+"cle": "HARCEL_TYPES.manipulation.desc",
+"fr": "Insinuations et jeux mentaux pour créer angoisse et confusion.",
+"ligne": "P2-079"
+},
+{
+"num": "P2-080",
+"cle": "HARCEL_TYPES.sextorsion.label",
+"fr": "Chantage / Sextorsion",
+"ligne": "P2-080"
+},
+{
+"num": "P2-081",
+"cle": "HARCEL_TYPES.sextorsion.desc",
+"fr": "Utiliser des images ou secrets intimes pour faire pression.",
+"ligne": "P2-081"
+},
+{
+"num": "P2-082",
+"cle": "HARCEL_TYPES.sexiste.label",
+"fr": "Harcèlement sexiste",
+"ligne": "P2-082"
+},
+{
+"num": "P2-083",
+"cle": "HARCEL_TYPES.sexiste.desc",
+"fr": "Attaques fondées sur le genre pour humilier et diminuer.",
+"ligne": "P2-083"
+},
+{
+"num": "P2-084",
+"cle": "HARCEL_TYPES.scolaire.label",
+"fr": "Harcèlement scolaire prolongé",
+"ligne": "P2-084"
+},
+{
+"num": "P2-085",
+"cle": "HARCEL_TYPES.scolaire.desc",
+"fr": "Ce qui se passe au collège (cantine, couloirs, cours) continue sur les réseaux, et inversement.",
+"ligne": "P2-085"
+},
+{
+"num": "P2-086",
+"cle": "CONVOS[0].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-087",
+"cle": "CONVOS[0].section",
+"fr": "Aujourd'hui",
+"ligne": "P2-087"
+},
+{
+"num": "P2-088",
+"cle": "CONVOS[0].preview",
+"fr": "t'as vu ta tete sur ta derniere photo serieusement",
+"ligne": "P2-088"
+},
+{
+"num": "P2-089",
+"cle": "CONVOS[0].why",
+"fr": "Il s'attaque à son visage, à ses cheveux : c'est du body shaming. Et « t'as bien fait de plus venir en cours » la pousse à quitter le collège : c'est de l'exclusion, qui prolonge le harcèlement scolaire.",
+"ligne": "P2-089"
+},
+{
+"num": "P2-090",
+"cle": "CONVOS[0].messages[0].text",
+"fr": "t'as vu ta tete sur ta derniere photo serieusement",
+"ligne": "P2-088"
+},
+{
+"num": "P2-091",
+"cle": "CONVOS[0].messages[1].text",
+"fr": "ta coupe de cheveux c'est une catastrophe",
+"ligne": "P2-091"
+},
+{
+"num": "P2-092",
+"cle": "CONVOS[0].messages[2].text",
+"fr": "franchement t'as bien fait de plus venir en cours",
+"ligne": "P2-092"
+},
+{
+"num": "P2-093",
+"cle": "CONVOS[1].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-094",
+"cle": "CONVOS[1].preview",
+"fr": "tout le monde sait ce que t'as fait avec Nathan",
+"ligne": "P2-094"
+},
+{
+"num": "P2-095",
+"cle": "CONVOS[1].why",
+"fr": "Une histoire sur sa vie intime, sans preuve, que « tout le monde » connaîtrait : c'est une rumeur. Elle vise Clara parce que c'est une fille - personne ne le reprocherait à Nathan : c'est aussi sexiste. La dernière phrase est une menace.",
+"ligne": "P2-095"
+},
+{
+"num": "P2-096",
+"cle": "CONVOS[1].messages[0].text",
+"fr": "tout le monde sait ce que t'as fait avec Nathan aux toilettes",
+"ligne": "P2-096"
+},
+{
+"num": "P2-097",
+"cle": "CONVOS[1].messages[1].text",
+"fr": "t'as pas honte ?",
+"ligne": "P2-097"
+},
+{
+"num": "P2-098",
+"cle": "CONVOS[1].messages[2].text",
+"fr": "ca se fait pas de se comporter comme ca",
+"ligne": "P2-098"
+},
+{
+"num": "P2-099",
+"cle": "CONVOS[1].messages[3].text",
+"fr": "tu vas le regretter",
+"ligne": "P2-099"
+},
+{
+"num": "P2-100",
+"cle": "CONVOS[2].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-101",
+"cle": "CONVOS[2].preview",
+"fr": "ta photo de profil elle est pathetique",
+"ligne": "P2-101"
+},
+{
+"num": "P2-102",
+"cle": "CONVOS[2].why",
+"fr": "Se moquer de son visage et de son physique, c'est du body shaming. « Même les 6e se foutent de toi » ramène l'humiliation dans les couloirs du collège, et l'exclut.",
+"ligne": "P2-102"
+},
+{
+"num": "P2-103",
+"cle": "CONVOS[2].messages[0].text",
+"fr": "ta photo de profil elle est vraiment pathetique",
+"ligne": "P2-103"
+},
+{
+"num": "P2-104",
+"cle": "CONVOS[2].messages[1].text",
+"fr": "tu te crois belle ou quoi",
+"ligne": "P2-104"
+},
+{
+"num": "P2-105",
+"cle": "CONVOS[2].messages[2].text",
+"fr": "meme les 6emes se foutent de toi quand tu passes dans le couloir",
+"ligne": "P2-105"
+},
+{
+"num": "P2-106",
+"cle": "CONVOS[3].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-107",
+"cle": "CONVOS[3].preview",
+"fr": "il parait que t'as vole dans le casier de lena",
+"ligne": "P2-107"
+},
+{
+"num": "P2-108",
+"cle": "CONVOS[3].why",
+"fr": "Une accusation inventée (« il paraît que… ») et répandue à toute la classe pour salir sa réputation : c'est une rumeur. « C'est tout le monde qui le dit » sert à la rendre crédible.",
+"ligne": "P2-108"
+},
+{
+"num": "P2-109",
+"cle": "CONVOS[3].messages[0].text",
+"fr": "il parait que t'as vole dans le casier de lena",
+"ligne": "P2-107"
+},
+{
+"num": "P2-110",
+"cle": "CONVOS[3].messages[1].text",
+"fr": "c'est pour ca qu'elle te parle plus",
+"ligne": "P2-110"
+},
+{
+"num": "P2-111",
+"cle": "CONVOS[3].messages[2].text",
+"fr": "j'ai prevenu toute la classe, gardez vos affaires 😂",
+"ligne": "P2-111"
+},
+{
+"num": "P2-112",
+"cle": "CONVOS[3].messages[3].text",
+"fr": "c'est pas moi qui le dis c'est tout le monde",
+"ligne": "P2-112"
+},
+{
+"num": "P2-113",
+"cle": "CONVOS[4].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-114",
+"cle": "CONVOS[4].preview",
+"fr": "j'ai screenshotte ta derniere story tu faisais pitie",
+"ligne": "P2-114"
+},
+{
+"num": "P2-115",
+"cle": "CONVOS[4].why",
+"fr": "Capturer sa story et la faire tourner sans son accord, c'est diffuser son image sans consentement. Dire que ses larmes sont « de crocodile », c'est nier sa souffrance pour qu'elle doute d'elle-même : de la manipulation.",
+"ligne": "P2-115"
+},
+{
+"num": "P2-116",
+"cle": "CONVOS[4].messages[0].text",
+"fr": "j'ai screenshotte ta derniere story avant que tu la supprimes",
+"ligne": "P2-116"
+},
+{
+"num": "P2-117",
+"cle": "CONVOS[4].messages[1].text",
+"fr": "tu faisais vraiment pitie avec tes larmes de crocodile",
+"ligne": "P2-117"
+},
+{
+"num": "P2-118",
+"cle": "CONVOS[4].messages[2].text",
+"fr": "ca tourne dans toute la classe depuis ce matin",
+"ligne": "P2-118"
+},
+{
+"num": "P2-119",
+"cle": "CONVOS[5].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-120",
+"cle": "CONVOS[5].section",
+"fr": "Hier",
+"ligne": "P2-120"
+},
+{
+"num": "P2-121",
+"cle": "CONVOS[5].preview",
+"fr": "t'as un vrai probleme avec ton poids tu sais ca",
+"ligne": "P2-121"
+},
+{
+"num": "P2-122",
+"cle": "CONVOS[5].why",
+"fr": "Son poids, son reflet dans le miroir : attaquer le corps de quelqu'un pour l'humilier, c'est du body shaming. Répété, ça peut abîmer longtemps l'image qu'on a de soi.",
+"ligne": "P2-122"
+},
+{
+"num": "P2-123",
+"cle": "CONVOS[5].messages[0].text",
+"fr": "t'as un vrai probleme avec ton poids tu sais ca ?",
+"ligne": "P2-123"
+},
+{
+"num": "P2-124",
+"cle": "CONVOS[5].messages[1].text",
+"fr": "chaque fois qu'on te voyait en cours c'etait de pire en pire",
+"ligne": "P2-124"
+},
+{
+"num": "P2-125",
+"cle": "CONVOS[5].messages[2].text",
+"fr": "t'as pas de miroir chez toi ?",
+"ligne": "P2-125"
+},
+{
+"num": "P2-126",
+"cle": "CONVOS[6].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-127",
+"cle": "CONVOS[6].preview",
+"fr": "on a fait un sondage sur toi dans la classe",
+"ligne": "P2-127"
+},
+{
+"num": "P2-128",
+"cle": "CONVOS[6].why",
+"fr": "Un sondage sur « la personne la plus nulle du collège », c'est monter toute une classe contre une seule personne : de l'exclusion, née au collège. Le « 94 % » est sûrement inventé : il est là pour qu'elle se croie seule contre tous.",
+"ligne": "P2-128"
+},
+{
+"num": "P2-129",
+"cle": "CONVOS[6].messages[0].text",
+"fr": "on a fait un sondage sur toi dans la classe",
+"ligne": "P2-127"
+},
+{
+"num": "P2-130",
+"cle": "CONVOS[6].messages[1].text",
+"fr": "la question c'etait : Clara est-elle la personne la plus nulle du college",
+"ligne": "P2-130"
+},
+{
+"num": "P2-131",
+"cle": "CONVOS[6].messages[2].text",
+"fr": "94% ont vote oui",
+"ligne": "P2-131"
+},
+{
+"num": "P2-132",
+"cle": "CONVOS[6].messages[3].text",
+"fr": "tu vas arreter de te la peter maintenant ?",
+"ligne": "P2-132"
+},
+{
+"num": "P2-133",
+"cle": "CONVOS[7].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-134",
+"cle": "CONVOS[7].preview",
+"fr": "t'es tellement sensible ca devient pesant pour tout le monde",
+"ligne": "P2-134"
+},
+{
+"num": "P2-135",
+"cle": "CONVOS[7].why",
+"fr": "Lui dire qu'elle est « trop sensible », que ses larmes sont « pathologiques », c'est retourner la faute contre elle : elle finit par croire que le problème, c'est elle. C'est de la manipulation. « Les autres te supportent plus » ajoute l'isolement.",
+"ligne": "P2-135"
+},
+{
+"num": "P2-136",
+"cle": "CONVOS[7].messages[0].text",
+"fr": "t'es tellement sensible ca devient pesant pour tout le monde",
+"ligne": "P2-134"
+},
+{
+"num": "P2-137",
+"cle": "CONVOS[7].messages[1].text",
+"fr": "tu pleures pour un rien c'est pathologique",
+"ligne": "P2-137"
+},
+{
+"num": "P2-138",
+"cle": "CONVOS[7].messages[2].text",
+"fr": "les autres te supportent plus mais personne veut te le dire en face",
+"ligne": "P2-138"
+},
+{
+"num": "P2-139",
+"cle": "CONVOS[7].messages[3].text",
+"fr": "maintenant tu sais",
+"ligne": "P2-139"
+},
+{
+"num": "P2-140",
+"cle": "CONVOS[8].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-141",
+"cle": "CONVOS[8].preview",
+"fr": "tu dors ?",
+"ligne": "P2-141"
+},
+{
+"num": "P2-142",
+"cle": "CONVOS[8].why",
+"fr": "Écrire à 2 h 47 du matin « demain on sera encore là », c'est lui faire comprendre qu'elle n'est en sécurité nulle part, même la nuit, même chez elle : ce sont des menaces.",
+"ligne": "P2-142"
+},
+{
+"num": "P2-143",
+"cle": "CONVOS[8].messages[0].text",
+"fr": "tu dors ?",
+"ligne": "P2-141"
+},
+{
+"num": "P2-144",
+"cle": "CONVOS[8].messages[1].text",
+"fr": "nous on dort tres bien",
+"ligne": "P2-144"
+},
+{
+"num": "P2-145",
+"cle": "CONVOS[8].messages[2].text",
+"fr": "tu peux eteindre ton tel ca changera rien",
+"ligne": "P2-145"
+},
+{
+"num": "P2-146",
+"cle": "CONVOS[8].messages[3].text",
+"fr": "demain on sera encore la",
+"ligne": "P2-146"
+},
+{
+"num": "P2-147",
+"cle": "CONVOS[9].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-148",
+"cle": "CONVOS[9].section",
+"fr": "Cette semaine",
+"ligne": "P2-148"
+},
+{
+"num": "P2-149",
+"cle": "CONVOS[9].preview",
+"fr": "ta facon de t'habiller c'est vraiment une honte",
+"ligne": "P2-149"
+},
+{
+"num": "P2-150",
+"cle": "CONVOS[9].why",
+"fr": "Ses vêtements, son apparence : c'est du body shaming. « Même les profs ont remarqué » est sûrement faux, mais lui fait croire que tout le monde la juge. Et « reste chez toi » la pousse à disparaître : de l'exclusion.",
+"ligne": "P2-150"
+},
+{
+"num": "P2-151",
+"cle": "CONVOS[9].messages[0].text",
+"fr": "ta facon de t'habiller c'est vraiment une honte",
+"ligne": "P2-149"
+},
+{
+"num": "P2-152",
+"cle": "CONVOS[9].messages[1].text",
+"fr": "on dirait que tu t'habilles dans les poubelles",
+"ligne": "P2-152"
+},
+{
+"num": "P2-153",
+"cle": "CONVOS[9].messages[2].text",
+"fr": "meme les profs ont remarque",
+"ligne": "P2-153"
+},
+{
+"num": "P2-154",
+"cle": "CONVOS[9].messages[3].text",
+"fr": "tu devrais rester chez toi franchement",
+"ligne": "P2-154"
+},
+{
+"num": "P2-155",
+"cle": "CONVOS[10].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-156",
+"cle": "CONVOS[10].preview",
+"fr": "on parle de toi sur le groupe depuis hier soir",
+"ligne": "P2-156"
+},
+{
+"num": "P2-157",
+"cle": "CONVOS[10].why",
+"fr": "« On parle de toi, mais je te dirai pas quoi » : installer une angoisse sans rien de vérifiable, c'est de la manipulation. Évoquer ce que « les mecs de ta classe disent sur toi », c'est aussi laisser courir une rumeur.",
+"ligne": "P2-157"
+},
+{
+"num": "P2-158",
+"cle": "CONVOS[10].messages[0].text",
+"fr": "tu sais qu'on parle de toi sur le groupe depuis hier soir ?",
+"ligne": "P2-158"
+},
+{
+"num": "P2-159",
+"cle": "CONVOS[10].messages[1].text",
+"fr": "ce que les mecs de ta classe disent sur toi c'est pas joli",
+"ligne": "P2-159"
+},
+{
+"num": "P2-160",
+"cle": "CONVOS[10].messages[2].text",
+"fr": "je te dirai pas ce que c'est, ca te ferait trop de mal",
+"ligne": "P2-160"
+},
+{
+"num": "P2-161",
+"cle": "CONVOS[10].messages[3].text",
+"fr": "ou peut-etre que tu merites de savoir en fait",
+"ligne": "P2-161"
+},
+{
+"num": "P2-162",
+"cle": "CONVOS[11].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-163",
+"cle": "CONVOS[11].preview",
+"fr": "ta photo a ete partagee dans plusieurs groupes 💀",
+"ligne": "P2-163"
+},
+{
+"num": "P2-164",
+"cle": "CONVOS[11].why",
+"fr": "Sa photo circule dans des groupes où elle n'est pas, pour qu'on se moque d'elle : c'est la diffusion d'une image sans son consentement.",
+"ligne": "P2-164"
+},
+{
+"num": "P2-165",
+"cle": "CONVOS[11].messages[0].text",
+"fr": "ta photo a ete partagee dans plusieurs groupes 💀",
+"ligne": "P2-163"
+},
+{
+"num": "P2-166",
+"cle": "CONVOS[11].messages[1].text",
+"fr": "t'as un effet comique sans le vouloir c'est assez fort",
+"ligne": "P2-166"
+},
+{
+"num": "P2-167",
+"cle": "CONVOS[11].messages[2].text",
+"fr": "tout le monde se marre grace a toi",
+"ligne": "P2-167"
+},
+{
+"num": "P2-168",
+"cle": "CONVOS[12].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-169",
+"cle": "CONVOS[12].preview",
+"fr": "tes amis te parlent encore par pitie tu le sais non",
+"ligne": "P2-169"
+},
+{
+"num": "P2-170",
+"cle": "CONVOS[12].why",
+"fr": "Lui faire croire que ses amis la supportent par pitié, c'est l'éloigner des seules personnes qui pourraient l'aider : de la manipulation, qui mène à l'isolement.",
+"ligne": "P2-170"
+},
+{
+"num": "P2-171",
+"cle": "CONVOS[12].messages[0].text",
+"fr": "tes amis te parlent encore par pitie tu le sais non ?",
+"ligne": "P2-171"
+},
+{
+"num": "P2-172",
+"cle": "CONVOS[12].messages[1].text",
+"fr": "j'ai demande a quelqu'un de ton groupe il m'a dit qu'il te supportait plus",
+"ligne": "P2-172"
+},
+{
+"num": "P2-173",
+"cle": "CONVOS[12].messages[2].text",
+"fr": "t'as pas beaucoup d'avenir dans cette classe",
+"ligne": "P2-173"
+},
+{
+"num": "P2-174",
+"cle": "CONVOS[13].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-175",
+"cle": "CONVOS[13].section",
+"fr": "Le mois dernier",
+"ligne": "P2-175"
+},
+{
+"num": "P2-176",
+"cle": "CONVOS[13].preview",
+"fr": "4 likes sur ta photo avec 612 abonnes c'est nul",
+"ligne": "P2-176"
+},
+{
+"num": "P2-177",
+"cle": "CONVOS[13].why",
+"fr": "Compter ses likes pour lui prouver que « même ses abonnés l'ignorent », c'est lui faire sentir qu'elle n'a plus sa place, même en ligne : de l'exclusion.",
+"ligne": "P2-177"
+},
+{
+"num": "P2-178",
+"cle": "CONVOS[13].messages[0].text",
+"fr": "t'as vu ton nombre de likes sur ta derniere photo ?",
+"ligne": "P2-178"
+},
+{
+"num": "P2-179",
+"cle": "CONVOS[13].messages[1].text",
+"fr": "4 likes en 2 heures avec 612 abonnes c'est nul",
+"ligne": "P2-179"
+},
+{
+"num": "P2-180",
+"cle": "CONVOS[13].messages[2].text",
+"fr": "meme tes propres abonnes t'ignorent mdrrr",
+"ligne": "P2-180"
+},
+{
+"num": "P2-181",
+"cle": "CONVOS[13].messages[3].text",
+"fr": "prends ca comme un message",
+"ligne": "P2-181"
+},
+{
+"num": "P2-182",
+"cle": "CONVOS[14].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-183",
+"cle": "CONVOS[14].preview",
+"fr": "je comprends pas comment t'as encore des amis",
+"ligne": "P2-183"
+},
+{
+"num": "P2-184",
+"cle": "CONVOS[14].why",
+"fr": "« C'est pas méchant, c'est juste la vérité » : présenter une insulte comme un fait, pour qu'elle finisse par y croire, c'est de la manipulation. « Comment t'as encore des amis » cherche aussi à l'isoler.",
+"ligne": "P2-184"
+},
+{
+"num": "P2-185",
+"cle": "CONVOS[14].messages[0].text",
+"fr": "je comprends vraiment pas comment t'as encore des amis",
+"ligne": "P2-185"
+},
+{
+"num": "P2-186",
+"cle": "CONVOS[14].messages[1].text",
+"fr": "t'as rien d'interessant serieusement",
+"ligne": "P2-186"
+},
+{
+"num": "P2-187",
+"cle": "CONVOS[14].messages[2].text",
+"fr": "c'est pas mechant c'est juste la verite",
+"ligne": "P2-187"
+},
+{
+"num": "P2-188",
+"cle": "CONVOS[14].messages[3].text",
+"fr": "tu devrais y reflechir",
+"ligne": "P2-188"
+},
+{
+"num": "P2-189",
+"cle": "CONVOS[15].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-190",
+"cle": "CONVOS[15].preview",
+"fr": "on t'a filmee a la cantine hier t'etais au courant",
+"ligne": "P2-190"
+},
+{
+"num": "P2-191",
+"cle": "CONVOS[15].why",
+"fr": "La filmer sans qu'elle le sache et promettre que la vidéo « va tourner partout », c'est diffuser son image sans consentement - et la menacer.",
+"ligne": "P2-191"
+},
+{
+"num": "P2-192",
+"cle": "CONVOS[15].messages[0].text",
+"fr": "on t'a filmee a la cantine hier t'etais au courant ?",
+"ligne": "P2-192"
+},
+{
+"num": "P2-193",
+"cle": "CONVOS[15].messages[1].text",
+"fr": "t'avais l'air completement perdue comme d'hab",
+"ligne": "P2-193"
+},
+{
+"num": "P2-194",
+"cle": "CONVOS[15].messages[2].text",
+"fr": "ca va tourner partout ne t'inquiete pas",
+"ligne": "P2-194"
+},
+{
+"num": "P2-195",
+"cle": "CONVOS[16].sub",
+"fr": "Amie · Lyon",
+"ligne": "P2-195"
+},
+{
+"num": "P2-196",
+"cle": "CONVOS[16].preview",
+"fr": "clara reponds s'il te plait je m'inquiete",
+"ligne": "P2-196"
+},
+{
+"num": "P2-197",
+"cle": "CONVOS[16].messages[0].text",
+"fr": "Clara t'as pas repondu hier soir ca va ?",
+"ligne": "P2-197"
+},
+{
+"num": "P2-198",
+"cle": "CONVOS[16].messages[1].text",
+"fr": "j'ai vu que t'avais poste une story a minuit j'etais inquiete",
+"ligne": "P2-198"
+},
+{
+"num": "P2-199",
+"cle": "CONVOS[16].messages[2].text",
+"fr": "sarah je peux plus",
+"ligne": "P2-199"
+},
+{
+"num": "P2-200",
+"cle": "CONVOS[16].messages[3].text",
+"fr": "je sais pas comment t'expliquer c'est tous les jours maintenant",
+"ligne": "P2-200"
+},
+{
+"num": "P2-201",
+"cle": "CONVOS[16].messages[4].text",
+"fr": "les messages les commentaires les regards en cours",
+"ligne": "P2-201"
+},
+{
+"num": "P2-202",
+"cle": "CONVOS[16].messages[5].text",
+"fr": "j'ai plus envie de venir au college",
+"ligne": "P2-202"
+},
+{
+"num": "P2-203",
+"cle": "CONVOS[16].messages[6].text",
+"fr": "oh non clara... je savais pas que c'etait aussi grave",
+"ligne": "P2-203"
+},
+{
+"num": "P2-204",
+"cle": "CONVOS[16].messages[7].text",
+"fr": "pourquoi tu m'as pas dit avant",
+"ligne": "P2-204"
+},
+{
+"num": "P2-205",
+"cle": "CONVOS[16].messages[8].text",
+"fr": "j'osais pas j'avais honte",
+"ligne": "P2-205"
+},
+{
+"num": "P2-206",
+"cle": "CONVOS[16].messages[9].text",
+"fr": "sarah est-ce que je peux venir chez toi le weekend prochain",
+"ligne": "P2-206"
+},
+{
+"num": "P2-207",
+"cle": "CONVOS[16].messages[10].text",
+"fr": "j'ai besoin de partir d'ici meme juste 2 jours",
+"ligne": "P2-207"
+},
+{
+"num": "P2-208",
+"cle": "CONVOS[16].messages[11].text",
+"fr": "EVIDEMMENT tu viens quand tu veux tu le sais non",
+"ligne": "P2-208"
+},
+{
+"num": "P2-209",
+"cle": "CONVOS[16].messages[12].text",
+"fr": "je vais en parler a ma mere ce soir et on t'organise ca",
+"ligne": "P2-209"
+},
+{
+"num": "P2-210",
+"cle": "CONVOS[16].messages[13].text",
+"fr": "et clara s'il te plait parles-en a tes parents ou a un adulte au college",
+"ligne": "P2-210"
+},
+{
+"num": "P2-211",
+"cle": "CONVOS[16].messages[14].text",
+"fr": "t'as pas a subir ca toute seule",
+"ligne": "P2-211"
+},
+{
+"num": "P2-212",
+"cle": "CONVOS[16].messages[15].text",
+"fr": "merci sarah vraiment",
+"ligne": "P2-212"
+},
+{
+"num": "P2-213",
+"cle": "CONVOS[16].messages[16].text",
+"fr": "t'es la seule avec Ines qui me comprend",
+"ligne": "P2-213"
+},
+{
+"num": "P2-214",
+"cle": "CONVOS[16].messages[17].text",
+"fr": "mais Ines elle a deja tellement de problemes chez elle que je veux pas la deranger",
+"ligne": "P2-214"
+},
+{
+"num": "P2-215",
+"cle": "CONVOS[16].messages[18].text",
+"fr": "du coup je lui fais croire que tout va bien",
+"ligne": "P2-215"
+},
+{
+"num": "P2-216",
+"cle": "CONVOS[16].messages[19].text",
+"fr": "mais un weekend ca suffira pas",
+"ligne": "P2-216"
+},
+{
+"num": "P2-217",
+"cle": "CONVOS[16].messages[20].text",
+"fr": "sarah je crois que je vais partir chez ma tante",
+"ligne": "P2-217"
+},
+{
+"num": "P2-218",
+"cle": "CONVOS[16].messages[21].text",
+"fr": "y'a que la que je serai bien",
+"ligne": "P2-218"
+},
+{
+"num": "P2-219",
+"cle": "CONVOS[17].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-220",
+"cle": "CONVOS[17].preview",
+"fr": "les filles comme toi ca sait pas se tenir",
+"ligne": "P2-220"
+},
+{
+"num": "P2-221",
+"cle": "CONVOS[17].why",
+"fr": "« T'es une fille, reste à ta place » : on l'attaque parce qu'elle est une fille, pour la faire taire. C'est du harcèlement sexiste.",
+"ligne": "P2-221"
+},
+{
+"num": "P2-222",
+"cle": "CONVOS[17].messages[0].text",
+"fr": "les filles comme toi ca sait pas se tenir",
+"ligne": "P2-220"
+},
+{
+"num": "P2-223",
+"cle": "CONVOS[17].messages[1].text",
+"fr": "t'as pas ta place a t'exprimer comme ca devant tout le monde",
+"ligne": "P2-223"
+},
+{
+"num": "P2-224",
+"cle": "CONVOS[17].messages[2].text",
+"fr": "t'es une fille reste a ta place",
+"ligne": "P2-224"
+},
+{
+"num": "P2-225",
+"cle": "CONVOS[17].messages[3].text",
+"fr": "t'es trop dans ta tete pour une fille",
+"ligne": "P2-225"
+},
+{
+"num": "P2-226",
+"cle": "CONVOS[18].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-227",
+"cle": "CONVOS[18].preview",
+"fr": "tout le monde riait dans ton dos a la cantine",
+"ligne": "P2-227"
+},
+{
+"num": "P2-228",
+"cle": "CONVOS[18].why",
+"fr": "La cantine, le cours de maths, les profs : ce qui se passe au collège est repris en ligne le soir même. Le harcèlement ne s'arrête plus à la sortie des cours.",
+"ligne": "P2-228"
+},
+{
+"num": "P2-229",
+"cle": "CONVOS[18].messages[0].text",
+"fr": "t'as vu la tete que t'avais a la cantine aujourd'hui",
+"ligne": "P2-229"
+},
+{
+"num": "P2-230",
+"cle": "CONVOS[18].messages[1].text",
+"fr": "tout le monde riait dans ton dos a la cantine",
+"ligne": "P2-227"
+},
+{
+"num": "P2-231",
+"cle": "CONVOS[18].messages[2].text",
+"fr": "le prof de maths t'a encore mise en difficulte devant tout le monde non",
+"ligne": "P2-231"
+},
+{
+"num": "P2-232",
+"cle": "CONVOS[18].messages[3].text",
+"fr": "meme les profs peuvent pas te supporter c'etait dingue",
+"ligne": "P2-232"
+},
+{
+"num": "P2-233",
+"cle": "CONVOS[19].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-234",
+"cle": "CONVOS[19].preview",
+"fr": "t'as vu le commentaire que E. a laisse sur ta photo",
+"ligne": "P2-234"
+},
+{
+"num": "P2-235",
+"cle": "CONVOS[19].why",
+"fr": "Lui montrer que tout le monde aime le commentaire moqueur et pas sa photo, c'est lui faire sentir que le groupe la rejette : de l'exclusion.",
+"ligne": "P2-235"
+},
+{
+"num": "P2-236",
+"cle": "CONVOS[19].messages[0].text",
+"fr": "t'as vu le commentaire que E. a laisse sur ta photo ?",
+"ligne": "P2-236"
+},
+{
+"num": "P2-237",
+"cle": "CONVOS[19].messages[1].text",
+"fr": "tout le monde a like son comm mais pas ta photo c'est marrant non",
+"ligne": "P2-237"
+},
+{
+"num": "P2-238",
+"cle": "CONVOS[19].messages[2].text",
+"fr": "ca veut tout dire",
+"ligne": "P2-238"
+},
+{
+"num": "P2-239",
+"cle": "CONVOS[20].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-240",
+"cle": "CONVOS[20].section",
+"fr": "Il y a 2 mois",
+"ligne": "P2-240"
+},
+{
+"num": "P2-241",
+"cle": "CONVOS[20].preview",
+"fr": "personne ne t'a defendue quand M. t'a insultee tu l'as remarque",
+"ligne": "P2-241"
+},
+{
+"num": "P2-242",
+"cle": "CONVOS[20].why",
+"fr": "« Personne ne t'a défendue » : lui faire croire que tout le monde est contre elle, c'est la couper des autres. C'est de la manipulation, qui sert à l'isoler.",
+"ligne": "P2-242"
+},
+{
+"num": "P2-243",
+"cle": "CONVOS[20].messages[0].text",
+"fr": "personne ne t'a defendue quand M. t'a insultee tu l'as remarque ?",
+"ligne": "P2-243"
+},
+{
+"num": "P2-244",
+"cle": "CONVOS[20].messages[1].text",
+"fr": "c'est parce que tout le monde pense pareil",
+"ligne": "P2-244"
+},
+{
+"num": "P2-245",
+"cle": "CONVOS[20].messages[2].text",
+"fr": "ils ont juste pas le courage de te le dire en face",
+"ligne": "P2-245"
+},
+{
+"num": "P2-246",
+"cle": "CONVOS[21].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-247",
+"cle": "CONVOS[21].preview",
+"fr": "t'as vu les stories que les 3emes ont postees sur toi",
+"ligne": "P2-247"
+},
+{
+"num": "P2-248",
+"cle": "CONVOS[21].why",
+"fr": "Un surnom inventé et diffusé en story à « tout le collège » : on salit sa réputation devant tout l'établissement. C'est une rumeur, qui prolonge le harcèlement scolaire.",
+"ligne": "P2-248"
+},
+{
+"num": "P2-249",
+"cle": "CONVOS[21].messages[0].text",
+"fr": "t'as vu les stories que les 3emes ont postees sur toi ?",
+"ligne": "P2-249"
+},
+{
+"num": "P2-250",
+"cle": "CONVOS[21].messages[1].text",
+"fr": "ils t'ont surnommee et ca a bien marche comme blague",
+"ligne": "P2-250"
+},
+{
+"num": "P2-251",
+"cle": "CONVOS[21].messages[2].text",
+"fr": "tout le college est au courant maintenant",
+"ligne": "P2-251"
+},
+{
+"num": "P2-252",
+"cle": "CONVOS[21].messages[3].text",
+"fr": "bravo",
+"ligne": "P2-252"
+},
+{
+"num": "P2-253",
+"cle": "CONVOS[22].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-254",
+"cle": "CONVOS[22].preview",
+"fr": "ton ex a tout raconte a ses potes tu savais",
+"ligne": "P2-254"
+},
+{
+"num": "P2-255",
+"cle": "CONVOS[22].why",
+"fr": "Son ex aurait « tout raconté » de sa vie intime : vrai ou faux, c'est une rumeur. Et « tu feras mieux la prochaine fois » juge une fille sur sa vie amoureuse : c'est sexiste.",
+"ligne": "P2-255"
+},
+{
+"num": "P2-256",
+"cle": "CONVOS[22].messages[0].text",
+"fr": "ton ex a tout raconte a ses potes tu savais ?",
+"ligne": "P2-256"
+},
+{
+"num": "P2-257",
+"cle": "CONVOS[22].messages[1].text",
+"fr": "genre vraiment tout",
+"ligne": "P2-257"
+},
+{
+"num": "P2-258",
+"cle": "CONVOS[22].messages[2].text",
+"fr": "tu feras mieux la prochaine fois si y'en a une",
+"ligne": "P2-258"
+},
+{
+"num": "P2-259",
+"cle": "CONVOS[23].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-260",
+"cle": "CONVOS[23].preview",
+"fr": "j'ai des photos de toi que tu voudrais pas que tout le monde voie",
+"ligne": "P2-260"
+},
+{
+"num": "P2-261",
+"cle": "CONVOS[23].why",
+"fr": "« Si tu parles, j'envoie les photos » : c'est du chantage. Se servir d'images gênantes ou intimes pour faire taire quelqu'un, c'est de la sextorsion - un délit, à signaler tout de suite.",
+"ligne": "P2-261"
+},
+{
+"num": "P2-262",
+"cle": "CONVOS[23].messages[0].text",
+"fr": "j'ai des photos de toi que tu voudrais pas que tout le monde voie",
+"ligne": "P2-260"
+},
+{
+"num": "P2-263",
+"cle": "CONVOS[23].messages[1].text",
+"fr": "des photos de la soiree chez Lena le mois dernier",
+"ligne": "P2-263"
+},
+{
+"num": "P2-264",
+"cle": "CONVOS[23].messages[2].text",
+"fr": "si tu parles a quelqu'un de ce qui se passe au college je les envoie a toute ta liste de contacts",
+"ligne": "P2-264"
+},
+{
+"num": "P2-265",
+"cle": "CONVOS[23].messages[3].text",
+"fr": "t'as compris le message ?",
+"ligne": "P2-265"
+},
+{
+"num": "P2-266",
+"cle": "CONVOS[24].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-267",
+"cle": "CONVOS[24].section",
+"fr": "Il y a 3 mois",
+"ligne": "P2-267"
+},
+{
+"num": "P2-268",
+"cle": "CONVOS[24].preview",
+"fr": "t'arrives encore a dormir la nuit sachant que tout le monde te deteste",
+"ligne": "P2-268"
+},
+{
+"num": "P2-269",
+"cle": "CONVOS[24].why",
+"fr": "« Tout le monde te déteste » : rien ne le prouve, mais à force de l'entendre, on finit par y croire. C'est de la manipulation, qui l'isole.",
+"ligne": "P2-269"
+},
+{
+"num": "P2-270",
+"cle": "CONVOS[24].messages[0].text",
+"fr": "t'arrives encore a dormir la nuit sachant que tout le monde te deteste ?",
+"ligne": "P2-270"
+},
+{
+"num": "P2-271",
+"cle": "CONVOS[24].messages[1].text",
+"fr": "parce que moi a ta place je pourrais pas",
+"ligne": "P2-271"
+},
+{
+"num": "P2-272",
+"cle": "CONVOS[24].messages[2].text",
+"fr": "tu dois etre blindee ou completement aveugle",
+"ligne": "P2-272"
+},
+{
+"num": "P2-273",
+"cle": "CONVOS[25].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-274",
+"cle": "CONVOS[25].preview",
+"fr": "tu peux supprimer ton compte personne le suivrait",
+"ligne": "P2-274"
+},
+{
+"num": "P2-275",
+"cle": "CONVOS[25].why",
+"fr": "La pousser à supprimer son compte, c'est vouloir la faire disparaître sans avoir l'air d'y être pour rien : de l'exclusion forcée.",
+"ligne": "P2-275"
+},
+{
+"num": "P2-276",
+"cle": "CONVOS[25].messages[0].text",
+"fr": "tu peux supprimer ton compte personne ne le remarquerait",
+"ligne": "P2-276"
+},
+{
+"num": "P2-277",
+"cle": "CONVOS[25].messages[1].text",
+"fr": "t'as 612 abonnes mais zero vrai ami dessus",
+"ligne": "P2-277"
+},
+{
+"num": "P2-278",
+"cle": "CONVOS[25].messages[2].text",
+"fr": "c'est triste non",
+"ligne": "P2-278"
+},
+{
+"num": "P2-279",
+"cle": "CONVOS[26].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-280",
+"cle": "CONVOS[26].preview",
+"fr": "j'ai cree un compte rien que pour te dire que t'es nulle",
+"ligne": "P2-280"
+},
+{
+"num": "P2-281",
+"cle": "CONVOS[26].messages[0].text",
+"fr": "j'ai cree ce compte rien que pour te dire que t'es nulle",
+"ligne": "P2-281"
+},
+{
+"num": "P2-282",
+"cle": "CONVOS[26].messages[1].text",
+"fr": "c'etait necessaire",
+"ligne": "P2-282"
+},
+{
+"num": "P2-283",
+"cle": "CONVOS[27].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-284",
+"cle": "CONVOS[27].preview",
+"fr": "t'es la personne la plus facile a detester que j'ai jamais vue",
+"ligne": "P2-284"
+},
+{
+"num": "P2-285",
+"cle": "CONVOS[27].why",
+"fr": "« La personne la plus facile à détester » : lui faire croire que tout le monde la rejette, c'est de l'exclusion - et de la manipulation.",
+"ligne": "P2-285"
+},
+{
+"num": "P2-286",
+"cle": "CONVOS[27].messages[0].text",
+"fr": "t'es la personne la plus facile a detester que j'ai jamais vue",
+"ligne": "P2-284"
+},
+{
+"num": "P2-287",
+"cle": "CONVOS[27].messages[1].text",
+"fr": "sans effort vraiment",
+"ligne": "P2-287"
+},
+{
+"num": "P2-288",
+"cle": "CONVOS[27].messages[2].text",
+"fr": "felicitations",
+"ligne": "P2-288"
+},
+{
+"num": "P2-289",
+"cle": "CONVOS[28].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-290",
+"cle": "CONVOS[28].section",
+"fr": "Il y a plus de 6 mois",
+"ligne": "P2-290"
+},
+{
+"num": "P2-291",
+"cle": "CONVOS[28].preview",
+"fr": "ca fait un moment qu'on voulait te dire que t'etais pas a ta place ici",
+"ligne": "P2-291"
+},
+{
+"num": "P2-292",
+"cle": "CONVOS[28].why",
+"fr": "« Pas à ta place ici, dans ce collège, dans cette classe, sur ce réseau » : on lui dit qu'elle n'a sa place nulle part. C'est de l'exclusion, qui part du collège.",
+"ligne": "P2-292"
+},
+{
+"num": "P2-293",
+"cle": "CONVOS[28].messages[0].text",
+"fr": "ca fait un moment qu'on voulait te dire que t'etais pas a ta place ici",
+"ligne": "P2-291"
+},
+{
+"num": "P2-294",
+"cle": "CONVOS[28].messages[1].text",
+"fr": "dans ce college dans cette classe et sur ce reseau",
+"ligne": "P2-294"
+},
+{
+"num": "P2-295",
+"cle": "CONVOS[28].messages[2].text",
+"fr": "prends ca comme un conseil",
+"ligne": "P2-295"
+},
+{
+"num": "P2-296",
+"cle": "CONVOS[29].sub",
+"fr": "Compte inconnu",
+"ligne": "P2-023"
+},
+{
+"num": "P2-297",
+"cle": "CONVOS[29].preview",
+"fr": "on t'a inventé un surnom dans la classe tu veux savoir lequel",
+"ligne": "P2-297"
+},
+{
+"num": "P2-298",
+"cle": "CONVOS[29].why",
+"fr": "Un surnom que « tout le monde utilise sauf toi » : on se moque d'elle dans son dos, dans toute la classe. C'est une rumeur. « Demande autour de toi si t'as le courage » la pousse à se méfier de tout le monde : de la manipulation.",
+"ligne": "P2-298"
+},
+{
+"num": "P2-299",
+"cle": "CONVOS[29].messages[0].text",
+"fr": "on t'a invente un surnom dans la classe tu veux savoir lequel ?",
+"ligne": "P2-299"
+},
+{
+"num": "P2-300",
+"cle": "CONVOS[29].messages[1].text",
+"fr": "tout le monde l'utilise deja sauf toi",
+"ligne": "P2-300"
+},
+{
+"num": "P2-301",
+"cle": "CONVOS[29].messages[2].text",
+"fr": "demande autour de toi si t'as le courage",
+"ligne": "P2-301"
+},
+{
+"num": "P2-302",
+"cle": "CONVOS[30].sub",
+"fr": "Kevin",
+"ligne": null
+},
+{
+"num": "P2-303",
+"cle": "CONVOS[30].preview",
+"fr": "Je suis désolé, je ne pensais pas que ça irait aussi loin...",
+"ligne": "P2-303"
+},
+{
+"num": "P2-304",
+"cle": "CONVOS[30].messages[0].text",
+"fr": "Je suis désolé, je ne pensais pas que ça irait aussi loin",
+"ligne": "P2-304"
+},
+{
+"num": "P2-305",
+"cle": "CONVOS[30].messages[1].text",
+"fr": "mais si tu veux voir ce qu'ils racontent sur toi, c'est ici",
+"ligne": "P2-305"
+},
+{
+"num": "P2-306",
+"cle": "CONVOS[30].messages[2].text",
+"fr": "le groupe Whatsupp « les vrais 4B 🔥 », code 4827",
+"ligne": "P2-306"
+},
+{
+"num": "P2-307",
+"cle": "photoData[0].caption",
+"fr": "lever de soleil ce matin 🌅",
+"ligne": "P2-307"
+},
+{
+"num": "P2-308",
+"cle": "photoData[0].comments[0].text",
+"fr": "quelle qualite de photo lol",
+"ligne": "P2-308"
+},
+{
+"num": "P2-309",
+"cle": "photoData[0].comments[1].text",
+"fr": "ta photo elle est floue t'as meme pas de talent",
+"ligne": "P2-309"
+},
+{
+"num": "P2-310",
+"cle": "photoData[0].comments[2].text",
+"fr": "elle est trop moche ta photo serieusement",
+"ligne": "P2-310"
+},
+{
+"num": "P2-311",
+"cle": "photoData[1].caption",
+"fr": "j'ai adoré jouer ce soir 🎸🎵",
+"ligne": "P2-311"
+},
+{
+"num": "P2-312",
+"cle": "photoData[1].comments[0].text",
+"fr": "MAIS depuis quand tu joues aussi bien",
+"ligne": "P2-312"
+},
+{
+"num": "P2-313",
+"cle": "photoData[1].comments[1].text",
+"fr": "la meme chanson depuis 3 semaines mdr mais j'adore",
+"ligne": "P2-313"
+},
+{
+"num": "P2-314",
+"cle": "photoData[1].comments[2].text",
+"fr": "tu joues au spectacle de fin d'annee stp",
+"ligne": "P2-314"
+},
+{
+"num": "P2-315",
+"cle": "photoData[2].caption",
+"fr": "mon chaton 🐱❤️",
+"ligne": "P2-315"
+},
+{
+"num": "P2-316",
+"cle": "photoData[2].comments[0].text",
+"fr": "meme ton chat a l'air aussi nul que toi",
+"ligne": "P2-316"
+},
+{
+"num": "P2-317",
+"cle": "photoData[2].comments[1].text",
+"fr": "elle est trop moche ta photo",
+"ligne": "P2-317"
+},
+{
+"num": "P2-318",
+"cle": "photoData[3].caption",
+"fr": "glace du dimanche 🍦",
+"ligne": "P2-318"
+},
+{
+"num": "P2-319",
+"cle": "photoData[3].why",
+"fr": "Une photo de glace, et on lui parle de son poids : c'est du body shaming. Ces commentaires sont publics : tous ses abonnés les lisent.",
+"ligne": "P2-319"
+},
+{
+"num": "P2-320",
+"cle": "photoData[3].comments[0].text",
+"fr": "et tu te demandes pourquoi t'as un probleme de poids",
+"ligne": "P2-320"
+},
+{
+"num": "P2-321",
+"cle": "photoData[3].comments[1].text",
+"fr": "franchement t'as aucune honte de poster ca",
+"ligne": "P2-321"
+},
+{
+"num": "P2-322",
+"cle": "photoData[3].comments[2].text",
+"fr": "mange encore t'inquiete",
+"ligne": "P2-322"
+},
+{
+"num": "P2-323",
+"cle": "photoData[4].caption",
+"fr": "lecture du soir 📚",
+"ligne": "P2-323"
+},
+{
+"num": "P2-324",
+"cle": "photoData[4].comments[0].text",
+"fr": "t'es a quel tome la ??",
+"ligne": "P2-324"
+},
+{
+"num": "P2-325",
+"cle": "photoData[4].comments[1].text",
+"fr": "tu me le pretes quand t'as fini",
+"ligne": "P2-325"
+},
+{
+"num": "P2-326",
+"cle": "photoData[5].caption",
+"fr": "concert ce soir 🎤🔥",
+"ligne": "P2-326"
+},
+{
+"num": "P2-327",
+"cle": "photoData[5].why",
+"fr": "« T'es pas à ta place », « les gens autour de toi devaient être contents » : on lui fait comprendre qu'elle est de trop partout, même à un concert. C'est de l'exclusion.",
+"ligne": "P2-327"
+},
+{
+"num": "P2-328",
+"cle": "photoData[5].comments[0].text",
+"fr": "quoi ? tu aimes cette artiste ? t'es nulle ma pauvre fille",
+"ligne": "P2-328"
+},
+{
+"num": "P2-329",
+"cle": "photoData[5].comments[1].text",
+"fr": "t'aurais pas du y aller ca se voit que t'es pas a ta place",
+"ligne": "P2-329"
+},
+{
+"num": "P2-330",
+"cle": "photoData[5].comments[2].text",
+"fr": "les gens autour de toi dans la foule ils devaient etre contents lol",
+"ligne": "P2-330"
+},
+{
+"num": "P2-331",
+"cle": "photoData[6].caption",
+"fr": "fleurs du marché 🌸",
+"ligne": "P2-331"
+},
+{
+"num": "P2-332",
+"cle": "photoData[6].why",
+"fr": "« Même les fleurs veulent partir », « personne t'en offrira jamais » : on lui répète qu'elle sera toujours seule. C'est de l'exclusion.",
+"ligne": "P2-332"
+},
+{
+"num": "P2-333",
+"cle": "photoData[6].comments[0].text",
+"fr": "meme les fleurs ont l'air de vouloir partir",
+"ligne": "P2-333"
+},
+{
+"num": "P2-334",
+"cle": "photoData[6].comments[1].text",
+"fr": "des fleurs ? personne t'en offrira jamais 💀",
+"ligne": "P2-334"
+},
+{
+"num": "P2-335",
+"cle": "photoData[7].caption",
+"fr": "gâteau d'anniversaire 🎂",
+"ligne": "P2-335"
+},
+{
+"num": "P2-336",
+"cle": "photoData[7].why",
+"fr": "Se moquer d'un anniversaire « sans personne », c'est lui faire sentir qu'elle est seule : de l'exclusion. « Tu l'as mangé toute seule ? » vise aussi son corps : c'est du body shaming.",
+"ligne": "P2-336"
+},
+{
+"num": "P2-337",
+"cle": "photoData[7].comments[0].text",
+"fr": "personne etait la pour ton anniversaire c'est ca ?",
+"ligne": "P2-337"
+},
+{
+"num": "P2-338",
+"cle": "photoData[7].comments[1].text",
+"fr": "tu l'as mange toute seule le gateau ?",
+"ligne": "P2-338"
+},
+{
+"num": "P2-339",
+"cle": "photoData[7].comments[2].text",
+"fr": "triste comme fete",
+"ligne": "P2-339"
+},
+{
+"num": "P2-340",
+"cle": "photoData[8].caption",
+"fr": "nuit étoilée 🌙",
+"ligne": "P2-340"
+},
+{
+"num": "P2-341",
+"cle": "photoData[8].why",
+"fr": "« 0 like, c'est un message », « même le ciel veut pas de toi » : on lui répète que personne ne veut d'elle. C'est de l'exclusion.",
+"ligne": "P2-341"
+},
+{
+"num": "P2-342",
+"cle": "photoData[8].comments[0].text",
+"fr": "0 likes en 3 heures c'est un message clara",
+"ligne": "P2-342"
+},
+{
+"num": "P2-343",
+"cle": "photoData[8].comments[1].text",
+"fr": "meme le ciel il veut pas de toi",
+"ligne": "P2-343"
+},
+{
+"num": "P2-344",
+"cle": "photoData[8].comments[2].text",
+"fr": "t'aurais mieux fait de dormir que de poster ca",
+"ligne": "P2-344"
+},
+{
+"num": "P2-345",
+"cle": "UI.all",
+"fr": "Tous",
+"ligne": "P2-021"
+},
+{
+"num": "P2-346",
+"cle": "UI.typesIdentified",
+"fr": "types trouvés",
+"ligne": "P2-346"
+},
+{
+"num": "P2-347",
+"cle": "UI.typesBtn",
+"fr": "📋 Types",
+"ligne": "P2-062"
+},
+{
+"num": "P2-348",
+"cle": "UI.today",
+"fr": "Aujourd'hui",
+"ligne": "P2-087"
+},
+{
+"num": "P2-349",
+"cle": "UI.firstToLike",
+"fr": "Sois la premiere a aimer",
+"ligne": "P2-349"
+},
+{
+"num": "P2-350",
+"cle": "UI.searchPh",
+"fr": "Rechercher un pseudo ou un message",
+"ligne": "P2-350"
+},
+{
+"num": "P2-351",
+"cle": "UI.searchNone",
+"fr": "Aucun résultat.",
+"ligne": "P2-351"
+},
+{
+"num": "P2-352",
+"cle": "UI.searchComments",
+"fr": "Commentaires sous ses photos",
+"ligne": "P2-352"
+},
+{
+"num": "P2-353",
+"cle": "UI.searchUnder",
+"fr": "sous « {cap} »",
+"ligne": "P2-353"
+},
+{
+"num": "P2-354",
+"cle": "UI.synthBtn",
+"fr": "📋 Voir la synthèse - Ce qui est arrivé à Clara",
+"ligne": "P2-354"
+},
+{
+"num": "P2-355",
+"cle": "UI.synthNote",
+"fr": "Ces formes de harcèlement sont réelles. Chacune laisse des traces sur la victime - même sans contact physique.",
+"ligne": "P2-355"
+},
+{
+"num": "P2-356",
+"cle": "UI.listTitle",
+"fr": "📋 Les types de harcèlement à repérer",
+"ligne": "P2-356"
+},
+{
+"num": "P2-357",
+"cle": "UI.listIntro",
+"fr": "Trouve-en au moins 6 sur 9. Appuie sur un message ou un commentaire, puis choisis son type.",
+"ligne": "P2-357"
+},
+{
+"num": "P2-358",
+"cle": "UI.synthTitle",
+"fr": "📋 Ce qui est arrivé à Clara - Synthèse",
+"ligne": "P2-358"
+},
+{
+"num": "P2-359",
+"cle": "UI.backToWA",
+"fr": "← Retour au groupe",
+"ligne": "P2-060"
+},
+{
+"num": "P2-360",
+"cle": "UI.idLabel",
+"fr": "Quel type de harcèlement ?",
+"ligne": "P2-360"
+},
+{
+"num": "P2-361",
+"cle": "UI.idSeveral",
+"fr": "Un message peut relever de plusieurs types : un seul suffit.",
+"ligne": "P2-361"
+},
+{
+"num": "P2-362",
+"cle": "UI.alsoTypes",
+"fr": "Ce message relève aussi de :",
+"ligne": "P2-362"
+},
+{
+"num": "P2-363",
+"cle": "UI.wrong1",
+"fr": "Pas tout à fait. Relis le message, et essaie un autre type.",
+"ligne": "P2-363"
+},
+{
+"num": "P2-364",
+"cle": "UI.wrong2",
+"fr": "Voici la réponse.",
+"ligne": "P2-364"
+},
+{
+"num": "P2-365",
+"cle": "UI.wrongNote",
+"fr": "Ce type n'est pas compté cette fois : retrouve-le dans un autre message.",
+"ligne": "P2-365"
+},
+{
+"num": "P2-366",
+"cle": "UI.idClose",
+"fr": "Fermer",
+"ligne": "P2-056"
+},
+{
+"num": "P2-367",
+"cle": "UI.idContinue",
+"fr": "Continuer →",
+"ligne": "P2-367"
+},
+{
+"num": "P2-368",
+"cle": "UI.synthFound",
+"fr": "trouvé",
+"ligne": "P2-368"
+},
+{
+"num": "P2-369",
+"cle": "UI.synthMissed",
+"fr": "pas vu",
+"ligne": "P2-369"
+},
+{
+"num": "P2-370",
+"cle": "UI.synthTodo",
+"fr": "à trouver",
+"ligne": "P2-370"
+},
+{
+"num": "P2-371",
+"cle": "UI.demasqueSub",
+"fr": "Démasqué dans le groupe : ",
+"ligne": "P2-371"
+},
+{
+"num": "P2-372",
+"cle": "UI.reportBtn",
+"fr": "⚠ Signaler ce compte",
+"ligne": "P2-372"
+},
+{
+"num": "P2-373",
+"cle": "UI.reportDone",
+"fr": "✓ Compte signalé",
+"ligne": "P2-373"
+},
+{
+"num": "P2-374",
+"cle": "UI.reportAfter",
+"fr": "Compte signalé. Clara aurait pu le faire dès le premier message - personne ne le lui avait dit.",
+"ligne": "P2-374"
+},
+{
+"num": "P2-375",
+"cle": "UI.noteCode",
+"fr": "🔐 Le code pour la suite",
+"ligne": "P2-375"
+},
+{
+"num": "P2-376",
+"cle": "UI.codeClose",
+"fr": "← Relire le message de Kevin",
+"ligne": "P2-055"
+},
+{
+"num": "P2-377",
+"cle": "UI.enquetes.marine.bar",
+"fr": "🔎 <b>Enquête</b> - Dans le groupe, Marine dit avoir écrit sous la photo du chat de Clara que « même son chat a l'air aussi nul qu'elle ». Ouvre cette photo et appuie sur le <b>pseudo</b> de l'auteur du commentaire.",
+"ligne": "P2-377"
+},
+{
+"num": "P2-378",
+"cle": "UI.enquetes.marine.lbHint",
+"fr": "🔎 Enquête : appuie sur le pseudo de l'auteur du commentaire de Marine.",
+"ligne": "P2-378"
+},
+{
+"num": "P2-379",
+"cle": "UI.enquetes.marine.wrongPhoto",
+"fr": "Ce n'est pas la bonne photo : Marine parle du chat de Clara.",
+"ligne": "P2-379"
+},
+{
+"num": "P2-380",
+"cle": "UI.enquetes.marine.wrongUser",
+"fr": "Pas ce pseudo-là. Relis ce que Marine a écrit : « même son chat a l'air aussi nul qu'elle ».",
+"ligne": "P2-380"
+},
+{
+"num": "P2-381",
+"cle": "UI.enquetes.marine.okTitle",
+"fr": "Compte démasqué",
+"ligne": "P2-381"
+},
+{
+"num": "P2-382",
+"cle": "UI.enquetes.marine.okNote",
+"fr": "Clara ne peut pas le savoir. Toi si : tu as recoupé ce qui se dit dans le groupe avec ses commentaires.",
+"ligne": "P2-382"
+},
+{
+"num": "P2-383",
+"cle": "UI.notTagged",
+"fr": "Méchant, oui. Mais ce message seul ne permet pas de dire de quel type de harcèlement il s'agit : cherches-en un plus précis.",
+"ligne": "P2-383"
+},
+{
+"num": "P3-001",
+"cle": "3_Groupe_Secret.html#i1-line",
+"fr": "Grâce au code de Kevin, je peux lire le groupe où tout s'organise.",
+"ligne": "P3-001"
+},
+{
+"num": "P3-002",
+"cle": "3_Groupe_Secret.html#i1-line",
+"fr": "Je dois découvrir qui se cache derrière les comptes anonymes qui écrivent à Clara.",
+"ligne": "P3-002"
+},
+{
+"num": "P3-003",
+"cle": "3_Groupe_Secret.html#intro3-btn",
+"fr": "Accéder au groupe →",
+"ligne": "P3-003"
+},
+{
+"num": "P3-004",
+"cle": "3_Groupe_Secret.html#i1-skip",
+"fr": "appuyer pour continuer",
+"ligne": "P1-006"
+},
+{
+"num": "P3-005",
+"cle": "3_Groupe_Secret.html#tag",
+"fr": "Simulation",
+"ligne": "P2-006"
+},
+{
+"num": "P3-006",
+"cle": "3_Groupe_Secret.html#wa-ff-btn@title",
+"fr": "Avancer plus vite",
+"ligne": "P3-006"
+},
+{
+"num": "P3-007",
+"cle": "3_Groupe_Secret.html#start-screen",
+"fr": "Tu vas observer les échanges dans un groupe secret de la classe - celui dont Clara est exclue.",
+"ligne": "P3-007"
+},
+{
+"num": "P3-008",
+"cle": "3_Groupe_Secret.html#wa-input-field@placeholder",
+"fr": "Message…",
+"ligne": "P2-024"
+},
+{
+"num": "P3-009",
+"cle": "3_Groupe_Secret.html#gate-box",
+"fr": "Code du groupe",
+"ligne": "P2-051"
+},
+{
+"num": "P3-010",
+"cle": "3_Groupe_Secret.html#gate-box",
+"fr": "Ce groupe Whatsupp est protégé par un code d'accès. Ce que tu liras derrière est ce que le groupe a écrit.",
+"ligne": "P3-010"
+},
+{
+"num": "P3-011",
+"cle": "3_Groupe_Secret.html#gate-btn",
+"fr": "Entrer dans le groupe →",
+"ligne": "P3-011"
+},
+{
+"num": "P3-012",
+"cle": "3_Groupe_Secret.html#gate-error",
+"fr": "Ce n'est pas le code.",
+"ligne": "P3-012"
+},
+{
+"num": "P3-013",
+"cle": "3_Groupe_Secret.html#gate-hint",
+"fr": "Il t'a été donné à la fin de la Partie 2, dans le message de Kevin.",
+"ligne": "P3-013"
+},
+{
+"num": "P3-014",
+"cle": "3_Groupe_Secret.html#quiz-continue",
+"fr": "Continuer →",
+"ligne": "P2-367"
+},
+{
+"num": "P3-015",
+"cle": "3_Groupe_Secret.html#ig-av-sm@alt",
+"fr": "Clara",
+"ligne": null
+},
+{
+"num": "P3-016",
+"cle": "3_Groupe_Secret.html#ig-modal-bar",
+"fr": "clara.fontaine",
+"ligne": null
+},
+{
+"num": "P3-017",
+"cle": "3_Groupe_Secret.html#ig-modal-bar",
+"fr": "il y a 2 heures",
+"ligne": "P3-017"
+},
+{
+"num": "P3-018",
+"cle": "3_Groupe_Secret.html#ig-modal-caption",
+"fr": "clara.fontaine",
+"ligne": null
+},
+{
+"num": "P3-019",
+"cle": "3_Groupe_Secret.html#ig-note",
+"fr": "⚠ Ces comptes appartiennent aux membres du groupe que tu observes.",
+"ligne": "P3-019"
+},
+{
+"num": "P3-020",
+"cle": "3_Groupe_Secret.html#ig-modal-back",
+"fr": "← Retour au groupe",
+"ligne": "P2-060"
+},
+{
+"num": "P3-021",
+"cle": "3_Groupe_Secret.html#menu-btn",
+"fr": "← Menu",
+"ligne": "P1-001"
+},
+{
+"num": "P3-022",
+"cle": "3_Groupe_Secret.html#fs-btn@title",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P3-023",
+"cle": "3_Groupe_Secret.html#fs-btn@aria-label",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P3-024",
+"cle": "WA_DATA.group.subtitle",
+"fr": "Enzo, Jade, Théo, Marine, Kevin",
+"ligne": "P3-024"
+},
+{
+"num": "P3-025",
+"cle": "WA_DATA.banner.strong",
+"fr": "Exercice pédagogique sur le cyberharcèlement",
+"ligne": "P3-025"
+},
+{
+"num": "P3-026",
+"cle": "WA_DATA.banner.tail",
+"fr": ", créé à des fins éducatives - tous les personnages et messages sont fictifs.",
+"ligne": "P3-026"
+},
+{
+"num": "P3-027",
+"cle": "WA_DATA.warning.title",
+"fr": "Simulation pédagogique",
+"ligne": "P2-042"
+},
+{
+"num": "P3-028",
+"cle": "WA_DATA.warning.body",
+"fr": "Je vais observer un groupe secret dont Clara ne fait pas partie.\n\nCes échanges montrent comment le harcèlement se coordonne en coulisse - comment des comptes anonymes sont créés pour attaquer et comment les agressions sont organisées collectivement.",
+"ligne": "P3-028"
+},
+{
+"num": "P3-029",
+"cle": "WA_DATA.warning.btn",
+"fr": "Continuer →",
+"ligne": "P2-367"
+},
+{
+"num": "P3-030",
+"cle": "WA_DATA.mission.title",
+"fr": "Ce qu'il faut repérer",
+"ligne": "P2-045"
+},
+{
+"num": "P3-031",
+"cle": "WA_DATA.mission.body",
+"fr": "Clara reçoit des messages de comptes anonymes. Ici, entre eux, ils disent quels comptes ils utilisent.\n\nMon objectif : découvrir qui se cache derrière chacun. Dès qu'un compte est nommé (@…), appuie dessus. Il y en a six : l'un d'eux, il faudra aller le retrouver sur l'Instaclasse de Clara.\n\nLa conversation défile toute seule. Appuie n'importe où pour passer plus vite au message suivant.",
+"ligne": "P3-031"
+},
+{
+"num": "P3-032",
+"cle": "WA_DATA.mission.btn",
+"fr": "Commencer →",
+"ligne": "P3-032"
+},
+{
+"num": "P3-033",
+"cle": "WA_DATA.comptes.label",
+"fr": "comptes identifiés",
+"ligne": "P3-033"
+},
+{
+"num": "P3-034",
+"cle": "WA_DATA.comptes.cardTitle",
+"fr": "Compte démasqué",
+"ligne": "P2-381"
+},
+{
+"num": "P3-035",
+"cle": "WA_DATA.comptes.cardIntro",
+"fr": "Derrière ce compte, il y a :",
+"ligne": "P3-035"
+},
+{
+"num": "P3-036",
+"cle": "WA_DATA.comptes.cardNote",
+"fr": "Clara ne peut pas le savoir. Toi si - parce que tu lis un groupe où tu n'es pas.",
+"ligne": "P3-036"
+},
+{
+"num": "P3-037",
+"cle": "WA_DATA.comptes.cardSee",
+"fr": "Voir ses messages sur l'Instaclasse de Clara →",
+"ligne": "P3-037"
+},
+{
+"num": "P3-038",
+"cle": "WA_DATA.comptes.cardClose",
+"fr": "Fermer",
+"ligne": "P2-056"
+},
+{
+"num": "P3-039",
+"cle": "WA_DATA.comptes.already",
+"fr": "Déjà repéré.",
+"ligne": "P3-039"
+},
+{
+"num": "P3-040",
+"cle": "WA_DATA.comptes.liste[2].qui",
+"fr": "Enzo et Théo",
+"ligne": "P3-040"
+},
+{
+"num": "P3-041",
+"cle": "WA_DATA.startLabel",
+"fr": "▶ Voir ce qui se dit dans le groupe",
+"ligne": "P3-041"
+},
+{
+"num": "P3-042",
+"cle": "WA_DATA.postCard.account",
+"fr": "clara.fontaine",
+"ligne": null
+},
+{
+"num": "P3-043",
+"cle": "WA_DATA.postCard.caption",
+"fr": "lever de soleil ce matin 🌅",
+"ligne": "P2-307"
+},
+{
+"num": "P3-044",
+"cle": "WA_DATA.postCard.seeBtn",
+"fr": "👁 Voir les commentaires envahir sa publication",
+"ligne": "P3-044"
+},
+{
+"num": "P3-045",
+"cle": "WA_DATA.postComments[0].text",
+"fr": "quelle qualite de photo lol",
+"ligne": "P2-308"
+},
+{
+"num": "P3-046",
+"cle": "WA_DATA.postComments[1].text",
+"fr": "ta photo elle est floue t'as meme pas de talent",
+"ligne": "P2-309"
+},
+{
+"num": "P3-047",
+"cle": "WA_DATA.postComments[2].text",
+"fr": "elle est trop moche ta photo serieusement",
+"ligne": "P2-310"
+},
+{
+"num": "P3-048",
+"cle": "WA_DATA.messages[0].text",
+"fr": "les gars c trop drôle, clara a encore essayé de nous parler à la récré 💀",
+"ligne": "P3-048"
+},
+{
+"num": "P3-049",
+"cle": "WA_DATA.messages[1].text",
+"fr": "sérieusement elle comprend pas qu'elle est plus dans le groupe ou quoi",
+"ligne": "P3-049"
+},
+{
+"num": "P3-050",
+"cle": "WA_DATA.messages[2].text",
+"fr": "je l'ai carrément ignorée devant tout le monde, elle avait l'air d'une clown",
+"ligne": "P3-050"
+},
+{
+"num": "P3-051",
+"cle": "WA_DATA.messages[3].text",
+"fr": "mdrrr 💀",
+"ligne": "P3-051"
+},
+{
+"num": "P3-052",
+"cle": "WA_DATA.messages[4].text",
+"fr": "ça fait combien de temps qu'on lui parle plus au fait ?",
+"ligne": "P3-052"
+},
+{
+"num": "P3-053",
+"cle": "WA_DATA.messages[5].text",
+"fr": "genre 3 semaines et elle comprend toujours pas lol",
+"ligne": "P3-053"
+},
+{
+"num": "P3-054",
+"cle": "WA_DATA.messages[6].text",
+"fr": "j'en ai marre de la voir poster des trucs sur insta comme si de rien n'était",
+"ligne": "P3-054"
+},
+{
+"num": "P3-055",
+"cle": "WA_DATA.messages[7].text",
+"fr": "ouais elle fait genre tout va bien alors que personne lui parle au collège",
+"ligne": "P3-055"
+},
+{
+"num": "P3-056",
+"cle": "WA_DATA.messages[8].text",
+"fr": "on devrait aller lui flood ses commentaires",
+"ligne": "P3-056"
+},
+{
+"num": "P3-057",
+"cle": "WA_DATA.messages[9].text",
+"fr": "bonne idée, attendez qu'elle poste quelque chose 👀",
+"ligne": "P3-057"
+},
+{
+"num": "P3-058",
+"cle": "WA_DATA.messages[10].text",
+"fr": "Enzo a partagé une publication Instaclasse",
+"ligne": "P3-058"
+},
+{
+"num": "P3-059",
+"cle": "WA_DATA.messages[12].text",
+"fr": "ALLEZ Y TOUS c'est le moment 🔥🔥",
+"ligne": "P3-059"
+},
+{
+"num": "P3-060",
+"cle": "WA_DATA.messages[13].text",
+"fr": "j'y vais maintenant",
+"ligne": "P3-060"
+},
+{
+"num": "P3-061",
+"cle": "WA_DATA.messages[14].text",
+"fr": "moi aussi, attendez je cherche mon compte anon",
+"ligne": "P3-061"
+},
+{
+"num": "P3-062",
+"cle": "WA_DATA.messages[15].text",
+"fr": "utilisez vos faux comptes surtout, comme ça elle sait pas que c'est nous",
+"ligne": "P3-062"
+},
+{
+"num": "P3-063",
+"cle": "WA_DATA.messages[16].text",
+"fr": "ouais genre même si elle screenshotte on peut toujours nier",
+"ligne": "P3-063"
+},
+{
+"num": "P3-064",
+"cle": "WA_DATA.messages[17].text",
+"fr": "moi j'utilise @utilisateur_4729",
+"ligne": "P3-064"
+},
+{
+"num": "P3-065",
+"cle": "WA_DATA.messages[18].text",
+"fr": "moi c'est @_noreply_ghost_ lol j'ai mis \"elle est trop moche ta photo\"",
+"ligne": "P3-065"
+},
+{
+"num": "P3-066",
+"cle": "WA_DATA.messages[19].text",
+"fr": "j'ai mis \"ta photo elle est floue t'as même pas de talent\" depuis @anonymous_x0 💀",
+"ligne": "P3-066"
+},
+{
+"num": "P3-067",
+"cle": "WA_DATA.messages[20].text",
+"fr": "hahaha moi j'attends un peu pour pas que ça arrive tout en même temps",
+"ligne": "P3-067"
+},
+{
+"num": "P3-068",
+"cle": "WA_DATA.messages[21].text",
+"fr": "stratégie 🧠",
+"ligne": "P3-068"
+},
+{
+"num": "P3-069",
+"cle": "WA_DATA.messages[22].text",
+"fr": "ouais faites des pauses entre chaque pour que ça ait l'air naturel",
+"ligne": "P3-069"
+},
+{
+"num": "P3-070",
+"cle": "WA_DATA.messages[23].text",
+"fr": "25 minutes plus tard",
+"ligne": "P3-070"
+},
+{
+"num": "P3-071",
+"cle": "WA_DATA.messages[24].text",
+"fr": "regardez son nombre de likes 💀 3 likes en 2h avec 612 abonnés c'est mort",
+"ligne": "P3-071"
+},
+{
+"num": "P3-072",
+"cle": "WA_DATA.messages[25].text",
+"fr": "même ses vrais abonnés l'ignorent maintenant hahaha",
+"ligne": "P3-072"
+},
+{
+"num": "P3-073",
+"cle": "WA_DATA.messages[26].text",
+"fr": "on a réussi à contaminer son image 😈",
+"ligne": "P3-073"
+},
+{
+"num": "P3-074",
+"cle": "WA_DATA.messages[27].text",
+"fr": "sérieusement vous trouvez pas qu'on va un peu trop loin là...",
+"ligne": "P3-074"
+},
+{
+"num": "P3-075",
+"cle": "WA_DATA.messages[28].text",
+"fr": "t'inquiète c'est juste pour rire, elle le prend trop au sérieux de toute façon",
+"ligne": "P3-075"
+},
+{
+"num": "P3-076",
+"cle": "WA_DATA.messages[29].text",
+"fr": "ouais ok...",
+"ligne": "P3-076"
+},
+{
+"num": "P3-077",
+"cle": "WA_DATA.messages[30].text",
+"fr": "Kevin n'a pas l'air d'accord… mais il se tait. Pourquoi ? Je dois comprendre ce qu'il pense vraiment.",
+"ligne": "P3-077"
+},
+{
+"num": "P3-078",
+"cle": "WA_DATA.messages[31].text",
+"fr": "et aussi ses DMs ? on pourrait lui envoyer des trucs la nuit",
+"ligne": "P3-078"
+},
+{
+"num": "P3-079",
+"cle": "WA_DATA.messages[32].text",
+"fr": "oui avec des comptes anon encore, comme ça elle dort pas tranquille",
+"ligne": "P3-079"
+},
+{
+"num": "P3-080",
+"cle": "WA_DATA.messages[33].text",
+"fr": "genre la harceler pour qu'elle finisse par partir d'insta",
+"ligne": "P3-080"
+},
+{
+"num": "P3-081",
+"cle": "WA_DATA.messages[35].text",
+"fr": "@anonymous_x0 c'est moi qui l'ai créé, Théo l'utilise aussi btw",
+"ligne": "P3-081"
+},
+{
+"num": "P3-082",
+"cle": "WA_DATA.messages[36].text",
+"fr": "et j'en ai fait un 2e : @vrai_info_colleg, pour balancer des rumeurs sur elle",
+"ligne": "P3-082"
+},
+{
+"num": "P3-083",
+"cle": "WA_DATA.messages[37].text",
+"fr": "moi j'ai @jevoustrouve pour lui faire peur la nuit",
+"ligne": "P3-083"
+},
+{
+"num": "P3-084",
+"cle": "WA_DATA.messages[38].text",
+"fr": "moi mon compte je dis pas lequel 🤫 mais allez voir sous la photo de son chat, j'ai mis que même son chat avait l'air aussi nul qu'elle 😂",
+"ligne": "P3-084"
+},
+{
+"num": "P3-085",
+"cle": "WA_DATA.messages[39].text",
+"fr": "Marine ne dit pas quel compte elle utilise. Mais son commentaire est sous la photo du chat de Clara : je peux retrouver qui l'a écrit.",
+"ligne": "P3-085"
+},
+{
+"num": "P3-086",
+"cle": "WA_DATA.messages[39].btn",
+"fr": "🔎 Retrouver le compte de Marine sur l'Instaclasse",
+"ligne": "P3-086"
+},
+{
+"num": "P3-087",
+"cle": "WA_DATA.messages[39].done",
+"fr": "✓ Compte de Marine retrouvé :",
+"ligne": "P3-087"
+},
+{
+"num": "P3-088",
+"cle": "WA_DATA.messages[40].text",
+"fr": "pour ce soir on s'organise : messages toutes les heures après minuit",
+"ligne": "P3-088"
+},
+{
+"num": "P3-089",
+"cle": "WA_DATA.messages[41].text",
+"fr": "pour qu'elle pense à nous même chez elle, même quand elle essaie de dormir 💀",
+"ligne": "P3-089"
+},
+{
+"num": "P3-090",
+"cle": "WA_DATA.messages[42].text",
+"fr": "et on flood ses DMs depuis les comptes anon, surtout des trucs sur son physique",
+"ligne": "P3-090"
+},
+{
+"num": "P3-091",
+"cle": "WA_DATA.messages[44].text",
+"fr": "Lendemain - 09h14",
+"ligne": "P3-091"
+},
+{
+"num": "P3-092",
+"cle": "WA_DATA.messages[45].text",
+"fr": "vous avez vu ? Clara a plus posté depuis hier soir",
+"ligne": "P3-092"
+},
+{
+"num": "P3-093",
+"cle": "WA_DATA.messages[46].text",
+"fr": "hahaha on l'a bien cassée 💀",
+"ligne": "P3-093"
+},
+{
+"num": "P3-094",
+"cle": "WA_DATA.messages[47].text",
+"fr": "même plus vue en ligne depuis ce matin",
+"ligne": "P3-094"
+},
+{
+"num": "P3-095",
+"cle": "WA_DATA.messages[48].text",
+"fr": "et elle était pas en cours aujourd'hui non plus 😂",
+"ligne": "P3-095"
+},
+{
+"num": "P3-096",
+"cle": "WA_DATA.messages[49].text",
+"fr": "sérieusement... c'est peut-être grave là",
+"ligne": "P3-096"
+},
+{
+"num": "P3-097",
+"cle": "WA_DATA.messages[50].text",
+"fr": "relax elle a juste besoin d'une pause, elle l'a bien cherché 😂",
+"ligne": "P3-097"
+},
+{
+"num": "P3-098",
+"cle": "WA_DATA.messages[51].text",
+"fr": "elle a disparu de partout d'un coup. c'est pas normal",
+"ligne": "P3-098"
+},
+{
+"num": "P3-099",
+"cle": "WA_DATA.messages[52].text",
+"fr": "kevin arrête de dramatiser c'est bon",
+"ligne": "P3-099"
+},
+{
+"num": "P3-100",
+"cle": "WA_DATA.messages[53].text",
+"fr": "j'ai entendu dire qu'elle est partie dans son « havre secret » lmao",
+"ligne": "P3-100"
+},
+{
+"num": "P3-101",
+"cle": "WA_DATA.messages[54].text",
+"fr": "son QUOI 💀💀💀",
+"ligne": "P3-101"
+},
+{
+"num": "P3-102",
+"cle": "WA_DATA.messages[55].text",
+"fr": "elle est vraiment trop bizarre cette fille avec ses mots de 40 ans",
+"ligne": "P3-102"
+},
+{
+"num": "P3-103",
+"cle": "WA_DATA.messages[56].text",
+"fr": "c'est quoi ce « havre secret » omg elle se prend pour qui",
+"ligne": "P3-103"
+},
+{
+"num": "P3-104",
+"cle": "WA_DATA.messages[57].text",
+"fr": "chez sa tante je crois, quelque part, personne sait vraiment",
+"ligne": "P3-104"
+},
+{
+"num": "P3-105",
+"cle": "WA_DATA.messages[58].text",
+"fr": "lmao elle s'est enfuie dans son château secret 🏰 trop pathétique",
+"ligne": "P3-105"
+},
+{
+"num": "P3-106",
+"cle": "WA_DATA.messages[59].text",
+"fr": "les gars franchement... on est peut-être allés trop loin",
+"ligne": "P3-106"
+},
+{
+"num": "P3-107",
+"cle": "WA_DATA.messages[60].text",
+"fr": "non, elle l'a bien cherché. elle avait juste à pas réagir comme ça",
+"ligne": "P3-107"
+},
+{
+"num": "P3-108",
+"cle": "WA_DATA.messages[61].text",
+"fr": "exactement, c'est sa faute si elle peut pas encaisser",
+"ligne": "P3-108"
+},
+{
+"num": "P3-109",
+"cle": "WA_DATA.messages[62].text",
+"fr": "bon elle revient quand elle veut de son « havre » 😂 on sera là",
+"ligne": "P3-109"
+},
+{
+"num": "P3-110",
+"cle": "WA_DATA.messages[64].text",
+"fr": "Kevin a essayé de les arrêter, plusieurs fois. Seul contre quatre, il n'y arrive pas. C'est sans doute pour ça qu'il a envoyé le code à Clara.",
+"ligne": "P3-110"
+},
+{
+"num": "P3-111",
+"cle": "WA_DATA.quizzes.coordination.label",
+"fr": "Point d'analyse",
+"ligne": "P3-111"
+},
+{
+"num": "P3-112",
+"cle": "WA_DATA.quizzes.coordination.question",
+"fr": "Kevin hésite mais se tait et accepte. Que révèle cette scène ?",
+"ligne": "P3-112"
+},
+{
+"num": "P3-113",
+"cle": "WA_DATA.quizzes.coordination.options[0]",
+"fr": "Kevin est trop lâche pour s'opposer",
+"ligne": "P3-113"
+},
+{
+"num": "P3-114",
+"cle": "WA_DATA.quizzes.coordination.options[1]",
+"fr": "La pression du groupe peut réduire au silence même celui qui doute - c'est un mécanisme clé du harcèlement collectif",
+"ligne": "P3-114"
+},
+{
+"num": "P3-115",
+"cle": "WA_DATA.quizzes.coordination.options[2]",
+"fr": "Kevin n'est pas vraiment impliqué dans le harcèlement",
+"ligne": "P3-115"
+},
+{
+"num": "P3-116",
+"cle": "WA_DATA.quizzes.coordination.options[3]",
+"fr": "C'est une décision individuelle et libre de chacun",
+"ligne": "P3-116"
+},
+{
+"num": "P3-117",
+"cle": "WA_DATA.quizzes.coordination.explanation",
+"fr": "Le harcèlement de groupe fonctionne parce que la pression sociale étouffe les voix discordantes. Kevin doute, mais il se conforme pour ne pas être exclu à son tour. Pendant ce temps, Clara fait face à une masse entière - ce qui rend son isolement total et son sentiment d'injustice encore plus fort.",
+"ligne": "P3-117"
+},
+{
+"num": "P3-118",
+"cle": "WA_DATA.quizzes.anonymat.label",
+"fr": "Point d'analyse",
+"ligne": "P3-111"
+},
+{
+"num": "P3-119",
+"cle": "WA_DATA.quizzes.anonymat.question",
+"fr": "Pourquoi créent-ils des comptes anonymes spécifiquement pour harceler Clara ?",
+"ligne": "P3-119"
+},
+{
+"num": "P3-120",
+"cle": "WA_DATA.quizzes.anonymat.options[0]",
+"fr": "Pour tester les paramètres de confidentialité d'Instaclasse",
+"ligne": "P3-120"
+},
+{
+"num": "P3-121",
+"cle": "WA_DATA.quizzes.anonymat.options[1]",
+"fr": "Pour éviter d'être identifiés, multiplier les agresseurs apparents et rendre le blocage impossible",
+"ligne": "P3-121"
+},
+{
+"num": "P3-122",
+"cle": "WA_DATA.quizzes.anonymat.options[2]",
+"fr": "Parce que leurs vrais comptes ont déjà été bloqués par Clara",
+"ligne": "P3-122"
+},
+{
+"num": "P3-123",
+"cle": "WA_DATA.quizzes.anonymat.options[3]",
+"fr": "Pour jouer un rôle fictif sans conséquences réelles",
+"ligne": "P3-123"
+},
+{
+"num": "P3-124",
+"cle": "WA_DATA.quizzes.anonymat.explanation",
+"fr": "Les comptes anonymes servent à masquer l'identité des harceleurs tout en donnant l'impression que les attaques viennent de partout. Clara ne peut pas identifier ses agresseurs, les bloquer efficacement, ni prouver qui fait quoi. L'angoisse devient permanente car la menace semble surgir de nulle part - même chez elle, même la nuit.",
+"ligne": "P3-124"
+},
+{
+"num": "P3-125",
+"cle": "WA_DATA.synthesis.title",
+"fr": "📋 Mécanismes du harcèlement de groupe",
+"ligne": "P3-125"
+},
+{
+"num": "P3-126",
+"cle": "WA_DATA.synthesis.items[0].exp",
+"fr": "Kevin hésite mais se conforme pour ne pas être exclu. Quand personne n'ose s'opposer, tout le groupe devient complice - même ceux qui doutent. La victime fait face à une masse, pas à un individu.",
+"ligne": "P3-126"
+},
+{
+"num": "P3-127",
+"cle": "WA_DATA.synthesis.items[1].exp",
+"fr": "Les faux comptes permettent de multiplier les agresseurs apparents et d'éviter toute identification. La victime ne peut bloquer personne efficacement. L'angoisse devient permanente car la menace vient de nulle part.",
+"ligne": "P3-127"
+},
+{
+"num": "P3-128",
+"cle": "WA_DATA.synthesis.items[2].exp",
+"fr": "Le harcèlement est planifié, réparti dans le temps pour paraître naturel. Ce n'est pas spontané : c'est une organisation invisible. La victime perçoit une hostilité généralisée sans en voir la source.",
+"ligne": "P3-128"
+},
+{
+"num": "P3-129",
+"cle": "WA_DATA.synthesis.items[3].exp",
+"fr": "En envoyant des messages après minuit, le groupe s'assure que Clara ne peut plus se réfugier chez elle. Le harcèlement suit la victime partout - même dans son lit, même la nuit.",
+"ligne": "P3-129"
+},
+{
+"num": "P3-130",
+"cle": "WA_DATA.endThought",
+"fr": "Clara est chez sa tante, son « havre secret ». Mais où habite sa tante ? Je n'en sais rien… Il faut que je trouve quelqu'un qui le sache.",
+"ligne": "P3-130"
+},
+{
+"num": "P3-131",
+"cle": "WA_DATA.endMessage.title",
+"fr": "Ce groupe existait pendant que Clara…",
+"ligne": "P3-131"
+},
+{
+"num": "P3-132",
+"cle": "WA_DATA.endMessage.points[0]",
+"fr": "recevait des messages anonymes la nuit - ils sont dans ce groupe.",
+"ligne": "P3-132"
+},
+{
+"num": "P3-133",
+"cle": "WA_DATA.endMessage.points[1]",
+"fr": "voyait ses commentaires envahis - ils les ont organisés ici.",
+"ligne": "P3-133"
+},
+{
+"num": "P3-134",
+"cle": "WA_DATA.endMessage.points[2]",
+"fr": "pensait que « tout le monde » la détestait - ils l'ont fabriqué ensemble.",
+"ligne": "P3-134"
+},
+{
+"num": "P3-135",
+"cle": "WA_DATA.endMessage.points[3]",
+"fr": "n'osait plus poster - c'était leur objectif.",
+"ligne": "P3-135"
+},
+{
+"num": "P3-136",
+"cle": "WA_DATA.endMessage.points[4]",
+"fr": "s'est enfuie vers son « havre secret »... mais où est-il ?",
+"ligne": "P3-136"
+},
+{
+"num": "P3-137",
+"cle": "WA_DATA.endMessage.note",
+"fr": "Le harcèlement de groupe transforme chaque espace en danger. Clara est partie se réfugier loin de tout ça.",
+"ligne": "P3-137"
+},
+{
+"num": "P3-138",
+"cle": "WA_DATA.kevin.title",
+"fr": "Et Kevin ?",
+"ligne": "P3-138"
+},
+{
+"num": "P3-139",
+"cle": "WA_DATA.kevin.body",
+"fr": "Kevin a douté cinq fois. « On va un peu trop loin là. » « C'est peut-être grave. » « Elle a disparu de partout d'un coup. » « On est peut-être allés trop loin. » Puis « … ». À chaque fois on lui a coupé la parole, et à chaque fois il s'est tu. Il a fini par écrire à Clara, mais trop tard : elle était déjà partie.",
+"ligne": "P3-139"
+},
+{
+"num": "P3-140",
+"cle": "WA_DATA.kevin.items[0]",
+"fr": "Écrire à Clara en privé dès le premier doute, une seule phrase. Il n'avait pas besoin d'affronter le groupe : il suffisait qu'elle ne se croie plus seule.",
+"ligne": "P3-140"
+},
+{
+"num": "P3-141",
+"cle": "WA_DATA.kevin.items[1]",
+"fr": "Quitter le groupe. Partir se voit, et ça retire une voix au nombre.",
+"ligne": "P3-141"
+},
+{
+"num": "P3-142",
+"cle": "WA_DATA.kevin.items[2]",
+"fr": "Garder une capture d'écran. C'est la seule preuve que ce groupe a existé.",
+"ligne": "P3-142"
+},
+{
+"num": "P3-143",
+"cle": "WA_DATA.kevin.items[3]",
+"fr": "En parler à un adulte. C'est le seul geste qui pouvait arrêter les autres.",
+"ligne": "P3-143"
+},
+{
+"num": "P3-144",
+"cle": "WA_DATA.kevin.note",
+"fr": "Dans une classe, il y a rarement beaucoup de Clara et beaucoup d'Enzo. Il y a surtout beaucoup de Kevin.",
+"ligne": "P3-144"
+},
+{
+"num": "P3-145",
+"cle": "WA_DATA.mobile.title",
+"fr": "Pourquoi Clara ?",
+"ligne": "P3-145"
+},
+{
+"num": "P3-146",
+"cle": "WA_DATA.mobile.body",
+"fr": "Relis le groupe : à aucun moment ils ne le disent. La seule justification qui revient est « elle l'a bien cherché ». Il n'y a pas de raison - et chercher laquelle serait déjà donner tort à Clara.",
+"ligne": "P3-146"
+},
+{
+"num": "P3-147",
+"cle": "WA_DATA.navigation.prev.label",
+"fr": "← Instaclasse de Clara",
+"ligne": "P3-147"
+},
+{
+"num": "P3-148",
+"cle": "WA_DATA.navigation.next.label",
+"fr": "Retour au menu →",
+"ligne": "P3-148"
+},
+{
+"num": "P3-149",
+"cle": "UI.today",
+"fr": "Aujourd'hui",
+"ligne": "P2-087"
+},
+{
+"num": "P3-150",
+"cle": "UI.mentionTooltip",
+"fr": "Voir ses messages sur l'Instaclasse de Clara",
+"ligne": "P3-150"
+},
+{
+"num": "P3-151",
+"cle": "UI.wrong",
+"fr": "✗ Pas tout à fait.",
+"ligne": "P3-151"
+},
+{
+"num": "P3-152",
+"cle": "UI.tapHint",
+"fr": "Appuie pour accélérer",
+"ligne": "P3-152"
+},
+{
+"num": "P3-153",
+"cle": "UI.penseeLabel",
+"fr": "💭 Léo se dit…",
+"ligne": "P1-024"
+},
+{
+"num": "P3-154",
+"cle": "UI.inputPlaceholder",
+"fr": "Message…",
+"ligne": "P2-024"
+},
+{
+"num": "P4-001",
+"cle": "4_Convaincre_Clara.html#pg-title",
+"fr": "Passer l'appel",
+"ligne": "P4-001"
+},
+{
+"num": "P4-002",
+"cle": "4_Convaincre_Clara.html#pg-hint",
+"fr": "Pour parler à Clara, il faut appeler chez sa tante.",
+"ligne": "P4-002"
+},
+{
+"num": "P4-003",
+"cle": "4_Convaincre_Clara.html#pg-input@placeholder",
+"fr": "Numéro de la tante",
+"ligne": "P4-003"
+},
+{
+"num": "P4-004",
+"cle": "4_Convaincre_Clara.html#pg-call",
+"fr": "Appeler →",
+"ligne": "P4-004"
+},
+{
+"num": "P4-005",
+"cle": "4_Convaincre_Clara.html#pg-skip",
+"fr": "← Retourner demander à Inès",
+"ligne": "P4-005"
+},
+{
+"num": "P4-006",
+"cle": "4_Convaincre_Clara.html#pg-back",
+"fr": "← Retour à l'enquête",
+"ligne": "P4-006"
+},
+{
+"num": "P4-007",
+"cle": "4_Convaincre_Clara.html#i1-line",
+"fr": "Je dois contacter Clara pour lui apporter mon soutien et l'aider à aller mieux.",
+"ligne": "P4-007"
+},
+{
+"num": "P4-008",
+"cle": "4_Convaincre_Clara.html#intro4-btn",
+"fr": "Contacter Clara →",
+"ligne": "P4-008"
+},
+{
+"num": "P4-009",
+"cle": "4_Convaincre_Clara.html#i1-skip",
+"fr": "appuyer pour continuer",
+"ligne": "P1-006"
+},
+{
+"num": "P4-010",
+"cle": "4_Convaincre_Clara.html#save-sep",
+"fr": "ou reprendre une partie",
+"ligne": "P4-010"
+},
+{
+"num": "P4-011",
+"cle": "4_Convaincre_Clara.html#code-input@placeholder",
+"fr": "ex : BVRHJ1X",
+"ligne": "P4-011"
+},
+{
+"num": "P4-012",
+"cle": "4_Convaincre_Clara.html#btn-resume",
+"fr": "Reprendre",
+"ligne": "M-046"
+},
+{
+"num": "P4-013",
+"cle": "4_Convaincre_Clara.html#btn-save",
+"fr": "Sauvegarder",
+"ligne": "P4-013"
+},
+{
+"num": "P4-014",
+"cle": "4_Convaincre_Clara.html#emp-lbl",
+"fr": "Empathie",
+"ligne": "P4-014"
+},
+{
+"num": "P4-015",
+"cle": "4_Convaincre_Clara.html#btn-continue",
+"fr": "Continuer →",
+"ligne": "P2-367"
+},
+{
+"num": "P4-016",
+"cle": "4_Convaincre_Clara.html#modal-save-lbl",
+"fr": "Ton code de sauvegarde",
+"ligne": "P4-016"
+},
+{
+"num": "P4-017",
+"cle": "4_Convaincre_Clara.html#modal-save-hint",
+"fr": "Note ces 4 caractères. Sur l'écran d'accueil, saisis-les pour reprendre ta partie.",
+"ligne": "P4-017"
+},
+{
+"num": "P4-018",
+"cle": "4_Convaincre_Clara.html#btn-close-modal",
+"fr": "Fermer",
+"ligne": "P2-056"
+},
+{
+"num": "P4-019",
+"cle": "4_Convaincre_Clara.html#menu-btn",
+"fr": "← Menu",
+"ligne": "P1-001"
+},
+{
+"num": "P4-020",
+"cle": "4_Convaincre_Clara.html#fs-btn@title",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P4-021",
+"cle": "4_Convaincre_Clara.html#fs-btn@aria-label",
+"fr": "Plein écran",
+"ligne": "M-050"
+},
+{
+"num": "P4-022",
+"cle": "4_Convaincre_Clara.html (appel)",
+"fr": "Ce numéro ne répond pas.",
+"ligne": "P4-022"
+},
+{
+"num": "P4-023",
+"cle": "TEXTES.titre.eyebrow",
+"fr": "Un jeu sur l'empathie - Harcèlement scolaire",
+"ligne": "P4-023"
+},
+{
+"num": "P4-024",
+"cle": "TEXTES.titre.main",
+"fr": "Convaincre Clara",
+"ligne": "M-039"
+},
+{
+"num": "P4-025",
+"cle": "TEXTES.titre.sub",
+"fr": "Clara ne vient plus au collège depuis presque une semaine. Elle s'est réfugiée chez sa tante, à la campagne.\nTu es Léo, son ami{e}. Pour parler à Clara, tu dois d'abord convaincre sa tante que tu es digne de confiance - et que tu es vraiment là pour l'aider.",
+"ligne": "P4-025"
+},
+{
+"num": "P4-026",
+"cle": "TEXTES.titre.legende[0]",
+"fr": "La tante",
+"ligne": "P4-026"
+},
+{
+"num": "P4-027",
+"cle": "TEXTES.titre.legende[1]",
+"fr": "Clara",
+"ligne": null
+},
+{
+"num": "P4-028",
+"cle": "TEXTES.titre.legende[2]",
+"fr": "Toi - Léo",
+"ligne": "P4-028"
+},
+{
+"num": "P4-029",
+"cle": "TEXTES.titre.bouton",
+"fr": "☎  Appeler",
+"ligne": "P4-029"
+},
+{
+"num": "P4-030",
+"cle": "TEXTES.titre.commentTitre",
+"fr": "Comment ça se passe",
+"ligne": "P4-030"
+},
+{
+"num": "P4-031",
+"cle": "TEXTES.titre.comment[0]",
+"fr": "À chaque fois, tu choisis ce que dit Léo parmi trois réponses.",
+"ligne": "P4-031"
+},
+{
+"num": "P4-032",
+"cle": "TEXTES.titre.comment[1]",
+"fr": "D'abord, la tante. Elle protège Clara : montre-lui que tu penses à Clara avant toi, sans insister. Si elle ne te fait pas confiance, elle raccroche.",
+"ligne": "P4-032"
+},
+{
+"num": "P4-033",
+"cle": "TEXTES.titre.comment[2]",
+"fr": "Ensuite, Clara. Écoute-la avant de vouloir l'aider : ne la juge pas, ne lui fais pas de reproche, ne lui donne pas de solution toute faite. Si elle se sent jugée, elle raccroche.",
+"ligne": "P4-033"
+},
+{
+"num": "P4-034",
+"cle": "TEXTES.titre.comment[3]",
+"fr": "Après chaque réponse, une remarque t'explique comment elle a été reçue.",
+"ligne": "P4-034"
+},
+{
+"num": "P4-035",
+"cle": "TEXTES.titre.pensees[0]",
+"fr": "Il y a forcément un moyen d'avoir ce numéro…",
+"ligne": "P4-035"
+},
+{
+"num": "P4-036",
+"cle": "TEXTES.titre.pensees[1]",
+"fr": "Il y a certainement quelqu'un que je connais qui peut m'aider.",
+"ligne": "P4-036"
+},
+{
+"num": "P4-037",
+"cle": "TEXTES.titre.pensees[2]",
+"fr": "C'est quelqu'un avec qui j'ai déjà interagi qui peut m'aider…",
+"ligne": "P4-037"
+},
+{
+"num": "P4-038",
+"cle": "TEXTES.gameover.titre",
+"fr": "La tante a raccroché.",
+"ligne": "P4-038"
+},
+{
+"num": "P4-039",
+"cle": "TEXTES.gameover.corps",
+"fr": "Elle a senti que tu n'étais pas prêt{e} à comprendre ce que Clara traversait.\n\nPour protéger sa nièce encore fragile, elle a préféré mettre fin à la conversation.",
+"ligne": "P4-039"
+},
+{
+"num": "P4-040",
+"cle": "TEXTES.gameover.lecon",
+"fr": "💡 L'empathie, ce n'est pas seulement vouloir aider.\nC'est écouter avant de parler. Sentir avant d'agir.",
+"ligne": "P4-040"
+},
+{
+"num": "P4-041",
+"cle": "TEXTES.btnRecommencer",
+"fr": "↩ Recommencer",
+"ligne": "P4-041"
+},
+{
+"num": "P4-042",
+"cle": "TEXTES.btnRejouer",
+"fr": "↩ Rejouer",
+"ligne": "P4-042"
+},
+{
+"num": "P4-043",
+"cle": "TEXTES.objectifs.1",
+"fr": "Objectif : que la tante accepte de te passer Clara.",
+"ligne": "P4-043"
+},
+{
+"num": "P4-044",
+"cle": "TEXTES.objectifs.2",
+"fr": "Objectif : écouter Clara, et l'aider à accepter de parler à un adulte.",
+"ligne": "P4-044"
+},
+{
+"num": "P4-045",
+"cle": "TEXTES.gameoverClara.titre",
+"fr": "Clara a raccroché.",
+"ligne": "P4-045"
+},
+{
+"num": "P4-046",
+"cle": "TEXTES.gameoverClara.corps",
+"fr": "Elle s'est sentie jugée au lieu d'être écoutée. Elle n'avait plus la force de continuer ce soir.\n\nTu peux la rappeler, et essayer autrement.",
+"ligne": "P4-046"
+},
+{
+"num": "P4-047",
+"cle": "TEXTES.gameoverClara.lecon",
+"fr": "💡 Quelqu'un qui souffre n'a pas d'abord besoin de conseils ni de solutions.\nIl a besoin qu'on l'écoute, sans le juger.",
+"ligne": "P4-047"
+},
+{
+"num": "P4-048",
+"cle": "TEXTES.btnRappeler",
+"fr": "↩ Rappeler Clara",
+"ligne": "P4-048"
+},
+{
+"num": "P4-049",
+"cle": "TEXTES.btnTout",
+"fr": "↩ Tout recommencer",
+"ligne": "P4-049"
+},
+{
+"num": "P4-050",
+"cle": "TEXTES.btnSuite",
+"fr": "La suite de l'histoire →",
+"ligne": "P4-050"
+},
+{
+"num": "P4-051",
+"cle": "TEXTES.btnRejouerClara",
+"fr": "↩ Recommencer l'échange avec Clara",
+"ligne": "P4-051"
+},
+{
+"num": "P4-052",
+"cle": "TEXTES.locuteurs.aunt",
+"fr": "La tante",
+"ligne": "P4-026"
+},
+{
+"num": "P4-053",
+"cle": "TEXTES.locuteurs.lea",
+"fr": "Clara",
+"ligne": null
+},
+{
+"num": "P4-054",
+"cle": "TEXTES.locuteurs.thomas",
+"fr": "Léo",
+"ligne": null
+},
+{
+"num": "P4-055",
+"cle": "TEXTES.conclusion[0]",
+"fr": "Le lendemain, Léo est {allé|allée} voir le CPE.",
+"ligne": "P4-055"
+},
+{
+"num": "P4-056",
+"cle": "TEXTES.conclusion[1]",
+"fr": "Pas pour dénoncer : pour dire qu'une élève de son collège ne venait plus, et pourquoi. {Il|Elle} a montré les captures d'écran {qu'il|qu'elle} avait gardées, et signalé les comptes anonymes, un par un.",
+"ligne": "P4-056"
+},
+{
+"num": "P4-057",
+"cle": "TEXTES.conclusion[2]",
+"fr": "{Il|Elle} n'a rien réglé {tout seul|toute seule}. {Il|Elle} a fait ce {qu'un ami|qu'une amie} de quatorze ans peut faire : prévenir quelqu'un qui peut agir.",
+"ligne": "P4-057"
+},
+{
+"num": "P4-058",
+"cle": "TEXTES.conclusion[3]",
+"fr": "Le collège a ouvert une enquête. Les cinq du groupe ont été reçus, avec leurs parents. Deux ont répondu qu'ils « ne pensaient pas à mal ». Kevin a montré ses captures.",
+"ligne": "P4-058"
+},
+{
+"num": "P4-059",
+"cle": "TEXTES.conclusion[4]",
+"fr": "En France, le harcèlement scolaire est un délit depuis 2022 - y compris en ligne, y compris entre élèves.",
+"ligne": "P4-059"
+},
+{
+"num": "P4-060",
+"cle": "TEXTES.conclusion[5]",
+"fr": "Clara est revenue au collège trois semaines plus tard. Ça n'a pas été simple. Mais elle ne portait plus ça toute seule.",
+"ligne": "P4-060"
+},
+{
+"num": "P4-061",
+"cle": "TEXTES.recapBtn",
+"fr": "🖨 Récapitulatif à imprimer",
+"ligne": "P4-061"
+},
+{
+"num": "P4-062",
+"cle": "TEXTES.fins[0].titre",
+"fr": "Clara va demander de l'aide.",
+"ligne": "P4-062"
+},
+{
+"num": "P4-063",
+"cle": "TEXTES.fins[0].corps",
+"fr": "Tu as su trouver les mots justes à chaque instant.\nNi trop forts, ni trop légers - juste présents.\n\nLa tante t'a fait confiance. Clara a raccroché avec une décision concrète : parler à un adulte de confiance, et ne plus porter ça seule.\n\nTon rôle n'était pas de la sauver. C'était de lui montrer que demander de l'aide, c'est possible.",
+"ligne": "P4-063"
+},
+{
+"num": "P4-064",
+"cle": "TEXTES.fins[0].citation",
+"fr": "« Je vais en parler à ma tante. Vraiment parler. »\n- Clara",
+"ligne": "P4-064"
+},
+{
+"num": "P4-065",
+"cle": "TEXTES.fins[1].titre",
+"fr": "Un premier pas.",
+"ligne": "P4-065"
+},
+{
+"num": "P4-066",
+"cle": "TEXTES.fins[1].corps",
+"fr": "Tu as montré de la bonne volonté, même si certaines réponses manquaient de profondeur.\n\nClara hésite encore - mais elle envisage d'en parler à un adulte. Le chemin est long.\n\nTon rôle était de lui montrer que ce n'est pas à elle seule de tout porter.",
+"ligne": "P4-066"
+},
+{
+"num": "P4-067",
+"cle": "TEXTES.fins[1].citation",
+"fr": "« Peut-être que je vais essayer… »\n- Clara",
+"ligne": "P4-067"
+},
+{
+"num": "P4-068",
+"cle": "TEXTES.fins[2].titre",
+"fr": "La distance reste.",
+"ligne": "P4-068"
+},
+{
+"num": "P4-069",
+"cle": "TEXTES.fins[2].corps",
+"fr": "Tu voulais bien faire, mais tes mots ont parfois sonné comme des reproches ou de l'impatience.\n\nClara reste fermée. Elle a besoin de temps - et de quelqu'un qui écoute vraiment avant d'agir.\n\nRecommence l'échange : écoute-la d'abord, sans la juger.",
+"ligne": "P4-069"
+},
+{
+"num": "P4-070",
+"cle": "TEXTES.fins[2].citation",
+"fr": "« J'avais juste besoin que tu m'écoutes. »\n- Clara",
+"ligne": "P4-070"
+},
+{
+"num": "P4-071",
+"cle": "TEXTES.jeu.pivotHaut",
+"fr": "(revenue) Elle veut bien te parler.\nJe te la passe.",
+"ligne": "P4-071"
+},
+{
+"num": "P4-072",
+"cle": "TEXTES.jeu.pivotBas",
+"fr": "(revenue) Elle hésite encore…\n… Bon. Elle accepte. Mais vas-y doucement.",
+"ligne": "P4-072"
+},
+{
+"num": "P4-073",
+"cle": "TEXTES.jeu.echecGate1",
+"fr": "(longue pause)\nJe suis désolée, Léo. Je ne crois pas que ce soit une bonne idée ce soir.\nPeut-être une autre fois.",
+"ligne": "P4-073"
+},
+{
+"num": "P4-074",
+"cle": "TEXTES.jeu.echecGate2",
+"fr": "[ Elle raccroche doucement. ]",
+"ligne": "P4-074"
+},
+{
+"num": "P4-075",
+"cle": "TEXTES.jeu.echecRecup1",
+"fr": "(ton ferme) Je pense qu'il vaut mieux en rester là, Léo.\nClara n'est pas en état pour ça. Pas ce soir.",
+"ligne": "P4-075"
+},
+{
+"num": "P4-076",
+"cle": "TEXTES.jeu.echecRecup2",
+"fr": "[ Elle raccroche. ]",
+"ligne": "P4-076"
+},
+{
+"num": "P4-077",
+"cle": "TEXTES.jeu.scoreLabel",
+"fr": "Score d'empathie : ",
+"ligne": "P4-077"
+},
+{
+"num": "P4-078",
+"cle": "TEXTES.jeu.claraRaccroche1",
+"fr": "(long silence) … Je crois que je vais raccrocher. J'ai pas la force, ce soir.",
+"ligne": "P4-078"
+},
+{
+"num": "P4-079",
+"cle": "TEXTES.jeu.claraRaccroche2",
+"fr": "[ Elle raccroche. ]",
+"ligne": "P4-076"
+},
+{
+"num": "P4-080",
+"cle": "TEXTES.SCENES[0].phaseName",
+"fr": "Phase 1 - La tante",
+"ligne": "P4-080"
+},
+{
+"num": "P4-081",
+"cle": "TEXTES.SCENES[0].stepLabel",
+"fr": "Question 1 / 3",
+"ligne": "P4-081"
+},
+{
+"num": "P4-082",
+"cle": "TEXTES.SCENES[0].dialogueBefore[0].txt",
+"fr": "[ Le téléphone sonne… déclic. ]",
+"ligne": "P4-082"
+},
+{
+"num": "P4-083",
+"cle": "TEXTES.SCENES[0].dialogueBefore[1].txt",
+"fr": "Allô ?",
+"ligne": "P4-083"
+},
+{
+"num": "P4-084",
+"cle": "TEXTES.SCENES[0].dialogueBefore[2].txt",
+"fr": "Bonjour madame… excusez-moi de vous déranger. Je m'appelle Léo, je suis {un ami|une amie} de Clara. Est-ce que je pourrais lui parler, s'il vous plaît ?",
+"ligne": "P4-084"
+},
+{
+"num": "P4-085",
+"cle": "TEXTES.SCENES[0].dialogueBefore[3].txt",
+"fr": "Léo… Oui, elle m'a parlé de toi.\nMais… je préfère être honnête : ce n'est pas un bon moment.",
+"ligne": "P4-085"
+},
+{
+"num": "P4-086",
+"cle": "TEXTES.SCENES[0].prompt",
+"fr": "Comment répondre ?",
+"ligne": "P4-086"
+},
+{
+"num": "P4-087",
+"cle": "TEXTES.SCENES[0].choices[0].txt",
+"fr": "« Je comprends. Je veux pas la brusquer… mais elle me manque, et j'ai peur pour elle. »",
+"ligne": "P4-087"
+},
+{
+"num": "P4-088",
+"cle": "TEXTES.SCENES[0].choices[0].fb.msg",
+"fr": "Tu montres que sa protection passe avant ton besoin.",
+"ligne": "P4-088"
+},
+{
+"num": "P4-089",
+"cle": "TEXTES.SCENES[0].choices[0].reply.txt",
+"fr": "(un silence) C'est gentil de le dire comme ça.",
+"ligne": "P4-089"
+},
+{
+"num": "P4-090",
+"cle": "TEXTES.SCENES[0].choices[1].txt",
+"fr": "« Je comprends. Mais c'est important - ça ne prendra pas longtemps. »",
+"ligne": "P4-090"
+},
+{
+"num": "P4-091",
+"cle": "TEXTES.SCENES[0].choices[1].fb.msg",
+"fr": "Honnête, mais centré sur toi plutôt que sur Clara.",
+"ligne": "P4-091"
+},
+{
+"num": "P4-092",
+"cle": "TEXTES.SCENES[0].choices[1].reply.txt",
+"fr": "Hmm… d'accord. Je t'écoute.",
+"ligne": "P4-092"
+},
+{
+"num": "P4-093",
+"cle": "TEXTES.SCENES[0].choices[2].txt",
+"fr": "« J'ai besoin de lui parler maintenant, c'est urgent. »",
+"ligne": "P4-093"
+},
+{
+"num": "P4-094",
+"cle": "TEXTES.SCENES[0].choices[2].fb.msg",
+"fr": "« C'est urgent » : tu parles de ton besoin à toi. La tante, elle, protège Clara, qui va mal. En insistant, tu lui montres que tu passes avant Clara - exactement ce qu'elle redoute.",
+"ligne": "P4-094"
+},
+{
+"num": "P4-095",
+"cle": "TEXTES.SCENES[0].choices[2].reply.txt",
+"fr": "(froide) Urgent… pour toi, peut-être.",
+"ligne": "P4-095"
+},
+{
+"num": "P4-096",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.auntLine",
+"fr": "Ce n'est pas une urgence pour moi, Léo. Et pour l'instant, c'est ce qui compte.",
+"ligne": "P4-096"
+},
+{
+"num": "P4-097",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.prompt",
+"fr": "La tante attend. Que dis-tu ?",
+"ligne": "P4-097"
+},
+{
+"num": "P4-098",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.good.txt",
+"fr": "« Vous avez raison. Je suis désolé{e}. C'est elle qui compte, pas moi. »",
+"ligne": "P4-098"
+},
+{
+"num": "P4-099",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.good.fb.msg",
+"fr": "Tu reconnais ton erreur et tu remets Clara au centre. C'est ce qui rassure la tante.",
+"ligne": "P4-099"
+},
+{
+"num": "P4-100",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.good.reply.txt",
+"fr": "(légèrement adoucie) …D'accord. Continue.",
+"ligne": "P4-100"
+},
+{
+"num": "P4-101",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.bad.txt",
+"fr": "« Mais vous ne comprenez pas, c'est vraiment important. »",
+"ligne": "P4-101"
+},
+{
+"num": "P4-102",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.bad.fb.msg",
+"fr": "Tu contredis la tante au lieu de l'entendre. Ce n'est pas à toi de décider si Clara est prête à parler : c'est à elle, et à la tante qui la protège.",
+"ligne": "P4-102"
+},
+{
+"num": "P4-103",
+"cle": "TEXTES.SCENES[0].choices[2].recovery.bad.reply.txt",
+"fr": "(sèchement) Je comprends très bien. Et ça ne me rassure pas.",
+"ligne": "P4-103"
+},
+{
+"num": "P4-104",
+"cle": "TEXTES.SCENES[1].phaseName",
+"fr": "Phase 1 - La tante",
+"ligne": "P4-080"
+},
+{
+"num": "P4-105",
+"cle": "TEXTES.SCENES[1].stepLabel",
+"fr": "Question 2 / 3",
+"ligne": "P4-105"
+},
+{
+"num": "P4-106",
+"cle": "TEXTES.SCENES[1].dialogueBefore[0].txt",
+"fr": "Tu sais, depuis qu'elle est arrivée ici… Clara n'est plus la même.\nElle pleure beaucoup. Elle fait des cauchemars. Elle se réveille paniquée la nuit.\nEt surtout… elle culpabilise. Elle pense que tout est de sa faute.",
+"ligne": "P4-106"
+},
+{
+"num": "P4-107",
+"cle": "TEXTES.SCENES[1].prompt",
+"fr": "Que réponds-tu ?",
+"ligne": "P4-107"
+},
+{
+"num": "P4-108",
+"cle": "TEXTES.SCENES[1].choices[0].txt",
+"fr": "« Elle culpabilise ? Mais elle a rien fait… C'est ça qui me fait le plus mal. »",
+"ligne": "P4-108"
+},
+{
+"num": "P4-109",
+"cle": "TEXTES.SCENES[1].choices[0].fb.msg",
+"fr": "Tu défends Clara directement. La tante le ressent.",
+"ligne": "P4-109"
+},
+{
+"num": "P4-110",
+"cle": "TEXTES.SCENES[1].choices[0].reply.txt",
+"fr": "(souffle) C'est exactement ce qu'elle a besoin d'entendre.",
+"ligne": "P4-110"
+},
+{
+"num": "P4-111",
+"cle": "TEXTES.SCENES[1].choices[1].txt",
+"fr": "« Je savais pas que c'était à ce point… c'est vraiment grave. »",
+"ligne": "P4-111"
+},
+{
+"num": "P4-112",
+"cle": "TEXTES.SCENES[1].choices[1].fb.msg",
+"fr": "Sincère, mais tu restes en surface.",
+"ligne": "P4-112"
+},
+{
+"num": "P4-113",
+"cle": "TEXTES.SCENES[1].choices[1].reply.txt",
+"fr": "Oui. C'est très grave.",
+"ligne": "P4-113"
+},
+{
+"num": "P4-114",
+"cle": "TEXTES.SCENES[1].choices[2].txt",
+"fr": "« Elle aurait dû m'en parler avant d'en arriver là. »",
+"ligne": "P4-114"
+},
+{
+"num": "P4-115",
+"cle": "TEXTES.SCENES[1].choices[2].fb.msg",
+"fr": "« Elle aurait dû m'en parler » : c'est reprocher à Clara de s'être tue. Une victime se tait souvent par honte ou par peur. Lui en vouloir, c'est ajouter à la culpabilité dont la tante vient justement de parler.",
+"ligne": "P4-115"
+},
+{
+"num": "P4-116",
+"cle": "TEXTES.SCENES[1].choices[2].reply.txt",
+"fr": "(sèchement) Elle n'osait pas. C'est précisément le problème.",
+"ligne": "P4-116"
+},
+{
+"num": "P4-117",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.auntLine",
+"fr": "Si tu lui faisais des reproches maintenant… tu la blesserais encore plus, Léo.",
+"ligne": "P4-117"
+},
+{
+"num": "P4-118",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.prompt",
+"fr": "Comment réagis-tu à ça ?",
+"ligne": "P4-118"
+},
+{
+"num": "P4-119",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.good.txt",
+"fr": "« Vous avez raison. Ce n'est pas ce que je voulais dire. Elle ne méritait rien de tout ça. »",
+"ligne": "P4-119"
+},
+{
+"num": "P4-120",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.good.fb.msg",
+"fr": "Tu te reprends, et tu remets la faute là où elle est : chez ceux qui l'ont harcelée.",
+"ligne": "P4-120"
+},
+{
+"num": "P4-121",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.good.reply.txt",
+"fr": "(pause) …C'est mieux. J'entends de la sincérité.",
+"ligne": "P4-121"
+},
+{
+"num": "P4-122",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.bad.txt",
+"fr": "« Je fais juste remarquer que si elle m'avait parlé, on aurait pu éviter ça. »",
+"ligne": "P4-122"
+},
+{
+"num": "P4-123",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.bad.fb.msg",
+"fr": "Tu insistes : tout aurait été évitable si elle avait parlé. Ça revient à dire que c'est un peu sa faute. Ce n'est jamais la faute de la victime.",
+"ligne": "P4-123"
+},
+{
+"num": "P4-124",
+"cle": "TEXTES.SCENES[1].choices[2].recovery.bad.reply.txt",
+"fr": "(froide) Éviter ça. Tu penses vraiment que c'était si simple.",
+"ligne": "P4-124"
+},
+{
+"num": "P4-125",
+"cle": "TEXTES.SCENES[2].phaseName",
+"fr": "Phase 1 - La tante",
+"ligne": "P4-080"
+},
+{
+"num": "P4-126",
+"cle": "TEXTES.SCENES[2].stepLabel",
+"fr": "Question 3 / 3",
+"ligne": "P4-126"
+},
+{
+"num": "P4-127",
+"cle": "TEXTES.SCENES[2].dialogueBefore[0].txt",
+"fr": "Le harcèlement, ça détruit lentement. Ça te fait douter de ta valeur…\nElle s'est renfermée. Elle évite même de regarder son téléphone.\nSi tu veux vraiment l'aider… il faudra être patient. Très patient.",
+"ligne": "P4-127"
+},
+{
+"num": "P4-128",
+"cle": "TEXTES.SCENES[2].prompt",
+"fr": "Avant qu'elle aille demander à Clara…",
+"ligne": "P4-128"
+},
+{
+"num": "P4-129",
+"cle": "TEXTES.SCENES[2].choices[0].txt",
+"fr": "« Je serai patient{e}. Dites-lui juste que je suis là. Elle est pas obligée de me parler. »",
+"ligne": "P4-129"
+},
+{
+"num": "P4-130",
+"cle": "TEXTES.SCENES[2].choices[0].fb.msg",
+"fr": "Tu enlèves toute pression. C'est exactement ce qu'il fallait.",
+"ligne": "P4-130"
+},
+{
+"num": "P4-131",
+"cle": "TEXTES.SCENES[2].choices[0].reply.txt",
+"fr": "(plus douce) Je vais lui dire ça. Attends.",
+"ligne": "P4-131"
+},
+{
+"num": "P4-132",
+"cle": "TEXTES.SCENES[2].choices[1].txt",
+"fr": "« Je ferai attention à ce que je lui dis. Merci de me laisser essayer. »",
+"ligne": "P4-132"
+},
+{
+"num": "P4-133",
+"cle": "TEXTES.SCENES[2].choices[1].fb.msg",
+"fr": "Sincère. La tante apprécie l'honnêteté.",
+"ligne": "P4-133"
+},
+{
+"num": "P4-134",
+"cle": "TEXTES.SCENES[2].choices[1].reply.txt",
+"fr": "D'accord… je vais lui demander.",
+"ligne": "P4-134"
+},
+{
+"num": "P4-135",
+"cle": "TEXTES.SCENES[2].choices[2].txt",
+"fr": "« Je vais lui dire que tout va s'arranger, que j'ai un plan. »",
+"ligne": "P4-135"
+},
+{
+"num": "P4-136",
+"cle": "TEXTES.SCENES[2].choices[2].fb.msg",
+"fr": "« J'ai un plan, tout va s'arranger » : tu promets ce que tu ne peux pas tenir, et tu décides à sa place. Clara n'a pas besoin qu'on la sauve, elle a besoin qu'on l'écoute, à son rythme.",
+"ligne": "P4-136"
+},
+{
+"num": "P4-137",
+"cle": "TEXTES.SCENES[2].choices[2].reply.txt",
+"fr": "(froide) Un plan. Clara n'a pas besoin d'un plan. Elle a besoin d'être entendue.",
+"ligne": "P4-137"
+},
+{
+"num": "P4-138",
+"cle": "TEXTES.SCENES[2].choices[2].recovery.auntLine",
+"fr": "Est-ce que tu comprends la différence, Léo ?",
+"ligne": "P4-138"
+},
+{
+"num": "P4-139",
+"cle": "TEXTES.SCENES[2].choices[2].recovery.good.txt",
+"fr": "« Oui… vous avez raison. Je voulais juste l'aider mais je suis allé{e} trop vite. »",
+"ligne": "P4-139"
+},
+{
+"num": "P4-140",
+"cle": "TEXTES.SCENES[2].choices[2].recovery.good.fb.msg",
+"fr": "Tu reconnais que tu es allé{e} trop vite. La tante voit que tu sais écouter.",
+"ligne": "P4-140"
+},
+{
+"num": "P4-141",
+"cle": "TEXTES.SCENES[2].choices[2].recovery.good.reply.txt",
+"fr": "(longue pause) …Je vais lui demander. Mais ne la brusque pas.",
+"ligne": "P4-141"
+},
+{
+"num": "P4-142",
+"cle": "TEXTES.SCENES[2].choices[2].recovery.bad.txt",
+"fr": "« Je pense que ça lui ferait du bien d'avoir un objectif concret. »",
+"ligne": "P4-142"
+},
+{
+"num": "P4-143",
+"cle": "TEXTES.SCENES[2].choices[2].recovery.bad.fb.msg",
+"fr": "Un « objectif concret », c'est encore une solution décidée à sa place. Avant de pouvoir agir, Clara a besoin de se sentir entendue.",
+"ligne": "P4-143"
+},
+{
+"num": "P4-144",
+"cle": "TEXTES.SCENES[2].choices[2].recovery.bad.reply.txt",
+"fr": "(ferme) Je ne crois pas que tu sois prêt{e} à lui parler ce soir.",
+"ligne": "P4-144"
+},
+{
+"num": "P4-145",
+"cle": "TEXTES.SCENES[3].phaseName",
+"fr": "En attente…",
+"ligne": "P4-145"
+},
+{
+"num": "P4-146",
+"cle": "TEXTES.SCENES[3].dialogueBefore[0].txt",
+"fr": "[ Bruits étouffés… la tante s'éloigne… murmures au loin… ]",
+"ligne": "P4-146"
+},
+{
+"num": "P4-147",
+"cle": "TEXTES.SCENES[4].phaseName",
+"fr": "Phase 2 - Clara",
+"ligne": "P4-147"
+},
+{
+"num": "P4-148",
+"cle": "TEXTES.SCENES[4].stepLabel",
+"fr": "Question 1 / 4",
+"ligne": "P4-148"
+},
+{
+"num": "P4-149",
+"cle": "TEXTES.SCENES[4].dialogueBefore[0].txt",
+"fr": "[ Un froissement de téléphone… ]",
+"ligne": "P4-149"
+},
+{
+"num": "P4-150",
+"cle": "TEXTES.SCENES[4].dialogueBefore[1].txt",
+"fr": "Allô… ?",
+"ligne": "P4-150"
+},
+{
+"num": "P4-151",
+"cle": "TEXTES.SCENES[4].dialogueBefore[2].txt",
+"fr": "Clara… c'est moi. Léo.",
+"ligne": "P4-151"
+},
+{
+"num": "P4-152",
+"cle": "TEXTES.SCENES[4].dialogueBefore[3].txt",
+"fr": "… Salut.",
+"ligne": "P4-152"
+},
+{
+"num": "P4-153",
+"cle": "TEXTES.SCENES[4].dialogueBefore[4].txt",
+"fr": "Je suis désolé{e} d'appeler comme ça. Je ne savais pas comment faire autrement.",
+"ligne": "P4-153"
+},
+{
+"num": "P4-154",
+"cle": "TEXTES.SCENES[4].dialogueBefore[5].txt",
+"fr": "C'est… c'est pas grave.",
+"ligne": "P4-154"
+},
+{
+"num": "P4-155",
+"cle": "TEXTES.SCENES[4].dialogueBefore[6].txt",
+"fr": "Tu m'as manqué.",
+"ligne": "P4-155"
+},
+{
+"num": "P4-156",
+"cle": "TEXTES.SCENES[4].dialogueBefore[7].txt",
+"fr": "(souffle) Toi aussi…",
+"ligne": "P4-156"
+},
+{
+"num": "P4-157",
+"cle": "TEXTES.SCENES[4].dialogueBefore[8].txt",
+"fr": "Pourquoi tu n'as rien dit ? Tu sais que tu pouvais me parler…",
+"ligne": "P4-157"
+},
+{
+"num": "P4-158",
+"cle": "TEXTES.SCENES[4].dialogueBefore[9].txt",
+"fr": "J'y ai pensé… plein de fois.\nJ'ai même commencé à écrire des messages… et puis je les supprimais.",
+"ligne": "P4-158"
+},
+{
+"num": "P4-159",
+"cle": "TEXTES.SCENES[4].prompt",
+"fr": "Que lui réponds-tu ?",
+"ligne": "P4-159"
+},
+{
+"num": "P4-160",
+"cle": "TEXTES.SCENES[4].choices[0].txt",
+"fr": "« T'avais pas besoin de trouver les bons mots. Je t'aurais écoutée, même sans explication. »",
+"ligne": "P4-160"
+},
+{
+"num": "P4-161",
+"cle": "TEXTES.SCENES[4].choices[0].fb.msg",
+"fr": "Tu lèves la pression des mots. Elle peut souffler.",
+"ligne": "P4-161"
+},
+{
+"num": "P4-162",
+"cle": "TEXTES.SCENES[4].choices[0].reply.txt",
+"fr": "(silence) …Je sais. Je crois que j'avais honte.",
+"ligne": "P4-162"
+},
+{
+"num": "P4-163",
+"cle": "TEXTES.SCENES[4].choices[1].txt",
+"fr": "« Je comprends… c'est dur de savoir comment dire ces choses. »",
+"ligne": "P4-163"
+},
+{
+"num": "P4-164",
+"cle": "TEXTES.SCENES[4].choices[1].fb.msg",
+"fr": "Vrai, mais un peu général.",
+"ligne": "P4-164"
+},
+{
+"num": "P4-165",
+"cle": "TEXTES.SCENES[4].choices[1].reply.txt",
+"fr": "Ouais… c'est ça.",
+"ligne": "P4-165"
+},
+{
+"num": "P4-166",
+"cle": "TEXTES.SCENES[4].choices[2].txt",
+"fr": "« Pourquoi tu as supprimé ces messages ? J'aurais répondu, tu sais. »",
+"ligne": "P4-166"
+},
+{
+"num": "P4-167",
+"cle": "TEXTES.SCENES[4].choices[2].fb.msg",
+"fr": "« Pourquoi tu les as supprimés ? » : tu lui demandes des comptes, et tu ramènes la conversation à toi (« j'aurais répondu »). Elle a déjà honte de s'être tue : la questionner là-dessus, c'est la mettre en faute.",
+"ligne": "P4-167"
+},
+{
+"num": "P4-168",
+"cle": "TEXTES.SCENES[4].choices[2].reply.txt",
+"fr": "(froide) J'en sais rien…",
+"ligne": "P4-168"
+},
+{
+"num": "P4-169",
+"cle": "TEXTES.SCENES[4].dialogueRappel[0].txt",
+"fr": "[ Tu rappelles. Ça sonne longtemps… déclic. ]",
+"ligne": "P4-169"
+},
+{
+"num": "P4-170",
+"cle": "TEXTES.SCENES[4].dialogueRappel[1].txt",
+"fr": "Allô ?",
+"ligne": "P4-170"
+},
+{
+"num": "P4-171",
+"cle": "TEXTES.SCENES[4].dialogueRappel[2].txt",
+"fr": "C'est encore Léo. Je suis désolé{e}… J'ai mal parlé à Clara tout à l'heure. Est-ce qu'elle accepterait de me reparler ? Juste une minute.",
+"ligne": "P4-171"
+},
+{
+"num": "P4-172",
+"cle": "TEXTES.SCENES[4].dialogueRappel[3].txt",
+"fr": "(un long silence) … Je vais lui demander. Mais cette fois, écoute-la.",
+"ligne": "P4-172"
+},
+{
+"num": "P4-173",
+"cle": "TEXTES.SCENES[4].dialogueRappel[4].txt",
+"fr": "[ Des pas… une porte… des murmures. ]",
+"ligne": "P4-173"
+},
+{
+"num": "P4-174",
+"cle": "TEXTES.SCENES[4].dialogueRappel[5].txt",
+"fr": "… Allô ?",
+"ligne": "P4-174"
+},
+{
+"num": "P4-175",
+"cle": "TEXTES.SCENES[4].dialogueRappel[6].txt",
+"fr": "Clara… pardon pour tout à l'heure. Je voulais pas te faire la leçon. Je suis là pour t'écouter, c'est tout.",
+"ligne": "P4-175"
+},
+{
+"num": "P4-176",
+"cle": "TEXTES.SCENES[4].dialogueRappel[7].txt",
+"fr": "(silence) … D'accord.",
+"ligne": "P4-176"
+},
+{
+"num": "P4-177",
+"cle": "TEXTES.SCENES[4].dialogueRappel[8].txt",
+"fr": "Je t'avais demandé pourquoi tu n'avais rien dit. T'es pas obligée de répondre.",
+"ligne": "P4-177"
+},
+{
+"num": "P4-178",
+"cle": "TEXTES.SCENES[4].dialogueRappel[9].txt",
+"fr": "Non… je veux bien. J'y ai pensé… plein de fois.\nJ'ai même commencé à écrire des messages… et puis je les supprimais.",
+"ligne": "P4-178"
+},
+{
+"num": "P4-179",
+"cle": "TEXTES.SCENES[5].phaseName",
+"fr": "Phase 2 - Clara",
+"ligne": "P4-147"
+},
+{
+"num": "P4-180",
+"cle": "TEXTES.SCENES[5].stepLabel",
+"fr": "Question 2 / 4",
+"ligne": "P4-180"
+},
+{
+"num": "P4-181",
+"cle": "TEXTES.SCENES[5].dialogueBefore[0].txt",
+"fr": "Au début, c'était juste des remarques… des petites piques.\nJe me disais que ça allait passer.\nMais après… ça a empiré. Des moqueries en groupe. Des commentaires sur tout.\nEt ensuite, ça a continué en ligne. Des messages. Des captures. Des rumeurs.\nJe ne pouvais plus y échapper… même chez moi.",
+"ligne": "P4-181"
+},
+{
+"num": "P4-182",
+"cle": "TEXTES.SCENES[5].prompt",
+"fr": "Que ressens-tu à l'entendre ?",
+"ligne": "P4-182"
+},
+{
+"num": "P4-183",
+"cle": "TEXTES.SCENES[5].choices[0].txt",
+"fr": "« Même chez toi t'étais pas tranquille… T'avais plus aucun endroit où souffler. Je suis désolé{e}. »",
+"ligne": "P4-183"
+},
+{
+"num": "P4-184",
+"cle": "TEXTES.SCENES[5].choices[0].fb.msg",
+"fr": "Tu nommes sa réalité avec précision. Elle se sent comprise.",
+"ligne": "P4-184"
+},
+{
+"num": "P4-185",
+"cle": "TEXTES.SCENES[5].choices[0].reply.txt",
+"fr": "(voix qui se brise) Oui… c'est exactement ça.",
+"ligne": "P4-185"
+},
+{
+"num": "P4-186",
+"cle": "TEXTES.SCENES[5].choices[1].txt",
+"fr": "« C'est horrible… être harcelée même à la maison. »",
+"ligne": "P4-186"
+},
+{
+"num": "P4-187",
+"cle": "TEXTES.SCENES[5].choices[1].fb.msg",
+"fr": "Sincère, mais tu restes en surface.",
+"ligne": "P4-112"
+},
+{
+"num": "P4-188",
+"cle": "TEXTES.SCENES[5].choices[1].reply.txt",
+"fr": "Ouais…",
+"ligne": "P4-188"
+},
+{
+"num": "P4-189",
+"cle": "TEXTES.SCENES[5].choices[2].txt",
+"fr": "« T'aurais pu bloquer ces gens, désactiver tes réseaux. »",
+"ligne": "P4-189"
+},
+{
+"num": "P4-190",
+"cle": "TEXTES.SCENES[5].choices[2].fb.msg",
+"fr": "Un conseil qu'elle n'a pas demandé, et qui sonne comme un reproche : « tu aurais pu éviter ça ». Elle te confie ce qu'elle a vécu, pas un problème à régler. Et bloquer ne suffit pas : les comptes anonymes reviennent sous un autre nom. Avant de conseiller, écoute.",
+"ligne": "P4-190"
+},
+{
+"num": "P4-191",
+"cle": "TEXTES.SCENES[5].choices[2].reply.txt",
+"fr": "(froide) Merci, j'y avais pas pensé.",
+"ligne": "P4-191"
+},
+{
+"num": "P4-192",
+"cle": "TEXTES.SCENES[6].phaseName",
+"fr": "Phase 2 - Clara",
+"ligne": "P4-147"
+},
+{
+"num": "P4-193",
+"cle": "TEXTES.SCENES[6].stepLabel",
+"fr": "Question 3 / 4",
+"ligne": "P4-193"
+},
+{
+"num": "P4-194",
+"cle": "TEXTES.SCENES[6].dialogueBefore[0].txt",
+"fr": "Le pire, tu sais quoi ?\nC'est quand j'ai commencé à y croire.\nQuand je me regardais dans le miroir et que je voyais ce qu'ils disaient.",
+"ligne": "P4-194"
+},
+{
+"num": "P4-195",
+"cle": "TEXTES.SCENES[6].prompt",
+"fr": "Comment lui répondre ?",
+"ligne": "P4-195"
+},
+{
+"num": "P4-196",
+"cle": "TEXTES.SCENES[6].choices[0].txt",
+"fr": "« C'est normal que t'aies fini par y croire, ils te l'ont dit cent fois. Mais c'est faux. C'est eux le problème, pas toi. »",
+"ligne": "P4-196"
+},
+{
+"num": "P4-197",
+"cle": "TEXTES.SCENES[6].choices[0].fb.msg",
+"fr": "Tu expliques le mécanisme. Tu lui rends la réalité.",
+"ligne": "P4-197"
+},
+{
+"num": "P4-198",
+"cle": "TEXTES.SCENES[6].choices[0].reply.txt",
+"fr": "(longue pause) Personne ne l'avait dit comme ça avant.",
+"ligne": "P4-198"
+},
+{
+"num": "P4-199",
+"cle": "TEXTES.SCENES[6].choices[1].txt",
+"fr": "« Non. Ce que tu voyais, c'est leurs mensonges - pas toi. »",
+"ligne": "P4-199"
+},
+{
+"num": "P4-200",
+"cle": "TEXTES.SCENES[6].choices[1].fb.msg",
+"fr": "Clair et direct. Utile.",
+"ligne": "P4-200"
+},
+{
+"num": "P4-201",
+"cle": "TEXTES.SCENES[6].choices[1].reply.txt",
+"fr": "J'essaie de me le dire… c'est dur.",
+"ligne": "P4-201"
+},
+{
+"num": "P4-202",
+"cle": "TEXTES.SCENES[6].choices[2].txt",
+"fr": "« Tu sais bien que c'est faux ce qu'ils disent. »",
+"ligne": "P4-202"
+},
+{
+"num": "P4-203",
+"cle": "TEXTES.SCENES[6].choices[2].fb.msg",
+"fr": "« Tu sais bien que c'est faux » : si elle le savait, elle n'en serait pas là. Entendu cent fois, le harcèlement finit par faire croire à la victime ce qu'on lui dit. « Tu sais bien », c'est lui reprocher d'y avoir cru.",
+"ligne": "P4-203"
+},
+{
+"num": "P4-204",
+"cle": "TEXTES.SCENES[6].choices[2].reply.txt",
+"fr": "(silence) Si je le savais vraiment, j'aurais pas craqué.",
+"ligne": "P4-204"
+},
+{
+"num": "P4-205",
+"cle": "TEXTES.SCENES[7].phaseName",
+"fr": "Phase 2 - Clara",
+"ligne": "P4-147"
+},
+{
+"num": "P4-206",
+"cle": "TEXTES.SCENES[7].stepLabel",
+"fr": "Question 4 / 4",
+"ligne": "P4-206"
+},
+{
+"num": "P4-207",
+"cle": "TEXTES.SCENES[7].dialogueBefore[0].txt",
+"fr": "Ça fait cinq jours que je suis ici…\nLes deux premiers, je sortais même pas de la chambre.\nMaintenant… ça va un peu moins mal. Mais j'ai encore peur.\nPeur de retourner au collège. Peur que ça recommence. Peur que rien ne change.",
+"ligne": "P4-207"
+},
+{
+"num": "P4-208",
+"cle": "TEXTES.SCENES[7].dialogueBefore[1].txt",
+"fr": "Tu en as parlé à ta tante ? À tes parents ?",
+"ligne": "P4-208"
+},
+{
+"num": "P4-209",
+"cle": "TEXTES.SCENES[7].dialogueBefore[2].txt",
+"fr": "Mes parents croient que c'est juste de la fatigue. Ils ont dit au collège que j'étais malade.\nMa tante, elle, sait un peu… Elle est gentille. Mais je veux pas les inquiéter.\nJ'ai l'impression que si j'en parle vraiment… ça devient réel.",
+"ligne": "P4-209"
+},
+{
+"num": "P4-210",
+"cle": "TEXTES.SCENES[7].prompt",
+"fr": "Que lui dire ?",
+"ligne": "P4-210"
+},
+{
+"num": "P4-211",
+"cle": "TEXTES.SCENES[7].choices[0].txt",
+"fr": "« C'est déjà réel, Clara. Et c'est pour ça qu'il faut des adultes qui peuvent agir : ta tante, tes parents, le CPE. Pas pour tout régler d'un coup. Juste pour que tu portes plus ça toute seule. »",
+"ligne": "P4-211"
+},
+{
+"num": "P4-212",
+"cle": "TEXTES.SCENES[7].choices[0].fb.msg",
+"fr": "Tu lui montres que chercher de l'aide adulte, c'est un acte de courage - pas une faiblesse.",
+"ligne": "P4-212"
+},
+{
+"num": "P4-213",
+"cle": "TEXTES.SCENES[7].choices[0].reply.txt",
+"fr": "(silence) …Peut-être. Ma tante m'a proposé d'appeler le collège.\nJ'avais dit non. Mais là… peut-être que oui.",
+"ligne": "P4-213"
+},
+{
+"num": "P4-214",
+"cle": "TEXTES.SCENES[7].choices[1].txt",
+"fr": "« Tu n'as pas à régler ça toute seule. Si tu veux, je peux être là quand tu en parles à quelqu'un - n'importe quel adulte de confiance. »",
+"ligne": "P4-214"
+},
+{
+"num": "P4-215",
+"cle": "TEXTES.SCENES[7].choices[1].fb.msg",
+"fr": "Solidaire. Mais c'est à elle de faire le premier pas - tu le lui rappelles bien.",
+"ligne": "P4-215"
+},
+{
+"num": "P4-216",
+"cle": "TEXTES.SCENES[7].choices[1].reply.txt",
+"fr": "(hésitante) …D'accord. Je vais y réfléchir.",
+"ligne": "P4-216"
+},
+{
+"num": "P4-217",
+"cle": "TEXTES.SCENES[7].choices[2].txt",
+"fr": "« T'inquiète, je vais régler ça moi-même. Ces gens vont avoir des problèmes. »",
+"ligne": "P4-217"
+},
+{
+"num": "P4-218",
+"cle": "TEXTES.SCENES[7].choices[2].fb.msg",
+"fr": "« Je vais régler ça moi-même » : tu veux la protéger, mais t'en prendre seul{e} au groupe risque d'aggraver les choses, pour elle comme pour toi. Ce n'est pas ton rôle : c'est celui des adultes qui peuvent agir - le CPE, ses parents, sa tante.",
+"ligne": "P4-218"
+},
+{
+"num": "P4-219",
+"cle": "TEXTES.SCENES[7].choices[2].reply.txt",
+"fr": "(froide) Non… s'il te plaît, fais rien. Ça va juste empirer.",
+"ligne": "P4-219"
+},
+{
+"num": "P4-220",
+"cle": "UI.invalidCode",
+"fr": "Code invalide - vérifie les 4 caractères.",
+"ligne": "P4-220"
+},
+{
+"num": "R-001",
+"cle": "recapitulatif.html#eyebrow",
+"fr": "Retrouver Clara · exercice de sensibilisation",
+"ligne": "R-001"
+},
+{
+"num": "R-002",
+"cle": "recapitulatif.html#page",
+"fr": "Ce que tu as vu",
+"ligne": "R-002"
+},
+{
+"num": "R-003",
+"cle": "recapitulatif.html#ident",
+"fr": "Nom :",
+"ligne": "R-003"
+},
+{
+"num": "R-004",
+"cle": "recapitulatif.html#ident",
+"fr": "Classe :",
+"ligne": "R-004"
+},
+{
+"num": "R-005",
+"cle": "recapitulatif.html#ident",
+"fr": "Date :",
+"ligne": "R-005"
+},
+{
+"num": "R-006",
+"cle": "recapitulatif.html#page",
+"fr": "Les neuf formes de harcèlement",
+"ligne": "R-006"
+},
+{
+"num": "R-007",
+"cle": "recapitulatif.html#intro",
+"fr": "Cochées : celles que tu as identifiées toi-même dans le compte de Clara. Les autres étaient là aussi.",
+"ligne": "R-007"
+},
+{
+"num": "R-008",
+"cle": "recapitulatif.html#page",
+"fr": "Les comptes anonymes",
+"ligne": "R-008"
+},
+{
+"num": "R-009",
+"cle": "recapitulatif.html#intro",
+"fr": "Six comptes, quatre élèves de la classe. Clara ne l'a jamais su - c'est ce qui rend l'anonymat si efficace.",
+"ligne": "R-009"
+},
+{
+"num": "R-010",
+"cle": "recapitulatif.html#page",
+"fr": "Comment ça s'est terminé",
+"ligne": "R-010"
+},
+{
+"num": "R-011",
+"cle": "recapitulatif.html#page",
+"fr": "Où trouver de l'aide",
+"ligne": "R-011"
+},
+{
+"num": "R-012",
+"cle": "recapitulatif.html#page",
+"fr": "À toi",
+"ligne": "R-012"
+},
+{
+"num": "R-013",
+"cle": "recapitulatif.html#ecrire",
+"fr": "Si je vois ça arriver autour de moi, la première chose que je fais :",
+"ligne": "R-013"
+},
+{
+"num": "R-014",
+"cle": "recapitulatif.html#ecrire",
+"fr": "La personne à qui j'en parle :",
+"ligne": "R-014"
+},
+{
+"num": "R-015",
+"cle": "recapitulatif.html#print",
+"fr": "🖨 Imprimer",
+"ligne": "R-015"
+},
+{
+"num": "R-016",
+"cle": "recapitulatif.html#tools",
+"fr": "← Retour au menu",
+"ligne": "R-016"
+},
+{
+"num": "R-017",
+"cle": "recapitulatif.html#page",
+"fr": "Les personnages et les messages de cet exercice sont fictifs. Le harcèlement scolaire, lui, est un délit - y compris en ligne.",
+"ligne": "R-017"
+},
+{
+"num": "R-018",
+"cle": "RESSOURCES.titre",
+"fr": "Si jamais tu veux parler, voici les numéros qui peuvent t'aider",
+"ligne": "R-018"
+},
+{
+"num": "R-019",
+"cle": "RESSOURCES.liste[0].txt",
+"fr": "Harcèlement et cyberharcèlement - gratuit, anonyme, 7 j/7",
+"ligne": "R-019"
+},
+{
+"num": "R-020",
+"cle": "RESSOURCES.liste[1].txt",
+"fr": "Souffrance psychique et prévention du suicide",
+"ligne": "R-020"
+},
+{
+"num": "R-021",
+"cle": "RESSOURCES.liste[2].label",
+"fr": "e-enfance.org",
+"ligne": null
+},
+{
+"num": "R-022",
+"cle": "RESSOURCES.liste[2].txt",
+"fr": "Conseils et signalement en ligne",
+"ligne": "R-022"
+}
+]
