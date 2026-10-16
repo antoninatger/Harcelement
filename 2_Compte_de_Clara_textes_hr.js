@@ -47,7 +47,7 @@ const CONVOS = [
       },
       {
         "from": "them",
-        "text": "nije te sram ?",
+        "text": "nije te sram?",
         "time": "10:31"
       },
       {
@@ -113,7 +113,7 @@ const CONVOS = [
       },
       {
         "from": "them",
-        "text": "upozorio sam cijeli razred, pazite na svoje stvari ?😂",
+        "text": "upozorio sam cijeli razred, pazite na svoje stvari 😂",
         "time": "09:59"
       },
       {

@@ -365,7 +365,7 @@ const UI = {
     "reponseResolue": "Kod njezine tete. Pišu o tome u grupi.",
     "copyTitle": "Kopiraj broj.",
     "relireBtn": "↺ Ponovno pročitaj prvi razgovor.",
-    "wrongAnswer": "Kako ? Ne razumijem. Gdje bi ona, po tebi, mogla biti?",
+    "wrongAnswer": "Kako? Ne razumijem. Gdje bi ona, po tebi, mogla biti?",
     "nextUrl": "4_Convaincre_Clara_hr.html",
     "nextBtn": "→ 4. dio: Kako nagovoriti Klaru"
   }

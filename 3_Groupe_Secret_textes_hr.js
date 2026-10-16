@@ -93,7 +93,7 @@ var WA_DATA = {
     {
       "id": 1,
       "sender": "Enzo",
-      "text": "ljudi, ovo je presmiješno, Klara nam se opet pokušala obratiti na velikom odmoru ? é💀",
+      "text": "ljudi, ovo je presmiješno, Klara nam se opet pokušala obratiti na velikom odmoru 💀",
       "time": "17:14",
       "delay": 800
     },
@@ -418,7 +418,7 @@ var WA_DATA = {
     {
       "id": 43,
       "sender": "Marina",
-      "text": "A danas nije došla ni na nastavu ?😂",
+      "text": "A danas nije došla ni na nastavu 😂",
       "time": "09:16",
       "delay": 900
     },
@@ -488,7 +488,7 @@ var WA_DATA = {
     {
       "id": 53,
       "sender": "Enzo",
-      "text": "hahaha, pobjegla je u svoj tajni dvorac ? 🏰 t Baš jadno",
+      "text": "hahaha, pobjegla je u svoj tajni dvorac 🏰 baš jadno",
       "time": "09:22",
       "delay": 800
     },
@@ -569,22 +569,22 @@ var WA_DATA = {
     "items": [
       {
         "icon": "👥",
-        "type": "La pression collective",
+        "type": "Pritisak grupe",
         "exp": "Kevin oklijeva, ali ipak pristaje sudjelovati jer se boji da će ga grupa odbaciti. Kad se nitko ne usudi suprotstaviti nasilju, odgovornost snosi cijela grupa – čak i oni koji sumnjaju u ono što se događa, ali šute. Klara se ne suočava samo s jednom osobom, nego s cijelom grupom."
       },
       {
         "icon": "👤",
-        "type": "L'anonymat comme bouclier",
+        "type": "Anonimnost kao štit",
         "exp": "Lažni računi omogućuju nasilnicima da stvore dojam da ih ima mnogo više nego što ih zapravo ima. Žrtva ne može učinkovito blokirati sve koji je uznemiravaju. Strah i tjeskoba postaju dio njezine svakodnevice jer prijetnje mogu doći sa svih strana."
       },
       {
         "icon": "🗓️",
-        "type": "La coordination invisible",
+        "type": "Nevidljivo dogovaranje",
         "exp": "Vršnjačko nasilje pomno je isplanirano, a napadi su raspoređeni kroz vrijeme kako bi izgledali spontano. Ne događa se slučajno – riječ je o nevidljivoj organizaciji. Žrtva osjeća da su svi protiv nje, a ne vidi tko stoji iza toga."
       },
       {
         "icon": "🌙",
-        "type": "L'invasion de l'espace privé",
+        "type": "Upad u privatni prostor",
         "exp": "Slanjem poruka nakon ponoći grupa se pobrinula da Klara više nema mira ni u vlastitom domu. Od nasilja se ne može odmoriti ni kada legne u krevet – ono je prati čak i noću."
       }
     ]
