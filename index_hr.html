@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronađi Klaru</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="prenom.js" defer></script>
+<script src="sauvegarde.js" defer></script>
+<script src="index.js" defer></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --bg:#07090f;
+  --surface:#0d1119;
+  --card:#121826;
+  --border:rgba(255,255,255,.07);
+  --text:#d8d0c2;
+  --dim:#8a8394;
+  --accent:#c4865a;
+  --blue:#4a90d9;
+  --purple:#8b6bb1;
+  --green:#5a9e7a;
+  --red:#c76b6b;
+}
+
+html,body{
+  min-height:100%;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Jost',sans-serif;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:2rem 1rem;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:3.5rem;
+  position:relative;
+  z-index:1;
+}
+
+.hero-label{
+  font-family:'Jost',sans-serif;
+  font-size:.75rem;
+  font-weight:500;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:.9rem;
+}
+
+.hero-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:clamp(2.2rem,6vw,3.6rem);
+  font-weight:300;
+  letter-spacing:.02em;
+  color:var(--text);
+  line-height:1.15;
+}
+
+.hero-title em{
+  font-style:italic;
+  color:var(--accent);
+}
+
+.hero-sub{
+  margin-top:1rem;
+  font-size:.92rem;
+  color:var(--dim);
+  font-weight:300;
+  max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.7;
+}
+
+.divider{
+  width:40px;
+  height:1px;
+  background:var(--accent);
+  opacity:.4;
+  margin:1.4rem auto 0;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1.25rem;
+  max-width:820px;
+  width:100%;
+  position:relative;
+  z-index:1;
+}
+
+@media(max-width:380px){
+  .grid{grid-template-columns:1fr;}
+}
+
+.card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:2rem 1.6rem 1.7rem;
+  cursor:pointer;
+  text-decoration:none;
+  color:inherit;
+  overflow:hidden;
+  transition:transform .28s cubic-bezier(.25,.8,.25,1),
+              box-shadow .28s cubic-bezier(.25,.8,.25,1),
+              border-color .28s;
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .28s;
+  border-radius:16px;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 20px 48px rgba(0,0,0,.45);
+}
+
+.card:hover::before{opacity:1;}
+
+/* Per-card accent colours */
+.card-1{--c:var(--blue);}
+.card-1::before{background:radial-gradient(ellipse at 30% 0%,rgba(74,144,217,.09) 0%,transparent 65%);}
+.card-1:hover{border-color:rgba(74,144,217,.3);}
+
+.card-2{--c:var(--purple);}
+.card-2::before{background:radial-gradient(ellipse at 30% 0%,rgba(139,107,177,.09) 0%,transparent 65%);}
+.card-2:hover{border-color:rgba(139,107,177,.3);}
+
+.card-3{--c:var(--green);}
+.card-3::before{background:radial-gradient(ellipse at 30% 0%,rgba(90,158,122,.09) 0%,transparent 65%);}
+.card-3:hover{border-color:rgba(90,158,122,.3);}
+
+.card-4{--c:var(--accent);}
+.card-4::before{background:radial-gradient(ellipse at 30% 0%,rgba(196,134,90,.09) 0%,transparent 65%);}
+.card-4:hover{border-color:rgba(196,134,90,.3);}
+
+/* Parties pas encore atteintes : la carte reste lisible mais inerte. */
+.card.locked{opacity:.42;filter:grayscale(.55);cursor:default;pointer-events:none;}
+.card.locked:hover{transform:none;border-color:rgba(255,255,255,.07);}
+.card.locked .card-preview{opacity:.45;}
+.card.locked .card-arrow{color:#7d8698;font-weight:400;text-transform:none;letter-spacing:0;}
+.lock-why{display:block;font-size:.76rem;line-height:1.45;color:#7d8698;}
+
+
+.card-num{
+  font-family:'Jost',sans-serif;
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--c);
+  margin-bottom:1.1rem;
+  opacity:.7;
+}
+
+.card-icon{
+  font-size:2rem;
+  margin-bottom:1rem;
+  line-height:1;
+  display:block;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.4));
+}
+
+.card-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.22rem;
+  font-weight:400;
+  line-height:1.3;
+  color:var(--text);
+  margin-bottom:.55rem;
+}
+
+.card-desc{
+  font-size:.82rem;
+  color:var(--dim);
+  font-weight:300;
+  line-height:1.65;
+  flex:1;
+}
+
+.card-arrow{
+  margin-top:1.4rem;
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+  font-size:.78rem;
+  font-weight:500;
+  color:var(--c);
+  opacity:.6;
+  transition:opacity .2s, gap .2s;
+}
+
+.card:hover .card-arrow{
+  opacity:1;
+  gap:.65rem;
+}
+
+.card-arrow svg{
+  width:14px;
+  height:14px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:transform .2s;
+}
+
+.card:hover .card-arrow svg{transform:translateX(3px);}
+
+/* ── CARD PREVIEWS ── */
+.card-preview{
+  position:relative;height:148px;
+  margin:-2rem -1.6rem 1.5rem;
+  flex-shrink:0;background:#0a0c14;overflow:hidden;
+}
+
+/* SMS bubbles (carte 1) */
+.prev-sms{
+  position:absolute;inset:0;background:#0a0a0a;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:10px 12px;gap:5px;
+}
+.prev-b{font-size:9px;padding:5px 9px;border-radius:12px;max-width:72%;line-height:1.4;font-family:-apple-system,sans-serif;}
+.prev-b.r{background:#1c1c1e;color:#d4d4d4;align-self:flex-start;border-bottom-left-radius:3px;}
+.prev-b.s{background:#0b84ff;color:#fff;align-self:flex-end;border-bottom-right-radius:3px;}
+.prev-b.sy{font-size:8px;color:#444;align-self:center;background:transparent;font-style:italic;}
+
+/* CTA overlay (carte 1 uniquement) */
+.card-cta{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;
+  background:rgba(7,9,15,.55);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+  transition:background .3s;
+}
+.card:hover .card-cta{background:rgba(7,9,15,.32);}
+.cta-label{
+  font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:1.05rem;
+  color:#fff;letter-spacing:.015em;text-shadow:0 1px 8px rgba(0,0,0,.7);
+}
+.cta-btn{
+  font-family:'Jost',sans-serif;font-size:.7rem;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;
+  background:var(--blue);color:#fff;
+  padding:5px 16px;border-radius:20px;
+  transition:transform .2s,box-shadow .2s;
+  box-shadow:0 2px 12px rgba(74,144,217,.35);
+}
+.card:hover .cta-btn{transform:scale(1.06);box-shadow:0 4px 18px rgba(74,144,217,.5);}
+
+/* Instaclasse preview (carte 2) */
+.prev-insta{position:absolute;inset:0;background:#000;overflow:hidden;}
+.prev-ig-hdr{height:38px;background:#121212;border-bottom:0.5px solid #222;display:flex;align-items:center;padding:0 10px;gap:7px;}
+.prev-ig-av{width:22px;height:22px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);flex-shrink:0;}
+.prev-ig-name{font-size:9px;font-weight:600;color:#f5f5f5;font-family:system-ui;}
+.prev-ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;margin-top:1.5px;}
+.prev-ig-cell{aspect-ratio:1;overflow:hidden;}
+.prev-ig-cell img{width:100%;height:100%;object-fit:cover;filter:brightness(.75) saturate(.9);}
+
+/* Whatsupp preview (carte 3) */
+.prev-wa{
+  position:absolute;inset:0;background:#0b141a;
+  display:flex;flex-direction:column;gap:5px;
+  padding:10px 12px;justify-content:flex-end;
+}
+.prev-wa-b{font-size:9px;padding:5px 9px;border-radius:10px;max-width:80%;line-height:1.4;font-family:system-ui;color:#e9edef;background:#202c33;align-self:flex-start;border-top-left-radius:3px;}
+.prev-wa-b .nm{font-size:8px;color:#00a884;display:block;margin-bottom:2px;font-weight:600;}
+
+/* Dialogue preview (carte 4) */
+.prev-dial{
+  position:absolute;inset:0;background:#07090f;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:16px;
+}
+.prev-dl{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:10px;color:rgba(216,208,194,.42);line-height:1.6;text-align:center;}
+.prev-dl.hi{color:rgba(216,208,194,.82);font-size:10.5px;}
+
+#prenom-choix{
+  display:flex;gap:9px;justify-content:center;align-items:center;flex-wrap:wrap;
+  margin:0 auto 2.2rem;z-index:1;position:relative;font-family:'Jost',sans-serif;
+}
+#prenom-choix .pc-lab{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);}
+#prenom-choix button{
+  background:none;border:1px solid var(--border);border-radius:999px;color:var(--dim);
+  font-family:'Jost',sans-serif;font-size:.8rem;letter-spacing:.08em;padding:7px 18px;cursor:pointer;
+  transition:color .2s,border-color .2s,background .2s;
+}
+#prenom-choix button:hover{color:var(--text);border-color:var(--accent);}
+#prenom-choix button.on{color:var(--accent);border-color:var(--accent);background:rgba(196,134,90,.08);font-weight:600;}
+#save-area{
+  display:none;flex-direction:column;align-items:center;gap:10px;
+  margin:1.6rem auto 0;max-width:420px;z-index:1;position:relative;
+}
+#save-area .sa-sep{
+  font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--dim);
+}
+#save-area .sa-code{
+  font-family:'Courier New',monospace;font-size:1.25rem;letter-spacing:.3em;
+  color:var(--accent);background:rgba(196,134,90,.07);
+  border:1px solid rgba(196,134,90,.28);border-radius:4px;padding:9px 16px;
+}
+#save-area .sa-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
+#save-area input{
+  background:none;border:1px solid var(--border);border-radius:3px;color:var(--text);
+  font-family:'Courier New',monospace;font-size:.9rem;letter-spacing:.2em;
+  padding:8px 12px;width:150px;text-align:center;outline:none;text-transform:uppercase;
+}
+#save-area input:focus{border-color:var(--accent);}
+#save-area button{
+  background:none;border:1px solid var(--border);border-radius:3px;color:var(--dim);
+  font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:9px 16px;cursor:pointer;transition:color .2s,border-color .2s;
+}
+#save-area button:hover{color:var(--text);border-color:var(--accent);}
+#save-area .sa-msg{font-family:'Jost',sans-serif;font-size:.72rem;color:var(--red);min-height:1em;}
+#reset-btn{
+  display:none;
+  margin:1.4rem auto 0;
+  background:none;
+  border:1px solid var(--border);
+  border-radius:999px;
+  color:var(--dim);
+  font-family:'Jost',sans-serif;
+  font-size:.74rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:9px 20px;
+  cursor:pointer;
+  transition:color .2s,border-color .2s;
+  z-index:1;
+  position:relative;
+}
+#reset-btn:hover{color:var(--text);border-color:var(--accent);}
+.footer{
+  margin-top:1.6rem;
+  font-size:.78rem;
+  color:var(--dim);
+  letter-spacing:.06em;
+  position:relative;
+  z-index:1;
+}
+.footer-logo{
+  display:block;
+  width:fit-content;
+  margin:0 auto .7rem;
+  background:#fff;
+  border-radius:8px;
+  padding:6px;
+  line-height:0;
+}
+.footer-txt{opacity:.85;}
+.footer-logo img{height:84px;width:auto;display:block;}
+
+#fs-btn{
+  position:fixed;top:1rem;right:1rem;
+  z-index:2000;
+  background:rgba(13,17,25,.75);
+  border:1px solid var(--border);
+  border-radius:8px;
+  color:var(--dim);
+  cursor:pointer;
+  padding:7px;
+  line-height:0;
+  transition:color .2s,border-color .2s,background .2s;
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+#fs-btn:hover{color:var(--text);border-color:rgba(255,255,255,.2);background:rgba(13,17,25,.95);}
+
+/* ── INTRO ── */
+#intro-overlay{
+  position:fixed;inset:0;background:var(--bg);
+  z-index:1000;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:1.6rem;padding:2rem;
+  cursor:default;
+}
+.intro-line{
+  font-family:'Playfair Display',Georgia,serif;
+  font-style:italic;font-weight:300;
+  font-size:clamp(1.15rem,3.2vw,1.75rem);
+  color:var(--text);text-align:center;line-height:1.7;
+  opacity:0;transform:translateY(10px);
+  animation:iline 1.4s ease forwards;
+}
+.intro-line:nth-child(1){animation-delay:0.8s;}
+.intro-line:nth-child(2){animation-delay:3.2s;}
+.intro-line:nth-child(3){animation-delay:5.8s;}
+@keyframes iline{
+  to{opacity:1;transform:translateY(0);}
+}
+.intro-skip{
+  position:absolute;bottom:2.2rem;
+  font-family:'Jost',sans-serif;font-size:.7rem;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--dim);opacity:0;
+  animation:iline .8s ease forwards;animation-delay:7.5s;
+}
+</style>
+</head>
+<body>
+
+<!-- Intro -->
+<div id="intro-overlay">
+  <p class="intro-line">Klara je nestala</p>
+  <p class="intro-line">{Zabrinut|Zabrinuta} sam.</p>
+  <p class="intro-line">Želim saznati što joj se dogodilo.</p>
+  <span class="intro-skip">Pritisni za nastavak</span>
+</div>
+
+<header class="hero">
+  <p class="hero-label">Edukativna vježba</p>
+  <h1 class="hero-title">Pronađi <em>Klaru</em></h1>
+  <p class="hero-sub">Četiri koraka za razumijevanje onoga što se dogodilo Klari i kako joj pomoći.</p>
+  <div class="divider"></div>
+</header>
+
+<div id="prenom-choix" data-prenom-brut>
+  <span class="pc-lab">Igraš</span>
+  <button type="button" data-prenom="Léo">Leo</button>
+  <button type="button" data-prenom="Léa">Lea</button>
+</div>
+
+<main class="grid">
+
+  <a class="card card-1" href="1_Telephone_Ines_hr.html">
+    <div class="card-preview">
+      <div class="prev-sms">
+        <div class="prev-b r">Više ni meni mi uopće ne odgovara.</div>
+        <div class="prev-b s">Znaš li što se dogodilo?</div>
+        <div class="prev-b sy">Ines piše…</div>
+      </div>
+      <div class="card-cta">
+        <span class="cta-label">Započni istragu</span>
+        <span class="cta-btn">1. dio →</span>
+      </div>
+    </div>
+    <span class="card-num">1. dio</span>
+    <h2 class="card-title">Inesin mobitel</h2>
+    <p class="card-desc">Ines je Klarina najbolja frendica. Popričaj s njom i saznaj što zna o cijeloj situaciji.</p>
+    <div class="card-arrow">
+      Započni
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </div>
+  </a>
+
+  <a class="card card-2" href="2_Compte_de_Clara_hr.html">
+    <div class="card-preview">
+      <div class="prev-insta">
+        <div class="prev-ig-hdr">
+          <div class="prev-ig-av"></div>
+          <span class="prev-ig-name">@klara.fonten</span>
+        </div>
+        <div class="prev-ig-grid">
+          <div class="prev-ig-cell"><img src="images_clara/concert.png" alt=""></div>
+          <div class="prev-ig-cell"><img src="images_clara/plage.png" alt=""></div>
+          <div class="prev-ig-cell"><img src="images_clara/fleurs.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <span class="card-num">2. dio</span>
+    <h2 class="card-title">Klarin Storigram</h2>
+    <p class="card-desc">Pogledaj Klarin profil na Storigramu i otkrij tragove online maltretiranja kojem je izložena.</p>
+    <div class="card-arrow">
+      Započni
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </div>
+  </a>
+
+  <a class="card card-3" href="3_Groupe_Secret_hr.html">
+    <div class="card-preview">
+      <div class="prev-wa">
+        <div class="prev-wa-b r"><span class="nm">Enzo</span>Jesi vidio jutrošnju objavu? 💀</div>
+        <div class="prev-wa-b r"><span class="nm">Žad</span>Hahaha, pukla je!</div>
+        <div class="prev-wa-b r"><span class="nm">Enzo</span>Netko joj je odgovorio???</div>
+      </div>
+    </div>
+    <span class="card-num">3. dio</span>
+    <h2 class="card-title">Tajna Vatsap grupa</h2>
+    <p class="card-desc">Pogledaj tajnu Vatsap grupu u kojoj su dogovarali kako će maltretirati Klaru.</p>
+    <div class="card-arrow">
+      Započni
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </div>
+  </a>
+
+  <a class="card card-4" href="4_Convaincre_Clara_hr.html">
+    <div class="card-preview">
+      <div class="prev-dial">
+        <div class="prev-dl">📞 Kod Klarine tete…</div>
+        <div class="prev-dl hi">„Razmišljala sam o tome… puno puta.”</div>
+        <div class="prev-dl">Moramo pronaći prave riječi.</div>
+      </div>
+    </div>
+    <span class="card-num">4. dio</span>
+    <h2 class="card-title">Uvjeri Klaru</h2>
+    <p class="card-desc">Klara je na rubu odustajanja. Pronađi prave riječi i pokaži joj da nije sama.</p>
+    <div class="card-arrow">
+      Započni
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </div>
+  </a>
+
+</main>
+
+<div id="save-area">
+  <span class="sa-sep">Tvoj kod za nastavak</span>
+  <span class="sa-code" id="sa-code">0000000</span>
+  <span class="sa-sep">Ili nastavi pomoću koda</span>
+  <div class="sa-row">
+    <input type="text" id="sa-input" maxlength="7" placeholder="7 znakova" autocomplete="off" spellcheck="false" aria-label="Kod za nastavak">
+    <button type="button" id="sa-go">Nastavi</button>
+  </div>
+  <span class="sa-msg" id="sa-msg"></span>
+</div>
+<button type="button" id="reset-btn">↺ Nova istraga</button>
+<footer class="footer"><span class="footer-logo"><img src="images_clara/logo_ambassade_croatie.png" alt="Veleposlanstvo Francuske u Hrvatskoj"></span><span class="footer-txt">© Pronađi Klaru – Edukativna vježba o vršnjačkom nasilju</span></footer>
+
+<button id="fs-btn" title="Cijeli zaslon" aria-label="Aktiviraj prikaz preko cijelog zaslona">
+  <svg id="fs-icon-expand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
+    <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+  </svg>
+  <svg id="fs-icon-shrink" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+    <polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/>
+    <line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/>
+  </svg>
+</button>
+
+<script>
+(function(){
+  var btn=document.getElementById('fs-btn');
+  var expand=document.getElementById('fs-icon-expand');
+  var shrink=document.getElementById('fs-icon-shrink');
+  var fs=false;
+  function update(){
+    fs=!!(document.fullscreenElement||document.webkitFullscreenElement);
+    expand.style.display=fs?'none':'';
+    shrink.style.display=fs?'':'none';
+  }
+  btn.addEventListener('click',function(){
+    if(!fs){
+      (document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen).call(document.documentElement);
+    } else {
+      (document.exitFullscreen||document.webkitExitFullscreen).call(document);
+    }
+  });
+  document.addEventListener('fullscreenchange',update);
+  document.addEventListener('webkitfullscreenchange',update);
+})();
+</script>
+
+<script src="retour.js" defer></script>
+</body>
+</html>

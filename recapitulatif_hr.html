@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronađi Klaru – sažetak</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f2f1ec;color:#1a1a1e;font-family:'Jost',system-ui,sans-serif;font-size:15px;line-height:1.6;}
+.page{max-width:760px;margin:0 auto;padding:34px 22px 60px;background:#fff;min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.06);}
+header{border-bottom:2px solid #1a1a1e;padding-bottom:14px;}
+.eyebrow{margin:0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6b6b73;font-weight:600;}
+h1{margin:8px 0 0;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:32px;line-height:1.1;}
+.ident{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px 22px;margin-top:16px;font-size:13.5px;color:#4a4a52;}
+.ident div{display:flex;gap:8px;align-items:baseline}
+.ident span{flex:1;border-bottom:1px solid #b9b9c0;min-width:70px;padding-bottom:2px;}
+h2{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:21px;margin:30px 0 4px;}
+.intro{margin:0 0 14px;color:#5a5a63;font-size:13.5px;}
+.t{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-top:1px solid #e2e1dc;}
+.t:first-of-type{border-top:none}
+.box{flex-shrink:0;width:17px;height:17px;border:1.5px solid #1a1a1e;border-radius:3px;margin-top:3px;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;}
+.box.on{background:#1a1a1e;color:#fff}
+.t .lab{font-weight:600;font-size:14.5px}
+.t .desc{font-size:13px;color:#5a5a63;line-height:1.5}
+.t.no .lab,.t.no .desc{color:#8c8c95}
+.cpt{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid #e2e1dc;font-size:14px;}
+.cpt code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#4a4a52}
+.cpt b{font-weight:600}
+.cpt .unk{color:#a0a0a8;font-weight:400}
+.fin{background:#f6f5f1;border-left:3px solid #1a1a1e;padding:13px 16px;font-size:14.5px;}
+.res{display:flex;gap:12px;padding:7px 0;border-top:1px solid #e2e1dc;font-size:14px;}
+.res b{min-width:118px;font-weight:600}
+.ecrire{margin-top:10px}
+.ecrire p{margin:0 0 4px;font-size:14px;font-weight:500}
+.ligne{border-bottom:1px solid #b9b9c0;height:27px;margin-bottom:9px}
+.tools{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+.tools button,.tools a{font:inherit;font-size:13px;padding:9px 17px;border:1px solid #c9c8c2;border-radius:3px;
+  background:#fff;color:#1a1a1e;cursor:pointer;text-decoration:none;}
+.tools button:hover,.tools a:hover{border-color:#1a1a1e}
+footer{margin-top:26px;padding-top:12px;border-top:1px solid #e2e1dc;font-size:12px;color:#8c8c95}
+@media print{
+  body{background:#fff}
+  .page{box-shadow:none;max-width:none;padding:0;min-height:0}
+  .tools{display:none}
+  h2{margin-top:20px}
+  .t,.cpt,.res{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <p class="eyebrow">Pronađi Klaru · edukativna aktivnost o vršnjačkom nasilju</p>
+  <h1>Što si {otkrio|otkrila}</h1>
+  <div class="ident">
+    <div>Prezime: <span></span></div>
+    <div>Razred: <span></span></div>
+    <div>Datum: <span id="date"></span></div>
+  </div>
+</header>
+
+<h2>Devet oblika vršnjačkog nasilja</h2>
+<p class="intro">Označeno: oblici koje si {sam|sama} {prepoznao|prepoznala} na Klarinu profilu. Bili su prisutni i ostali oblici.</p>
+<div id="types"></div>
+
+<h2>Anonimni računi</h2>
+<p class="intro">Šest profila, četvero učenika iz razreda. Klara to nikad nije saznala – upravo zato je anonimnost toliko učinkovita.</p>
+<div id="comptes"></div>
+
+<h2>Kako je završilo</h2>
+<div class="fin" id="fin"></div>
+
+<h2>Gdje potražiti pomoć</h2>
+<div id="res"></div>
+
+<h2>Tvoj red</h2>
+<div class="ecrire">
+  <p>Ako primijetim da se nešto takvo događa u mojoj okolini, prvo što ću učiniti:</p>
+  <div class="ligne"></div><div class="ligne"></div>
+  <p>Osoba kojoj ću to reći:</p>
+  <div class="ligne"></div>
+</div>
+
+<div class="tools">
+  <button type="button" id="print">🖨 Ispiši</button>
+  <a href="index_hr.html">← Povratak na izbornik</a>
+</div>
+<footer>Likovi i poruke u ovoj vježbi su izmišljeni. No vršnjačko nasilje u školi, uključujući ono na internetu, može biti kažnjivo zakonom.</footer>
+</div>
+
+<script src="2_Compte_de_Clara_textes_hr.js"></script>
+<script src="prenom.js"></script>
+<script src="ressources_hr.js"></script>
+<script src="sauvegarde.js"></script>
+<script>
+(function () {
+  var e = window.Sauvegarde ? Sauvegarde.etat() : { types: [], comptes: [] };
+  document.getElementById('date').textContent =
+    new Date().toLocaleDateString('hr-HR', { day: '2-digit', month: 'long', year: 'numeric' });
+
+  var ht = (typeof HARCEL_TYPES !== 'undefined') ? HARCEL_TYPES : {};
+  var host = document.getElementById('types');
+  Object.keys(ht).forEach(function (k) {
+    var t = ht[k], vu = e.types.indexOf(k) !== -1;
+    var d = document.createElement('div');
+    d.className = 't' + (vu ? '' : ' no');
+    d.innerHTML = '<span class="box' + (vu ? ' on' : '') + '">' + (vu ? '✓' : '') + '</span>'
+      + '<span><span class="lab">' + t.icon + ' ' + t.label + '</span><br>'
+      + '<span class="desc">' + t.desc + '</span></span>';
+    host.appendChild(d);
+  });
+
+  var ch = document.getElementById('comptes');
+  (window.Sauvegarde ? Sauvegarde.COMPTES : []).forEach(function (h) {
+    var vu = e.comptes.indexOf(h) !== -1;
+    var d = document.createElement('div');
+    d.className = 'cpt';
+    d.innerHTML = '<code>@' + h + '</code>'
+      + (vu ? '<b>' + Sauvegarde.QUI[h] + '</b>' : '<span class="unk">nije razotkriven</span>');
+    ch.appendChild(d);
+  });
+
+  var fins = {
+    good: "Klara je odlučila zatražiti pomoć i razgovarati s odraslom osobom. Tvoja uloga nije bila spasiti je, nego joj pokazati da može zatražiti pomoć.",
+    ok:   "Klara još oklijeva, ali razmišlja o tome da razgovara s odraslom osobom. To je prvi korak – pred njom je dug put.",
+    bad:  "Klara se i dalje zatvara u sebe. Trebao joj je netko tko će je doista saslušati prije nego što počne djelovati.",
+    none: "Ovaj dio još nije odigran do kraja."
+  };
+  var f = 'none';
+  try { f = localStorage.getItem('rc_fin') || 'none'; } catch (x) {}
+  document.getElementById('fin').textContent = fins[f] || fins.none;
+
+  var R = window.RESSOURCES || { liste: [] };
+  var rh = document.getElementById('res');
+  R.liste.forEach(function (r) {
+    var d = document.createElement('div');
+    d.className = 'res';
+    d.innerHTML = '<b>' + r.label + '</b><span>' + r.txt + '</span>';
+    rh.appendChild(d);
+  });
+  var h2 = rh.previousElementSibling;
+  if (h2 && R.titre) h2.textContent = R.titre;
+
+  document.getElementById('print').addEventListener('click', function () { window.print(); });
+})();
+</script>
+</body>
+</html>

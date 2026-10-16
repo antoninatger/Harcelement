@@ -151,6 +151,11 @@
   var QUI = { utilisateur_4729:'Enzo', _noreply_ghost_:'Jade',
               anonymous_x0:'Enzo et Théo', vrai_info_colleg:'Jade', jevoustrouve:'Théo',
               anon_colleg_real:'Marine' };
+  // Version croate : prénoms adaptés par la traduction.
+  if (/_hr\.html?$/.test(location.pathname))
+    QUI = { utilisateur_4729:'Enzo', _noreply_ghost_:'Žad',
+            anonymous_x0:'Enzo i Teo', vrai_info_colleg:'Žad', jevoustrouve:'Teo',
+            anon_colleg_real:'Marina' };
 
   function appliquer(e) {
     if (!e) return false;

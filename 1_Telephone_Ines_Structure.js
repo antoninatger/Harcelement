@@ -451,9 +451,10 @@ function openSecondConvo(){
 
     var n = val.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
     // « chez sa tante » est la réponse naturelle ; on accepte aussi les mots
-    // du groupe Whatsupp (« havre secret ») et leurs équivalents anglais.
-    var parHavre = ['havre','secret','haven','safe'].some(function(w){ return n.includes(w); });
-    var parTante = ['tante','campagne','aunt','countryside'].some(function(w){ return n.includes(w); });
+    // du groupe Whatsupp (« havre secret ») et leurs équivalents anglais et
+    // croates (« tajno utočište », « kod tete na selu », sans les accents).
+    var parHavre = ['havre','secret','haven','safe','utocist','tajn'].some(function(w){ return n.includes(w); });
+    var parTante = ['tante','campagne','aunt','countryside','tet','selo','selu'].some(function(w){ return n.includes(w); });
 
     if (!parHavre && !parTante) {
       await ecrit(S.wrongAnswer, 1200);

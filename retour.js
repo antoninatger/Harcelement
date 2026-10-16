@@ -41,8 +41,9 @@
      est le seul repère fiable, on l'utilise en secours.
      --------------------------------------------------------------------- */
   var fichier = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  var EN = (document.documentElement.getAttribute('lang') === 'en')
-        || /_en\.html?$/.test(fichier);
+  // La version croate garde la fenêtre en anglais : c'est Antonin qui lit les remarques.
+  var EN = /^(en|hr)$/.test(document.documentElement.getAttribute('lang') || '')
+        || /_(en|hr)\.html?$/.test(fichier);
 
   var partie = 0;
   if (fichier.indexOf('1_') === 0) partie = 1;

@@ -33,6 +33,7 @@
   // Il se suffit à lui-même : il marche d'un navigateur et d'un appareil à
   // l'autre, rien n'est gardé ailleurs que dans le code lui-même.
   var isEN = location.pathname.indexOf('_en') !== -1;
+  var isHR = location.pathname.indexOf('_hr') !== -1;
   try {
     if (window.Sauvegarde) {
       var zone = document.getElementById('save-area');
@@ -42,7 +43,7 @@
         zone.style.display = 'flex';
         document.getElementById('sa-code').textContent = code;
         if (!enCours) zone.querySelector('.sa-code').previousElementSibling.textContent =
-          isEN ? 'Nothing to save yet' : 'Rien à sauvegarder pour l\'instant';
+          isEN ? 'Nothing to save yet' : isHR ? 'Još nema ničega za spremiti.' : 'Rien à sauvegarder pour l\'instant';
         var go = document.getElementById('sa-go');
         var inp = document.getElementById('sa-input');
         var msg = document.getElementById('sa-msg');
@@ -51,6 +52,7 @@
         go.addEventListener('click', function () {
           if (Sauvegarde.reprendre(inp.value)) location.replace(location.pathname);
           else msg.textContent = isEN ? 'Unknown code - check the 7 characters.'
+                                      : isHR ? 'Nepoznat kod – provjeri svih 7 znakova.'
                                       : 'Code inconnu - vérifie les 7 caractères.';
         });
       }
@@ -104,6 +106,10 @@
         2: 'Talk to Inès first - she is the one who has Clara\'s login details.',
         3: 'Kevin gives you the group code at the end of Part 2.',
         4: et.p3 ? 'I need the phone number of Clara\'s aunt. How can I get it?' : 'Read the Whatsupp group first.'
+      } : isHR ? {
+        2: 'Prvo razgovaraj s Ines – ona je ta koja ima Klarine podatke za prijavu.',
+        3: 'Kevin će ti dati kod za grupu na kraju 2. dijela.',
+        4: et.p3 ? 'Treba mi broj Klarine tete. Kako ga mogu dobiti?' : 'Prvo pročitaj poruke u Vatsap grupi.'
       } : {
         2: 'Parle d\'abord à Inès - c\'est elle qui a les identifiants de Clara.',
         3: 'Kevin te donne le code du groupe à la fin de la Partie 2.',
@@ -129,8 +135,8 @@
     if(localStorage.getItem('rc_p1_visited')){
       var label = document.querySelector('.cta-label');
       var badge = document.querySelector('.cta-btn');
-      if(label){ label.textContent = isEN ? 'Resume the investigation' : 'Reprendre l\'enquête'; }
-      if(badge){ badge.textContent = isEN ? '↩ Continue' : '↩ Continuer'; badge.style.background = '#2c4a6e'; }
+      if(label){ label.textContent = isEN ? 'Resume the investigation' : isHR ? 'Nastavi istragu' : 'Reprendre l\'enquête'; }
+      if(badge){ badge.textContent = isEN ? '↩ Continue' : isHR ? '↩ Nastavi' : '↩ Continuer'; badge.style.background = '#2c4a6e'; }
     }
   } catch(e) {}
 })();

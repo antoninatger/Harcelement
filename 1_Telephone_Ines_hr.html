@@ -1,0 +1,168 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.pw{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:1.5rem 1rem;min-height:100vh;background:#000;}
+@media(min-width:600px){.pw{align-items:center;padding:2rem 1rem;}}
+/* Bulle de pensée de Léo, hors du téléphone : au-dessus sur mobile, à gauche sur grand écran */
+#pz{width:min(296px, calc(100vw - 2rem));min-height:0;display:flex;flex-direction:column;justify-content:flex-end;margin-bottom:14px;}
+#pz:empty{margin-bottom:0;}
+.pensee{position:relative;background:#f2eee6;color:#22201c;border-radius:22px;padding:10px 14px 11px;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:12.5px;line-height:1.5;box-shadow:0 4px 18px rgba(0,0,0,.45);animation:pzIn .35s ease;transition:opacity .4s;margin-bottom:16px;}
+.pensee.old{opacity:.45;font-size:11.5px;}
+.pensee.old::before,.pensee.old::after{display:none;}
+.pensee-qui{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-style:normal;font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a7f6e;margin-bottom:3px;}
+.pensee::before,.pensee::after{content:'';position:absolute;background:#f2eee6;border-radius:50%;}
+.pensee::before{width:13px;height:13px;left:34px;bottom:-9px;}
+.pensee::after{width:7px;height:7px;left:26px;bottom:-19px;}
+@keyframes pzIn{from{opacity:0;transform:translateY(6px) scale(.97)}to{opacity:1;transform:none}}
+@media(min-width:760px){
+  .pensee{margin-bottom:0;}
+  .pensee+.pensee{margin-top:12px;}
+  .pw{flex-direction:row;}
+  .pw::after{content:'';width:252px;flex-shrink:0;} /* garde le téléphone centré */
+  #pz{width:230px;margin:0 22px 0 0;align-self:center;min-height:0;}
+  .pensee{margin-bottom:0;}
+  .pensee::before{left:auto;right:-9px;bottom:22px;}
+  .pensee::after{left:auto;right:-20px;bottom:14px;}
+}
+.ph{width:min(296px, calc(100vw - 2rem));background:#0d0d0d;border-radius:38px;border:7px solid #1c1c1c;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;}
+.sb{background:#000;display:flex;justify-content:space-between;align-items:flex-end;padding:11px 18px 5px;}
+.nt{width:104px;height:24px;background:#000;border-radius:0 0 14px 14px;align-self:flex-start;border:1.5px solid #1a1a1a;border-top:none;}
+.chdr{background:#111;padding:9px 13px;display:flex;align-items:center;gap:10px;border-bottom:0.5px solid #1e1e1e;}
+.av{width:32px;height:32px;border-radius:50%;background:#5e5ce6;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
+.tbar{background:#111;padding:5px 12px 6px;display:flex;align-items:center;gap:7px;border-bottom:0.5px solid #1e1e1e;}
+.tbarr{flex:1;height:5px;background:#1e1e1e;border-radius:3px;overflow:hidden;position:relative;}
+.tmark{position:absolute;left:50%;top:0;width:1.5px;height:100%;background:#333;z-index:1;}
+.tbarf{height:100%;border-radius:3px;transition:width .65s cubic-bezier(.4,0,.2,1),background .4s;}
+.ma{height:268px;overflow-y:auto;background:#000;padding:10px;display:flex;flex-direction:column;gap:5px;scrollbar-width:none;}
+.ma::-webkit-scrollbar{display:none}
+.bb{max-width:82%;padding:7px 11px;border-radius:17px;font-size:12.5px;line-height:1.45;animation:pop .2s;}
+.bb.s{background:#0b84ff;color:#fff;align-self:flex-end;border-bottom-right-radius:3px;}
+.bb.r{background:#1c1c1e;color:#e5e5ea;align-self:flex-start;border-bottom-left-radius:3px;}
+.bb.sy{align-self:center;background:transparent;color:#444;font-size:10.5px;font-style:italic;padding:3px 6px;}
+.bb.cr{background:#2c1a1a;color:#ff9f9f;align-self:flex-start;border-bottom-left-radius:3px;border:0.5px solid #5a2020;}
+.bb.ed{background:#0d1a0d;color:#4dcc70;align-self:stretch;border:0.5px solid #1a4a1a;font-size:10px;font-style:italic;padding:6px 9px;border-radius:8px;line-height:1.5;max-width:100%;}
+@keyframes pop{from{transform:scale(.87);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes i1slide{to{opacity:1;transform:translateY(0);}}
+@keyframes i1fade{to{opacity:1;}}
+#intro1{position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;padding:2rem;cursor:pointer;}
+.i1-inner{max-width:460px;text-align:center;}
+.i1-line{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:300;font-size:clamp(.95rem,2.6vw,1.25rem);color:#c8c0b2;line-height:1.85;margin-bottom:.9rem;opacity:0;transform:translateY(9px);animation:i1slide 1.1s ease forwards;}
+.i1-line:nth-child(1){animation-delay:.7s;}
+.i1-line:nth-child(2){animation-delay:2.6s;}
+.i1-line:nth-child(3){animation-delay:4.5s;}
+.i1-sep{display:block;width:32px;height:1px;background:rgba(196,134,90,.5);margin:1.4rem auto 1.8rem;}
+.i1-btn{font-family:-apple-system,sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;background:transparent;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.65);padding:10px 26px;border-radius:24px;cursor:pointer;opacity:0;animation:i1fade .8s ease 6.2s forwards;transition:color .2s,border-color .2s;}
+.i1-btn:hover{color:#fff;border-color:rgba(255,255,255,.5);}
+.i1-skip{display:block;margin-top:.9rem;font-family:-apple-system,sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#2a2a2a;opacity:0;animation:i1fade .8s ease 7s forwards;}
+.tyi{display:flex;gap:3px;padding:6px 10px;background:#1c1c1e;border-radius:17px;width:fit-content;border-bottom-left-radius:3px;animation:pop .2s;}
+.tyi span{width:5px;height:5px;background:#555;border-radius:50%;animation:td 1.2s infinite;}
+.tyi span:nth-child(2){animation-delay:.2s}
+.tyi span:nth-child(3){animation-delay:.4s}
+@keyframes td{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-3px);opacity:1}}
+.ca{background:#111;padding:7px;min-height:108px;border-top:0.5px solid #1e1e1e;}
+.cb{background:#222;border:0.5px solid #2e2e2e;color:#e5e5ea;padding:7px 10px;border-radius:11px;font-size:11.5px;text-align:left;cursor:pointer;display:flex;align-items:flex-start;gap:6px;width:100%;margin-bottom:5px;}
+.cb:last-child{margin-bottom:0}
+.cb.cr-btn{background:#1e1010;border-color:#3a1515;}
+.cb:hover{background:#2c2c2c}
+.cb.cr-btn:hover{background:#2a1414}
+.cb:active{transform:scale(.98)}
+.cb:disabled{opacity:.35;cursor:default}
+.cl{font-weight:700;color:#0b84ff;flex-shrink:0;font-size:12px;padding-top:1px;}
+.cr-btn .cl{color:#ff6b6b;}
+.chint{color:#444;font-size:10.5px;text-align:center;padding:2px 0 6px;}
+.chint.cr{color:#7a3333;}
+.ea{background:#000;padding:10px;color:#e5e5ea;font-size:12px;line-height:1.65;}
+.rb{background:#1c1c1e;border:0.5px solid #2e2e2e;color:#0b84ff;padding:8px;border-radius:20px;font-size:12px;cursor:pointer;margin-top:10px;width:100%;}
+.rb:hover{background:#252525}
+.igcard{background:#0a0a0f;border:0.5px solid #2a2a3e;border-radius:10px;padding:8px 10px;margin:7px 0;font-size:12px;color:#e5e5ea;}
+.igusr{color:#c4a5ff;font-weight:600;}
+.igpwd{color:#7b7fff;letter-spacing:.5px;}
+.igwarn{color:#ff453a;font-size:10.5px;margin-top:4px;}
+.revcard{background:#0a150a;border:0.5px solid #1a3a1a;border-radius:8px;padding:7px 9px;margin:4px 0;}
+.revcard-head{display:flex;align-items:center;gap:5px;margin-bottom:2px;}
+.revcard-icon{font-size:12px;}
+.revcard-title{color:#4dcc70;font-weight:600;font-size:10px;}
+.revcard-txt{color:#666;font-size:10px;line-height:1.4;}
+.menu-btn{position:fixed;top:14px;left:14px;z-index:10000;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.8);font-family:-apple-system,system-ui,sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.06em;padding:7px 13px;border-radius:20px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:color .2s,border-color .2s,background .2s;line-height:1;}
+.menu-btn:hover{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(0,0,0,.85);}
+.cpbtn{background:#162016;border:0.5px solid #1a4a1a;color:#4dcc70;padding:2px 6px;border-radius:5px;font-size:9px;cursor:pointer;margin-left:4px;vertical-align:middle;line-height:1;}
+.cpbtn:hover{background:#1f3a1f}
+.cpbtn.ok{background:#0d2a0d;color:#30d158;}
+.nxbtn{background:#0a1e35;border:0.5px solid #0b4880;color:#0b84ff;padding:8px;border-radius:20px;font-size:11.5px;cursor:pointer;margin-top:8px;width:100%;display:block;text-align:center;text-decoration:none;box-sizing:border-box;}
+.nxbtn:hover{background:#0d2645}
+#p3-notif-bar{display:none;background:#0a1f0a;border-bottom:0.5px solid #1a4a1a;padding:5px 13px;cursor:pointer;align-items:center;gap:7px;}
+#p3-notif-bar:hover{background:#0d2a0d;}
+@keyframes p3pulse{0%,100%{opacity:1;}50%{opacity:.45;}}
+.p3-dot{width:7px;height:7px;border-radius:50%;background:#30d158;flex-shrink:0;animation:p3pulse 1.8s ease-in-out infinite;display:inline-block;}
+#second-convo{display:none;flex-direction:column;}
+#sc-input{flex:1;background:#222;border:0.5px solid #2e2e2e;color:#e5e5ea;padding:7px 10px;border-radius:11px;font-size:11.5px;outline:none;font-family:-apple-system,sans-serif;}
+#sc-send{background:#0b84ff;border:none;color:#fff;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+#sc-send:hover{background:#0070e0;}
+</style>
+
+<a href="index_hr.html?skip" class="menu-btn">← Izbornik</a>
+
+<div id="intro1">
+  <div class="i1-inner">
+    <p class="i1-line">Ines je Klarina najbolja frendica. Ja sam s njom jedva ikad {pričao|pričala}.</p>
+    <p class="i1-line">Možda mi ona može pomoći da shvatim što se dogodilo Klari.</p>
+    <p class="i1-line">Ali moram joj dokazati da joj stvarno želim pomoći.</p>
+    <span class="i1-sep"></span>
+    <button id="intro1-btn" class="i1-btn">Zovi Ines →</button>
+    <span class="i1-skip">Pritisni za nastavak.</span>
+  </div>
+</div>
+
+<div class="pw"><div id="pz" aria-live="polite"></div><div class="ph">
+  <div class="sb">
+    <span style="color:#fff;font-size:12px;font-weight:600;">9:41</span>
+    <div class="nt"></div>
+    <div style="display:flex;gap:5px;align-items:center;">
+      <svg width="13" height="10" viewBox="0 0 16 12" fill="none"><rect x="0" y="5" width="3" height="7" rx=".5" fill="white" opacity=".45"/><rect x="4.5" y="3.5" width="3" height="8.5" rx=".5" fill="white" opacity=".65"/><rect x="9" y="1.5" width="3" height="10.5" rx=".5" fill="white" opacity=".85"/><rect x="13.5" y="0" width="2.5" height="12" rx=".5" fill="white"/></svg>
+      <svg width="18" height="10" viewBox="0 0 26 12" fill="none"><rect x=".75" y="1.75" width="19.5" height="8.5" rx="1.75" stroke="white" stroke-width="1.5" opacity=".85"/><rect x="21.5" y="4" width="2.5" height="4" rx="1" fill="white" opacity=".85"/><rect x="2" y="3" width="13" height="6" rx=".75" fill="white"/></svg>
+    </div>
+  </div>
+
+  <div class="chdr">
+    <div class="av" id="av"></div>
+    <div style="flex:1;">
+      <div style="color:#e5e5ea;font-size:13px;font-weight:600;" id="cn"></div>
+      <div style="color:#555;font-size:10.5px;" id="st"></div>
+    </div>
+  </div>
+
+  <!-- Notification discrète - nouveau message d'Inès (visible après partie 3) -->
+  <div id="p3-notif-bar">
+    <span class="p3-dot"></span>
+    <span style="color:#4dcc70;font-size:10px;font-weight:600;flex:1;">Nova poruka</span>
+    <span style="color:#4dcc70;font-size:9px;opacity:.6;">Upravo sada</span>
+  </div>
+
+  <div class="tbar">
+    <span id="tlb" style="color:#ff9f0a;font-size:9px;min-width:108px;transition:color .4s;white-space:nowrap;"></span>
+    <div class="tbarr"><div class="tmark"></div><div class="tbarf" id="tf" style="width:50%;background:#ff9f0a;"></div></div>
+  </div>
+
+  <div class="ma" id="ma"></div>
+  <div class="ca" id="ca"><div class="chint">…</div></div>
+
+  <!-- Deuxième conversation avec Inès (après partie 3) -->
+  <div id="second-convo">
+    <div class="ma" id="sc-ma"></div>
+    <div id="sc-ca" style="background:#111;padding:7px;min-height:44px;border-top:0.5px solid #1e1e1e;">
+      <div id="sc-input-row" style="display:none;display:flex;gap:6px;align-items:center;">
+        <input id="sc-input" placeholder="Napiši poruku…" autocomplete="off">
+        <button id="sc-send">↑</button>
+      </div>
+      <div id="sc-end" style="display:none;"></div>
+    </div>
+  </div>
+</div></div>
+
+<script src="1_Telephone_Ines_textes_hr.js"></script>
+<script src="prenom.js"></script>
+<script src="1_Telephone_Ines_Structure.js"></script>
+<style>#fs-btn{position:fixed;top:1rem;right:1rem;z-index:9000;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:rgba(255,255,255,.45);cursor:pointer;padding:7px;line-height:0;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:color .2s,border-color .2s;}#fs-btn:hover{color:#fff;border-color:rgba(255,255,255,.3);}</style>
+<button id="fs-btn" title="Cijeli zaslon" aria-label="Cijeli zaslon"><svg id="fse" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg><svg id="fss" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/></svg></button>
+<script>(function(){var b=document.getElementById('fs-btn'),e=document.getElementById('fse'),s=document.getElementById('fss'),f=false;function u(){f=!!(document.fullscreenElement||document.webkitFullscreenElement);e.style.display=f?'none':'';s.style.display=f?'':'none';}b.addEventListener('click',function(){if(!f)(document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen).call(document.documentElement);else(document.exitFullscreen||document.webkitExitFullscreen).call(document);});document.addEventListener('fullscreenchange',u);document.addEventListener('webkitfullscreenchange',u);})();</script>
+<script src="retour.js" defer></script>
