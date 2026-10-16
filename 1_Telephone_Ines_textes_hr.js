@@ -109,7 +109,7 @@ var TEXTES = {
         },
         {
           "l": "C",
-          "t": "Zabrinut sam. Već danima ne mogu spavati otkad je nema.",
+          "t": "{Zabrinut|Zabrinuta} sam. Već danima ne mogu spavati otkad je nema.",
           "e": 1,
           "p": "{Rekao|Rekla} sam joj kako se osjećam, a da ništa nisam {tražio|tražila} od nje. Možda mi može vjerovati."
         }
