@@ -272,7 +272,7 @@ body::after{
   <div class="save-area">
     <div class="save-sep">ili nastavi neku od prethodnih igara</div>
     <div class="save-row">
-      <input type="text" id="code-input" class="code-input" maxlength="7" placeholder="npr.: BVRHJ1X" autocomplete="off" spellcheck="false">
+      <input type="text" id="code-input" class="code-input" maxlength="10" placeholder="npr.: BVRHJ1X" autocomplete="off" spellcheck="false">
       <button class="btn-resume">Nastavi</button>
     </div>
     <div class="code-error" id="code-error"></div>
@@ -335,7 +335,7 @@ body::after{
   <div class="modal-save-box">
     <div class="modal-save-lbl">Tvoj kod za spremanje igre</div>
     <div class="modal-save-code" id="save-code">-</div>
-    <div class="modal-save-hint">Zapiši ova 4 znaka. Na početnom zaslonu unesi ih kako bi {nastavio|nastavila} igru.</div>
+    <div class="modal-save-hint">Zapiši ovih 7 znakova. Na početnom zaslonu unesi ih kako bi {nastavio|nastavila} igru.</div>
     <button class="btn-close-modal">Zatvori</button>
   </div>
 </div>
@@ -360,6 +360,10 @@ body::after{
   var input=document.getElementById('pg-input');
   var errEl=document.getElementById('pg-error');
   var CORRECT='0454789532';
+
+  // Appel déjà commencé (ou rouvert par le code de reprise) : le numéro
+  // a déjà été trouvé, on ne le redemande pas.
+  try{ var p4=JSON.parse(localStorage.getItem('rc_p4')||'null'); if(p4&&p4.s>0) gate.style.display='none'; }catch(e){}
 
   function normalise(s){ return s.replace(/[\s.\-()+]/g,''); }
 
@@ -413,7 +417,7 @@ body::after{
 </script>
 <style>#fs-btn{position:fixed;top:1rem;right:1rem;z-index:9000;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:rgba(255,255,255,.45);cursor:pointer;padding:7px;line-height:0;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:color .2s,border-color .2s;}#fs-btn:hover{color:#fff;border-color:rgba(255,255,255,.5);}</style>
 <button id="fs-btn" title="Cijeli zaslon" aria-label="Cijeli zaslon"><svg id="fse" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg><svg id="fss" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/></svg></button>
-<script>(function(){var b=document.getElementById('fs-btn'),e=document.getElementById('fse'),s=document.getElementById('fss'),f=false;function u(){f=!!(document.fullscreenElement||document.webkitFullscreenElement);e.style.display=f?'none':'';s.style.display=f?'':'none';}b.addEventListener('click',function(){if(!f)(document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen).call(document.documentElement);else(document.exitFullscreen||document.webkitExitFullscreen).call(document);});document.addEventListener('fullscreenchange',u);document.addEventListener('webkitfullscreenchange',u);})();</script>
+<script>(function(){var b=document.getElementById('fs-btn'),e=document.getElementById('fse'),s=document.getElementById('fss'),f=false;function u(){f=!!(document.fullscreenElement||document.webkitFullscreenElement);e.style.display=f?'none':'';s.style.display=f?'':'none';}var rq=document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen,ex=document.exitFullscreen||document.webkitExitFullscreen;if(!rq){b.style.display='none';return;}b.addEventListener('click',function(){if(!f)rq.call(document.documentElement);else if(ex)ex.call(document);});document.addEventListener('fullscreenchange',u);document.addEventListener('webkitfullscreenchange',u);})();</script>
 <script src="retour.js" defer></script>
 </body>
 </html>

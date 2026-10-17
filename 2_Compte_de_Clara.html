@@ -788,7 +788,7 @@ body.sheet-open #lb-comments{max-height:none !important;}
   <div class="ig-gate-box">
     <div class="ig-gate-logo">Instaclasse</div>
     <div class="ig-gate-sub">Inès t'a transmis les identifiants de Clara.<br>Connecte-toi pour accéder à son compte.</div>
-    <input id="ig-user" class="ig-gate-input" type="text" placeholder="Nom d'utilisateur" autocomplete="off" spellcheck="false">
+    <input id="ig-user" autocapitalize="none" autocorrect="off" class="ig-gate-input" type="text" placeholder="Nom d'utilisateur" autocomplete="off" spellcheck="false">
     <div class="ig-gate-pw">
       <input id="ig-pass" class="ig-gate-input" type="password" placeholder="Mot de passe" autocomplete="off">
       <button type="button" id="ig-eye" class="ig-gate-eye" aria-label="Afficher le mot de passe" title="Afficher le mot de passe">👁</button>
@@ -843,7 +843,7 @@ body.sheet-open #lb-comments{max-height:none !important;}
     p.focus();
   });
   document.getElementById('ig-login-btn').addEventListener('click',function(){
-    var u=document.getElementById('ig-user').value.trim().replace(/^@/,'');
+    var u=document.getElementById('ig-user').value.trim().replace(/^@/,'').toLowerCase();
     var p=document.getElementById('ig-pass').value;
     var err=document.getElementById('ig-error');
     if(u===USER&&p===PASS){err.textContent='';dismiss();}
@@ -990,7 +990,7 @@ body.sheet-open #lb-comments{max-height:none !important;}
 </script>
 <style>#fs-btn{position:fixed;top:1rem;right:1rem;z-index:9000;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:rgba(255,255,255,.45);cursor:pointer;padding:7px;line-height:0;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:color .2s,border-color .2s;}#fs-btn:hover{color:#fff;border-color:rgba(255,255,255,.3);}</style>
 <button id="fs-btn" title="Plein écran" aria-label="Plein écran"><svg id="fse" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg><svg id="fss" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/></svg></button>
-<script>(function(){var b=document.getElementById('fs-btn'),e=document.getElementById('fse'),s=document.getElementById('fss'),f=false;function u(){f=!!(document.fullscreenElement||document.webkitFullscreenElement);e.style.display=f?'none':'';s.style.display=f?'':'none';}b.addEventListener('click',function(){if(!f)(document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen).call(document.documentElement);else(document.exitFullscreen||document.webkitExitFullscreen).call(document);});document.addEventListener('fullscreenchange',u);document.addEventListener('webkitfullscreenchange',u);})();</script>
+<script>(function(){var b=document.getElementById('fs-btn'),e=document.getElementById('fse'),s=document.getElementById('fss'),f=false;function u(){f=!!(document.fullscreenElement||document.webkitFullscreenElement);e.style.display=f?'none':'';s.style.display=f?'':'none';}var rq=document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen,ex=document.exitFullscreen||document.webkitExitFullscreen;if(!rq){b.style.display='none';return;}b.addEventListener('click',function(){if(!f)rq.call(document.documentElement);else if(ex)ex.call(document);});document.addEventListener('fullscreenchange',u);document.addEventListener('webkitfullscreenchange',u);})();</script>
 <script src="retour.js" defer></script>
 </body>
 </html>

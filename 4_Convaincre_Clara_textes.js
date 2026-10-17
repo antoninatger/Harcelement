@@ -338,5 +338,5 @@ var TEXTES = {
 
 const UI = {
   recapUrl: "recapitulatif.html",
-  invalidCode: "Code invalide - vérifie les 4 caractères."
+  invalidCode: "Code invalide - vérifie les 7 caractères."
 };

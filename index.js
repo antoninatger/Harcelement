@@ -140,3 +140,7 @@
     }
   } catch(e) {}
 })();
+
+// Retour arrière du navigateur (ou balayage sur iPad) : la page revient du
+// cache sans relire la progression. On la recharge pour débloquer les parties.
+window.addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });

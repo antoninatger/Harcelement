@@ -667,5 +667,5 @@ var TEXTES = {
 
 const UI = {
   "recapUrl": "recapitulatif_hr.html",
-  "invalidCode": "Nevažeći kod – provjeri ima li točno 4 znaka."
+  "invalidCode": "Nevažeći kod – provjeri ima li točno 7 znakova."
 };

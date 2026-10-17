@@ -548,7 +548,7 @@ body::before{
   <span class="sa-code" id="sa-code">0000000</span>
   <span class="sa-sep">or resume with a code</span>
   <div class="sa-row">
-    <input type="text" id="sa-input" maxlength="7" placeholder="7 characters" autocomplete="off" spellcheck="false" aria-label="Resume code">
+    <input type="text" id="sa-input" maxlength="10" placeholder="7 characters" autocomplete="off" spellcheck="false" aria-label="Resume code">
     <button type="button" id="sa-go">Resume</button>
   </div>
   <span class="sa-msg" id="sa-msg"></span>
@@ -579,12 +579,13 @@ body::before{
     expand.style.display=fs?'none':'';
     shrink.style.display=fs?'':'none';
   }
+  // iPhone : pas de plein écran sur un élément, le bouton est masqué.
+  var rq=document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen;
+  var ex=document.exitFullscreen||document.webkitExitFullscreen;
+  if(!rq){ btn.style.display='none'; return; }
   btn.addEventListener('click',function(){
-    if(!fs){
-      (document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen).call(document.documentElement);
-    } else {
-      (document.exitFullscreen||document.webkitExitFullscreen).call(document);
-    }
+    if(!fs) rq.call(document.documentElement);
+    else if(ex) ex.call(document);
   });
   document.addEventListener('fullscreenchange',update);
   document.addEventListener('webkitfullscreenchange',update);

@@ -56,7 +56,7 @@
     return {
       p1:       lire('rc_p1_visited', null) ? 1 : 0,
       p3:       borne(lire('rc_p3_done', 0), 2),
-      types:    json('rc_types', []),
+      types:    Array.isArray(json('rc_types', [])) ? json('rc_types', []) : [],
       comptes:  Object.keys(json('rc_comptes', {})),
       empathy:  borne(p4.e, 8),
       scene:    borne(p4.s, 8),
@@ -156,6 +156,11 @@
     QUI = { utilisateur_4729:'Enzo', _noreply_ghost_:'Žad',
             anonymous_x0:'Enzo i Teo', vrai_info_colleg:'Žad', jevoustrouve:'Teo',
             anon_colleg_real:'Marina' };
+
+  else if (/_en\.html?$/.test(location.pathname))
+    QUI = { utilisateur_4729:'Enzo', _noreply_ghost_:'Jade',
+            anonymous_x0:'Enzo and Théo', vrai_info_colleg:'Jade', jevoustrouve:'Théo',
+            anon_colleg_real:'Marine' };
 
   function appliquer(e) {
     if (!e) return false;

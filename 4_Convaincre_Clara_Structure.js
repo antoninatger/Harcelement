@@ -470,3 +470,11 @@ document.getElementById('screen-epilogue').addEventListener('click', e=>{
 //  INIT
 // ═══════════════════════════════════════════════════════════════
 initTextes();
+// Appel interrompu, ou code saisi sur l'accueil : « Commencer » repart de
+// zéro, alors le code est prérempli pour que « Reprendre » rouvre l'appel.
+(function(){
+  try {
+    const e=Sauvegarde.etat();
+    if(e.scene>0 && e.fin==='none') document.getElementById('code-input').value=Sauvegarde.code();
+  } catch(err) {}
+})();

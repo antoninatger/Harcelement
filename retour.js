@@ -65,7 +65,7 @@
 
   /* Ce qui, dans le DOM, signale que la partie est terminée. Un sélecteur
      par partie ; l'accueil n'en a pas. */
-  var FINS = [null, '#ca .ea', '#synthesis-overlay', '#end-state.active', '#screen-end.active'];
+  var FINS = [null, '#ca .ea', '#synthesis-overlay[data-mode="synth"]', '#end-state.active', '#screen-end.active'];
 
   var T = EN ? {
     btn: 'Message', btnTitle: 'Send me a note',

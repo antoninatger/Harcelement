@@ -401,7 +401,11 @@ function startMission() {
   // Reprise : le seuil peut déjà être atteint.
   if (typesFound.size >= REQUIRED_TYPES) {
     gamePhase = 2;
-    setTimeout(revealSecretMessage, 600);
+    // Le bandeau « nouveau message » ne revient pas si Kevin a déjà été lu,
+    // ni pendant une enquête lancée depuis le groupe : il couvrait le pseudo
+    // à toucher sur la photo.
+    if (enquete || convoVue(99) || convoVue('99')) buildDMList();
+    else setTimeout(revealSecretMessage, 600);
     const btn = document.getElementById('synthesis-btn');
     if (btn) btn.style.display = 'flex';
   }
@@ -485,6 +489,9 @@ function showTypesList(mode) {
     note.textContent = UI.synthNote;
     content.appendChild(note);
   }
+  // retour.js n'affiche son bandeau de fin que pour la synthèse, pas pour
+  // la simple liste des types ouverte en cours de mission.
+  document.getElementById('synthesis-overlay').dataset.mode = mode;
   document.getElementById('synthesis-overlay').style.display = 'flex';
 }
 

@@ -339,6 +339,9 @@ var secondDejaResolue = false;
 (function(){
   var p3done = null;
   try { p3done = localStorage.getItem('rc_p3_done'); } catch(e) {}
+  // Stockage bloqué (appareils scolaires) : rc_p3_done n'existe pas. Le bouton
+  // « Retourner demander à Inès » de la partie 4 arrive avec ?revoir.
+  if (!p3done && /revoir/.test(location.search)) p3done = '1';
   if (!p3done) return;
 
   var notifBar = document.getElementById('p3-notif-bar');
@@ -454,7 +457,7 @@ function openSecondConvo(){
     // du groupe Whatsupp (« havre secret ») et leurs équivalents anglais et
     // croates (« tajno utočište », « kod tete na selu », sans les accents).
     var parHavre = ['havre','secret','haven','safe','utocist','tajn'].some(function(w){ return n.includes(w); });
-    var parTante = ['tante','campagne','aunt','countryside','tet','selo','selu'].some(function(w){ return n.includes(w); });
+    var parTante = ['tante','tata','tati','campagne','aunt','country','tet','selo','selu'].some(function(w){ return n.includes(w); });
 
     if (!parHavre && !parTante) {
       await ecrit(S.wrongAnswer, 1200);
