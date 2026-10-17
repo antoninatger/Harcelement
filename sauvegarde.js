@@ -89,6 +89,13 @@
     return m;
   }
 
+  // Clé de contrôle : somme pondérée des 6 chiffres, modulo 36. Les poids sont
+  // premiers avec 36 (un caractère mal recopié est toujours refusé) et deux
+  // poids voisins diffèrent de 2 ou 10 (deux caractères inversés le sont
+  // presque toujours, y compris avec la clé elle-même). L'ancienne somme
+  // simple laissait passer les inversions.
+  var POIDS = [35, 25, 23, 13, 11, 1];
+
   function encoder() {
     var e = etat();
     var brut = {
@@ -111,7 +118,7 @@
     var b36 = v.toString(36).toUpperCase();
     while (b36.length < 6) b36 = '0' + b36;
     var somme = 0;
-    for (var i = 0; i < b36.length; i++) somme += b36.charCodeAt(i);
+    for (var i = 0; i < b36.length; i++) somme += POIDS[i] * parseInt(b36[i], 36);
     return b36 + (somme % 36).toString(36).toUpperCase();
   }
 
@@ -120,7 +127,7 @@
     if (!/^[0-9A-Z]{7}$/.test(code)) return null;
     var b36 = code.slice(0, 6), chk = parseInt(code[6], 36);
     var somme = 0;
-    for (var i = 0; i < 6; i++) somme += b36.charCodeAt(i);
+    for (var i = 0; i < 6; i++) somme += POIDS[i] * parseInt(b36[i], 36);
     if (isNaN(chk) || somme % 36 !== chk) return null;
     var v = parseInt(b36, 36);
     if (isNaN(v) || v < 0) return null;
