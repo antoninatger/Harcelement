@@ -375,11 +375,16 @@ function rappelerClara(){
 
 // ═══ ENDING ═══
 function buildResourcesHTML(){
-  const R = (window.RESSOURCES || { titre: '', liste: [] });
-  const items=R.liste.map(r=>
-    `<div><span class="res-num">${r.label}</span> - ${r.txt}</div>`
+  // Une zone par pays (France, Croatie, Royaume-Uni), puis l'urgence et
+  // l'école, valables partout. Voir ressources.js.
+  const R = (window.RESSOURCES || { titre: '', pays: [], commun: [] });
+  const ligne = r => `<div><span class="res-num">${r.label}</span> - ${r.txt}</div>`;
+  const zones = (R.pays || []).map(z =>
+    `<div class="res-pays">${z.nom}</div>${z.liste.map(ligne).join('')}`
   ).join('');
-  return `<div class="res-block"><div class="res-title">${R.titre}</div>${items}</div>`;
+  const commun = (R.commun || R.liste || []).map(ligne).join('');
+  return `<div class="res-block"><div class="res-title">${R.titre}</div>${zones}`
+    + (commun ? `<div class="res-commun">${commun}</div>` : '') + `</div>`;
 }
 
 function buildRecapHTML(){

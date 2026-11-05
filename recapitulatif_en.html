@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script src="coquille.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Finding Clara - summary</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -32,6 +33,8 @@ h2{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:21px;m
 .fin{background:#f6f5f1;border-left:3px solid #1a1a1e;padding:13px 16px;font-size:14.5px;}
 .res{display:flex;gap:12px;padding:7px 0;border-top:1px solid #e2e1dc;font-size:14px;}
 .res b{min-width:118px;font-weight:600}
+.res-pays{margin-top:12px;padding-bottom:4px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#5a5a63}
+.res-pays:empty{margin-top:8px;padding:0}
 .ecrire{margin-top:10px}
 .ecrire p{margin:0 0 4px;font-size:14px;font-weight:500}
 .ligne{border-bottom:1px solid #b9b9c0;height:27px;margin-bottom:9px}
@@ -46,6 +49,7 @@ footer{margin-top:26px;padding-top:12px;border-top:1px solid #e2e1dc;font-size:1
   .tools{display:none}
   h2{margin-top:20px}
   .t,.cpt,.res{page-break-inside:avoid}
+  .res-pays{page-break-after:avoid}
 }
 </style>
 </head>
@@ -134,12 +138,27 @@ footer{margin-top:26px;padding-top:12px;border-top:1px solid #e2e1dc;font-size:1
 
   var R = window.RESSOURCES || { liste: [] };
   var rh = document.getElementById('res');
-  R.liste.forEach(function (r) {
+  function ligne(r) {
     var d = document.createElement('div');
     d.className = 'res';
     d.innerHTML = '<b>' + r.label + '</b><span>' + r.txt + '</span>';
     rh.appendChild(d);
+  }
+  // Une zone par pays, puis l'urgence et l'école (voir ressources.js).
+  (R.pays || []).forEach(function (z) {
+    var t = document.createElement('div');
+    t.className = 'res-pays';
+    t.textContent = z.nom;
+    rh.appendChild(t);
+    z.liste.forEach(ligne);
   });
+  var commun = R.commun || R.liste || [];
+  if (commun.length && (R.pays || []).length) {
+    var t = document.createElement('div');
+    t.className = 'res-pays';
+    rh.appendChild(t);
+  }
+  commun.forEach(ligne);
   var h2 = rh.previousElementSibling;
   if (h2 && R.titre) h2.textContent = R.titre;
 

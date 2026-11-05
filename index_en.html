@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script src="coquille.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Finding Clara</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -568,29 +569,7 @@ body::before{
   </svg>
 </button>
 
-<script>
-(function(){
-  var btn=document.getElementById('fs-btn');
-  var expand=document.getElementById('fs-icon-expand');
-  var shrink=document.getElementById('fs-icon-shrink');
-  var fs=false;
-  function update(){
-    fs=!!(document.fullscreenElement||document.webkitFullscreenElement);
-    expand.style.display=fs?'none':'';
-    shrink.style.display=fs?'':'none';
-  }
-  // iPhone : pas de plein écran sur un élément, le bouton est masqué.
-  var rq=document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen;
-  var ex=document.exitFullscreen||document.webkitExitFullscreen;
-  if(!rq){ btn.style.display='none'; return; }
-  btn.addEventListener('click',function(){
-    if(!fs) rq.call(document.documentElement);
-    else if(ex) ex.call(document);
-  });
-  document.addEventListener('fullscreenchange',update);
-  document.addEventListener('webkitfullscreenchange',update);
-})();
-</script>
+<script src="plein-ecran.js"></script>
 
 <script src="retour.js" defer></script>
 </body>

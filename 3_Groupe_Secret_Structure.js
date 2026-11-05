@@ -243,8 +243,8 @@ function processNext() {
   // ne suivait) : chacun attend un appui du joueur. Le « écrit… » reste,
   // court, pour le rythme.
   var typingMs = (msg.type === 'post-card')
-    ? 800
-    : Math.min(800, Math.max(250, (msg.text || '').length * 10));
+    ? 500
+    : Math.min(500, Math.max(200, (msg.text || '').length * 6));
 
   var typingEl = showTyping(msg.sender);
   scrollChat();
@@ -305,7 +305,10 @@ function scheduleAutoAdvance() {
   clearTimeout(autoTimer);
   if (autoPaused) return;
   var n = (dernierTexte || '').length;
-  var delay = fastMode ? 1200 : Math.min(7000, Math.max(2600, 1800 + n * 45));
+  // Rythme revu le 5 novembre (retour d'Anton : on appuyait sur ⏩ à chaque
+  // fois). Par défaut : ~1,3 s pour un message court, 3 s au plus pour un
+  // long. ⏩ va encore plus vite.
+  var delay = fastMode ? 600 : Math.min(3000, Math.max(1300, 800 + n * 20));
   autoTimer = setTimeout(function () {
     if (!waitingTap) return;
     if (fenetreOuverte()) { scheduleAutoAdvance(); return; }

@@ -2,6 +2,7 @@
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
+<script src="coquille.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uvjeri Klaru</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -219,6 +220,8 @@ body::after{
 .res-block{margin-top:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;font-family:'Jost',sans-serif;font-size:12px;color:rgba(255,255,255,.62);line-height:1.85;text-align:left;max-width:420px;}
 .res-title{color:rgba(255,255,255,.85);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:15px;line-height:1.5;margin-bottom:8px;}
 .res-num{color:rgba(255,255,255,.88);font-weight:500;}
+.res-pays{margin-top:10px;color:rgba(255,255,255,.88);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.res-commun{margin-top:10px;}
 /* Conclusion : le texte de fin, ligne après ligne */
 #screen-epilogue{flex-direction:column;align-items:center;padding:48px 28px;cursor:pointer;}
 #epi-lines{max-width:500px;}
@@ -417,7 +420,7 @@ body::after{
 </script>
 <style>#fs-btn{position:fixed;top:1rem;right:1rem;z-index:9000;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:rgba(255,255,255,.45);cursor:pointer;padding:7px;line-height:0;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:color .2s,border-color .2s;}#fs-btn:hover{color:#fff;border-color:rgba(255,255,255,.5);}</style>
 <button id="fs-btn" title="Cijeli zaslon" aria-label="Cijeli zaslon"><svg id="fse" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg><svg id="fss" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/></svg></button>
-<script>(function(){var b=document.getElementById('fs-btn'),e=document.getElementById('fse'),s=document.getElementById('fss'),f=false;function u(){f=!!(document.fullscreenElement||document.webkitFullscreenElement);e.style.display=f?'none':'';s.style.display=f?'':'none';}var rq=document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen,ex=document.exitFullscreen||document.webkitExitFullscreen;if(!rq){b.style.display='none';return;}b.addEventListener('click',function(){if(!f)rq.call(document.documentElement);else if(ex)ex.call(document);});document.addEventListener('fullscreenchange',u);document.addEventListener('webkitfullscreenchange',u);})();</script>
+<script src="plein-ecran.js"></script>
 <script src="retour.js" defer></script>
 </body>
 </html>
