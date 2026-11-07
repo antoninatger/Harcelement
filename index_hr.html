@@ -317,6 +317,10 @@ body::before{
 }
 #prenom-choix button:hover{color:var(--text);border-color:var(--accent);}
 #prenom-choix button.on{color:var(--accent);border-color:var(--accent);background:rgba(196,134,90,.08);font-weight:600;}
+#prenom-role{
+  text-align:center;margin:-1.4rem auto 2.2rem;padding:0 16px;z-index:1;position:relative;
+  font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:1rem;color:var(--text);
+}
 #save-area{
   display:none;flex-direction:column;align-items:center;gap:10px;
   margin:1.6rem auto 0;max-width:420px;z-index:1;position:relative;
@@ -461,6 +465,7 @@ body::before{
   <button type="button" data-prenom="Léo">Leo</button>
   <button type="button" data-prenom="Léa">Lea</button>
 </div>
+<p id="prenom-role">{Ti si Leo, Klarin prijatelj.|Ti si Lea, Klarina prijateljica.}</p>
 
 <main class="grid">
 
