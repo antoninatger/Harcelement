@@ -91,7 +91,7 @@ var TEXTES = {
   ],
   "G": [
     {
-      "edu": "I have to be as honest and sincere as possible - it's my only chance of getting her to help me.",
+      "edu": "I have to tell her how I feel, without demanding anything from her - it's my only chance of getting her to help me.",
       "c": [
         {
           "l": "A",
@@ -290,7 +290,7 @@ var TEXTES = {
     "blocage": {
       "titre": "🔴 Trust lost",
       "ines": "I knew we couldn't trust you.",
-      "conseil": "Two clumsy answers, and Inès shut down. Start again: talk to her about Clara and how you feel, without pushing or judging her.",
+      "conseil": "Her trust dropped too low, and Inès shut down. Start again: talk to her about Clara and how you feel, without pushing or judging her. After a clumsy answer, a good one can still win her back.",
       "sys": "(she stops replying)"
     },
     "succes": {

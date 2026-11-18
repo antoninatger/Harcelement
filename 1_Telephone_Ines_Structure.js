@@ -1,7 +1,12 @@
 var G=TEXTES.G, CRISIS=TEXTES.CRISIS, REVELATIONS=TEXTES.REVELATIONS;
 
-// faux : réponses maladroites (e < 0). À la deuxième, Inès arrête de répondre,
-// comme Clara en Partie 4 : il faut recommencer la conversation.
+// Inès arrête de répondre quand la confiance descend à SEUIL_RUPTURE, comme
+// Clara en Partie 4 : il faut recommencer la conversation. La rupture dépend de
+// la jauge, pas du nombre de maladresses : un bon rattrapage (Partie « crise »)
+// redonne vraiment une chance. Départ à 0 : une maladresse ouvre la crise (-1),
+// une mauvaise réponse à la crise fait tomber à -2 et Inès s'en va.
+var SEUIL_RUPTURE=-2;
+// faux : réponses maladroites (e < 0), gardé pour information.
 var trust=0,good=0,faux=0,step=0,crisisUsed=false,phase='story',busy=false,tyEl=null;
 var ma=document.getElementById('ma'),ca=document.getElementById('ca');
 var tf=document.getElementById('tf'),tlb=document.getElementById('tlb');
@@ -145,8 +150,8 @@ async function pick(choice){
     await sl(2000);
   }
 
-  // Deuxième maladresse : Inès coupe la conversation.
-  if(faux>=2){
+  // Confiance trop basse : Inès coupe la conversation.
+  if(trust<=SEUIL_RUPTURE){
     await sl(400);showTy();await sl(1200);hideTy();
     addBub(TEXTES.blocageMessages[0].t,TEXTES.blocageMessages[0].type);
     await sl(350);addBub(TEXTES.blocageMessages[1].t,TEXTES.blocageMessages[1].type);
@@ -161,8 +166,9 @@ async function pick(choice){
     await showNextStep();return;
   }
 
-  // Première maladresse : Inès se méfie et demande qui est Léo. C'est la
-  // seule chance de se rattraper ; une deuxième maladresse et elle s'en va.
+  // Première maladresse : Inès se méfie et demande qui est Léo. Une bonne
+  // réponse fait remonter la jauge ; ensuite, seule la jauge décide si elle
+  // reste ou s'en va.
   if(choice.e<0&&!crisisUsed&&step<G.length-1){
     crisisUsed=true;phase='crisis';
     await sl(600);showTy();await sl(1400);hideTy();

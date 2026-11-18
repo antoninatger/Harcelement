@@ -93,7 +93,7 @@ var TEXTES = {
   ],
   "G": [
     {
-      "edu": "Moram biti što {iskreniji|iskrenija} i {otvoreniji|otvorenija} – to mi je jedina šansa da mi pomogne.",
+      "edu": "Moram joj reći što osjećam, a da ništa ne tražim od nje – to mi je jedina šansa da mi pomogne.",
       "c": [
         {
           "l": "A",
@@ -292,7 +292,7 @@ var TEXTES = {
     "blocage": {
       "titre": "🔴 Izgubljeno povjerenje",
       "ines": "Znala sam da ti ne možemo vjerovati.",
-      "conseil": "Samo dva nespretna odgovora bila su dovoljna da se Ines povuče u sebe. Pokušaj ponovno: pričaj joj o Klari i o tome što osjećaš, bez pritiska i osuđivanja.",
+      "conseil": "Povjerenje je palo prenisko i Ines se povukla u sebe. Pokušaj ponovno: pričaj joj o Klari i o tome što osjećaš, bez pritiska i osuđivanja. Nakon nespretnog odgovora, dobar odgovor još je može vratiti.",
       "sys": "(više ne odgovara )"
     },
     "succes": {
