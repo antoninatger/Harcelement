@@ -94,7 +94,7 @@ var TEXTES = {
   // lui, la jauge bougeait sans que le joueur comprenne pourquoi.
   "G": [
     {
-      "edu": "Je dois être {le plus honnête|la plus honnête} possible, et {le plus sincère|la plus sincère} - c'est ma seule chance qu'elle m'aide.",
+      "edu": "Je dois lui dire ce que je ressens, sans rien exiger d'elle - c'est ma seule chance qu'elle m'aide.",
       "c": [
         {
           "l": "A",
@@ -293,7 +293,7 @@ var TEXTES = {
     "blocage": {
       "titre": "🔴 Confiance perdue",
       "ines": "Je savais qu'on ne pouvait pas te faire confiance.",
-      "conseil": "Deux réponses maladroites, et Inès s'est fermée. Recommence : parle-lui de Clara et de ce que tu ressens, sans la presser ni la juger.",
+      "conseil": "Sa confiance est tombée trop bas, et Inès s'est fermée. Recommence : parle-lui de Clara et de ce que tu ressens, sans la presser ni la juger. Après une maladresse, une bonne réponse peut encore la faire revenir.",
       "sys": "(elle ne répond plus)"
     },
     "succes": {
